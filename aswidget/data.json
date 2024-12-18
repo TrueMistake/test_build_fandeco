@@ -1,0 +1,111 @@
+{
+    "products": [
+        {
+            "id": "1",
+            "active": true,
+            "image": "https://aws.massive.ru/widget-img-analog/card-img-1.png",
+            "code": "A1054PL-9GO",
+            "name": "Подвесная люстра Divinare AMADEO",
+            "price": "1 999 999 ₽",
+            "link" : "#"
+        },
+        {
+            "id": "2",
+            "active": true,
+            "image": "https://aws.massive.ru/widget-img-analog/card-img-2.png",
+            "code": "A1054PL-9GO",
+            "name": "Подвесная люстра Divinare AMADEO",
+            "price": "1 999 999 ₽",
+            "link" : "#"
+        },
+        {
+            "id": "3",
+            "active": true,
+            "image": "https://aws.massive.ru/widget-img-analog/card-img-3.png",
+            "code": "A1054PL-9GO",
+            "name": "Подвесная люстра Divinare AMADEO",
+            "price": "1 999 999 ₽",
+            "link" : "#"
+        },
+        {
+            "id": "4",
+            "active": true,
+            "image": "https://aws.massive.ru/widget-img-analog/card-img-4.png",
+            "code": "A1054PL-9GO",
+            "name": "Подвесная люстра Divinare AMADEO",
+            "price": "1 999 999 ₽",
+            "link" : "#"
+        },
+        {
+            "id": "5",
+            "active": true,
+            "image": "https://aws.massive.ru/widget-img-analog/card-img-1.png",
+            "code": "A1054PL-9GO",
+            "name": "Подвесная люстра Divinare AMADEO",
+            "price": "1 999 999 ₽",
+            "link" : "#"
+        },
+        {
+            "id": "6",
+            "active": true,
+            "image": "https://aws.massive.ru/widget-img-analog/card-img-2.png",
+            "code": "A1054PL-9GO",
+            "name": "Подвесная люстра Divinare AMADEO",
+            "price": "1 999 999 ₽",
+            "link" : "#"
+        },
+        {
+            "id": "7",
+            "active": true,
+            "image": "https://aws.massive.ru/widget-img-analog/card-img-3.png",
+            "code": "A1054PL-9GO",
+            "name": "Подвесная люстра Divinare AMADEO",
+            "price": "1 999 999 ₽",
+            "link" : "#"
+        },
+        {
+            "id": "8",
+            "active": true,
+            "image": "https://aws.massive.ru/widget-img-analog/card-img-4.png",
+            "code": "A1054PL-9GO",
+            "name": "Подвесная люстра Divinare AMADEO",
+            "price": "1 999 999 ₽",
+            "link" : "#"
+        },
+        {
+            "id": "9",
+            "active": true,
+            "image": "https://aws.massive.ru/widget-img-analog/card-img-1.png",
+            "code": "A1054PL-9GO",
+            "name": "Подвесная люстра Divinare AMADEO",
+            "price": "1 999 999 ₽",
+            "link" : "#"
+        },
+        {
+            "id": "10",
+            "active": true,
+            "image": "https://aws.massive.ru/widget-img-analog/card-img-2.png",
+            "code": "A1054PL-9GO",
+            "name": "Подвесная люстра Divinare AMADEO",
+            "price": "1 999 999 ₽",
+            "link" : "#"
+        }
+    ],
+    "settings": {
+        "font-family": "'Inter', sans-serif",
+        "display-title": "block",
+        "color-title": "#262626",
+        "cards-count-sm": 2,
+        "cards-count-md": 3,
+        "cards-count-lg": 4,
+        "cards-count-xl": 5,
+        "color-code": "#8C8C8C",
+        "color-name": "#262626",
+        "color-price": "#262626",
+        "color-button": "#262626",
+        "color-button-hover": "#ffffff",
+        "color-button-text": "#ffffff",
+        "color-button-text-hover": "#262626"
+    },
+    "title": "Похожие товары"
+}
