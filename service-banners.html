@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="ru" class="mode--dev js rgba boxshadow csstransitions js rgba boxshadow csstransitions">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Баннеры для сервисов на странице каталога</title>
+    <meta name="figma" content="@@figma">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700&display=swap" rel="stylesheet" />
+    <link rel="shortcut icon" href="https://aws.massive.ru/fandeco.ru/redesign/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/main.min.css">
+    
+        
+            <link rel="stylesheet" href="css/page/home.min.css">
+        
+            <link rel="stylesheet" href="css/page/billboard-for-configurator.min.css">
+        
+            <link rel="stylesheet" href="css/jivosite.min.css">
+        
+            <link rel="stylesheet" href="css/module/reviews.min.css">
+        
+    
+</head>
+
+<body class="page">
+
+
+<!-- Ничего из тега style переносить не нужно. Данные стили добавлены для демонстрационной старницы -->
+<style>
+    .container-test-123456789 .col-md-12 {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    @media (min-width: 992px) {
+        .container-test-123456789 .service-banner,
+        .container-test-123456789 .service-banner__card {
+            max-width: 300px;
+        }
+    }
+</style>
+
+<!-- Контейнер section и другие обертки для слайдера с баннерами переносить не надо. Добавлены для демонстрационной страницы -->
+<section>
+    <div class="container container-test-123456789">
+        <div class="row">
+            <div class="col-md-12">
+
+                <!-- Из верстки брать только слайдер начиная с класса .service-banner -- START -->
+                <div class="service-banner">
+                    <div class="swiper service-banner__slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide service-banner__slide">
+	<a href="#" class="service-banner__card">
+		<!-- Маркер для рекламного баннера с тултипом --- START -->
+		<!-- Для того чтобы установить кастомную позицию маркера на баннере, нужно добавить инлайновые стили top и right -->
+<!-- В заначение data атрибута link (data-link) нужно записать ссыку, котороая будет скопирована в буфер, если data-link нет, то бедет взято значение href из ближайшей сслыки родителе -->
+<div class="add-mark" data-link="https://fandeco.ru/qerty">
+    <i class="add-mark__icon"></i>
+    <span class="add-mark__title">Реклама</span>
+    <div class="add-mark__tooltip">
+        <div class="add-mark__content">
+            <span class="add-mark__company">Реклaмодатель ООО "Фандеко</span>
+            <span class="add-mark__copy">
+                <i></i>
+                <span>Скопировать ссылку</span>
+            </span>
+        </div>
+        <span class="add-mark__close"></span>
+    </div>
+</div>
+		<!-- Маркер для рекламного баннера с тултипом --- FINISH -->
+		<div class="service-banner__picture">
+			<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFDgJf9QAAAABJRU5ErkJggg=="
+				data-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/809/13d94739af.jpg" alt="" class="swiper-lazy">
+		</div>
+		<div class="service-banner__caption">
+			<div class="service-banner__title">Примерьте выбранный товар в интерьере вашего дома</div>
+			<div class="service-banner__button">
+				<span class="service-banner__link">
+					<span>Зайти в примерку</span>
+				</span>
+			</div>
+		</div>
+	</a>
+</div><div class="swiper-slide service-banner__slide">
+	<a href="#" class="service-banner__card">
+		<!-- Маркер для рекламного баннера с тултипом --- START -->
+		<!-- Для того чтобы установить кастомную позицию маркера на баннере, нужно добавить инлайновые стили top и right -->
+<!-- В заначение data атрибута link (data-link) нужно записать ссыку, котороая будет скопирована в буфер, если data-link нет, то бедет взято значение href из ближайшей сслыки родителе -->
+<div class="add-mark" data-link="https://fandeco.ru/qerty">
+    <i class="add-mark__icon"></i>
+    <span class="add-mark__title">Реклама</span>
+    <div class="add-mark__tooltip">
+        <div class="add-mark__content">
+            <span class="add-mark__company">Реклaмодатель ООО "Фандеко</span>
+            <span class="add-mark__copy">
+                <i></i>
+                <span>Скопировать ссылку</span>
+            </span>
+        </div>
+        <span class="add-mark__close"></span>
+    </div>
+</div>
+		<!-- Маркер для рекламного баннера с тултипом --- FINISH -->
+		<div class="service-banner__picture">
+			<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFDgJf9QAAAABJRU5ErkJggg=="
+				data-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/810/8282abd4a9.jpg" alt="" class="swiper-lazy">
+		</div>
+		<div class="service-banner__caption">
+			<div class="service-banner__title">Подберем светильник по вашему фото</div>
+			<div class="service-banner__button">
+				<span class="service-banner__link">
+					<span>Найти по фото</span>
+				</span>
+			</div>
+		</div>
+	</a>
+</div><div class="swiper-slide service-banner__slide">
+	<a href="#" class="service-banner__card">
+		<!-- Маркер для рекламного баннера с тултипом --- START -->
+		<!-- Для того чтобы установить кастомную позицию маркера на баннере, нужно добавить инлайновые стили top и right -->
+<!-- В заначение data атрибута link (data-link) нужно записать ссыку, котороая будет скопирована в буфер, если data-link нет, то бедет взято значение href из ближайшей сслыки родителе -->
+<div class="add-mark" data-link="https://fandeco.ru/qerty">
+    <i class="add-mark__icon"></i>
+    <span class="add-mark__title">Реклама</span>
+    <div class="add-mark__tooltip">
+        <div class="add-mark__content">
+            <span class="add-mark__company">Реклaмодатель ООО "Фандеко</span>
+            <span class="add-mark__copy">
+                <i></i>
+                <span>Скопировать ссылку</span>
+            </span>
+        </div>
+        <span class="add-mark__close"></span>
+    </div>
+</div>
+		<!-- Маркер для рекламного баннера с тултипом --- FINISH -->
+		<div class="service-banner__picture">
+			<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFDgJf9QAAAABJRU5ErkJggg=="
+				data-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/811/f2082c9bea.jpg" alt="" class="swiper-lazy">
+		</div>
+		<div class="service-banner__caption">
+			<div class="service-banner__title">Конфигуратор Werkel поможет подобрать розетки в интерьер</div>
+			<div class="service-banner__button">
+				<span class="service-banner__link">
+					<span>Перейти в конфигуратор</span>
+				</span>
+			</div>
+		</div>
+	</a>
+</div><div class="swiper-slide service-banner__slide">
+	<a href="#" class="service-banner__card">
+		<!-- Маркер для рекламного баннера с тултипом --- START -->
+		<!-- Для того чтобы установить кастомную позицию маркера на баннере, нужно добавить инлайновые стили top и right -->
+<!-- В заначение data атрибута link (data-link) нужно записать ссыку, котороая будет скопирована в буфер, если data-link нет, то бедет взято значение href из ближайшей сслыки родителе -->
+<div class="add-mark" data-link="https://fandeco.ru/qerty">
+    <i class="add-mark__icon"></i>
+    <span class="add-mark__title">Реклама</span>
+    <div class="add-mark__tooltip">
+        <div class="add-mark__content">
+            <span class="add-mark__company">Реклaмодатель ООО "Фандеко</span>
+            <span class="add-mark__copy">
+                <i></i>
+                <span>Скопировать ссылку</span>
+            </span>
+        </div>
+        <span class="add-mark__close"></span>
+    </div>
+</div>
+		<!-- Маркер для рекламного баннера с тултипом --- FINISH -->
+		<div class="service-banner__picture">
+			<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFDgJf9QAAAABJRU5ErkJggg=="
+				data-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/815/20515975b2.jpg" alt="" class="swiper-lazy">
+		</div>
+		<div class="service-banner__caption">
+			<div class="service-banner__title">Вы можете оплатить Вашу покупку долями</div>
+			<div class="service-banner__button">
+				<span class="service-banner__link">
+					<span>Оплатить долями</span>
+				</span>
+			</div>
+		</div>
+	</a>
+</div><div class="swiper-slide service-banner__slide">
+	<a href="#" class="service-banner__card">
+		<!-- Маркер для рекламного баннера с тултипом --- START -->
+		<!-- Для того чтобы установить кастомную позицию маркера на баннере, нужно добавить инлайновые стили top и right -->
+<!-- В заначение data атрибута link (data-link) нужно записать ссыку, котороая будет скопирована в буфер, если data-link нет, то бедет взято значение href из ближайшей сслыки родителе -->
+<div class="add-mark" data-link="https://fandeco.ru/qerty">
+    <i class="add-mark__icon"></i>
+    <span class="add-mark__title">Реклама</span>
+    <div class="add-mark__tooltip">
+        <div class="add-mark__content">
+            <span class="add-mark__company">Реклaмодатель ООО "Фандеко</span>
+            <span class="add-mark__copy">
+                <i></i>
+                <span>Скопировать ссылку</span>
+            </span>
+        </div>
+        <span class="add-mark__close"></span>
+    </div>
+</div>
+		<!-- Маркер для рекламного баннера с тултипом --- FINISH -->
+		<div class="service-banner__picture">
+			<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFDgJf9QAAAABJRU5ErkJggg=="
+				data-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/813/42072c4ea6.jpg" alt="" class="swiper-lazy">
+		</div>
+		<div class="service-banner__caption">
+			<div class="service-banner__title">Подберем для Вас несколько вариантов похожих товаров</div>
+			<div class="service-banner__button">
+				<span class="service-banner__link">
+					<span>Подбор аналогичных товаров</span>
+				</span>
+			</div>
+		</div>
+	</a>
+</div><div class="swiper-slide service-banner__slide">
+	<a href="#" class="service-banner__card">
+		<!-- Маркер для рекламного баннера с тултипом --- START -->
+		<!-- Для того чтобы установить кастомную позицию маркера на баннере, нужно добавить инлайновые стили top и right -->
+<!-- В заначение data атрибута link (data-link) нужно записать ссыку, котороая будет скопирована в буфер, если data-link нет, то бедет взято значение href из ближайшей сслыки родителе -->
+<div class="add-mark" data-link="https://fandeco.ru/qerty">
+    <i class="add-mark__icon"></i>
+    <span class="add-mark__title">Реклама</span>
+    <div class="add-mark__tooltip">
+        <div class="add-mark__content">
+            <span class="add-mark__company">Реклaмодатель ООО "Фандеко</span>
+            <span class="add-mark__copy">
+                <i></i>
+                <span>Скопировать ссылку</span>
+            </span>
+        </div>
+        <span class="add-mark__close"></span>
+    </div>
+</div>
+		<!-- Маркер для рекламного баннера с тултипом --- FINISH -->
+		<div class="service-banner__picture">
+			<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFDgJf9QAAAABJRU5ErkJggg=="
+				data-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/814/3d2271b3af.jpg" alt="" class="swiper-lazy">
+		</div>
+		<div class="service-banner__caption">
+			<div class="service-banner__title">Расчитайте необходимую Вам мощность освещения</div>
+			<div class="service-banner__button">
+				<span class="service-banner__link">
+					<span>Калькулятор мощности</span>
+				</span>
+			</div>
+		</div>
+	</a>
+</div>
+                        </div>
+                        <div class="swiper-pagination service-banner__pagination"></div>
+                    </div>
+                </div>
+                <!-- Из верстки брать только слайдер начиная с класса .service-banner -- FINISH -->
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Контейнер section и другие обертки для баннеров переносить не надо. Добавлены для демонстрационной страницы -->
+<section>
+    <div class="container container-test-123456789">
+        <div class="row">
+            <div class="col-md-12">
+                <!-- Из верстки брать только баннеры -- START -->
+                <a href="#" class="service-banner__card">
+	<!-- Маркер для рекламного баннера с тултипом --- START -->
+	<!-- Для того чтобы установить кастомную позицию маркера на баннере, нужно добавить инлайновые стили top и right -->
+<!-- В заначение data атрибута link (data-link) нужно записать ссыку, котороая будет скопирована в буфер, если data-link нет, то бедет взято значение href из ближайшей сслыки родителе -->
+<div class="add-mark" data-link="https://fandeco.ru/qerty">
+    <i class="add-mark__icon"></i>
+    <span class="add-mark__title">Реклама</span>
+    <div class="add-mark__tooltip">
+        <div class="add-mark__content">
+            <span class="add-mark__company">Реклaмодатель ООО "Фандеко</span>
+            <span class="add-mark__copy">
+                <i></i>
+                <span>Скопировать ссылку</span>
+            </span>
+        </div>
+        <span class="add-mark__close"></span>
+    </div>
+</div>
+	<!-- Маркер для рекламного баннера с тултипом --- FINISH -->
+	<div class="service-banner__picture">
+		<img src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/809/13d94739af.jpg" alt="">
+	</div>
+	<div class="service-banner__caption">
+		<div class="service-banner__title">Примерьте выбранный товар в интерьере вашего дома</div>
+		<div class="service-banner__button">
+			<span class="service-banner__link">
+				<span>Зайти в примерку</span>
+			</span>
+		</div>
+	</div>
+</a><a href="#" class="service-banner__card">
+	<!-- Маркер для рекламного баннера с тултипом --- START -->
+	<!-- Для того чтобы установить кастомную позицию маркера на баннере, нужно добавить инлайновые стили top и right -->
+<!-- В заначение data атрибута link (data-link) нужно записать ссыку, котороая будет скопирована в буфер, если data-link нет, то бедет взято значение href из ближайшей сслыки родителе -->
+<div class="add-mark" data-link="https://fandeco.ru/qerty">
+    <i class="add-mark__icon"></i>
+    <span class="add-mark__title">Реклама</span>
+    <div class="add-mark__tooltip">
+        <div class="add-mark__content">
+            <span class="add-mark__company">Реклaмодатель ООО "Фандеко</span>
+            <span class="add-mark__copy">
+                <i></i>
+                <span>Скопировать ссылку</span>
+            </span>
+        </div>
+        <span class="add-mark__close"></span>
+    </div>
+</div>
+	<!-- Маркер для рекламного баннера с тултипом --- FINISH -->
+	<div class="service-banner__picture">
+		<img src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/810/8282abd4a9.jpg" alt="">
+	</div>
+	<div class="service-banner__caption">
+		<div class="service-banner__title">Подберем светильник по вашему фото</div>
+		<div class="service-banner__button">
+			<span class="service-banner__link">
+				<span>Найти по фото</span>
+			</span>
+		</div>
+	</div>
+</a><a href="#" class="service-banner__card">
+	<!-- Маркер для рекламного баннера с тултипом --- START -->
+	<!-- Для того чтобы установить кастомную позицию маркера на баннере, нужно добавить инлайновые стили top и right -->
+<!-- В заначение data атрибута link (data-link) нужно записать ссыку, котороая будет скопирована в буфер, если data-link нет, то бедет взято значение href из ближайшей сслыки родителе -->
+<div class="add-mark" data-link="https://fandeco.ru/qerty">
+    <i class="add-mark__icon"></i>
+    <span class="add-mark__title">Реклама</span>
+    <div class="add-mark__tooltip">
+        <div class="add-mark__content">
+            <span class="add-mark__company">Реклaмодатель ООО "Фандеко</span>
+            <span class="add-mark__copy">
+                <i></i>
+                <span>Скопировать ссылку</span>
+            </span>
+        </div>
+        <span class="add-mark__close"></span>
+    </div>
+</div>
+	<!-- Маркер для рекламного баннера с тултипом --- FINISH -->
+	<div class="service-banner__picture">
+		<img src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/811/f2082c9bea.jpg" alt="">
+	</div>
+	<div class="service-banner__caption">
+		<div class="service-banner__title">Конфигуратор Werkel поможет подобрать розетки в интерьер</div>
+		<div class="service-banner__button">
+			<span class="service-banner__link">
+				<span>Перейти в конфигуратор</span>
+			</span>
+		</div>
+	</div>
+</a><a href="#" class="service-banner__card">
+	<!-- Маркер для рекламного баннера с тултипом --- START -->
+	<!-- Для того чтобы установить кастомную позицию маркера на баннере, нужно добавить инлайновые стили top и right -->
+<!-- В заначение data атрибута link (data-link) нужно записать ссыку, котороая будет скопирована в буфер, если data-link нет, то бедет взято значение href из ближайшей сслыки родителе -->
+<div class="add-mark" data-link="https://fandeco.ru/qerty">
+    <i class="add-mark__icon"></i>
+    <span class="add-mark__title">Реклама</span>
+    <div class="add-mark__tooltip">
+        <div class="add-mark__content">
+            <span class="add-mark__company">Реклaмодатель ООО "Фандеко</span>
+            <span class="add-mark__copy">
+                <i></i>
+                <span>Скопировать ссылку</span>
+            </span>
+        </div>
+        <span class="add-mark__close"></span>
+    </div>
+</div>
+	<!-- Маркер для рекламного баннера с тултипом --- FINISH -->
+	<div class="service-banner__picture">
+		<img src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/815/20515975b2.jpg" alt="">
+	</div>
+	<div class="service-banner__caption">
+		<div class="service-banner__title">Вы можете оплатить Вашу покупку долями</div>
+		<div class="service-banner__button">
+			<span class="service-banner__link">
+				<span>Оплатить долями</span>
+			</span>
+		</div>
+	</div>
+</a><a href="#" class="service-banner__card">
+	<!-- Маркер для рекламного баннера с тултипом --- START -->
+	<!-- Для того чтобы установить кастомную позицию маркера на баннере, нужно добавить инлайновые стили top и right -->
+<!-- В заначение data атрибута link (data-link) нужно записать ссыку, котороая будет скопирована в буфер, если data-link нет, то бедет взято значение href из ближайшей сслыки родителе -->
+<div class="add-mark" data-link="https://fandeco.ru/qerty">
+    <i class="add-mark__icon"></i>
+    <span class="add-mark__title">Реклама</span>
+    <div class="add-mark__tooltip">
+        <div class="add-mark__content">
+            <span class="add-mark__company">Реклaмодатель ООО "Фандеко</span>
+            <span class="add-mark__copy">
+                <i></i>
+                <span>Скопировать ссылку</span>
+            </span>
+        </div>
+        <span class="add-mark__close"></span>
+    </div>
+</div>
+	<!-- Маркер для рекламного баннера с тултипом --- FINISH -->
+	<div class="service-banner__picture">
+		<img src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/813/42072c4ea6.jpg" alt="">
+	</div>
+	<div class="service-banner__caption">
+		<div class="service-banner__title">Подберем для Вас несколько вариантов похожих товаров</div>
+		<div class="service-banner__button">
+			<span class="service-banner__link">
+				<span>Подбор аналогичных товаров</span>
+			</span>
+		</div>
+	</div>
+</a><a href="#" class="service-banner__card">
+	<!-- Маркер для рекламного баннера с тултипом --- START -->
+	<!-- Для того чтобы установить кастомную позицию маркера на баннере, нужно добавить инлайновые стили top и right -->
+<!-- В заначение data атрибута link (data-link) нужно записать ссыку, котороая будет скопирована в буфер, если data-link нет, то бедет взято значение href из ближайшей сслыки родителе -->
+<div class="add-mark" data-link="https://fandeco.ru/qerty">
+    <i class="add-mark__icon"></i>
+    <span class="add-mark__title">Реклама</span>
+    <div class="add-mark__tooltip">
+        <div class="add-mark__content">
+            <span class="add-mark__company">Реклaмодатель ООО "Фандеко</span>
+            <span class="add-mark__copy">
+                <i></i>
+                <span>Скопировать ссылку</span>
+            </span>
+        </div>
+        <span class="add-mark__close"></span>
+    </div>
+</div>
+	<!-- Маркер для рекламного баннера с тултипом --- FINISH -->
+	<div class="service-banner__picture">
+		<img src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/814/3d2271b3af.jpg" alt="">
+	</div>
+	<div class="service-banner__caption">
+		<div class="service-banner__title">Расчитайте необходимую Вам мощность освещения</div>
+		<div class="service-banner__button">
+			<span class="service-banner__link">
+				<span>Калькулятор мощности</span>
+			</span>
+		</div>
+	</div>
+</a>
+                <!-- Из верстки брать только баннеры -- START -->
+            </div>
+        </div>
+    </div>
+</section>
+<script src="js/main.js"></script>

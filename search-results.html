@@ -1,0 +1,651 @@
+    <!doctype html>
+<html lang="ru" class="mode--dev js rgba boxshadow csstransitions js rgba boxshadow csstransitions">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поисковая выдача</title>
+    <meta name="figma" content="@@figma">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700&display=swap" rel="stylesheet" />
+    <link rel="shortcut icon" href="https://aws.massive.ru/fandeco.ru/redesign/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/main.min.css">
+    
+</head>
+
+<body class="page">
+
+    <div class="widget_wrap">
+    <ul class="widget_list">
+        <li class="widget_item">
+    <a class="widget_link" href="home.html">Главная страница</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="about-product.html">О товаре</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="about.html">О нас</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="banner.html">Баннер/Слайдер</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="brands.html">Бренды</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="catalogs.html">Каталоги</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="comparison.html">Сравнение</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="cooperation.html">Cотрудничество</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="delivery.html">О товаре</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="matching.html">Сравнение</a>
+</li>
+
+        <li class="widget_label">Динамика</li>
+        <li class="widget_item">
+            <a class="widget_link widget_link_dynamic" data-num="dyn_1" href="#">Первый вариант</a>
+        </li>
+        <li class="widget_item">
+            <a class="widget_link widget_link_dynamic" data-num="dyn_2" href="#">Второй вариант</a>
+        </li>
+        <li class="widget_item">
+            <a class="widget_link widget_link_dynamic" data-num="dyn_3" href="#">Третий вариант</a>
+        </li>
+        <li class="widget_item">
+            <a class="widget_link widget_link_dynamic" data-num="dyn_4" href="#">Четвертый вариант</a>
+        </li>
+    </ul>
+</div>
+
+    <!-- Блок style в верстку не переносим. Нужен для демонстрации верстки -->
+    <style>
+        @media (min-width: 993px) {
+            .suggestions-product.autocomplete-suggestions {
+                left: 50%;
+                transform: translateX(-50%);
+                position: absolute; max-height: 560px; display: block;
+            }
+        }    
+    </style>
+
+    <!-- Блок style в верcтку не переносим. Взял с боевого. Уже есть на сайте -->
+    <style>
+        .section_product .h2,
+        .new_card_slider_blocks .h2 {
+            margin-bottom: 35px;
+            margin-top: 25px;
+        }
+
+
+        .home_headline {
+            padding: 20px 0;
+            font-size: 24px;
+        }
+
+        @media screen and (max-width: 768px) {
+
+            .new_card_tabs .new_card_tab6 {
+                display: none !important;
+            }
+
+        }
+
+        .new_card_tabs {
+            margin-bottom: 20px;
+        }
+
+        .new_card_slider_blocks {
+            padding: 60px 0;
+        }
+
+        #citychech .reg_search_popup ul {
+            margin-left: 0;
+            padding-left: 0;
+            margin-bottom: 0;
+        }
+
+        #citychech .reg_search_popup ul li {
+            margin: 4px 0 5px 8px;
+        }
+
+        #citychech .city-input-button input {
+            padding-left: 20px;
+        }
+
+        .ps_shop {
+            cursor: pointer;
+            transition: .2s;
+        }
+
+        .ps_shop.ps_shop_card {
+            border-bottom: 0;
+            transition: .2s;
+        }
+
+        .ps_shop.ps_shop_line {
+            border-bottom: 1px dashed;
+        }
+
+        .ps_shop:hover {
+            color: #0b97c4;
+            border-bottom: 0;
+        }
+
+        .ps_shop.ps_shop_card:hover {
+            border-bottom: 1px dashed;
+        }
+
+        .new_card_shop_table_line:not(.show) {
+            display: none;
+        }
+
+        @media screen and (min-width: 768px) {
+
+            #oneClick_body .new_card_shop_name {
+                padding-left: 0;
+                margin-left: 0;
+            }
+
+            #oneClick_body .new_card_shop_table_line {
+                padding-left: 5px;
+            }
+
+            .new_card_shop_address {
+                font-size: 12px;
+            }
+
+            .new_card_shop_address b {
+                padding-bottom: 5px;
+                font-size: 14px;
+            }
+
+            .new_card_shop_address a {
+                margin-top: 10px;
+                font-size: 15px;
+                display: inline-block;
+            }
+
+            .new_card_shop_table_line {
+                min-height: 140px;
+            }
+
+            .new_card_shop_table_line:hover {
+                border-bottom: 1px solid var(--redesign-second-color);
+                padding-bottom: 20px;
+            }
+
+        }
+
+        .new_card_shop_address a:hover {
+            color: #2399e2;
+        }
+
+        .the_link_open_catalog_more.active {
+            color: #666 !important;
+        }
+
+        .the_link_open_catalog_more:hover {
+            color: var(--redesign-second-color) !important;
+        }
+
+        .new_card_shop_address abbr {
+            cursor: pointer;
+        }
+
+        #load_maps {
+            width: 100%;
+            height: 300px
+        }
+
+        .ps_shop_maps:hover {
+            color: rgba(199, 122, 3, 0.76);
+        }
+
+        .clean_filters {
+            z-index: 3;
+        }
+
+        .autocomplete-suggestions suggest {
+            font-weight: bold;
+        }
+
+        .ncatlist .mse2_marker_availability+label:before,
+        .ncatlist .mse2_marker_in_order+label:before {
+            background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFJSURBVHgBrZQvSENBHMe/d0MdE7cXhvGtGETQVwwGsRgMJpkoOJxJQcvTJDO9ILpgmGlBkIHToMMkBouoDIsGDSZBZrBoeMIc6MCfd08QGW97e54fuDvuC/fh/vFjECQPwhY4mUTQ4APGYBMotxMvL7FkIZwRExMKECOLi24GijBiixw+j1MHjeOf8C0ajCUQDelqomi7jrn+LGZF+7NISlaGjvH8VsLW1XxzIretS4nM189H8VJ59BaN9aScRbrW+5MljLQjyd8su0pcRRelXfnBsDpcxEjXgiOW4+HdGk7us6gHmy50UG0o78Mc2ENM63Pm109H2LycQiMCxkSbVRtWqq84fdhGqCWCSLATG8U4qp/vDUWuO/qNlEmxF57P34zkWyRKAdSxuSghGahClAvc7n+cGZOtogKwbhEF4Q9bfJV0fryc+gJoVWgXWkxx2AAAAABJRU5ErkJggg==") no-repeat center center;
+
+        }
+
+        .ncatlist .mse2_marker_availability:checked+label:before,
+        .ncatlist .mse2_marker_in_order:checked+label:before {
+            background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAASCAYAAABWzo5XAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQ1IDc5LjE2MzQ5OSwgMjAxOC8wOC8xMy0xNjo0MDoyMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTkgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjNBMDlGQjcwQTNFNDExRUI5NEVEQUY1QURDMUUxM0Y1IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjNBMDlGQjcxQTNFNDExRUI5NEVEQUY1QURDMUUxM0Y1Ij4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6M0EwOUZCNkVBM0U0MTFFQjk0RURBRjVBREMxRTEzRjUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6M0EwOUZCNkZBM0U0MTFFQjk0RURBRjVBREMxRTEzRjUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz66OfLrAAAAmUlEQVR42mKcNWsWAxD0A3EBA3lgDxAHsACJ6UCcAcRNQHyNREOEgHgaEJ9hgRrSCMQNZLroPBAfZ4JyjjGQD24C8WOYQQIUGMQPxMwwgxgpMAisl4mBSmDUoFGDgOALBWZ8A+K/MINEKTAIlPGlQMRpIJ4PxE+B+A6JhoDy6FpQNgEZZA/E+4B4PRB/JNEgTiD+CcSWAAEGAC0DGFBFpDb7AAAAAElFTkSuQmCC") no-repeat center center;
+        }
+
+        .ncatfilterun {
+            max-height: 450px;
+        }
+
+        .suggestions-product_title {
+            color: #333;
+            font-size: 16px;
+        }
+
+        .suggestions-product_title em.highlight {
+            color: #000000;
+        }
+
+        .suggestions-product-suggest {
+            padding-left: 20px;
+        }
+
+        .suggestions-product-suggest:before {
+            content: "";
+            left: 10px;
+            background-repeat: no-repeat;
+            background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0idXJsKCNwYXR0ZXJuMCkiLz4KPGRlZnM+CjxwYXR0ZXJuIGlkPSJwYXR0ZXJuMCIgcGF0dGVybkNvbnRlbnRVbml0cz0ib2JqZWN0Qm91bmRpbmdCb3giIHdpZHRoPSIxIiBoZWlnaHQ9IjEiPgo8dXNlIHhsaW5rOmhyZWY9IiNpbWFnZTBfMV8yIiB0cmFuc2Zvcm09InNjYWxlKDAuMDI4NTcxNCkiLz4KPC9wYXR0ZXJuPgo8aW1hZ2UgaWQ9ImltYWdlMF8xXzIiIHdpZHRoPSIzNSIgaGVpZ2h0PSIzNSIgeGxpbms6aHJlZj0iZGF0YTppbWFnZS9wbmc7YmFzZTY0LGlWQk9SdzBLR2dvQUFBQU5TVWhFVWdBQUFDTUFBQUFqQ0FNQUFBQXBCME5yQUFBQUFYTlNSMElCMmNrc2Z3QUFBQWx3U0ZsekFBQVBpQUFBRDRnQkZzaWxoZ0FBQWZ0UVRGUkZBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBWWxJbnl3QUFBS2wwVWs1VEFBRUxFeUJBVUVzM0hnZ2tYSnJYM05MR3QyUW5CMGFmOGZUNXY2Q2x2dUw3eW1jWkFnbEp5OFZzSXlVcU84amZoZzhGUjhuaGl5RmdiVFNtZXhZTTBRU0k2b3g4NDZNWUpzZmJRUU11MVZGTTY2enVjdzFxZmtqbUZ4THBhdzdnSDRvODNjRVJmd3FkMnFnUWxtNjlWdFBEdGZlQ2tlMHdCdmlySFRHaTUwMnY3MU0xY1dGWnNCVW9teHBvOC9Ea2tHbVNXb1E0U3JzNW5zSk9qWGdVNlBhcUwxZlBPcHd0TFBWSzdiQUFBQUdoU1VSQlZIaWNZMkFZbElDUmlabUZsWTJkZzVNTHR4cHVIbDQrZmdGQklWNWhFVkVjU3NURUpTU2xwR1ZrNWVRVkZKV1VWYkNvVUZWVGw5RFFaTkhTMXRGVjBsUFFOekRFVkdKa2JHSnFaczdBQ0ZGdndhOXZ5WVNoeHNxYXo4WVd6clBqc1JkUVE3Zk53ZEhKbVFXSnoremk2dWFPcHNiRDA4dmJCMW5BVjhqUEgwMU5RR0NRTFlxQWcwRndTQ2lxaThNVXd0RjBSVVNLUjZFSVJMdkV4S0twaVpQMFFnM0lLSVA0TURRMUNmTHhxRkVTbXVoa2lhWW1LVGtsRlZVa3pTa2tIVlhFSWliRERsV0VOVE9MQlVVZ095YzRGeTBRSGZJaTgxR2M2RjlReUlGbXU0cXhaSjRWc3I2aTRwSnNORFVNN3FWbHN1VVZjRzVGVVdWVk5ib2FoNXJhdXBSNlZTREx4dzVvS1pkWVEyTjhreEdhSXFObVhsY0Z2NXlXMXJiYzl0SU9CcFhPcmtyOUVrNTBvN3A3TkhyNyt1c2EreVFuZ0tJOGV5Sy82NlRtQ25SVkRDS1RYU2J3VHBuYUFiYUVjZHIwZmxsV1ZYUTFLcXB4UnNDa0NFbU5ES296WnNiTW1vMXBFZ3BnckprVEx6RjNIaU4rVmFFdTh4Y3NYT1NEVncyajRlSWxFclVZM2tNRFJrdHpsaTBub0liQmlITkZLaUUxVkFZQUxJRlVjZzdYdjZzQUFBQUFTVVZPUks1Q1lJST0iLz4KPC9kZWZzPgo8L3N2Zz4K");
+            height: 25px;
+            width: 25px;
+            position: absolute;
+        }
+
+        .ecommerce-card__body .highlight {
+            font-style: normal;
+            background-color: rgb(255, 238, 126);
+            padding-left: 2px;
+            padding-right: 2px;
+        }
+
+        .navigation__link__label {
+            width: 100%;
+            height: auto;
+            padding: 0;
+            border-bottom: 1px solid #bababa;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 18px;
+            letter-spacing: .01em;
+            margin-top: 20px;
+        }
+
+        .navigation__category .navigation__link__label:first-child {
+            margin-top: 0;
+        }
+
+        .navigation__link__label .navigation__anchor {
+            font-weight: bold;
+        }
+
+        .navigation__link__value .navigation__anchor {
+            padding: 6px 10px 6px 20px;
+        }
+
+        .navigation__link__value .navigation__anchor span {
+            overflow: hidden;
+            /*  white-space: nowrap;*/
+            display: inline-block;
+        }
+
+        .navigation__link__value .navigation__anchor em {
+            color: #999;
+            margin-left: 3px;
+            font-style: normal;
+            font-size: 12px;
+            position: relative;
+            top: -5px;
+            display: inline-block;
+        }
+
+        .navigation__link__value:hover .navigation__anchor em {
+            color: #666;
+        }
+
+        .navigation__column {
+            max-width: 320px;
+        }
+
+        .navigation__link__more {
+            position: relative;
+        }
+
+        .navigation__link__more .navigation__anchor {
+            padding-top: 6px;
+        }
+
+        .navigation__link__more .navigation__anchor:hover {
+            background: none !important;
+            border: 0 !important;
+            box-shadow: none;
+            cursor: pointer;
+            color: var(--redesign-second-color);
+        }
+
+        .navigation__link__more .navigation__anchor .caret {
+            content: "";
+            position: relative;
+            z-index: 1;
+            width: 12px;
+            height: 8px;
+            background: url("/assets/dist_new/images/header_new/more_down.svg") no-repeat center center;
+            -webkit-transform: rotate(0);
+            transform: rotate(0);
+            -webkit-transition: .2s;
+            transition: .2s;
+            margin-left: 10px;
+            display: inline-block;
+        }
+
+        .navigation__link__more.active .navigation__anchor .caret {
+            transform: rotate(180deg);
+        }
+
+        .ncatfiltersector .ecommerce-header__sort {
+            display: none;
+        }
+
+        @media screen and (min-width: 768px) {
+            .ecommerce-header-items {
+                margin-top: 17px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .ecommerce-header-items .ecommerce-header__total {
+                display: none !important;
+            }
+
+            .ncatfiltersector .ecommerce-header__sort {
+                display: block !important;
+                margin-bottom: 15px;
+                margin-right: 0 !important;
+            }
+
+            .ncatfiltersector .ecommerce-header__sort .ecommerce-header__sort__btn {
+                width: 100%;
+            }
+
+            .ncatfiltersector .ecommerce-header__sort .dropdown {
+                width: 100%;
+            }
+        }
+
+        .ncatfiltit span {
+            font-weight: 500;
+        }
+
+        .ncatlist .ncatcheckbox+label span {
+
+            color: #524f4f;
+        }
+
+        .ecommerce-header__button_filter__btn .mse2_total {
+            margin-left: 5px;
+            color: #666;
+            font-size: 14px;
+            position: relative;
+            top: -3px;
+        }
+
+        .filter_more {
+            margin-top: 5px;
+            padding-left: 0;
+        }
+
+        @media screen and (max-width: 768px) {
+
+            .main_filters .fl_chek_con {
+                margin: 0 0 0 0;
+            }
+        }
+
+        #citychech .city-input-button input {
+            padding-left: 43px;
+        }
+
+        a.the_link_open_catalog {
+            cursor: pointer !important;
+        }
+
+        .dolyami_cart_block .tit {
+            cursor: pointer !important;
+        }
+
+        .check_wrap.ps .ps__rail-y {
+            opacity: 0.9;
+            width: 11px !important;
+        }
+
+        .check_wrap.ps .ps__rail-y .ps__thumb-y {
+            width: 10px !important;
+            cursor: pointer;
+        }
+
+        .check_wrap.ps .ps__thumb-y {
+            opacity: 0.5;
+            right: 0 !important;
+        }
+
+        /*
+        .check_wrap.ps .ps__thumb-y:hover {
+            opacity: 0.9;
+        }
+
+        .check_wrap.ps > .ps__rail-y {
+            background-color: #fff;
+        }
+    */
+        .ncatlist .newfilterj .ncatfilcontainer .check_wrap {
+            padding-left: 5px;
+        }
+
+        .check_ps_scroll .ncatfilcontainer {
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+
+
+        @media screen and (max-width: 768px) {
+            .ncatlist .newfilterj .ncatfiltit {
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+
+            .filter_more {
+                padding-top: 7px;
+                padding-left: 0;
+            }
+
+            .check_ps_scroll .ncatfilcontainer .filter_more {
+                border-top: 1px solid #eee;
+
+            }
+
+            .check_ps_scroll .ncatfilcontainer {
+                border-top: 0;
+                border-bottom: 0;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .nmodorder__link {
+                margin-top: .3rem;
+                margin-bottom: .5rem;
+                font-size: 16px;
+            }
+        }
+
+        .nmodorder__link {
+            display: inline-block;
+            position: relative;
+            font-size: 14px;
+            line-height: 1.3;
+            font-weight: 400;
+            color: #2399e2;
+            margin: 0 0 1rem;
+        }
+
+
+        .navigation_main .navigation__menu {
+            width: 321px;
+        }
+
+        .navigation_main .navigation__column:first-child {
+            max-width: 323px;
+            width: 330px;
+            padding-left: 20px;
+        }
+
+        .navigation_main .navigation__list {
+            margin-right: 0px;
+        }
+    </style>
+
+    <div class="suggestions-product autocomplete-suggestions updated">
+        <div class="autocomplete-suggestion" data-index="0">
+            <div class="suggestions-product-suggest">
+                <span class="suggestions-suggest">Люстра подвесная</span>
+            </div>
+        </div>
+
+        <div class="autocomplete-suggestion-title">Вы имели ввиду?</div>
+        <div class="autocomplete-suggestion" data-index="1">
+            <div class="suggestions-product-suggest">
+                <span class="suggestions-suggest">Люстра потолочная</span>
+            </div>
+        </div>
+        <div class="autocomplete-suggestion" data-index="2">
+            <div class="suggestions-product-suggest">
+                <span class="suggestions-suggest">Люстра на кухню</span>
+            </div>
+        </div>
+
+
+        <div class="autocomplete-suggestion-category-title">Найденные категории:</div>
+        <div class="autocomplete-suggestion" data-index="3">
+            <div class="suggestions-product_content autocomplete-suggestion_category">
+                <!-- Для категории можно использовать ссылку или span -->
+                <a href="#" class="suggestions-product_price">Люстры на шланге</a>
+            </div>
+        </div>
+        <div class="autocomplete-suggestion" data-index="4">
+            <div class="suggestions-product_content autocomplete-suggestion_category">
+                <span class="suggestions-product_price">Люстры хрустальные</span>
+            </div>
+        </div>
+        <div class="autocomplete-suggestion" data-index="5">
+            <div class="suggestions-product_content autocomplete-suggestion_category">
+                <span class="suggestions-product_price">Люстры для кухни</span>
+            </div>
+        </div>
+
+
+        <div class="autocomplete-suggestion-category-title">Найденные товары:</div>
+        <div class="autocomplete-suggestion" data-index="6">
+            <div class="suggestions-product_imgwr">
+                <span>
+                    <img src="https://aws.massive.ru/fandeco.ru/layout/sr-pic-1.jpg">
+                </span>
+            </div>
+            <div class="suggestions-product_content">
+                <span class="suggestions-product_title">
+                    Подвесная люстра Arte Lamp SARAH A1062SP-6CC
+                </span>
+                <span class="suggestions-product_price">
+                    <!-- Если у товара нет скидки, то теги i и mark вообще не добавляем -->
+                    <i>1 000 000 ₽</i>
+                    <mark>-1 000 000 ₽</mark>
+                    <span>38 990 ₽</span>
+                </span>
+            </div>
+        </div>
+        <div class="autocomplete-suggestion" data-index="7">
+            <div class="suggestions-product_imgwr">
+                <span>
+                    <img src="https://aws.massive.ru/fandeco.ru/layout/sr-pic-2.jpg">
+                </span>
+            </div>
+            <div class="suggestions-product_content">
+                <span class="suggestions-product_title">
+                    Подвесная люстра Arte Lamp VIVIEN A2719SP-8GO
+                </span>
+                <span class="suggestions-product_price">
+                    <i>14 890 ₽</i>
+                    <mark>-3 000 ₽</mark>
+                    <span>11 890 ₽</span>
+                </span>
+            </div>
+        </div>
+        <div class="autocomplete-suggestion" data-index="8">
+            <div class="suggestions-product_imgwr">
+                <span>
+                    <img src="https://aws.massive.ru/fandeco.ru/layout/sr-pic-3.jpg">
+                </span>
+            </div>
+            <div class="suggestions-product_content">
+                <span class="suggestions-product_title">
+                    Подвесная люстра ARTE LAMP MONTANA A7777SP-5GO
+                </span>
+                <span class="suggestions-product_price">
+                    <span>19 990 ₽</span>
+                </span>
+            </div>
+        </div>
+        <div class="autocomplete-suggestion" data-index="9">
+            <div class="suggestions-product_imgwr">
+                <span>
+                    <img src="https://aws.massive.ru/fandeco.ru/layout/sr-pic-4.jpg">
+                </span>
+            </div>
+            <div class="suggestions-product_content">
+                <span class="suggestions-product_title">
+                    Подвесная люстра Divinare AMALTHEA 7202/17 LM-10
+                </span>
+                <span class="suggestions-product_price">
+                    <span>19 990 ₽</span>
+                </span>
+            </div>
+        </div>
+        <div class="autocomplete-suggestion" data-index="10">
+            <div class="suggestions-product_imgwr">
+                <span>
+                    <img src="https://aws.massive.ru/fandeco.ru/layout/sr-pic-5.jpg">
+                </span>
+            </div>
+            <div class="suggestions-product_content">
+                <span class="suggestions-product_title">
+                    Подвесная люстра Arte Lamp CHERISH A2097LM-90GO
+                </span>
+                <span class="suggestions-product_price">
+                    <span>37 490 ₽</span>
+                </span>
+            </div>
+        </div>
+        <div class="autocomplete-suggestion" data-index="11">
+            <div class="suggestions-product_imgwr">
+                <span>
+                    <img src="https://aws.massive.ru/fandeco.ru/layout/sr-pic-6.jpg">
+                </span>
+            </div>
+            <div class="suggestions-product_content">
+                <span class="suggestions-product_title">
+                    Подвесная люстра Arte Lamp MAYA A4072LM-9GO
+                </span>
+                <span class="suggestions-product_price">
+                    <span>40 990 ₽</span>
+                </span>
+            </div>
+        </div>
+        <div class="autocomplete-suggestion" data-index="12">
+            <div class="suggestions-product_imgwr">
+                <span>
+                    <img src="https://aws.massive.ru/fandeco.ru/layout/sr-pic-7.jpg">
+                </span>
+            </div>
+            <div class="suggestions-product_content">
+                <span class="suggestions-product_title">
+                    Подвесная люстра Arte Lamp SOPHIA A4066LM-6PB
+                </span>
+                <span class="suggestions-product_price">
+                    <span>35 990 ₽</span>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>

@@ -1,0 +1,2943 @@
+<!doctype html>
+<html lang="ru" class="mode--dev js rgba boxshadow csstransitions js rgba boxshadow csstransitions">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест фильтра на странице Каталог</title>
+    <meta name="figma" content="@@figma">
+    <link rel="shortcut icon" href="https://584c5dbd-593d-44f7-8470-c89579a522b3.selcdn.net/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.4.0/nouislider.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/perfect-scrollbar/1.5.2/css/perfect-scrollbar.min.css">
+    <link rel="stylesheet" href="css/main.min.css">
+
+    
+        
+            <link rel="stylesheet" href="css/page/home.min.css">
+        
+            <link rel="stylesheet" href="css/page/billboard-for-configurator.min.css">
+        
+    
+    
+        
+    
+</head>
+<body class="page">
+
+
+
+
+
+
+<section class="ncatlist" id="mse2_mfilter" style="width: 300px; margin: 0 auto;">
+    <!-- Для страницы ТЕСТА Облегченный фильтр в боковом сайдбаре на странице Каталог -->
+<div class="catalog-list__filter catalog-list__filter_lite">
+    <div class="i-flocktory" data-fl-action="track-category-view" data-fl-category-id="6"></div>
+    <div class="ncatfilter">
+        <form action="catalog/" class="newfilterj" method="post" id="mse2_filters">
+            <div class="clean_filters" style="display: none!important; left: 246.5px; width: 220px;">
+                <button type="reset" class="btn hidden">Очистить фильтр</button>
+                <button class="btn btn_orange">Показать ХХХХ шт.</button>
+            </div>
+            <input type="hidden" name="availability" value="1">
+            <input type="hidden" name="category" value="6">
+            <p class="form-filter-title">
+                <i>Фильтр товаров <span class="jsops-numb mse2_total">45175</span></i>
+                <span id="js-close-filter" class="js-close-filter"><button class="form-filter-close"></button></span>
+            </p>
+            <div class="main_filters">
+                <div class="ncatfiltersector ncatfiltersector_top_filter clearfix">
+
+<!-- Меню каталог в самом верху фильтра -->
+                    <div class="listing_filters_wrapperHeadline">Категории</div>
+                        <div class="filters_categories">
+    <div class="listing_filters_slide_choice toggle">
+        <a href="#" class="select_li_choice_parent js_open_nav_category">Каталог</a>
+    </div>
+    <!-- Для страницы каталога, здесь вместо блока Люстры с подкатегориями, будут идти все подкатегории Каталога -->
+    
+    <div class="listing_filters_slide_choice">
+        <!-- Активной категории к ссылке добавляем класс .selected -->
+        <a href="#" class="select_li_choice_parent selected">Люстры</a>
+    </div>
+    <div class="listing_filters_wrapper">
+        <div class="listing_filters_wrapperList" style="display: block;">
+            <ul class="list">
+                <li class="select_li_choice">
+                    <a title="" href="#">Потолочные</a>
+                </li>
+                <li class="select_li_choice">
+                    <a title="" href="#">Подвесные</a>
+                </li>
+                <li class="select_li_choice">
+                    <a title="" href="#">Каскадные</a>
+                </li>
+                <li class="select_li_choice">
+                    <a title="" href="#">Люстры на штанге</a>
+                </li>
+                <li class="select_li_choice">
+                    <a title="" href="#">Большие люстры</a>
+                </li>
+                <li class="select_li_choice">
+                    <a title="" href="#">Люстры вентиляторы</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+                    </div>
+
+<!-- Фильтр Цена -->               
+                <div class="listing_filters_wrapper">
+                    <div class="listing_filters_wrapperHeadline active">Цена</div>
+                    <div class="listing_filters_wrapperList" style="display: block;">
+                    <!-- Ползунок Период - Выбор цены -->
+                    <div class="ncatfilterun catfilterun">
+                        <div class="ncatslrange clearfix">
+                            <fieldset id="mse2_price" class="disabled_fieldsets">
+                                <div class="mse2_number_inputs ncatsldef clearfix polzun_input">
+                                    <div class="polzun_input_el">
+                                        <input type="text" 
+                                            name="price" 
+                                            id="mse2_price_0" 
+                                            value="1000" 
+                                            data-current-value="1000"
+                                            class="slider-input-min" 
+                                            data-original-value="1000">
+                                    </div>
+                                    <div class="polzun_input_el">
+                                        <input type="text" 
+                                            name="price" 
+                                            id="mse2_price_1" 
+                                            value="10000"
+                                            data-current-value="10000"
+                                            class="slider-input-max" 
+                                            data-original-value="10000">
+                                    </div>
+                                </div>
+                                <div class="mse2_number_slider noUi-target noUi-ltr noUi-horizontal noUi-txt-dir-ltr">
+                                    <div class="noUi-base">
+                                        <div class="noUi-connects">
+                                            <div class="noUi-connect" 
+                                                style="transform: translate(0, 0) scale(1, 1);"></div>
+                                        </div>
+                                        <div class="noUi-origin"
+                                            style="transform: translate(-95.7%, 0px); z-index: 5;">
+                                            <div class="noUi-handle noUi-handle-lower" 
+                                                data-handle="0" 
+                                                tabindex="0" 
+                                                role="slider"
+                                                aria-orientation="horizontal" 
+                                                aria-valuemin="3.0" 
+                                                aria-valuemax="1359381.0" 
+                                                aria-valuenow="1000.0"
+                                                aria-valuetext="1000">
+                                                <div class="noUi-touch-area"></div>
+                                            </div>
+                                        </div>
+                                        <div class="noUi-origin" 
+                                            style="transform: translate(-4%, 0px); z-index: 4;">
+                                            <div class="noUi-handle noUi-handle-upper" 
+                                                data-handle="1" 
+                                                tabindex="0" 
+                                                role="slider"
+                                                aria-orientation="horizontal" 
+                                                aria-valuemin="3.0" 
+                                                aria-valuemax="1359381.0"
+                                                aria-valuenow="10000.0"
+                                                aria-valuetext="10000">
+                                                <div class="noUi-touch-area"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+                        <div class="ncatfilcheck_boolean ncatfilcheck_marker " 
+                            data-filter_key="marker" 
+                            id="mse2_marker">
+                            
+                            <div class="ncatfilcheck_show">
+                                <input type="checkbox" 
+                                    name="marker" 
+                                    id="mse2_marker_0" 
+                                    class="ncatcheckbox mse2_marker_availability"
+                                    data-key="marker_availability" value="availability">
+                                <label for="mse2_marker_0" title="В наличии" class="fl_chek">
+                                    <span>В наличии</span>&nbsp;<sup>5811</sup>
+                                </label>
+                            </div>
+                            
+                            <div class="ncatfilcheck_show">
+                                <input type="checkbox" 
+                                    name="marker" 
+                                    id="mse2_marker_1"
+                                    class="ncatcheckbox mse2_marker_in_order"
+                                    data-key="marker_in_order" value="in_order">
+                                <label for="mse2_marker_1" title="Под заказ" class="fl_chek">
+                                    <span>Под заказ</span>&nbsp;<sup>5811</sup>
+                                </label>
+                            </div>
+                            
+                            <div class="ncatfilcheck_show">
+                                <input type="checkbox" 
+                                    name="marker" 
+                                    id="mse2_marker_2" 
+                                    class="ncatcheckbox mse2_marker_out_of_stock"
+                                    data-key="marker_out_of_stock" value="out_of_stock">
+                                <label for="mse2_marker_2" title="Отсутствуют в продаже" class="fl_chek">
+                                    <span>Отсутствуют в продаже</span>&nbsp;<sup>5811</sup>
+                                </label>
+                            </div>
+                            
+                            <hr>
+                            
+                            <div class="ncatfilcheck_show">
+                                <input type="checkbox" 
+                                    name="marker" 
+                                    id="mse2_marker_3" 
+                                    class="ncatcheckbox mse2_marker_new"
+                                    data-key="marker_new" value="new">
+                                <label for="mse2_marker_3" title="Новинки" class="fl_chek ">
+                                    <span>Новинки <img
+                                            src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/696/b24f59d376.svg"
+                                            alt="Новинки">
+                                    </span>&nbsp;<sup>1250</sup>
+                                </label>
+                            </div>
+
+                            <div class="ncatfilcheck_show">
+                                <input type="checkbox" 
+                                    name="marker" 
+                                    id="mse2_marker_4" 
+                                    class="ncatcheckbox mse2_marker_sale"
+                                    data-key="marker_sale" 
+                                    value="sale">
+                                <label for="mse2_marker_4" title="Распродажа" class="fl_chek">
+                                    <span>Распродажа <img
+                                            src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/697/a83f89b7d7.svg"
+                                            alt="Распродажа">
+                                    </span>&nbsp;<sup>1707</sup>
+                                </label>
+                            </div>
+                            
+                            <div class="ncatfilcheck_show">
+                                <input type="checkbox" 
+                                    name="marker" 
+                                    id="mse2_marker_4"
+                                    class="ncatcheckbox mse2_marker_sale" 
+                                    data-key="marker_sale" 
+                                    value="sale">
+                                <label for="mse2_marker_4" title="Уцененные" class="fl_chek">
+                                    <span>Уцененные</span>&nbsp;<sup>450</sup>
+                                </label>
+                            </div>
+                            <div class="ncatfilcheck_show">
+                                <input type="checkbox" 
+                                    name="marker" id="mse2_marker_5" 
+                                    class="ncatcheckbox mse2_marker_file_is_3d_model"
+                                    data-key="marker_file_is_3d_model" 
+                                    value="file_is_3d_model">
+                                <label for="mse2_marker_5" title="3D Модели" class="fl_chek ">
+                                    <span>3D Модели</span>&nbsp;<sup>40</sup>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+<!-- Фильтр Основной -->
+                <div class="listing_filters_wrapper">
+                    <div class="listing_filters_wrapperHeadline active">Основной</div>
+                    <div class="listing_filters_wrapperList" style="display: block;">
+                        <div class="ncatfiltersector ncatfiltersectoropener clearfix terms_filter terms_filters_lamp_style" data-filter_key="lamp_style">
+    <div class="ncatfilterun">
+        <!-- Для того, чтобы блок был открыт по дефолту, добавлять класс .active -->
+        <div class="ncatfiltit ncatfiltitopener ">
+            <span>Стиль</span>
+        </div>
+        <div class="filter_footer">
+            <div class="filter_reset_btn js-filter_reset_btn " style="display: none" data-filter="lamp_style">
+                <button type="button">
+                    <i class="active">
+                        Сбросить
+                    </i>
+                </button>
+            </div>
+        </div>
+        <!-- Для того, чтобы блок был открыт по дефолту, добавлять класс .active -->
+        <div class="ncatfilcontainer fl_chek_con half_active ">
+            
+            <fieldset class="check_wrap" id="mse2_msoption|lamp_stylelamp_style">
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_lamp_style_0">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_lamp_style_0"
+                        title=""
+                        >
+                        <span>Американский</span>&nbsp;<sup>112</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_lamp_style_1">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_lamp_style_1"
+                        title=""
+                        >
+                        <span>Арт-деко</span>&nbsp;<sup>1930</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_lamp_style_2">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_lamp_style_2"
+                        title=""
+                        >
+                        <span>Венецианский</span>&nbsp;<sup>12</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_lamp_style_3">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_lamp_style_3"
+                        title=""
+                        >
+                        <span>Восточный</span>&nbsp;<sup>81</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_lamp_style_4">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_lamp_style_4"
+                        title=""
+                        >
+                        <span>Детский</span>&nbsp;<sup>152</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_lamp_style_5">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_lamp_style_5"
+                        title=""
+                        >
+                        <span>Дизайнерский</span>&nbsp;<sup>892</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_lamp_style_6">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_lamp_style_6"
+                        title=""
+                        >
+                        <span>Замковый</span>&nbsp;<sup>138</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_lamp_style_7">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_lamp_style_7"
+                        title=""
+                        >
+                        <span>Кантри</span>&nbsp;<sup>457</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_lamp_style_8">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_lamp_style_8"
+                        title=""
+                        >
+                        <span>Классический</span>&nbsp;<sup>10991</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_lamp_style_9">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_lamp_style_9"
+                        title=""
+                        >
+                        <span>Лофт</span>&nbsp;<sup>2629</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_lamp_style_10">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_lamp_style_10"
+                        title=""
+                        >
+                        <span>Минимализм</span>&nbsp;<sup>1012</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_lamp_style_11">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_lamp_style_11"
+                        title=""
+                        >
+                        <span>Модерн</span>&nbsp;<sup>8878</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_lamp_style_12">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_lamp_style_12"
+                        title=""
+                        >
+                        <span>Морской</span>&nbsp;<sup>50</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_lamp_style_13">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_lamp_style_13"
+                        title=""
+                        >
+                        <span>Неоклассика</span>&nbsp;<sup>723</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_lamp_style_14">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_lamp_style_14"
+                        title=""
+                        >
+                        <span>Прованс</span>&nbsp;<sup>280</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_lamp_style_15">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_lamp_style_15"
+                        title=""
+                        >
+                        <span>Ретро</span>&nbsp;<sup>397</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_lamp_style_16">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_lamp_style_16"
+                        title=""
+                        >
+                        <span>Скандинавский</span>&nbsp;<sup>613</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_lamp_style_17">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_lamp_style_17"
+                        title=""
+                        >
+                        <span>Современный</span>&nbsp;<sup>12965</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_lamp_style_18">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_lamp_style_18"
+                        title=""
+                        >
+                        <span>Технический</span>&nbsp;<sup>4553</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_lamp_style_19">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_lamp_style_19"
+                        title=""
+                        >
+                        <span>Тиффани</span>&nbsp;<sup>144</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_lamp_style_20">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_lamp_style_20"
+                        title=""
+                        >
+                        <span>Флористика</span>&nbsp;<sup>233</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_lamp_style_21">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_lamp_style_21"
+                        title=""
+                        >
+                        <span>Хай-тек</span>&nbsp;<sup>4366</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_lamp_style_22">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_lamp_style_22"
+                        title=""
+                        >
+                        <span>Эко</span>&nbsp;<sup>144</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_lamp_style_23">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_lamp_style_23"
+                        title=""
+                        >
+                        <span>Этно</span>&nbsp;<sup>0</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_lamp_style_24">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_lamp_style_24"
+                        title=""
+                        >
+                        <span>Японский</span>&nbsp;<sup>35</sup>
+                    </label>
+                
+            </fieldset>
+            
+                <button class="show-more" type="button"></button>
+            
+        </div>
+    </div>
+</div>
+                        <div class="ncatfiltersector ncatfiltersectoropener clearfix terms_filter terms_filters_type_interior" data-filter_key="type_interior">
+    <div class="ncatfilterun">
+        <!-- Для того, чтобы блок был открыт по дефолту, добавлять класс .active -->
+        <div class="ncatfiltit ncatfiltitopener active">
+            <span>Интерьер</span>
+        </div>
+        <div class="filter_footer">
+            <div class="filter_reset_btn js-filter_reset_btn " style="display: none" data-filter="type_interior">
+                <button type="button">
+                    <i class="active">
+                        Сбросить
+                    </i>
+                </button>
+            </div>
+        </div>
+        <!-- Для того, чтобы блок был открыт по дефолту, добавлять класс .active -->
+        <div class="ncatfilcontainer fl_chek_con half_active active">
+            
+            <fieldset class="check_wrap" id="mse2_msoption|lamp_styletype_interior">
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_type_interior_0">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_type_interior_0"
+                        title=""
+                        >
+                        <span>Для спальни</span>&nbsp;<sup>40</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_type_interior_1">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_type_interior_1"
+                        title=""
+                        >
+                        <span>Для кухни</span>&nbsp;<sup>40</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_type_interior_2">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_type_interior_2"
+                        title=""
+                        >
+                        <span>Для гостиной</span>&nbsp;<sup>40</sup>
+                    </label>
+                
+            </fieldset>
+            
+        </div>
+    </div>
+</div>
+                        <div class="ncatfiltersector ncatfiltersectoropener clearfix terms_filter terms_filters_type_brands" data-filter_key="type_brands">
+    <div class="ncatfilterun">
+        <!-- Для того, чтобы блок был открыт по дефолту, добавлять класс .active -->
+        <div class="ncatfiltit ncatfiltitopener active">
+            <span>Бренды</span>
+        </div>
+        <div class="filter_footer">
+            <div class="filter_reset_btn js-filter_reset_btn " style="display: none" data-filter="type_brands">
+                <button type="button">
+                    <i class="active">
+                        Сбросить
+                    </i>
+                </button>
+            </div>
+        </div>
+        <!-- Для того, чтобы блок был открыт по дефолту, добавлять класс .active -->
+        <div class="ncatfilcontainer fl_chek_con half_active active">
+            
+            <fieldset class="check_wrap" id="mse2_msoption|lamp_styletype_brands">
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_type_brands_0">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_type_brands_0"
+                        title=""
+                        >
+                        <span>Moderli</span>&nbsp;<sup>40</sup>
+                    </label>
+                
+            </fieldset>
+            
+        </div>
+    </div>
+</div>
+                    </div>
+                </div>
+
+                <div class="listing_filters_wrapper">
+                    <div class="listing_filters_wrapperHeadline active">Габариты и монтаж</div>
+                    <div class="listing_filters_wrapperList" style="display: block;">
+                        <div class="ncatfiltersector ncatfiltersectoropener clearfix terms_filter terms_filters_furniture" data-filter_key="furniture">
+    <div class="ncatfilterun">
+        <!-- Для того, чтобы блок был открыт по дефолту, добавлять класс .active -->
+        <div class="ncatfiltit ncatfiltitopener active">
+            <span>Крепеж</span>
+        </div>
+        <div class="filter_footer">
+            <div class="filter_reset_btn js-filter_reset_btn " style="display: none" data-filter="furniture">
+                <button type="button">
+                    <i class="active">
+                        Сбросить
+                    </i>
+                </button>
+            </div>
+        </div>
+        <!-- Для того, чтобы блок был открыт по дефолту, добавлять класс .active -->
+        <div class="ncatfilcontainer fl_chek_con half_active active">
+            
+            <fieldset class="check_wrap" id="mse2_msoption|lamp_stylefurniture">
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_furniture_0">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_furniture_0"
+                        title=""
+                        >
+                        <span>На крюк</span>&nbsp;<sup>5811</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_furniture_1">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_furniture_1"
+                        title=""
+                        >
+                        <span>На планке</span>&nbsp;<sup>5811</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_furniture_2">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_furniture_2"
+                        title=""
+                        >
+                        <span>Скоба</span>&nbsp;<sup>5811</sup>
+                    </label>
+                
+            </fieldset>
+            
+        </div>
+    </div>
+</div>
+                        <div class="ncatfiltersector terms_filter_range ncatfiltersectoropener ncatfiltersectoropener_inline clearfix" data-filter_key="">
+    <div class="ncatfilterun">
+        <div class="ncatfiltit ncatfiltitopener">Длина, см</div>
+        <div class="ncatslrange ncatfilcontainer_slider ncatfilcontainer">
+            <fieldset class="disabled_fieldsets">
+                <div class="mse2_number_inputs ncatsldef clearfix polzun_input">
+                    <div class="polzun_input_el">
+                        <input type="text" value="1000" class="slider-input-min">
+                    </div>
+                    <div class="polzun_input_el">
+                        <input type="text" value="1000" class="slider-input-max">
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+</div>
+                        <div class="ncatfiltersector terms_filter_range ncatfiltersectoropener ncatfiltersectoropener_inline clearfix" data-filter_key="">
+    <div class="ncatfilterun">
+        <div class="ncatfiltit ncatfiltitopener">Высота, см</div>
+        <div class="ncatslrange ncatfilcontainer_slider ncatfilcontainer">
+            <fieldset class="disabled_fieldsets">
+                <div class="mse2_number_inputs ncatsldef clearfix polzun_input">
+                    <div class="polzun_input_el">
+                        <input type="text" value="1000" class="slider-input-min">
+                    </div>
+                    <div class="polzun_input_el">
+                        <input type="text" value="1000" class="slider-input-max">
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+</div>
+                        <div class="ncatfiltersector terms_filter_range ncatfiltersectoropener ncatfiltersectoropener_inline clearfix" data-filter_key="">
+    <div class="ncatfilterun">
+        <div class="ncatfiltit ncatfiltitopener">Ширина, см</div>
+        <div class="ncatslrange ncatfilcontainer_slider ncatfilcontainer">
+            <fieldset class="disabled_fieldsets">
+                <div class="mse2_number_inputs ncatsldef clearfix polzun_input">
+                    <div class="polzun_input_el">
+                        <input type="text" value="1000" class="slider-input-min">
+                    </div>
+                    <div class="polzun_input_el">
+                        <input type="text" value="1000" class="slider-input-max">
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+</div>
+                        <div class="ncatfiltersector terms_filter_range ncatfiltersectoropener ncatfiltersectoropener_inline clearfix" data-filter_key="">
+    <div class="ncatfilterun">
+        <div class="ncatfiltit ncatfiltitopener">Длина цепи</div>
+        <div class="ncatslrange ncatfilcontainer_slider ncatfilcontainer">
+            <fieldset class="disabled_fieldsets">
+                <div class="mse2_number_inputs ncatsldef clearfix polzun_input">
+                    <div class="polzun_input_el">
+                        <input type="text" value="1000" class="slider-input-min">
+                    </div>
+                    <div class="polzun_input_el">
+                        <input type="text" value="1000" class="slider-input-max">
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+</div>
+                    </div>
+                </div>
+
+                <div class="listing_filters_wrapper">
+                    <div class="listing_filters_wrapperHeadline active">Лампы</div>
+                    <div class="listing_filters_wrapperList" style="display: block;">
+
+                        <div class="ncatfiltersector terms_filter_range ncatfiltersectoropener clearfix" data-filter_key="ploshad_osvesheniya">
+                            <div class="ncatfilterun">
+                                <div class="ncatfiltit ncatfiltitopener">
+                                    Площадь освещения, м2 </div>
+                                <div class="ncatslrange ncatfilcontainer_slider ncatfilcontainer " style="display: block;">
+                                    <fieldset id="mse2_ploshad_osvesheniya" class="disabled_fieldsets">
+                                        <div class="mse2_number_inputs ncatsldef clearfix polzun_input">
+                                            <div class="polzun_input_el">
+
+                                                <input type="text" name="ploshad_osvesheniya" id="mse2_ploshad_osvesheniya_0" value="0"
+                                                    data-current-value="0" data-original-value="0" class="slider-input-min">
+                                            </div>
+                                            <div class="polzun_input_el">
+
+                                                <input type="text" name="ploshad_osvesheniya" id="mse2_ploshad_osvesheniya_1" value="270"
+                                                    data-current-value="270" data-original-value="270" class="slider-input-max">
+                                            </div>
+                                        </div>
+                                        <div class="mse2_number_slider noUi-target noUi-ltr noUi-horizontal noUi-txt-dir-ltr">
+                                            <div class="noUi-base">
+                                                <div class="noUi-connects">
+                                                    <div class="noUi-connect" style="transform: translate(0%, 0px) scale(1, 1);"></div>
+                                                </div>
+                                                <div class="noUi-origin" style="transform: translate(-100%, 0px); z-index: 5;">
+                                                    <div class="noUi-handle noUi-handle-lower" data-handle="0" tabindex="0" role="slider"
+                                                        aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="270.0"
+                                                        aria-valuenow="0.0" aria-valuetext="0">
+                                                        <div class="noUi-touch-area"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="noUi-origin" style="transform: translate(0%, 0px); z-index: 4;">
+                                                    <div class="noUi-handle noUi-handle-upper" data-handle="1" tabindex="0" role="slider"
+                                                        aria-orientation="horizontal" aria-valuemin="0.0" aria-valuemax="270.0"
+                                                        aria-valuenow="270.0" aria-valuetext="270">
+                                                        <div class="noUi-touch-area"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="ncatfiltersector terms_filter_range ncatfiltersectoropener clearfix " data-filter_key="length">
+    <div class="ncatfilterun">
+        <div class="ncatfiltit ncatfiltitopener active">
+            <span>Мощность, кг</span>
+        </div>
+        <div class="ncatslrange ncatfilcontainer_slider ncatfilcontainer" style="display: block;">
+            <fieldset>
+                <div class="mse2_number_inputs ncatsldef clearfix polzun_input">
+                    <div class="polzun_input_el">
+                        <input type="text" value="1000" class="slider-input-min">
+                    </div>
+                    <div class="polzun_input_el">
+                        <input type="text" value="1000" class="slider-input-max">
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+</div>
+                        <div class="ncatfiltersector terms_filter_range ncatfiltersectoropener clearfix " data-filter_key="length">
+    <div class="ncatfilterun">
+        <div class="ncatfiltit ncatfiltitopener ">
+            <span>Напряжение, кг</span>
+        </div>
+        <div class="ncatslrange ncatfilcontainer_slider ncatfilcontainer" >
+            <fieldset>
+                <div class="mse2_number_inputs ncatsldef clearfix polzun_input">
+                    <div class="polzun_input_el">
+                        <input type="text" value="1000" class="slider-input-min">
+                    </div>
+                    <div class="polzun_input_el">
+                        <input type="text" value="1000" class="slider-input-max">
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+</div>
+                        <div class="ncatfiltersector terms_filter_range ncatfiltersectoropener clearfix " data-filter_key="length">
+    <div class="ncatfilterun">
+        <div class="ncatfiltit ncatfiltitopener ">
+            <span>Количество ламп</span>
+        </div>
+        <div class="ncatslrange ncatfilcontainer_slider ncatfilcontainer" >
+            <fieldset>
+                <div class="mse2_number_inputs ncatsldef clearfix polzun_input">
+                    <div class="polzun_input_el">
+                        <input type="text" value="1000" class="slider-input-min">
+                    </div>
+                    <div class="polzun_input_el">
+                        <input type="text" value="1000" class="slider-input-max">
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+</div>
+                        <div class="ncatfiltersector terms_filter_range ncatfiltersectoropener clearfix " data-filter_key="length">
+    <div class="ncatfilterun">
+        <div class="ncatfiltit ncatfiltitopener ">
+            <span>Сетевой поток</span>
+        </div>
+        <div class="ncatslrange ncatfilcontainer_slider ncatfilcontainer" >
+            <fieldset>
+                <div class="mse2_number_inputs ncatsldef clearfix polzun_input">
+                    <div class="polzun_input_el">
+                        <input type="text" value="1000" class="slider-input-min">
+                    </div>
+                    <div class="polzun_input_el">
+                        <input type="text" value="1000" class="slider-input-max">
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+</div>
+                        <div class="ncatfiltersector ncatfiltersectoropener clearfix terms_filter terms_filters_lampsType" data-filter_key="lampsType">
+    <div class="ncatfilterun">
+        <!-- Для того, чтобы блок был открыт по дефолту, добавлять класс .active -->
+        <div class="ncatfiltit ncatfiltitopener active">
+            <span>Тип лампочки</span>
+        </div>
+        <div class="filter_footer">
+            <div class="filter_reset_btn js-filter_reset_btn " style="display: none" data-filter="lampsType">
+                <button type="button">
+                    <i class="active">
+                        Сбросить
+                    </i>
+                </button>
+            </div>
+        </div>
+        <!-- Для того, чтобы блок был открыт по дефолту, добавлять класс .active -->
+        <div class="ncatfilcontainer fl_chek_con half_active active">
+            
+            <fieldset class="check_wrap" id="mse2_msoption|lamp_stylelampsType">
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_lampsType_0">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_lampsType_0"
+                        title=""
+                        >
+                        <span>Светодиодная</span>&nbsp;<sup>5811</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_lampsType_1">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_lampsType_1"
+                        title=""
+                        >
+                        <span>Накаливания</span>&nbsp;<sup>5811</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_lampsType_2">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_lampsType_2"
+                        title=""
+                        >
+                        <span>Галогеновая</span>&nbsp;<sup>5811</sup>
+                    </label>
+                
+            </fieldset>
+            
+        </div>
+    </div>
+</div>
+                        <div class="ncatfiltersector ncatfiltersectoropener clearfix terms_filter terms_filters_plinthType" data-filter_key="plinthType">
+    <div class="ncatfilterun">
+        <!-- Для того, чтобы блок был открыт по дефолту, добавлять класс .active -->
+        <div class="ncatfiltit ncatfiltitopener ">
+            <span>Тип цоколя</span>
+        </div>
+        <div class="filter_footer">
+            <div class="filter_reset_btn js-filter_reset_btn " style="display: none" data-filter="plinthType">
+                <button type="button">
+                    <i class="active">
+                        Сбросить
+                    </i>
+                </button>
+            </div>
+        </div>
+        <!-- Для того, чтобы блок был открыт по дефолту, добавлять класс .active -->
+        <div class="ncatfilcontainer fl_chek_con half_active ">
+            
+            <fieldset class="check_wrap" id="mse2_msoption|lamp_styleplinthType">
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_plinthType_0">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_plinthType_0"
+                        title=""
+                        >
+                        <span>E14</span>&nbsp;<sup>15373</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_plinthType_1">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_plinthType_1"
+                        title=""
+                        >
+                        <span>E27</span>&nbsp;<sup>12112</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_plinthType_2">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_plinthType_2"
+                        title=""
+                        >
+                        <span>LED</span>&nbsp;<sup>12845</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_plinthType_3">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_plinthType_3"
+                        title=""
+                        >
+                        <span>GU10</span>&nbsp;<sup>3131</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_plinthType_4">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_plinthType_4"
+                        title=""
+                        >
+                        <span>G9</span>&nbsp;<sup>2645</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_plinthType_5">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_plinthType_5"
+                        title=""
+                        >
+                        <span>GU5.3</span>&nbsp;<sup>2691</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_plinthType_6">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_plinthType_6"
+                        title=""
+                        >
+                        <span>MR16</span>&nbsp;<sup>1526</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_plinthType_7">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_plinthType_7"
+                        title=""
+                        >
+                        <span>G4</span>&nbsp;<sup>403</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_plinthType_8">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_plinthType_8"
+                        title=""
+                        >
+                        <span>GX5.3</span>&nbsp;<sup>302</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_plinthType_9">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_plinthType_9"
+                        title=""
+                        >
+                        <span>G5.3</span>&nbsp;<sup>219</sup>
+                    </label>
+                
+            </fieldset>
+            
+                <button class="show-more" type="button"></button>
+            
+        </div>
+    </div>
+</div>
+                        <div class="ncatfiltersector terms_filter_range ncatfiltersectoropener clearfix " data-filter_key="length">
+    <div class="ncatfilterun">
+        <div class="ncatfiltit ncatfiltitopener active">
+            <span>Температура света</span>
+        </div>
+        <div class="ncatslrange ncatfilcontainer_slider ncatfilcontainer" style="display: block;">
+            <fieldset>
+                <div class="mse2_number_inputs ncatsldef clearfix polzun_input">
+                    <div class="polzun_input_el">
+                        <input type="text" value="1000" class="slider-input-min">
+                    </div>
+                    <div class="polzun_input_el">
+                        <input type="text" value="1000" class="slider-input-max">
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+</div>
+                        <div class="ncatfiltersector terms_filter_range ncatfiltersectoropener clearfix " data-filter_key="length">
+    <div class="ncatfilterun">
+        <div class="ncatfiltit ncatfiltitopener active">
+            <span>Площадь освещения</span>
+        </div>
+        <div class="ncatslrange ncatfilcontainer_slider ncatfilcontainer" style="display: block;">
+            <fieldset>
+                <div class="mse2_number_inputs ncatsldef clearfix polzun_input">
+                    <div class="polzun_input_el">
+                        <input type="text" value="1000" class="slider-input-min">
+                    </div>
+                    <div class="polzun_input_el">
+                        <input type="text" value="1000" class="slider-input-max">
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+</div>
+                    </div>
+                </div>
+                    
+                <div class="listing_filters_wrapper">
+                    <div class="listing_filters_wrapperHeadline active">Цвет и материал</div>
+                    <div class="listing_filters_wrapperList" style="display: block;">
+                        <div class="ncatfiltersector ncatfiltersectoropener clearfix terms_filter terms_filters_shadeColor" data-filter_key="shadeColor">
+    <div class="ncatfilterun">
+        <!-- Для того, чтобы блок был открыт по дефолту, добавлять класс .active -->
+        <div class="ncatfiltit ncatfiltitopener active">
+            <span>Цвет</span>
+        </div>
+        <div class="filter_footer">
+            <div class="filter_reset_btn js-filter_reset_btn " style="display: none" data-filter="shadeColor">
+                <button type="button">
+                    <i class="active">
+                        Сбросить
+                    </i>
+                </button>
+            </div>
+        </div>
+        <!-- Для того, чтобы блок был открыт по дефолту, добавлять класс .active -->
+        <div class="ncatfilcontainer fl_chek_con half_active active">
+            
+                <div class="the_search toggleable">
+                    <input type="text" class="terms_filter_input" placeholder="Поиск значений">
+                    <button type="button" class="btn btn_reset_search"></button>
+                </div>
+            
+            <fieldset class="check_wrap" id="mse2_msoption|lamp_styleshadeColor">
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_shadeColor_0">
+                    <label class="fl_chek  color"
+                        for="mse2_msoption_shadeColor_0"
+                        title=""
+                        data-color="Бежевый">
+                        <span>Бежевый</span>&nbsp;<sup>1250</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_shadeColor_1">
+                    <label class="fl_chek  color"
+                        for="mse2_msoption_shadeColor_1"
+                        title=""
+                        data-color="Белый">
+                        <span>Белый</span>&nbsp;<sup>1250</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_shadeColor_2">
+                    <label class="fl_chek  color"
+                        for="mse2_msoption_shadeColor_2"
+                        title=""
+                        data-color="Черный">
+                        <span>Черный</span>&nbsp;<sup>1250</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_shadeColor_3">
+                    <label class="fl_chek  color"
+                        for="mse2_msoption_shadeColor_3"
+                        title=""
+                        data-color="Серый">
+                        <span>Серый</span>&nbsp;<sup>1250</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_shadeColor_4">
+                    <label class="fl_chek zero_result color"
+                        for="mse2_msoption_shadeColor_4"
+                        title=""
+                        data-color="Коричневый">
+                        <span>Коричневый</span>&nbsp;<sup>1250</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_shadeColor_5">
+                    <label class="fl_chek  color"
+                        for="mse2_msoption_shadeColor_5"
+                        title=""
+                        data-color="Разноцветный">
+                        <span>Разноцветный</span>&nbsp;<sup>1250</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_shadeColor_6">
+                    <label class="fl_chek  color"
+                        for="mse2_msoption_shadeColor_6"
+                        title=""
+                        data-color="Золотистый">
+                        <span>Золотистый</span>&nbsp;<sup>1972</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_shadeColor_7">
+                    <label class="fl_chek  color"
+                        for="mse2_msoption_shadeColor_7"
+                        title=""
+                        data-color="Коричневый">
+                        <span>Коричневый</span>&nbsp;<sup>677</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_shadeColor_8">
+                    <label class="fl_chek  color"
+                        for="mse2_msoption_shadeColor_8"
+                        title=""
+                        data-color="Красный">
+                        <span>Красный</span>&nbsp;<sup>138</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_shadeColor_9">
+                    <label class="fl_chek  color"
+                        for="mse2_msoption_shadeColor_9"
+                        title=""
+                        data-color="Латунь">
+                        <span>Латунь</span>&nbsp;<sup>231</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_shadeColor_10">
+                    <label class="fl_chek  color"
+                        for="mse2_msoption_shadeColor_10"
+                        title=""
+                        data-color="Матовый">
+                        <span>Матовый</span>&nbsp;<sup>1392</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_shadeColor_11">
+                    <label class="fl_chek  color"
+                        for="mse2_msoption_shadeColor_11"
+                        title=""
+                        data-color="Матовый никель">
+                        <span>Матовый никель</span>&nbsp;<sup>48</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_shadeColor_12">
+                    <label class="fl_chek  color"
+                        for="mse2_msoption_shadeColor_12"
+                        title=""
+                        data-color="Медный">
+                        <span>Медный</span>&nbsp;<sup>230</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_shadeColor_13">
+                    <label class="fl_chek  color"
+                        for="mse2_msoption_shadeColor_13"
+                        title=""
+                        data-color="Никель">
+                        <span>Никель</span>&nbsp;<sup>83</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_shadeColor_14">
+                    <label class="fl_chek  color"
+                        for="mse2_msoption_shadeColor_14"
+                        title=""
+                        data-color="Оранжевый">
+                        <span>Оранжевый</span>&nbsp;<sup>35</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_shadeColor_15">
+                    <label class="fl_chek  color"
+                        for="mse2_msoption_shadeColor_15"
+                        title=""
+                        data-color="Прозрачный">
+                        <span>Прозрачный</span>&nbsp;<sup>10132</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_shadeColor_16">
+                    <label class="fl_chek  color"
+                        for="mse2_msoption_shadeColor_16"
+                        title=""
+                        data-color="Разноцветный">
+                        <span>Разноцветный</span>&nbsp;<sup>321</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_shadeColor_17">
+                    <label class="fl_chek  color"
+                        for="mse2_msoption_shadeColor_17"
+                        title=""
+                        data-color="Розовый">
+                        <span>Розовый</span>&nbsp;<sup>184</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_shadeColor_18">
+                    <label class="fl_chek  color"
+                        for="mse2_msoption_shadeColor_18"
+                        title=""
+                        data-color="Серебристый">
+                        <span>Серебристый</span>&nbsp;<sup>668</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_shadeColor_19">
+                    <label class="fl_chek  color"
+                        for="mse2_msoption_shadeColor_19"
+                        title=""
+                        data-color="Серый">
+                        <span>Серый</span>&nbsp;<sup>2108</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_shadeColor_20">
+                    <label class="fl_chek  color"
+                        for="mse2_msoption_shadeColor_20"
+                        title=""
+                        data-color="Синий">
+                        <span>Синий</span>&nbsp;<sup>112</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_shadeColor_21">
+                    <label class="fl_chek  color"
+                        for="mse2_msoption_shadeColor_21"
+                        title=""
+                        data-color="Фиолетовый">
+                        <span>Фиолетовый</span>&nbsp;<sup>34</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_shadeColor_22">
+                    <label class="fl_chek  color"
+                        for="mse2_msoption_shadeColor_22"
+                        title=""
+                        data-color="Хром">
+                        <span>Хром</span>&nbsp;<sup>1006</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_shadeColor_23">
+                    <label class="fl_chek  color"
+                        for="mse2_msoption_shadeColor_23"
+                        title=""
+                        data-color="Черный">
+                        <span>Черный</span>&nbsp;<sup>4609</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_shadeColor_24">
+                    <label class="fl_chek  color"
+                        for="mse2_msoption_shadeColor_24"
+                        title=""
+                        data-color="Янтарный">
+                        <span>Янтарный</span>&nbsp;<sup>715</sup>
+                    </label>
+                
+            </fieldset>
+            
+                <button class="show-more" type="button"></button>
+            
+        </div>
+    </div>
+</div>
+                        <div class="ncatfiltersector ncatfiltersectoropener clearfix terms_filter terms_filters_shadeMaterial" data-filter_key="shadeMaterial">
+    <div class="ncatfilterun">
+        <!-- Для того, чтобы блок был открыт по дефолту, добавлять класс .active -->
+        <div class="ncatfiltit ncatfiltitopener active">
+            <span>Материал</span>
+        </div>
+        <div class="filter_footer">
+            <div class="filter_reset_btn js-filter_reset_btn " style="display: none" data-filter="shadeMaterial">
+                <button type="button">
+                    <i class="active">
+                        Сбросить
+                    </i>
+                </button>
+            </div>
+        </div>
+        <!-- Для того, чтобы блок был открыт по дефолту, добавлять класс .active -->
+        <div class="ncatfilcontainer fl_chek_con half_active active">
+            
+                <div class="the_search toggleable">
+                    <input type="text" class="terms_filter_input" placeholder="Поиск значений">
+                    <button type="button" class="btn btn_reset_search"></button>
+                </div>
+            
+            <fieldset class="check_wrap" id="mse2_msoption|lamp_styleshadeMaterial">
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_shadeMaterial_0">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_shadeMaterial_0"
+                        title=""
+                        >
+                        <span>Акрил</span>&nbsp;<sup>5811</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_shadeMaterial_1">
+                    <label class="fl_chek zero_result "
+                        for="mse2_msoption_shadeMaterial_1"
+                        title=""
+                        >
+                        <span>Алюминий</span>&nbsp;<sup>5811</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_shadeMaterial_2">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_shadeMaterial_2"
+                        title=""
+                        >
+                        <span>Металл</span>&nbsp;<sup>5811</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_shadeMaterial_3">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_shadeMaterial_3"
+                        title=""
+                        >
+                        <span>Пластик</span>&nbsp;<sup>5811</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_shadeMaterial_4">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_shadeMaterial_4"
+                        title=""
+                        >
+                        <span>Силикон</span>&nbsp;<sup>5811</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_shadeMaterial_5">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_shadeMaterial_5"
+                        title=""
+                        >
+                        <span>Полимер</span>&nbsp;<sup>5811</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_shadeMaterial_6">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_shadeMaterial_6"
+                        title=""
+                        >
+                        <span>Алюминий</span>&nbsp;<sup>89</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_shadeMaterial_7">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_shadeMaterial_7"
+                        title=""
+                        >
+                        <span>Полимер</span>&nbsp;<sup>7</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_shadeMaterial_8">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_shadeMaterial_8"
+                        title=""
+                        >
+                        <span>Дерево</span>&nbsp;<sup>8</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_shadeMaterial_9">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_shadeMaterial_9"
+                        title=""
+                        >
+                        <span>Органза</span>&nbsp;<sup>7</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_shadeMaterial_10">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_shadeMaterial_10"
+                        title=""
+                        >
+                        <span>Керамика</span>&nbsp;<sup>8</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_shadeMaterial_11">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_shadeMaterial_11"
+                        title=""
+                        >
+                        <span>Ткань</span>&nbsp;<sup>18</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_shadeMaterial_12">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_shadeMaterial_12"
+                        title=""
+                        >
+                        <span>Гипс</span>&nbsp;<sup>5</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_shadeMaterial_13">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_shadeMaterial_13"
+                        title=""
+                        >
+                        <span>Бетон</span>&nbsp;<sup>31</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_shadeMaterial_14">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_shadeMaterial_14"
+                        title=""
+                        >
+                        <span>Камень</span>&nbsp;<sup>17</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_shadeMaterial_15">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_shadeMaterial_15"
+                        title=""
+                        >
+                        <span>Бумага</span>&nbsp;<sup>5</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_shadeMaterial_16">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_shadeMaterial_16"
+                        title=""
+                        >
+                        <span>Кожа</span>&nbsp;<sup>1</sup>
+                    </label>
+                
+            </fieldset>
+            
+                <button class="show-more" type="button"></button>
+            
+        </div>
+    </div>
+</div>
+                        <div class="ncatfiltersector ncatfiltersectoropener clearfix terms_filter terms_filters_shadeMaterial" data-filter_key="shadeMaterial">
+    <div class="ncatfilterun">
+        <!-- Для того, чтобы блок был открыт по дефолту, добавлять класс .active -->
+        <div class="ncatfiltit ncatfiltitopener ">
+            <span>Материал плафона</span>
+        </div>
+        <div class="filter_footer">
+            <div class="filter_reset_btn js-filter_reset_btn " style="display: none" data-filter="shadeMaterial">
+                <button type="button">
+                    <i class="active">
+                        Сбросить
+                    </i>
+                </button>
+            </div>
+        </div>
+        <!-- Для того, чтобы блок был открыт по дефолту, добавлять класс .active -->
+        <div class="ncatfilcontainer fl_chek_con half_active ">
+            
+                <div class="the_search toggleable">
+                    <input type="text" class="terms_filter_input" placeholder="Поиск значений">
+                    <button type="button" class="btn btn_reset_search"></button>
+                </div>
+            
+            <fieldset class="check_wrap" id="mse2_msoption|lamp_styleshadeMaterial">
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_shadeMaterial_0">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_shadeMaterial_0"
+                        title=""
+                        >
+                        <span>Акрил</span>&nbsp;<sup>5811</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_shadeMaterial_1">
+                    <label class="fl_chek zero_result "
+                        for="mse2_msoption_shadeMaterial_1"
+                        title=""
+                        >
+                        <span>Алюминий</span>&nbsp;<sup>5811</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_shadeMaterial_2">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_shadeMaterial_2"
+                        title=""
+                        >
+                        <span>Металл</span>&nbsp;<sup>5811</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_shadeMaterial_3">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_shadeMaterial_3"
+                        title=""
+                        >
+                        <span>Пластик</span>&nbsp;<sup>5811</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_shadeMaterial_4">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_shadeMaterial_4"
+                        title=""
+                        >
+                        <span>Силикон</span>&nbsp;<sup>5811</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_shadeMaterial_5">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_shadeMaterial_5"
+                        title=""
+                        >
+                        <span>Полимер</span>&nbsp;<sup>5811</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_shadeMaterial_6">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_shadeMaterial_6"
+                        title=""
+                        >
+                        <span>Алюминий</span>&nbsp;<sup>89</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_shadeMaterial_7">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_shadeMaterial_7"
+                        title=""
+                        >
+                        <span>Полимер</span>&nbsp;<sup>7</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_shadeMaterial_8">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_shadeMaterial_8"
+                        title=""
+                        >
+                        <span>Дерево</span>&nbsp;<sup>8</sup>
+                    </label>
+                
+            </fieldset>
+            
+                <button class="show-more" type="button"></button>
+            
+        </div>
+    </div>
+</div>
+                        <div class="ncatfiltersector ncatfiltersectoropener clearfix terms_filter terms_filters_armatureColor" data-filter_key="armatureColor">
+    <div class="ncatfilterun">
+        <!-- Для того, чтобы блок был открыт по дефолту, добавлять класс .active -->
+        <div class="ncatfiltit ncatfiltitopener ">
+            <span>Цвет плафона</span>
+        </div>
+        <div class="filter_footer">
+            <div class="filter_reset_btn js-filter_reset_btn " style="display: none" data-filter="armatureColor">
+                <button type="button">
+                    <i class="active">
+                        Сбросить
+                    </i>
+                </button>
+            </div>
+        </div>
+        <!-- Для того, чтобы блок был открыт по дефолту, добавлять класс .active -->
+        <div class="ncatfilcontainer fl_chek_con half_active ">
+            
+                <div class="the_search toggleable">
+                    <input type="text" class="terms_filter_input" placeholder="Поиск значений">
+                    <button type="button" class="btn btn_reset_search"></button>
+                </div>
+            
+            <fieldset class="check_wrap" id="mse2_msoption|lamp_stylearmatureColor">
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_armatureColor_0">
+                    <label class="fl_chek  color"
+                        for="mse2_msoption_armatureColor_0"
+                        title=""
+                        data-color="Бежевый">
+                        <span>Бежевый</span>&nbsp;<sup>1276</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_armatureColor_1">
+                    <label class="fl_chek  color"
+                        for="mse2_msoption_armatureColor_1"
+                        title=""
+                        data-color="Белый">
+                        <span>Белый</span>&nbsp;<sup>14834</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_armatureColor_2">
+                    <label class="fl_chek  color"
+                        for="mse2_msoption_armatureColor_2"
+                        title=""
+                        data-color="Бронза">
+                        <span>Бронза</span>&nbsp;<sup>486</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_armatureColor_3">
+                    <label class="fl_chek  color"
+                        for="mse2_msoption_armatureColor_3"
+                        title=""
+                        data-color="Голубой">
+                        <span>Голубой</span>&nbsp;<sup>170</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_armatureColor_4">
+                    <label class="fl_chek  color"
+                        for="mse2_msoption_armatureColor_4"
+                        title=""
+                        data-color="Желтый">
+                        <span>Желтый</span>&nbsp;<sup>179</sup>
+                    </label>
+                
+            </fieldset>
+            
+                <button class="show-more" type="button"></button>
+            
+        </div>
+    </div>
+</div>
+                        <div class="ncatfiltersector ncatfiltersectoropener clearfix terms_filter terms_filters_rebarMaterial" data-filter_key="rebarMaterial">
+    <div class="ncatfilterun">
+        <!-- Для того, чтобы блок был открыт по дефолту, добавлять класс .active -->
+        <div class="ncatfiltit ncatfiltitopener ">
+            <span>Материал арматуры</span>
+        </div>
+        <div class="filter_footer">
+            <div class="filter_reset_btn js-filter_reset_btn " style="display: none" data-filter="rebarMaterial">
+                <button type="button">
+                    <i class="active">
+                        Сбросить
+                    </i>
+                </button>
+            </div>
+        </div>
+        <!-- Для того, чтобы блок был открыт по дефолту, добавлять класс .active -->
+        <div class="ncatfilcontainer fl_chek_con half_active ">
+            
+                <div class="the_search toggleable">
+                    <input type="text" class="terms_filter_input" placeholder="Поиск значений">
+                    <button type="button" class="btn btn_reset_search"></button>
+                </div>
+            
+            <fieldset class="check_wrap" id="mse2_msoption|lamp_stylerebarMaterial">
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_rebarMaterial_0">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_rebarMaterial_0"
+                        title=""
+                        >
+                        <span>Стекло</span>&nbsp;<sup>985</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_rebarMaterial_1">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_rebarMaterial_1"
+                        title=""
+                        >
+                        <span>Металл</span>&nbsp;<sup>575</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_rebarMaterial_2">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_rebarMaterial_2"
+                        title=""
+                        >
+                        <span>Текстиль</span>&nbsp;<sup>262</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_rebarMaterial_3">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_rebarMaterial_3"
+                        title=""
+                        >
+                        <span>Акрил</span>&nbsp;<sup>57</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_rebarMaterial_4">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_rebarMaterial_4"
+                        title=""
+                        >
+                        <span>Пластик</span>&nbsp;<sup>79</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_rebarMaterial_5">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_rebarMaterial_5"
+                        title=""
+                        >
+                        <span>Хрусталь</span>&nbsp;<sup>94</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_rebarMaterial_6">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_rebarMaterial_6"
+                        title=""
+                        >
+                        <span>Алюминий</span>&nbsp;<sup>89</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_rebarMaterial_7">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_rebarMaterial_7"
+                        title=""
+                        >
+                        <span>Полимер</span>&nbsp;<sup>7</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_rebarMaterial_8">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_rebarMaterial_8"
+                        title=""
+                        >
+                        <span>Дерево</span>&nbsp;<sup>8</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_rebarMaterial_9">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_rebarMaterial_9"
+                        title=""
+                        >
+                        <span>Органза</span>&nbsp;<sup>7</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_rebarMaterial_10">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_rebarMaterial_10"
+                        title=""
+                        >
+                        <span>Керамика</span>&nbsp;<sup>8</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_rebarMaterial_11">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_rebarMaterial_11"
+                        title=""
+                        >
+                        <span>Ткань</span>&nbsp;<sup>18</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_rebarMaterial_12">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_rebarMaterial_12"
+                        title=""
+                        >
+                        <span>Гипс</span>&nbsp;<sup>5</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_rebarMaterial_13">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_rebarMaterial_13"
+                        title=""
+                        >
+                        <span>Бетон</span>&nbsp;<sup>31</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_rebarMaterial_14">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_rebarMaterial_14"
+                        title=""
+                        >
+                        <span>Камень</span>&nbsp;<sup>17</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_rebarMaterial_15">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_rebarMaterial_15"
+                        title=""
+                        >
+                        <span>Бумага</span>&nbsp;<sup>5</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_rebarMaterial_16">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_rebarMaterial_16"
+                        title=""
+                        >
+                        <span>Кожа</span>&nbsp;<sup>1</sup>
+                    </label>
+                
+            </fieldset>
+            
+                <button class="show-more" type="button"></button>
+            
+        </div>
+    </div>
+</div>
+                        <div class="ncatfiltersector ncatfiltersectoropener clearfix terms_filter terms_filters_armatureColor" data-filter_key="armatureColor">
+    <div class="ncatfilterun">
+        <!-- Для того, чтобы блок был открыт по дефолту, добавлять класс .active -->
+        <div class="ncatfiltit ncatfiltitopener ">
+            <span>Цвет арматуры</span>
+        </div>
+        <div class="filter_footer">
+            <div class="filter_reset_btn js-filter_reset_btn " style="display: none" data-filter="armatureColor">
+                <button type="button">
+                    <i class="active">
+                        Сбросить
+                    </i>
+                </button>
+            </div>
+        </div>
+        <!-- Для того, чтобы блок был открыт по дефолту, добавлять класс .active -->
+        <div class="ncatfilcontainer fl_chek_con half_active ">
+            
+                <div class="the_search toggleable">
+                    <input type="text" class="terms_filter_input" placeholder="Поиск значений">
+                    <button type="button" class="btn btn_reset_search"></button>
+                </div>
+            
+            <fieldset class="check_wrap" id="mse2_msoption|lamp_stylearmatureColor">
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_armatureColor_0">
+                    <label class="fl_chek  color"
+                        for="mse2_msoption_armatureColor_0"
+                        title=""
+                        data-color="Бежевый">
+                        <span>Бежевый</span>&nbsp;<sup>1276</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_armatureColor_1">
+                    <label class="fl_chek  color"
+                        for="mse2_msoption_armatureColor_1"
+                        title=""
+                        data-color="Белый">
+                        <span>Белый</span>&nbsp;<sup>14834</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_armatureColor_2">
+                    <label class="fl_chek  color"
+                        for="mse2_msoption_armatureColor_2"
+                        title=""
+                        data-color="Бронза">
+                        <span>Бронза</span>&nbsp;<sup>486</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_armatureColor_3">
+                    <label class="fl_chek  color"
+                        for="mse2_msoption_armatureColor_3"
+                        title=""
+                        data-color="Голубой">
+                        <span>Голубой</span>&nbsp;<sup>170</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_armatureColor_4">
+                    <label class="fl_chek  color"
+                        for="mse2_msoption_armatureColor_4"
+                        title=""
+                        data-color="Желтый">
+                        <span>Желтый</span>&nbsp;<sup>179</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_armatureColor_5">
+                    <label class="fl_chek  color"
+                        for="mse2_msoption_armatureColor_5"
+                        title=""
+                        data-color="Зеленый">
+                        <span>Зеленый</span>&nbsp;<sup>232</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_armatureColor_6">
+                    <label class="fl_chek  color"
+                        for="mse2_msoption_armatureColor_6"
+                        title=""
+                        data-color="Золотистый">
+                        <span>Золотистый</span>&nbsp;<sup>1972</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_armatureColor_7">
+                    <label class="fl_chek  color"
+                        for="mse2_msoption_armatureColor_7"
+                        title=""
+                        data-color="Коричневый">
+                        <span>Коричневый</span>&nbsp;<sup>677</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_armatureColor_8">
+                    <label class="fl_chek  color"
+                        for="mse2_msoption_armatureColor_8"
+                        title=""
+                        data-color="Красный">
+                        <span>Красный</span>&nbsp;<sup>138</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_armatureColor_9">
+                    <label class="fl_chek  color"
+                        for="mse2_msoption_armatureColor_9"
+                        title=""
+                        data-color="Латунь">
+                        <span>Латунь</span>&nbsp;<sup>231</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_armatureColor_10">
+                    <label class="fl_chek  color"
+                        for="mse2_msoption_armatureColor_10"
+                        title=""
+                        data-color="Матовый">
+                        <span>Матовый</span>&nbsp;<sup>1392</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_armatureColor_11">
+                    <label class="fl_chek  color"
+                        for="mse2_msoption_armatureColor_11"
+                        title=""
+                        data-color="Матовый никель">
+                        <span>Матовый никель</span>&nbsp;<sup>48</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_armatureColor_12">
+                    <label class="fl_chek  color"
+                        for="mse2_msoption_armatureColor_12"
+                        title=""
+                        data-color="Медный">
+                        <span>Медный</span>&nbsp;<sup>230</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_armatureColor_13">
+                    <label class="fl_chek  color"
+                        for="mse2_msoption_armatureColor_13"
+                        title=""
+                        data-color="Никель">
+                        <span>Никель</span>&nbsp;<sup>83</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_armatureColor_14">
+                    <label class="fl_chek  color"
+                        for="mse2_msoption_armatureColor_14"
+                        title=""
+                        data-color="Оранжевый">
+                        <span>Оранжевый</span>&nbsp;<sup>35</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_armatureColor_15">
+                    <label class="fl_chek  color"
+                        for="mse2_msoption_armatureColor_15"
+                        title=""
+                        data-color="Прозрачный">
+                        <span>Прозрачный</span>&nbsp;<sup>10132</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_armatureColor_16">
+                    <label class="fl_chek  color"
+                        for="mse2_msoption_armatureColor_16"
+                        title=""
+                        data-color="Разноцветный">
+                        <span>Разноцветный</span>&nbsp;<sup>321</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_armatureColor_17">
+                    <label class="fl_chek  color"
+                        for="mse2_msoption_armatureColor_17"
+                        title=""
+                        data-color="Розовый">
+                        <span>Розовый</span>&nbsp;<sup>184</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_armatureColor_18">
+                    <label class="fl_chek  color"
+                        for="mse2_msoption_armatureColor_18"
+                        title=""
+                        data-color="Серебристый">
+                        <span>Серебристый</span>&nbsp;<sup>668</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_armatureColor_19">
+                    <label class="fl_chek  color"
+                        for="mse2_msoption_armatureColor_19"
+                        title=""
+                        data-color="Серый">
+                        <span>Серый</span>&nbsp;<sup>2108</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_armatureColor_20">
+                    <label class="fl_chek  color"
+                        for="mse2_msoption_armatureColor_20"
+                        title=""
+                        data-color="Синий">
+                        <span>Синий</span>&nbsp;<sup>112</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_armatureColor_21">
+                    <label class="fl_chek  color"
+                        for="mse2_msoption_armatureColor_21"
+                        title=""
+                        data-color="Фиолетовый">
+                        <span>Фиолетовый</span>&nbsp;<sup>34</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_armatureColor_22">
+                    <label class="fl_chek  color"
+                        for="mse2_msoption_armatureColor_22"
+                        title=""
+                        data-color="Хром">
+                        <span>Хром</span>&nbsp;<sup>1006</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_armatureColor_23">
+                    <label class="fl_chek  color"
+                        for="mse2_msoption_armatureColor_23"
+                        title=""
+                        data-color="Черный">
+                        <span>Черный</span>&nbsp;<sup>4609</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_armatureColor_24">
+                    <label class="fl_chek  color"
+                        for="mse2_msoption_armatureColor_24"
+                        title=""
+                        data-color="Янтарный">
+                        <span>Янтарный</span>&nbsp;<sup>715</sup>
+                    </label>
+                
+            </fieldset>
+            
+                <button class="show-more" type="button"></button>
+            
+        </div>
+    </div>
+</div>
+                    </div>
+                </div>
+
+                <div class="listing_filters_wrapper">
+                    <div class="listing_filters_wrapperHeadline active">Дополнительно</div>
+                    <div class="listing_filters_wrapperList" style="display: block;">
+                        <div class="ncatfiltersector ncatfiltersectoropener clearfix terms_filter terms_filters_ip" data-filter_key="ip">
+    <div class="ncatfilterun">
+        <!-- Для того, чтобы блок был открыт по дефолту, добавлять класс .active -->
+        <div class="ncatfiltit ncatfiltitopener active">
+            <span>IP</span>
+        </div>
+        <div class="filter_footer">
+            <div class="filter_reset_btn js-filter_reset_btn " style="display: none" data-filter="ip">
+                <button type="button">
+                    <i class="active">
+                        Сбросить
+                    </i>
+                </button>
+            </div>
+        </div>
+        <!-- Для того, чтобы блок был открыт по дефолту, добавлять класс .active -->
+        <div class="ncatfilcontainer fl_chek_con half_active active">
+            
+            <fieldset class="check_wrap" id="mse2_msoption|lamp_styleip">
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_ip_0">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_ip_0"
+                        title=""
+                        >
+                        <span>20</span>&nbsp;<sup>5811</sup>
+                    </label>
+                
+            </fieldset>
+            
+        </div>
+    </div>
+</div>
+                        <div class="ncatfiltersector ncatfiltersectoropener clearfix terms_filter terms_filters_mountPlace" data-filter_key="mountPlace">
+    <div class="ncatfilterun">
+        <!-- Для того, чтобы блок был открыт по дефолту, добавлять класс .active -->
+        <div class="ncatfiltit ncatfiltitopener active">
+            <span>Место монтажа</span>
+        </div>
+        <div class="filter_footer">
+            <div class="filter_reset_btn js-filter_reset_btn " style="display: none" data-filter="mountPlace">
+                <button type="button">
+                    <i class="active">
+                        Сбросить
+                    </i>
+                </button>
+            </div>
+        </div>
+        <!-- Для того, чтобы блок был открыт по дефолту, добавлять класс .active -->
+        <div class="ncatfilcontainer fl_chek_con half_active active">
+            
+            <fieldset class="check_wrap" id="mse2_msoption|lamp_stylemountPlace">
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_mountPlace_0">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_mountPlace_0"
+                        title=""
+                        >
+                        <span>Силикон</span>&nbsp;<sup>5811</sup>
+                    </label>
+                
+            </fieldset>
+            
+        </div>
+    </div>
+</div>
+                        <div class="ncatfiltersector ncatfiltersectoropener clearfix terms_filter terms_filters_special" data-filter_key="special">
+    <div class="ncatfilterun">
+        <!-- Для того, чтобы блок был открыт по дефолту, добавлять класс .active -->
+        <div class="ncatfiltit ncatfiltitopener active">
+            <span>Особенности</span>
+        </div>
+        <div class="filter_footer">
+            <div class="filter_reset_btn js-filter_reset_btn " style="display: none" data-filter="special">
+                <button type="button">
+                    <i class="active">
+                        Сбросить
+                    </i>
+                </button>
+            </div>
+        </div>
+        <!-- Для того, чтобы блок был открыт по дефолту, добавлять класс .active -->
+        <div class="ncatfilcontainer fl_chek_con half_active active">
+            
+            <fieldset class="check_wrap" id="mse2_msoption|lamp_stylespecial">
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_special_0">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_special_0"
+                        title=""
+                        >
+                        <span>Каскадные</span>&nbsp;<sup>5811</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_special_1">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_special_1"
+                        title=""
+                        >
+                        <span>Дизайнерские</span>&nbsp;<sup>5811</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_special_2">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_special_2"
+                        title=""
+                        >
+                        <span>Хрустальные</span>&nbsp;<sup>5811</sup>
+                    </label>
+                
+            </fieldset>
+            
+        </div>
+    </div>
+</div>
+                        <div class="ncatfiltersector ncatfiltersectoropener clearfix terms_filter terms_filters_country" data-filter_key="country">
+    <div class="ncatfilterun">
+        <!-- Для того, чтобы блок был открыт по дефолту, добавлять класс .active -->
+        <div class="ncatfiltit ncatfiltitopener active">
+            <span>Страна изготовитель</span>
+        </div>
+        <div class="filter_footer">
+            <div class="filter_reset_btn js-filter_reset_btn " style="display: none" data-filter="country">
+                <button type="button">
+                    <i class="active">
+                        Сбросить
+                    </i>
+                </button>
+            </div>
+        </div>
+        <!-- Для того, чтобы блок был открыт по дефолту, добавлять класс .active -->
+        <div class="ncatfilcontainer fl_chek_con half_active active">
+            
+            <fieldset class="check_wrap" id="mse2_msoption|lamp_stylecountry">
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_country_0">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_country_0"
+                        title=""
+                        >
+                        <span>Германия</span>&nbsp;<sup>5811</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_country_1">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_country_1"
+                        title=""
+                        >
+                        <span>Италия</span>&nbsp;<sup>5811</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_country_2">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_country_2"
+                        title=""
+                        >
+                        <span>Китай</span>&nbsp;<sup>5811</sup>
+                    </label>
+                
+                    <input 
+                        class="ncatcheckbox"
+                        type="checkbox"
+                        name=""
+                        value=""
+                        id="mse2_msoption_country_3">
+                    <label class="fl_chek  "
+                        for="mse2_msoption_country_3"
+                        title=""
+                        >
+                        <span>Россия</span>&nbsp;<sup>5811</sup>
+                    </label>
+                
+            </fieldset>
+            
+        </div>
+    </div>
+</div>
+                    </div>
+                </div>
+            </div>
+   
+<!-- Кнопки сбросить, применить -->
+            <div class="ncatfiltersector ncatfiltersectorbtn clearfix">
+                <div class="df">
+                    <button type="reset" class="ncatformreset">Сбросить</button>
+                    <button type="submit" class="ncatformsubm">Применить</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</section>
+<script src="js/main.js"></script>

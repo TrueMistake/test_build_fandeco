@@ -1,0 +1,2904 @@
+<!doctype html>
+<html lang="ru" class="mode--dev js rgba boxshadow csstransitions js rgba boxshadow csstransitions">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест модальных окон Авторизации</title>
+    <meta name="figma" content="@@figma">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700&display=swap" rel="stylesheet" />
+    <link rel="shortcut icon" href="https://aws.massive.ru/fandeco.ru/redesign/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/main.min.css">
+    
+        
+            <link rel="stylesheet" href="css/page/home.min.css">
+        
+            <link rel="stylesheet" href="css/module/modals.min.css">
+        
+            <link rel="stylesheet" href="https://static.popmechanic.ru/service/styles.css">
+        
+            <link rel="stylesheet" href="https://code.jivo.ru/css/54feddb/widget.css">
+        
+            <link rel="stylesheet" href="css/jivosite.min.css">
+        
+            <link rel="stylesheet" href="css/page/store/list.min.css">
+        
+    
+</head>
+
+<body class="page">
+
+<!-- Блок style не переносить, нужен только для тестовой страницы -->
+<style>
+    .auth_modal {
+        overflow: auto;
+    }
+    
+    .auth_modal-content {
+        margin-bottom: 50px;
+    }
+</style>
+
+<div id="auth_modal" class="fade auth_modal auth_modal-open show" tabindex="-1" role="dialog">
+    <div class="auth_modal-dialog" role="document">
+        <div class="auth_modal-content">
+            <div class="auth_modal-header">
+                <button type="button" class=" auth_modal-closed auth_modal-close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div id="auth_body">
+                <div class="auth_container">
+                    <form method="post" class="auth_form auth_mask_country" data-form-id="phone_code" id="auth_input_phone_code">
+                        <input type="hidden" name="auth_phone" value="">
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Введите номер телефона
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span>Мы отправим код или позвоним. Отвечать на звонок не нужно.</span>
+                                    </div>
+                                    <div>
+                                        <div class="auth_block_inputs">
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer ">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input autocomplete="on" type="tel" inputmode="numeric" name="phone" maxlength="" value="" autofocus="" class="auth_input auth_mask_init">
+                                                            <span class="auth_input_placeholder auth_input_placeholder_toggle">999 999 99 99</span>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                            <div class="auth_country">
+                                                <div class="auth_country_block">
+                                                    <div class="auth_country_blocks">
+                                                        <div class="auth_country_block_1" role="listbox">
+                                                            <div class="auth_country_block_1_number">
+                                                                <div class="auth_country_block_1_number_1">
+                                                                    <span>+7</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="auth_country_block_2"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="auth_buttons">
+                                        <button tabindex="0" type="submit" name="auth_action" value="auth/phone/code" class="auth_btn btn btn-info btn-block">
+                                            Войти
+                                        </button>
+                                    </div>
+                                    <div class="auth_or">
+                                        или
+                                    </div>
+                                    
+                                    <div class="auth_forward_footer">
+                                        <div class="auth_forward_links">
+                                            <a class="auth_forward_link" href="#">
+                                                <img src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/707/16b9569e72.svg" alt="">
+                                            </a>
+                                            <a class="auth_forward_link" href="#">
+                                                <svg width="41" height="40" viewBox="0 0 41 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M33 40H26.1669V5.40659H23.1157C17.5289 5.40659 14.6066 8.26374 14.6066 12.5275C14.6066 17.3626 16.6264 19.6044 20.795 22.4615L24.2331 24.8352L14.3488 40H7L15.8959 26.4615C10.7818 22.7253 7.90248 19.0769 7.90248 12.9231C7.90248 5.23077 13.1455 0 23.0727 0H32.957L33 40Z" fill="#FC3F1D" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <a href="#" class=" auth_forward" data-form="email_login">Войти по почте</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    
+                    <form method="post" class="auth_form" data-form-id="phone_confirmation" id="auth_input_code" style="display: none">
+                        <input type="hidden" name="auth_phone" value="">
+                        <button tabindex="0" type="submit" name="auth_action" value="auth/phone/confirmation" style="display: none"></button>
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Введите код
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span><span id="auth_phone_code_text">Мы отправили код подтверждения на номер</span> <span id="auth_phone">+7 (000) 000-00-00</span> <a href="#" class="auth_phone_change auth_forward" data-form="phone_code">Изменить</a></span>
+                                    </div>
+                                    
+                                    <div class="auth_flash_call">
+                                        <span></span>
+                                    </div>
+                                    
+                                    <div>
+                                        <div class="auth_block_inputs">
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer ">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input autocomplete="off" type="tel" inputmode="numeric" name="code" maxlength="" value="" autofocus="autofocus" class="auth_input_code auth_mask_init">
+                                                            <input type="hidden" name="auth_code" class="auth_input_code auth_mask_init">
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    <div class="auth_timer_container">
+                                        <div class="auth_timer_text">
+                                            <span>Получить новый код можно<br> через <span class="auth_timer">00:59</span></span>
+                                        </div>
+                                        <div class="auth_timer_resend">
+                                            <a href="#" class="auth_resend_code">
+                                                Получить новый код
+                                            </a>
+                                        </div>
+                                        <a href="#" class="auth_resend_code">
+                                            Получить новый код
+                                        </a>
+                                    </div>
+                                    <div class="auth_forward_footer">
+                                        <div class="auth_forward_footer">
+                                            <a href="#" class="auth_forward" data-form="email_login">Войти по почте</a>
+                                        </div>
+                                    </div>
+                                
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    
+                    <form method="post" class="auth_form" data-form-id="in_login" id="auth_input_in_login" style="display: none">
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Введите код
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span>Вы успешно вошли на сайт</span>
+                                        <br>
+                                        <a href="http://auth.local/lichnyij-kabinet/">Перейти в личный кабинет</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    
+                    <form method="post" class="auth_form" data-form-id="email_login" id="auth_input_email" style="display: none">
+                        <input type="hidden" name="auth_phone" value="">
+                        <button tabindex="0" type="submit" name="auth_action" value="auth/email/login" style="display: none"></button>
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Войдите по почте
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span>Только для зарегистрированных пользователей</span>
+                                    </div>
+                                    <div>
+                                        <div class="auth_block_inputs">
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer ">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input type="text" name="email" inputmode="email" value="" autofocus="autofocus" class="auth_input_email auth_input_no_mask">
+                                                            <span class="auth_input_placeholder">Электронная почта</span>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                            
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input type="password" name="password" value="" class="auth_input_email auth_input_no_mask">
+                                                            <span class="auth_input_placeholder">Пароль</span>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="auth_buttons">
+                                        <button tabindex="0" type="submit" name="auth_action" value="auth/login" class="auth_btn btn btn-info btn-block">
+                                            Войти
+                                        </button>
+                                    </div>
+                                    <div class="auth_forward_footer">
+                                        <a href="#" class=" auth_forward" data-form="phone_code">Вернуться на главный экран</a>
+                                        
+                                        <br>
+                                        <br>
+                                        <a href="#" class=" auth_forward" data-form="reset_password" data-copy="email">Забыли пароль?</a>
+                                    
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </form>
+                    
+                    <form method="post" class="auth_form" data-form-id="reset_password" id="auth_input_reset_password" style="display: none">
+                        <input type="hidden" name="auth_phone" value="">
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Восстановление пароля
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span>Введите логин или пароля</span>
+                                    </div>
+                                    <div>
+                                        <div class="auth_block_inputs">
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer ">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input type="text" inputmode="email" name="email_reset" value="" autofocus="autofocus" class="auth_input_email auth_input_no_mask">
+                                                            <span class="auth_input_placeholder">Электронная почта</span>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="auth_buttons">
+                                        <button tabindex="0" type="submit" autofocus="" name="auth_action" value="auth/email/password/reset" class="auth_btn btn btn-info btn-block">
+                                            Сбросить пароль
+                                        </button>
+                                    </div>
+                                    <div class="auth_forward_footer">
+                                        <a href="#" class=" auth_forward" data-form="email_login">Вернуться к входу</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    
+                    <form method="post" class="auth_form" data-form-id="change_password" id="auth_input_change_password" style="display: none">
+                        <input type="hidden" name="auth_phone" value="">
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Изменить пароль
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span>Введите пароль и подтвердите его</span>
+                                    </div>
+                                    <div>
+                                        <div class="auth_block_inputs">
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input type="password" name="password" value="" class=" auth_input_no_mask">
+                                                            <span class="auth_input_placeholder">Пароль</span>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                            
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input type="password" name="password_confirmation" value="" class=" auth_input_no_mask">
+                                                            <span class="auth_input_placeholder">Подтверждение пароля</span>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="auth_buttons">
+                                        <button tabindex="0" type="submit" autofocus="" name="auth_action" value="auth/settings/password" class="auth_btn btn btn-info btn-block">
+                                            Изменить пароль
+                                        </button>
+                                    </div>
+                                    <div class="auth_forward_footer">
+                                        <a href="#" class="auth_forward" data-form="email_login">Перейти в личный кабинет</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    
+                    <form method="post" class="auth_form" data-form-id="change_password_success" id="auth_input_change_password_success" style="display: none">
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Изменить пароль
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span>Пароль успешно изменен</span>
+                                    </div>
+                                    <div class="auth_forward_footer">
+                                        <a href="http://auth.local/">Перейти в личный кабинет</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    
+                    <form method="post" class="auth_form auth_mask_country" data-form-id="phone_change" id="auth_input_phone_change" style="display: none">
+                        <input type="hidden" name="auth_phone" value="">
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Введите новый номер телефона
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span>Мы отправим код или позвоним для подтвеждения нового номера. Отвечать на звонок не нужно.</span>
+                                    </div>
+                                    <div>
+                                        <div class="auth_block_inputs">
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer ">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input autocomplete="on" type="tel" inputmode="numeric" name="phone" maxlength="" value="" autofocus="" class="auth_input auth_mask_init">
+                                                            <span class="auth_input_placeholder auth_input_placeholder_toggle">999 999 99 99</span>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                            <div class="auth_country">
+                                                <div class="auth_country_block">
+                                                    <div class="auth_country_blocks">
+                                                        <div class="auth_country_block_1" role="listbox">
+                                                            <div class="auth_country_block_1_number">
+                                                                <div class="auth_country_block_1_number_1">
+                                                                    <span>+7</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="auth_country_block_2"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="auth_buttons">
+                                        <button tabindex="0" type="submit" name="auth_action" value="auth/settings/phone/change" class="auth_btn btn btn-info btn-block">
+                                            Получить код
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    
+        <div class="auth_modal-content">
+            <div class="auth_modal-header">
+                <button type="button" class=" auth_modal-closed auth_modal-close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div id="auth_body">
+                <div class="auth_container">
+                    <form method="post" class="auth_form auth_mask_country" data-form-id="phone_code" id="auth_input_phone_code" style="display: none">
+                        <input type="hidden" name="auth_phone" value="">
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Введите номер телефона
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span>Мы отправим код или позвоним. Отвечать на звонок не нужно.</span>
+                                    </div>
+                                    <div>
+                                        <div class="auth_block_inputs">
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer ">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input autocomplete="on" type="tel" inputmode="numeric" name="phone" maxlength="" value="" autofocus="" class="auth_input auth_mask_init">
+                                                            <span class="auth_input_placeholder auth_input_placeholder_toggle">999 999 99 99</span>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                            <div class="auth_country">
+                                                <div class="auth_country_block">
+                                                    <div class="auth_country_blocks">
+                                                        <div class="auth_country_block_1" role="listbox">
+                                                            <div class="auth_country_block_1_number">
+                                                                <div class="auth_country_block_1_number_1">
+                                                                    <span>+7</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="auth_country_block_2"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="auth_buttons">
+                                        <button tabindex="0" type="submit" name="auth_action" value="auth/phone/code" class="auth_btn btn btn-info btn-block">
+                                            Получить код
+                                        </button>
+                                    </div>
+                                    <div class="auth_or">
+                                        или
+                                    </div>
+                                
+                                    <div class="auth_forward_footer">
+                                        <a href="#" class=" auth_forward" data-form="email_login">Войти по почте</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                
+                    <form method="post" class="auth_form" data-form-id="phone_confirmation" id="auth_input_code">
+                        <input type="hidden" name="auth_phone" value="">
+                        <button tabindex="0" type="submit" name="auth_action" value="auth/phone/confirmation" style="display: none"></button>
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">  
+                                        Введите код
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span><span id="auth_phone_code_text">Мы отправили код подтверждения на номер</span> <span id="auth_phone">+7 (000) 000-00-00</span> <a href="#" class="auth_phone_change auth_forward" data-form="phone_code">Изменить</a></span>
+                                    </div>
+                                
+                                <!--
+                                    <div class="auth_flash_call">
+                                        <span></span>
+                                    </div>
+                                --> 
+                                    <div>
+                                        <div class="auth_block_inputs">
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer ">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input autocomplete="off" type="tel" inputmode="numeric" name="code" maxlength="" value="12345" autofocus="autofocus" class="auth_input_code auth_mask_init">
+                                                            <input type="hidden" name="auth_code" class="auth_input_code auth_mask_init">
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                    
+                                        </div>
+                                    </div>
+                                
+                                
+                                    <div class="auth_timer_container">
+                                        <div class="auth_timer_text">
+                                            <span>Получить новый код можно<br> через <span class="auth_timer">00:59</span></span>
+                                        </div>
+                                        <div class="auth_timer_resend">
+                                            <a href="#" class="auth_resend_code">
+                                                Получить новый код
+                                            </a>
+                                        </div>
+                                        <a href="#" class="auth_resend_code">
+                                            Получить новый код
+                                        </a>
+                                    </div>
+                                    <div class="auth_forward_footer">
+                                        <div class="auth_forward_footer">
+                                            <a href="#" class="auth_forward" data-form="email_login">Войти по почте</a>
+                                        </div>
+                                    </div>
+                            
+                            
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                
+                    <form method="post" class="auth_form" data-form-id="in_login" id="auth_input_in_login" style="display: none">
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Введите код
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span>Вы успешно вошли на сайт</span>
+                                        <br>
+                                        <a href="http://auth.local/lichnyij-kabinet/">Перейти в личный кабинет</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                
+                    <form method="post" class="auth_form" data-form-id="email_login" id="auth_input_email" style="display: none">
+                        <input type="hidden" name="auth_phone" value="">
+                        <button tabindex="0" type="submit" name="auth_action" value="auth/email/login" style="display: none"></button>
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Войдите по почте
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span>Только для зарегистрированных пользователей</span>
+                                    </div>
+                                    <div>
+                                        <div class="auth_block_inputs">
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer ">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input type="text" name="email" inputmode="email" value="" autofocus="autofocus" class="auth_input_email auth_input_no_mask">
+                                                            <span class="auth_input_placeholder">Электронная почта</span>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input type="password" name="password" value="" class="auth_input_email auth_input_no_mask">
+                                                            <span class="auth_input_placeholder">Пароль</span>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="auth_buttons">
+                                        <button tabindex="0" type="submit" name="auth_action" value="auth/login" class="auth_btn btn btn-info btn-block">
+                                            Войти
+                                        </button>
+                                    </div>
+                                    <div class="auth_forward_footer">
+                                        <a href="#" class=" auth_forward" data-form="phone_code">Вернуться на главный экран</a>
+                                    
+                                        <br>
+                                        <br>
+                                        <a href="#" class=" auth_forward" data-form="reset_password" data-copy="email">Забыли пароль?</a>
+                                
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                
+                    </form>
+                
+                    <form method="post" class="auth_form" data-form-id="reset_password" id="auth_input_reset_password" style="display: none">
+                        <input type="hidden" name="auth_phone" value="">
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Восстановление пароля
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span>Введите логин или пароля</span>
+                                    </div>
+                                    <div>
+                                        <div class="auth_block_inputs">
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer ">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input type="text" inputmode="email" name="email_reset" value="" autofocus="autofocus" class="auth_input_email auth_input_no_mask">
+                                                            <span class="auth_input_placeholder">Электронная почта</span>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="auth_buttons">
+                                        <button tabindex="0" type="submit" autofocus="" name="auth_action" value="auth/email/password/reset" class="auth_btn btn btn-info btn-block">
+                                            Сбросить пароль
+                                        </button>
+                                    </div>
+                                    <div class="auth_forward_footer">
+                                        <a href="#" class=" auth_forward" data-form="email_login">Вернуться к входу</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                
+                    <form method="post" class="auth_form" data-form-id="change_password" id="auth_input_change_password" style="display: none">
+                        <input type="hidden" name="auth_phone" value="">
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Изменить пароль
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span>Введите пароля и подтвердите его</span>
+                                    </div>
+                                    <div>
+                                        <div class="auth_block_inputs">
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input type="password" name="password" value="" class=" auth_input_no_mask">
+                                                            <span class="auth_input_placeholder">Пароль</span>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input type="password" name="password_confirmation" value="" class=" auth_input_no_mask">
+                                                            <span class="auth_input_placeholder">Подтверждение пароля</span>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="auth_buttons">
+                                        <button tabindex="0" type="submit" autofocus="" name="auth_action" value="auth/settings/password" class="auth_btn btn btn-info btn-block">
+                                            Изменить пароль
+                                        </button>
+                                    </div>
+                                    <div class="auth_forward_footer">
+                                        <a href="#" class="auth_forward" data-form="email_login">Перейти в личный кабинет</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                
+                    <form method="post" class="auth_form" data-form-id="change_password_success" id="auth_input_change_password_success" style="display: none">
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Изменить пароль
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span>Пароль успешно изменен</span>
+                                    </div>
+                                    <div class="auth_forward_footer">
+                                        <a href="http://auth.local/">Перейти в личный кабинет</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                
+                    <form method="post" class="auth_form auth_mask_country" data-form-id="phone_change" id="auth_input_phone_change" style="display: none">
+                        <input type="hidden" name="auth_phone" value="">
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Введите новый номер телефона
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span>Мы отправим код или позвоним для подтвеждения нового номера. Отвечать на звонок не нужно.</span>
+                                    </div>
+                                    <div>
+                                        <div class="auth_block_inputs">
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer ">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input autocomplete="on" type="tel" inputmode="numeric" name="phone" maxlength="" value="" autofocus="" class="auth_input auth_mask_init">
+                                                            <span class="auth_input_placeholder auth_input_placeholder_toggle">999 999 99 99</span>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                            <div class="auth_country">
+                                                <div class="auth_country_block">
+                                                    <div class="auth_country_blocks">
+                                                        <div class="auth_country_block_1" role="listbox">
+                                                            <div class="auth_country_block_1_number">
+                                                                <div class="auth_country_block_1_number_1">
+                                                                    <span>+7</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="auth_country_block_2"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="auth_buttons">
+                                        <button tabindex="0" type="submit" name="auth_action" value="auth/settings/phone/change" class="auth_btn btn btn-info btn-block">
+                                            Получить код
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    
+        <div class="auth_modal-content">
+            <div class="auth_modal-header">
+                <button type="button" class=" auth_modal-closed auth_modal-close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div id="auth_body">
+                <div class="auth_container">
+                    <form method="post" class="auth_form auth_mask_country" data-form-id="phone_code" id="auth_input_phone_code" style="display: none">
+                        <input type="hidden" name="auth_phone" value="">
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Введите номер телефона
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span>Мы отправим код или позвоним. Отвечать на звонок не нужно.</span>
+                                    </div>
+                                    <div>
+                                        <div class="auth_block_inputs">
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer ">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input autocomplete="on" type="tel" inputmode="numeric" name="phone" maxlength="" value="" autofocus="" class="auth_input auth_mask_init">
+                                                            <span class="auth_input_placeholder auth_input_placeholder_toggle">999 999 99 99</span>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                            <div class="auth_country">
+                                                <div class="auth_country_block">
+                                                    <div class="auth_country_blocks">
+                                                        <div class="auth_country_block_1" role="listbox">
+                                                            <div class="auth_country_block_1_number">
+                                                                <div class="auth_country_block_1_number_1">
+                                                                    <span>+7</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="auth_country_block_2"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="auth_buttons">
+                                        <button tabindex="0" type="submit" name="auth_action" value="auth/phone/code" class="auth_btn btn btn-info btn-block">
+                                            Получить код
+                                        </button>
+                                    </div>
+                                    <div class="auth_or">
+                                        или
+                                    </div>
+                                
+                                    <div class="auth_forward_footer">
+                                        <a href="#" class=" auth_forward" data-form="email_login">Войти по почте</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                
+                    <form method="post" class="auth_form" data-form-id="phone_confirmation" id="auth_input_code" style="display: none">
+                        <input type="hidden" name="auth_phone" value="">
+                        <button tabindex="0" type="submit" name="auth_action" value="auth/phone/confirmation" style="display: none"></button>
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Введите код
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span><span id="auth_phone_code_text">Мы отправили код подтверждения на номер</span> <span id="auth_phone">+7 (000) 000-00-00</span> <a href="#" class="auth_phone_change auth_forward" data-form="phone_code">Изменить</a></span>
+                                    </div>
+                                
+                                    <div class="auth_flash_call">
+                                        <span></span>
+                                    </div>
+                                
+                                    <div>
+                                        <div class="auth_block_inputs">
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer ">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input autocomplete="off" type="tel" inputmode="numeric" name="code" maxlength="" value="" autofocus="autofocus" class="auth_input_code auth_mask_init">
+                                                            <input type="hidden" name="auth_code" class="auth_input_code auth_mask_init">
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                    
+                                        </div>
+                                    </div>
+                                
+                                
+                                    <div class="auth_timer_container">
+                                        <div class="auth_timer_text">
+                                            <span>Получить новый код можно<br> через <span class="auth_timer">00:59</span></span>
+                                        </div>
+                                        <div class="auth_timer_resend">
+                                            <a href="#" class="auth_resend_code">
+                                                Получить новый код
+                                            </a>
+                                        </div>
+                                        <a href="#" class="auth_resend_code">
+                                            Получить новый код
+                                        </a>
+                                    </div>
+                                    <div class="auth_forward_footer">
+                                        <div class="auth_forward_footer">
+                                            <a href="#" class="auth_forward" data-form="email_login">Войти по почте</a>
+                                        </div>
+                                    </div>
+                            
+                            
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                
+                    <form method="post" class="auth_form" data-form-id="in_login" id="auth_input_in_login">
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Введите код
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span>Вы успешно вошли на сайт</span>
+                                    </div>
+                                    <div class="auth_forward_footer">
+                                        <a href="http://auth.local/lichnyij-kabinet/">Перейти в личный кабинет</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                
+                    <form method="post" class="auth_form" data-form-id="email_login" id="auth_input_email" style="display: none">
+                        <input type="hidden" name="auth_phone" value="">
+                        <button tabindex="0" type="submit" name="auth_action" value="auth/email/login" style="display: none"></button>
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Войдите по почте
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span>Только для зарегистрированных пользователей</span>
+                                    </div>
+                                    <div>
+                                        <div class="auth_block_inputs">
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer ">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input type="text" name="email" inputmode="email" value="" autofocus="autofocus" class="auth_input_email auth_input_no_mask">
+                                                            <span class="auth_input_placeholder">Электронная почта</span>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input type="password" name="password" value="" class="auth_input_email auth_input_no_mask">
+                                                            <span class="auth_input_placeholder">Пароль</span>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="auth_buttons">
+                                        <button tabindex="0" type="submit" name="auth_action" value="auth/login" class="auth_btn btn btn-info btn-block">
+                                            Войти
+                                        </button>
+                                    </div>
+                                    <div class="auth_forward_footer">
+                                        <a href="#" class=" auth_forward" data-form="phone_code">Вернуться на главный экран</a>
+                                    
+                                        <br>
+                                        <br>
+                                        <a href="#" class=" auth_forward" data-form="reset_password" data-copy="email">Забыли пароль?</a>
+                                
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                
+                    </form>
+                
+                    <form method="post" class="auth_form" data-form-id="reset_password" id="auth_input_reset_password" style="display: none">
+                        <input type="hidden" name="auth_phone" value="">
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Восстановление пароля
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span>Введите логин или пароля</span>
+                                    </div>
+                                    <div>
+                                        <div class="auth_block_inputs">
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer ">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input type="text" inputmode="email" name="email_reset" value="" autofocus="autofocus" class="auth_input_email auth_input_no_mask">
+                                                            <span class="auth_input_placeholder">Электронная почта</span>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="auth_buttons">
+                                        <button tabindex="0" type="submit" autofocus="" name="auth_action" value="auth/email/password/reset" class="auth_btn btn btn-info btn-block">
+                                            Сбросить пароль
+                                        </button>
+                                    </div>
+                                    <div class="auth_forward_footer">
+                                        <a href="#" class=" auth_forward" data-form="email_login">Вернуться к входу</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                
+                    <form method="post" class="auth_form" data-form-id="change_password" id="auth_input_change_password" style="display: none">
+                        <input type="hidden" name="auth_phone" value="">
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Изменить пароль
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span>Введите пароля и подтвердите его</span>
+                                    </div>
+                                    <div>
+                                        <div class="auth_block_inputs">
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input type="password" name="password" value="" class=" auth_input_no_mask">
+                                                            <span class="auth_input_placeholder">Пароль</span>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input type="password" name="password_confirmation" value="" class=" auth_input_no_mask">
+                                                            <span class="auth_input_placeholder">Подтверждение пароля</span>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="auth_buttons">
+                                        <button tabindex="0" type="submit" autofocus="" name="auth_action" value="auth/settings/password" class="auth_btn btn btn-info btn-block">
+                                            Изменить пароль
+                                        </button>
+                                    </div>
+                                    <div class="auth_forward_footer">
+                                        <a href="#" class="auth_forward" data-form="email_login">Перейти в личный кабинет</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                
+                    <form method="post" class="auth_form" data-form-id="change_password_success" id="auth_input_change_password_success" style="display: none">
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Изменить пароль
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span>Пароль успешно изменен</span>
+                                    </div>
+                                    <div class="auth_forward_footer">
+                                        <a href="http://auth.local/">Перейти в личный кабинет</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                
+                    <form method="post" class="auth_form auth_mask_country" data-form-id="phone_change" id="auth_input_phone_change" style="display: none">
+                        <input type="hidden" name="auth_phone" value="">
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Введите новый номер телефона
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span>Мы отправим код или позвоним для подтвеждения нового номера. Отвечать на звонок не нужно.</span>
+                                    </div>
+                                    <div>
+                                        <div class="auth_block_inputs">
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer ">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input autocomplete="on" type="tel" inputmode="numeric" name="phone" maxlength="" value="" autofocus="" class="auth_input auth_mask_init">
+                                                            <span class="auth_input_placeholder auth_input_placeholder_toggle">999 999 99 99</span>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                            <div class="auth_country">
+                                                <div class="auth_country_block">
+                                                    <div class="auth_country_blocks">
+                                                        <div class="auth_country_block_1" role="listbox">
+                                                            <div class="auth_country_block_1_number">
+                                                                <div class="auth_country_block_1_number_1">
+                                                                    <span>+7</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="auth_country_block_2"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="auth_buttons">
+                                        <button tabindex="0" type="submit" name="auth_action" value="auth/settings/phone/change" class="auth_btn btn btn-info btn-block">
+                                            Получить код
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    
+        <div class="auth_modal-content">
+            <div class="auth_modal-header">
+                <button type="button" class=" auth_modal-closed auth_modal-close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div id="auth_body">
+                <div class="auth_container">
+                    <form method="post" class="auth_form auth_mask_country" data-form-id="phone_code" id="auth_input_phone_code" style="display: none">
+                        <input type="hidden" name="auth_phone" value="">
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Введите номер телефона
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span>Мы отправим код или позвоним. Отвечать на звонок не нужно.</span>
+                                    </div>
+                                    <div>
+                                        <div class="auth_block_inputs">
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer ">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input autocomplete="on" type="tel" inputmode="numeric" name="phone" maxlength="" value="" autofocus="" class="auth_input auth_mask_init">
+                                                            <span class="auth_input_placeholder auth_input_placeholder_toggle">999 999 99 99</span>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                            <div class="auth_country">
+                                                <div class="auth_country_block">
+                                                    <div class="auth_country_blocks">
+                                                        <div class="auth_country_block_1" role="listbox">
+                                                            <div class="auth_country_block_1_number">
+                                                                <div class="auth_country_block_1_number_1">
+                                                                    <span>+7</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="auth_country_block_2"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="auth_buttons">
+                                        <button tabindex="0" type="submit" name="auth_action" value="auth/phone/code" class="auth_btn btn btn-info btn-block">
+                                            Получить код
+                                        </button>
+                                    </div>
+                                    <div class="auth_or">
+                                        или
+                                    </div>
+                                
+                                    <div class="auth_forward_footer">
+                                        <a href="#" class=" auth_forward" data-form="email_login">Войти по почте</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                
+                    <form method="post" class="auth_form" data-form-id="phone_confirmation" id="auth_input_code" style="display: none">
+                        <input type="hidden" name="auth_phone" value="">
+                        <button tabindex="0" type="submit" name="auth_action" value="auth/phone/confirmation" style="display: none"></button>
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Введите код
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span><span id="auth_phone_code_text">Мы отправили код подтверждения на номер</span> <span id="auth_phone">+7 (000) 000-00-00</span> <a href="#" class="auth_phone_change auth_forward" data-form="phone_code">Изменить</a></span>
+                                    </div>
+                                
+                                    <div class="auth_flash_call">
+                                        <span></span>
+                                    </div>
+                                
+                                    <div>
+                                        <div class="auth_block_inputs">
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer ">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input autocomplete="off" type="tel" inputmode="numeric" name="code" maxlength="" value="" autofocus="autofocus" class="auth_input_code auth_mask_init">
+                                                            <input type="hidden" name="auth_code" class="auth_input_code auth_mask_init">
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                    
+                                        </div>
+                                    </div>
+                                
+                                
+                                    <div class="auth_timer_container">
+                                        <div class="auth_timer_text">
+                                            <span>Получить новый код можно<br> через <span class="auth_timer">00:59</span></span>
+                                        </div>
+                                        <div class="auth_timer_resend">
+                                            <a href="#" class="auth_resend_code">
+                                                Получить новый код
+                                            </a>
+                                        </div>
+                                        <a href="#" class="auth_resend_code">
+                                            Получить новый код
+                                        </a>
+                                    </div>
+                                    <div class="auth_forward_footer">
+                                        <div class="auth_forward_footer">
+                                            <a href="#" class="auth_forward" data-form="email_login">Войти по почте</a>
+                                        </div>
+                                    </div>
+                            
+                            
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                
+                    <form method="post" class="auth_form" data-form-id="in_login" id="auth_input_in_login" style="display: none">
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Введите код
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span>Вы успешно вошли на сайт</span>
+                                        <br>
+                                        <a href="http://auth.local/lichnyij-kabinet/">Перейти в личный кабинет</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                
+                    <form method="post" class="auth_form" data-form-id="email_login" id="auth_input_email">
+                        <input type="hidden" name="auth_phone" value="">
+                        <button tabindex="0" type="submit" name="auth_action" value="auth/email/login" style="display: none"></button>
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Войдите по почте
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span>Только для зарегистрированных пользователей</span>
+                                    </div>
+                                    <div>
+                                        <div class="auth_block_inputs">
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer ">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input type="text" name="email" inputmode="email" value="" autofocus="autofocus" class="auth_input_email auth_input_no_mask">
+                                                            <span class="auth_input_placeholder">Электронная почта</span>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input type="password" name="password" value="" class="auth_input_email auth_input_no_mask">
+                                                            <span class="auth_input_placeholder">Пароль</span>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="auth_buttons">
+                                        <button tabindex="0" type="submit" name="auth_action" value="auth/login" class="auth_btn btn btn-info btn-block">
+                                            Войти
+                                        </button>
+                                    </div>
+                                    <div class="auth_forward_footer">
+                                        <a href="#" class=" auth_forward" data-form="phone_code">Вернуться на главный экран</a>
+                                    
+                                        <br>
+                                        <br>
+                                        <a href="#" class=" auth_forward" data-form="reset_password" data-copy="email">Забыли пароль?</a>
+                                
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                
+                    <form method="post" class="auth_form" data-form-id="reset_password" id="auth_input_reset_password" style="display: none">
+                        <input type="hidden" name="auth_phone" value="">
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Восстановление пароля
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span>Введите логин или пароля</span>
+                                    </div>
+                                    <div>
+                                        <div class="auth_block_inputs">
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer ">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input type="text" inputmode="email" name="email_reset" value="" autofocus="autofocus" class="auth_input_email auth_input_no_mask">
+                                                            <span class="auth_input_placeholder">Электронная почта</span>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="auth_buttons">
+                                        <button tabindex="0" type="submit" autofocus="" name="auth_action" value="auth/email/password/reset" class="auth_btn btn btn-info btn-block">
+                                            Сбросить пароль
+                                        </button>
+                                    </div>
+                                    <div class="auth_forward_footer">
+                                        <a href="#" class=" auth_forward" data-form="email_login">Вернуться к входу</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                
+                    <form method="post" class="auth_form" data-form-id="change_password" id="auth_input_change_password" style="display: none">
+                        <input type="hidden" name="auth_phone" value="">
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Изменить пароль
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span>Введите пароля и подтвердите его</span>
+                                    </div>
+                                    <div>
+                                        <div class="auth_block_inputs">
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input type="password" name="password" value="" class=" auth_input_no_mask">
+                                                            <span class="auth_input_placeholder">Пароль</span>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input type="password" name="password_confirmation" value="" class=" auth_input_no_mask">
+                                                            <span class="auth_input_placeholder">Подтверждение пароля</span>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="auth_buttons">
+                                        <button tabindex="0" type="submit" autofocus="" name="auth_action" value="auth/settings/password" class="auth_btn btn btn-info btn-block">
+                                            Изменить пароль
+                                        </button>
+                                    </div>
+                                    <div class="auth_forward_footer">
+                                        <a href="#" class="auth_forward" data-form="email_login">Перейти в личный кабинет</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                
+                    <form method="post" class="auth_form" data-form-id="change_password_success" id="auth_input_change_password_success" style="display: none">
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Изменить пароль
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span>Пароль успешно изменен</span>
+                                    </div>
+                                    <div class="auth_forward_footer">
+                                        <a href="http://auth.local/">Перейти в личный кабинет</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                
+                    <form method="post" class="auth_form auth_mask_country" data-form-id="phone_change" id="auth_input_phone_change" style="display: none">
+                        <input type="hidden" name="auth_phone" value="">
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Введите новый номер телефона
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span>Мы отправим код или позвоним для подтвеждения нового номера. Отвечать на звонок не нужно.</span>
+                                    </div>
+                                    <div>
+                                        <div class="auth_block_inputs">
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer ">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input autocomplete="on" type="tel" inputmode="numeric" name="phone" maxlength="" value="" autofocus="" class="auth_input auth_mask_init">
+                                                            <span class="auth_input_placeholder auth_input_placeholder_toggle">999 999 99 99</span>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                            <div class="auth_country">
+                                                <div class="auth_country_block">
+                                                    <div class="auth_country_blocks">
+                                                        <div class="auth_country_block_1" role="listbox">
+                                                            <div class="auth_country_block_1_number">
+                                                                <div class="auth_country_block_1_number_1">
+                                                                    <span>+7</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="auth_country_block_2"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="auth_buttons">
+                                        <button tabindex="0" type="submit" name="auth_action" value="auth/settings/phone/change" class="auth_btn btn btn-info btn-block">
+                                            Получить код
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    
+        <div class="auth_modal-content">
+            <div class="auth_modal-header">
+                <button type="button" class=" auth_modal-closed auth_modal-close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div id="auth_body">
+                <div class="auth_container">
+                    <form method="post" class="auth_form auth_mask_country" data-form-id="phone_code" id="auth_input_phone_code" style="display: none">
+                        <input type="hidden" name="auth_phone" value="">
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Введите номер телефона
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span>Мы отправим код или позвоним. Отвечать на звонок не нужно.</span>
+                                    </div>
+                                    <div>
+                                        <div class="auth_block_inputs">
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer ">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input autocomplete="on" type="tel" inputmode="numeric" name="phone" maxlength="" value="" autofocus="" class="auth_input auth_mask_init">
+                                                            <span class="auth_input_placeholder auth_input_placeholder_toggle">999 999 99 99</span>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                            <div class="auth_country">
+                                                <div class="auth_country_block">
+                                                    <div class="auth_country_blocks">
+                                                        <div class="auth_country_block_1" role="listbox">
+                                                            <div class="auth_country_block_1_number">
+                                                                <div class="auth_country_block_1_number_1">
+                                                                    <span>+7</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="auth_country_block_2"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="auth_buttons">
+                                        <button tabindex="0" type="submit" name="auth_action" value="auth/phone/code" class="auth_btn btn btn-info btn-block">
+                                            Получить код
+                                        </button>
+                                    </div>
+                                    <div class="auth_or">
+                                        или
+                                    </div>
+                                
+                                    <div class="auth_forward_footer">
+                                        <a href="#" class=" auth_forward" data-form="email_login">Войти по почте</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                
+                    <form method="post" class="auth_form" data-form-id="phone_confirmation" id="auth_input_code" style="display: none">
+                        <input type="hidden" name="auth_phone" value="">
+                        <button tabindex="0" type="submit" name="auth_action" value="auth/phone/confirmation" style="display: none"></button>
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Введите код
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span><span id="auth_phone_code_text">Мы отправили код подтверждения на номер</span> <span id="auth_phone">+7 (000) 000-00-00</span> <a href="#" class="auth_phone_change auth_forward" data-form="phone_code">Изменить</a></span>
+                                    </div>
+                                
+                                    <div class="auth_flash_call">
+                                        <span></span>
+                                    </div>
+                                
+                                    <div>
+                                        <div class="auth_block_inputs">
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer ">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input autocomplete="off" type="tel" inputmode="numeric" name="code" maxlength="" value="" autofocus="autofocus" class="auth_input_code auth_mask_init">
+                                                            <input type="hidden" name="auth_code" class="auth_input_code auth_mask_init">
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                    
+                                        </div>
+                                    </div>
+                                
+                                
+                                    <div class="auth_timer_container">
+                                        <div class="auth_timer_text">
+                                            <span>Получить новый код можно<br> через <span class="auth_timer">00:59</span></span>
+                                        </div>
+                                        <div class="auth_timer_resend">
+                                            <a href="#" class="auth_resend_code">
+                                                Получить новый код
+                                            </a>
+                                        </div>
+                                        <a href="#" class="auth_resend_code">
+                                            Получить новый код
+                                        </a>
+                                    </div>
+                                    <div class="auth_forward_footer">
+                                        <div class="auth_forward_footer">
+                                            <a href="#" class="auth_forward" data-form="email_login">Войти по почте</a>
+                                        </div>
+                                    </div>
+                            
+                            
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                
+                    <form method="post" class="auth_form" data-form-id="in_login" id="auth_input_in_login" style="display: none">
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Введите код
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span>Вы успешно вошли на сайт</span>
+                                        <br>
+                                        <a href="http://auth.local/lichnyij-kabinet/">Перейти в личный кабинет</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                
+                    <form method="post" class="auth_form" data-form-id="email_login" id="auth_input_email" style="display: none">
+                        <input type="hidden" name="auth_phone" value="">
+                        <button tabindex="0" type="submit" name="auth_action" value="auth/email/login" style="display: none"></button>
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Войдите по почте
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span>Только для зарегистрированных пользователей</span>
+                                    </div>
+                                    <div>
+                                        <div class="auth_block_inputs">
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer ">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input type="text" name="email" inputmode="email" value="" autofocus="autofocus" class="auth_input_email auth_input_no_mask">
+                                                            <span class="auth_input_placeholder">Электронная почта</span>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input type="password" name="password" value="" class="auth_input_email auth_input_no_mask">
+                                                            <span class="auth_input_placeholder">Пароль</span>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="auth_buttons">
+                                        <button tabindex="0" type="submit" name="auth_action" value="auth/login" class="auth_btn btn btn-info btn-block">
+                                            Войти
+                                        </button>
+                                    </div>
+                                    <div class="auth_forward_footer">
+                                        <a href="#" class=" auth_forward" data-form="phone_code">Вернуться на главный экран</a>
+                                    
+                                        <br>
+                                        <br>
+                                        <a href="#" class=" auth_forward" data-form="reset_password" data-copy="email">Забыли пароль?</a>
+                                
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                
+                    </form>
+                
+                    <form method="post" class="auth_form" data-form-id="reset_password" id="auth_input_reset_password">
+                        <input type="hidden" name="auth_phone" value="">
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Восстановление пароля
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span>Введите логин или пароля</span>
+                                    </div>
+                                    <div>
+                                        <div class="auth_block_inputs">
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer ">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input type="text" inputmode="email" name="email_reset" value="" autofocus="autofocus" class="auth_input_email auth_input_no_mask">
+                                                            <span class="auth_input_placeholder">Электронная почта</span>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="auth_buttons">
+                                        <button tabindex="0" type="submit" autofocus="" name="auth_action" value="auth/email/password/reset" class="auth_btn btn btn-info btn-block">
+                                            Сбросить пароль
+                                        </button>
+                                    </div>
+                                    <div class="auth_forward_footer">
+                                        <a href="#" class=" auth_forward" data-form="email_login">Вернуться к входу</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                
+                    <form method="post" class="auth_form" data-form-id="change_password" id="auth_input_change_password" style="display: none">
+                        <input type="hidden" name="auth_phone" value="">
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Изменить пароль
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span>Введите пароля и подтвердите его</span>
+                                    </div>
+                                    <div>
+                                        <div class="auth_block_inputs">
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input type="password" name="password" value="" class=" auth_input_no_mask">
+                                                            <span class="auth_input_placeholder">Пароль</span>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input type="password" name="password_confirmation" value="" class=" auth_input_no_mask">
+                                                            <span class="auth_input_placeholder">Подтверждение пароля</span>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="auth_buttons">
+                                        <button tabindex="0" type="submit" autofocus="" name="auth_action" value="auth/settings/password" class="auth_btn btn btn-info btn-block">
+                                            Изменить пароль
+                                        </button>
+                                    </div>
+                                    <div class="auth_forward_footer">
+                                        <a href="#" class="auth_forward" data-form="email_login">Перейти в личный кабинет</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                
+                    <form method="post" class="auth_form" data-form-id="change_password_success" id="auth_input_change_password_success" style="display: none">
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Изменить пароль
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span>Пароль успешно изменен</span>
+                                    </div>
+                                    <div class="auth_forward_footer">
+                                        <a href="http://auth.local/">Перейти в личный кабинет</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                
+                    <form method="post" class="auth_form auth_mask_country" data-form-id="phone_change" id="auth_input_phone_change" style="display: none">
+                        <input type="hidden" name="auth_phone" value="">
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Введите новый номер телефона
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span>Мы отправим код или позвоним для подтвеждения нового номера. Отвечать на звонок не нужно.</span>
+                                    </div>
+                                    <div>
+                                        <div class="auth_block_inputs">
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer ">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input autocomplete="on" type="tel" inputmode="numeric" name="phone" maxlength="" value="" autofocus="" class="auth_input auth_mask_init">
+                                                            <span class="auth_input_placeholder auth_input_placeholder_toggle">999 999 99 99</span>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                            <div class="auth_country">
+                                                <div class="auth_country_block">
+                                                    <div class="auth_country_blocks">
+                                                        <div class="auth_country_block_1" role="listbox">
+                                                            <div class="auth_country_block_1_number">
+                                                                <div class="auth_country_block_1_number_1">
+                                                                    <span>+7</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="auth_country_block_2"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="auth_buttons">
+                                        <button tabindex="0" type="submit" name="auth_action" value="auth/settings/phone/change" class="auth_btn btn btn-info btn-block">
+                                            Получить код
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    
+        <div class="auth_modal-content">
+            <div class="auth_modal-header">
+                <button type="button" class=" auth_modal-closed auth_modal-close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div id="auth_body">
+                <div class="auth_container">
+                    <form method="post" class="auth_form auth_mask_country" data-form-id="phone_code" id="auth_input_phone_code" style="display: none">
+                        <input type="hidden" name="auth_phone" value="">
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Введите номер телефона
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span>Мы отправим код или позвоним. Отвечать на звонок не нужно.</span>
+                                    </div>
+                                    <div>
+                                        <div class="auth_block_inputs">
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer ">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input autocomplete="on" type="tel" inputmode="numeric" name="phone" maxlength="" value="" autofocus="" class="auth_input auth_mask_init">
+                                                            <span class="auth_input_placeholder auth_input_placeholder_toggle">999 999 99 99</span>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                            <div class="auth_country">
+                                                <div class="auth_country_block">
+                                                    <div class="auth_country_blocks">
+                                                        <div class="auth_country_block_1" role="listbox">
+                                                            <div class="auth_country_block_1_number">
+                                                                <div class="auth_country_block_1_number_1">
+                                                                    <span>+7</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="auth_country_block_2"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="auth_buttons">
+                                        <button tabindex="0" type="submit" name="auth_action" value="auth/phone/code" class="auth_btn btn btn-info btn-block">
+                                            Получить код
+                                        </button>
+                                    </div>
+                                    <div class="auth_or">
+                                        или
+                                    </div>
+                                
+                                    <div class="auth_forward_footer">
+                                        <a href="#" class=" auth_forward" data-form="email_login">Войти по почте</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                
+                    <form method="post" class="auth_form" data-form-id="phone_confirmation" id="auth_input_code" style="display: none">
+                        <input type="hidden" name="auth_phone" value="">
+                        <button tabindex="0" type="submit" name="auth_action" value="auth/phone/confirmation" style="display: none"></button>
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Введите код
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span><span id="auth_phone_code_text">Мы отправили код подтверждения на номер</span> <span id="auth_phone">+7 (000) 000-00-00</span> <a href="#" class="auth_phone_change auth_forward" data-form="phone_code">Изменить</a></span>
+                                    </div>
+                                
+                                    <div class="auth_flash_call">
+                                        <span></span>
+                                    </div>
+                                
+                                    <div>
+                                        <div class="auth_block_inputs">
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer ">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input autocomplete="off" type="tel" inputmode="numeric" name="code" maxlength="" value="" autofocus="autofocus" class="auth_input_code auth_mask_init">
+                                                            <input type="hidden" name="auth_code" class="auth_input_code auth_mask_init">
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                    
+                                        </div>
+                                    </div>
+                                
+                                
+                                    <div class="auth_timer_container">
+                                        <div class="auth_timer_text">
+                                            <span>Получить новый код можно<br> через <span class="auth_timer">00:59</span></span>
+                                        </div>
+                                        <div class="auth_timer_resend">
+                                            <a href="#" class="auth_resend_code">
+                                                Получить новый код
+                                            </a>
+                                        </div>
+                                        <a href="#" class="auth_resend_code">
+                                            Получить новый код
+                                        </a>
+                                    </div>
+                                    <div class="auth_forward_footer">
+                                        <div class="auth_forward_footer">
+                                            <a href="#" class="auth_forward" data-form="email_login">Войти по почте</a>
+                                        </div>
+                                    </div>
+                            
+                            
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                
+                    <form method="post" class="auth_form" data-form-id="in_login" id="auth_input_in_login" style="display: none">
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Введите код
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span>Вы успешно вошли на сайт</span>
+                                        <br>
+                                        <a href="http://auth.local/lichnyij-kabinet/">Перейти в личный кабинет</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                
+                    <form method="post" class="auth_form" data-form-id="email_login" id="auth_input_email" style="display: none">
+                        <input type="hidden" name="auth_phone" value="">
+                        <button tabindex="0" type="submit" name="auth_action" value="auth/email/login" style="display: none"></button>
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Войдите по почте
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span>Только для зарегистрированных пользователей</span>
+                                    </div>
+                                    <div>
+                                        <div class="auth_block_inputs">
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer ">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input type="text" name="email" inputmode="email" value="" autofocus="autofocus" class="auth_input_email auth_input_no_mask">
+                                                            <span class="auth_input_placeholder">Электронная почта</span>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input type="password" name="password" value="" class="auth_input_email auth_input_no_mask">
+                                                            <span class="auth_input_placeholder">Пароль</span>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="auth_buttons">
+                                        <button tabindex="0" type="submit" name="auth_action" value="auth/login" class="auth_btn btn btn-info btn-block">
+                                            Войти
+                                        </button>
+                                    </div>
+                                    <div class="auth_forward_footer">
+                                        <a href="#" class=" auth_forward" data-form="phone_code">Вернуться на главный экран</a>
+                                    
+                                        <br>
+                                        <br>
+                                        <a href="#" class=" auth_forward" data-form="reset_password" data-copy="email">Забыли пароль?</a>
+                                
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                
+                    </form>
+                
+                    <form method="post" class="auth_form" data-form-id="reset_password" id="auth_input_reset_password" style="display: none">
+                        <input type="hidden" name="auth_phone" value="">
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Восстановление пароля
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span>Введите логин или пароля</span>
+                                    </div>
+                                    <div>
+                                        <div class="auth_block_inputs">
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer ">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input type="text" inputmode="email" name="email_reset" value="" autofocus="autofocus" class="auth_input_email auth_input_no_mask">
+                                                            <span class="auth_input_placeholder">Электронная почта</span>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="auth_buttons">
+                                        <button tabindex="0" type="submit" autofocus="" name="auth_action" value="auth/email/password/reset" class="auth_btn btn btn-info btn-block">
+                                            Сбросить пароль
+                                        </button>
+                                    </div>
+                                    <div class="auth_forward_footer">
+                                        <a href="#" class=" auth_forward" data-form="email_login">Вернуться к входу</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                
+                    <form method="post" class="auth_form" data-form-id="change_password" id="auth_input_change_password">
+                        <input type="hidden" name="auth_phone" value="">
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Изменить пароль
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span>Введите пароля и подтвердите его</span>
+                                    </div>
+                                    <div>
+                                        <div class="auth_block_inputs">
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input type="password" name="password" value="" class=" auth_input_no_mask">
+                                                            <span class="auth_input_placeholder">Пароль</span>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input type="password" name="password_confirmation" value="" class=" auth_input_no_mask">
+                                                            <span class="auth_input_placeholder">Подтверждение пароля</span>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="auth_buttons">
+                                        <button tabindex="0" type="submit" autofocus="" name="auth_action" value="auth/settings/password" class="auth_btn btn btn-info btn-block">
+                                            Изменить пароль
+                                        </button>
+                                    </div>
+                                    <div class="auth_forward_footer">
+                                        <a href="#" class="auth_forward" data-form="email_login">Перейти в личный кабинет</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                
+                    <form method="post" class="auth_form" data-form-id="change_password_success" id="auth_input_change_password_success" style="display: none">
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Изменить пароль
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span>Пароль успешно изменен</span>
+                                    </div>
+                                    <div class="auth_forward_footer">
+                                        <a href="http://auth.local/">Перейти в личный кабинет</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                
+                    <form method="post" class="auth_form auth_mask_country" data-form-id="phone_change" id="auth_input_phone_change" style="display: none">
+                        <input type="hidden" name="auth_phone" value="">
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Введите новый номер телефона
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span>Мы отправим код или позвоним для подтвеждения нового номера. Отвечать на звонок не нужно.</span>
+                                    </div>
+                                    <div>
+                                        <div class="auth_block_inputs">
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer ">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input autocomplete="on" type="tel" inputmode="numeric" name="phone" maxlength="" value="" autofocus="" class="auth_input auth_mask_init">
+                                                            <span class="auth_input_placeholder auth_input_placeholder_toggle">999 999 99 99</span>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                            <div class="auth_country">
+                                                <div class="auth_country_block">
+                                                    <div class="auth_country_blocks">
+                                                        <div class="auth_country_block_1" role="listbox">
+                                                            <div class="auth_country_block_1_number">
+                                                                <div class="auth_country_block_1_number_1">
+                                                                    <span>+7</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="auth_country_block_2"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="auth_buttons">
+                                        <button tabindex="0" type="submit" name="auth_action" value="auth/settings/phone/change" class="auth_btn btn btn-info btn-block">
+                                            Получить код
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    
+        <div class="auth_modal-content">
+            <div class="auth_modal-header">
+                <button type="button" class=" auth_modal-closed auth_modal-close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div id="auth_body">
+                <div class="auth_container">
+                    <form method="post" class="auth_form auth_mask_country" data-form-id="phone_code" id="auth_input_phone_code" style="display: none">
+                        <input type="hidden" name="auth_phone" value="">
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Введите номер телефона
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span>Мы отправим код или позвоним. Отвечать на звонок не нужно.</span>
+                                    </div>
+                                    <div>
+                                        <div class="auth_block_inputs">
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer ">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input autocomplete="on" type="tel" inputmode="numeric" name="phone" maxlength="" value="" autofocus="" class="auth_input auth_mask_init">
+                                                            <span class="auth_input_placeholder auth_input_placeholder_toggle">999 999 99 99</span>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                            <div class="auth_country">
+                                                <div class="auth_country_block">
+                                                    <div class="auth_country_blocks">
+                                                        <div class="auth_country_block_1" role="listbox">
+                                                            <div class="auth_country_block_1_number">
+                                                                <div class="auth_country_block_1_number_1">
+                                                                    <span>+7</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="auth_country_block_2"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="auth_buttons">
+                                        <button tabindex="0" type="submit" name="auth_action" value="auth/phone/code" class="auth_btn btn btn-info btn-block">
+                                            Получить код
+                                        </button>
+                                    </div>
+                                    <div class="auth_or">
+                                        или
+                                    </div>
+                                
+                                    <div class="auth_forward_footer">
+                                        <a href="#" class=" auth_forward" data-form="email_login">Войти по почте</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                
+                    <form method="post" class="auth_form" data-form-id="phone_confirmation" id="auth_input_code" style="display: none">
+                        <input type="hidden" name="auth_phone" value="">
+                        <button tabindex="0" type="submit" name="auth_action" value="auth/phone/confirmation" style="display: none"></button>
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Введите код
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span><span id="auth_phone_code_text">Мы отправили код подтверждения на номер</span> <span id="auth_phone">+7 (000) 000-00-00</span> <a href="#" class="auth_phone_change auth_forward" data-form="phone_code">Изменить</a></span>
+                                    </div>
+                                
+                                    <div class="auth_flash_call">
+                                        <span></span>
+                                    </div>
+                                
+                                    <div>
+                                        <div class="auth_block_inputs">
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer ">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input autocomplete="off" type="tel" inputmode="numeric" name="code" maxlength="" value="" autofocus="autofocus" class="auth_input_code auth_mask_init">
+                                                            <input type="hidden" name="auth_code" class="auth_input_code auth_mask_init">
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                    
+                                        </div>
+                                    </div>
+                                
+                                
+                                    <div class="auth_timer_container">
+                                        <div class="auth_timer_text">
+                                            <span>Получить новый код можно<br> через <span class="auth_timer">00:59</span></span>
+                                        </div>
+                                        <div class="auth_timer_resend">
+                                            <a href="#" class="auth_resend_code">
+                                                Получить новый код
+                                            </a>
+                                        </div>
+                                        <a href="#" class="auth_resend_code">
+                                            Получить новый код
+                                        </a>
+                                    </div>
+                                    <div class="auth_forward_footer">
+                                        <div class="auth_forward_footer">
+                                            <a href="#" class="auth_forward" data-form="email_login">Войти по почте</a>
+                                        </div>
+                                    </div>
+                            
+                            
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                
+                    <form method="post" class="auth_form" data-form-id="in_login" id="auth_input_in_login" style="display: none">
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Введите код
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span>Вы успешно вошли на сайт</span>
+                                        <br>
+                                        <a href="http://auth.local/lichnyij-kabinet/">Перейти в личный кабинет</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                
+                    <form method="post" class="auth_form" data-form-id="email_login" id="auth_input_email" style="display: none">
+                        <input type="hidden" name="auth_phone" value="">
+                        <button tabindex="0" type="submit" name="auth_action" value="auth/email/login" style="display: none"></button>
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Войдите по почте
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span>Только для зарегистрированных пользователей</span>
+                                    </div>
+                                    <div>
+                                        <div class="auth_block_inputs">
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer ">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input type="text" name="email" inputmode="email" value="" autofocus="autofocus" class="auth_input_email auth_input_no_mask">
+                                                            <span class="auth_input_placeholder">Электронная почта</span>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input type="password" name="password" value="" class="auth_input_email auth_input_no_mask">
+                                                            <span class="auth_input_placeholder">Пароль</span>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="auth_buttons">
+                                        <button tabindex="0" type="submit" name="auth_action" value="auth/login" class="auth_btn btn btn-info btn-block">
+                                            Войти
+                                        </button>
+                                    </div>
+                                    <div class="auth_forward_footer">
+                                        <a href="#" class=" auth_forward" data-form="phone_code">Вернуться на главный экран</a>
+                                    
+                                        <br>
+                                        <br>
+                                        <a href="#" class=" auth_forward" data-form="reset_password" data-copy="email">Забыли пароль?</a>
+                                
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                
+                    </form>
+                
+                    <form method="post" class="auth_form" data-form-id="reset_password" id="auth_input_reset_password" style="display: none">
+                        <input type="hidden" name="auth_phone" value="">
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Восстановление пароля
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span>Введите логин или пароля</span>
+                                    </div>
+                                    <div>
+                                        <div class="auth_block_inputs">
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer ">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input type="text" inputmode="email" name="email_reset" value="" autofocus="autofocus" class="auth_input_email auth_input_no_mask">
+                                                            <span class="auth_input_placeholder">Электронная почта</span>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="auth_buttons">
+                                        <button tabindex="0" type="submit" autofocus="" name="auth_action" value="auth/email/password/reset" class="auth_btn btn btn-info btn-block">
+                                            Сбросить пароль
+                                        </button>
+                                    </div>
+                                    <div class="auth_forward_footer">
+                                        <a href="#" class=" auth_forward" data-form="email_login">Вернуться к входу</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                
+                    <form method="post" class="auth_form" data-form-id="change_password" id="auth_input_change_password" style="display: none">
+                        <input type="hidden" name="auth_phone" value="">
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Изменить пароль
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span>Введите пароля и подтвердите его</span>
+                                    </div>
+                                    <div>
+                                        <div class="auth_block_inputs">
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input type="password" name="password" value="" class=" auth_input_no_mask">
+                                                            <span class="auth_input_placeholder">Пароль</span>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input type="password" name="password_confirmation" value="" class=" auth_input_no_mask">
+                                                            <span class="auth_input_placeholder">Подтверждение пароля</span>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="auth_buttons">
+                                        <button tabindex="0" type="submit" autofocus="" name="auth_action" value="auth/settings/password" class="auth_btn btn btn-info btn-block">
+                                            Изменить пароль
+                                        </button>
+                                    </div>
+                                    <div class="auth_forward_footer">
+                                        <a href="#" class="auth_forward" data-form="email_login">Перейти в личный кабинет</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                
+                    <form method="post" class="auth_form" data-form-id="change_password_success" id="auth_input_change_password_success">
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Изменить пароль
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span>Пароль успешно изменен</span>
+                                    </div>
+                                    <div class="auth_forward_footer">
+                                        <a href="http://auth.local/">Перейти в личный кабинет</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                
+                    <form method="post" class="auth_form auth_mask_country" data-form-id="phone_change" id="auth_input_phone_change" style="display: none">
+                        <input type="hidden" name="auth_phone" value="">
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Введите новый номер телефона
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span>Мы отправим код или позвоним для подтвеждения нового номера. Отвечать на звонок не нужно.</span>
+                                    </div>
+                                    <div>
+                                        <div class="auth_block_inputs">
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer ">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input autocomplete="on" type="tel" inputmode="numeric" name="phone" maxlength="" value="" autofocus="" class="auth_input auth_mask_init">
+                                                            <span class="auth_input_placeholder auth_input_placeholder_toggle">999 999 99 99</span>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                            <div class="auth_country">
+                                                <div class="auth_country_block">
+                                                    <div class="auth_country_blocks">
+                                                        <div class="auth_country_block_1" role="listbox">
+                                                            <div class="auth_country_block_1_number">
+                                                                <div class="auth_country_block_1_number_1">
+                                                                    <span>+7</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="auth_country_block_2"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="auth_buttons">
+                                        <button tabindex="0" type="submit" name="auth_action" value="auth/settings/phone/change" class="auth_btn btn btn-info btn-block">
+                                            Получить код
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    
+        <div class="auth_modal-content">
+            <div class="auth_modal-header">
+                <button type="button" class=" auth_modal-closed auth_modal-close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div id="auth_body">
+                <div class="auth_container">
+                    <form method="post" class="auth_form auth_mask_country" data-form-id="phone_code" id="auth_input_phone_code" style="display: none">
+                        <input type="hidden" name="auth_phone" value="">
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Введите номер телефона
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span>Мы отправим код или позвоним. Отвечать на звонок не нужно.</span>
+                                    </div>
+                                    <div>
+                                        <div class="auth_block_inputs">
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer ">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input autocomplete="on" type="tel" inputmode="numeric" name="phone" maxlength="" value="" autofocus="" class="auth_input auth_mask_init">
+                                                            <span class="auth_input_placeholder auth_input_placeholder_toggle">999 999 99 99</span>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                            <div class="auth_country">
+                                                <div class="auth_country_block">
+                                                    <div class="auth_country_blocks">
+                                                        <div class="auth_country_block_1" role="listbox">
+                                                            <div class="auth_country_block_1_number">
+                                                                <div class="auth_country_block_1_number_1">
+                                                                    <span>+7</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="auth_country_block_2"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="auth_buttons">
+                                        <button tabindex="0" type="submit" name="auth_action" value="auth/phone/code" class="auth_btn btn btn-info btn-block">
+                                            Получить код
+                                        </button>
+                                    </div>
+                                    <div class="auth_or">
+                                        или
+                                    </div>
+                                
+                                    <div class="auth_forward_footer">
+                                        <a href="#" class=" auth_forward" data-form="email_login">Войти по почте</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                
+                    <form method="post" class="auth_form" data-form-id="phone_confirmation" id="auth_input_code" style="display: none">
+                        <input type="hidden" name="auth_phone" value="">
+                        <button tabindex="0" type="submit" name="auth_action" value="auth/phone/confirmation" style="display: none"></button>
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Введите код
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span><span id="auth_phone_code_text">Мы отправили код подтверждения на номер</span> <span id="auth_phone">+7 (000) 000-00-00</span> <a href="#" class="auth_phone_change auth_forward" data-form="phone_code">Изменить</a></span>
+                                    </div>
+                                
+                                    <div class="auth_flash_call">
+                                        <span></span>
+                                    </div>
+                                
+                                    <div>
+                                        <div class="auth_block_inputs">
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer ">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input autocomplete="off" type="tel" inputmode="numeric" name="code" maxlength="" value="" autofocus="autofocus" class="auth_input_code auth_mask_init">
+                                                            <input type="hidden" name="auth_code" class="auth_input_code auth_mask_init">
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                    
+                                        </div>
+                                    </div>
+                                
+                                
+                                    <div class="auth_timer_container">
+                                        <div class="auth_timer_text">
+                                            <span>Получить новый код можно<br> через <span class="auth_timer">00:59</span></span>
+                                        </div>
+                                        <div class="auth_timer_resend">
+                                            <a href="#" class="auth_resend_code">
+                                                Получить новый код
+                                            </a>
+                                        </div>
+                                        <a href="#" class="auth_resend_code">
+                                            Получить новый код
+                                        </a>
+                                    </div>
+                                    <div class="auth_forward_footer">
+                                        <div class="auth_forward_footer">
+                                            <a href="#" class="auth_forward" data-form="email_login">Войти по почте</a>
+                                        </div>
+                                    </div>
+                            
+                            
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                
+                    <form method="post" class="auth_form" data-form-id="in_login" id="auth_input_in_login" style="display: none">
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Введите код
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span>Вы успешно вошли на сайт</span>
+                                        <br>
+                                        <a href="http://auth.local/lichnyij-kabinet/">Перейти в личный кабинет</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                
+                    <form method="post" class="auth_form" data-form-id="email_login" id="auth_input_email" style="display: none">
+                        <input type="hidden" name="auth_phone" value="">
+                        <button tabindex="0" type="submit" name="auth_action" value="auth/email/login" style="display: none"></button>
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Войдите по почте
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span>Только для зарегистрированных пользователей</span>
+                                    </div>
+                                    <div>
+                                        <div class="auth_block_inputs">
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer ">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input type="text" name="email" inputmode="email" value="" autofocus="autofocus" class="auth_input_email auth_input_no_mask">
+                                                            <span class="auth_input_placeholder">Электронная почта</span>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input type="password" name="password" value="" class="auth_input_email auth_input_no_mask">
+                                                            <span class="auth_input_placeholder">Пароль</span>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="auth_buttons">
+                                        <button tabindex="0" type="submit" name="auth_action" value="auth/login" class="auth_btn btn btn-info btn-block">
+                                            Войти
+                                        </button>
+                                    </div>
+                                    <div class="auth_forward_footer">
+                                        <a href="#" class=" auth_forward" data-form="phone_code">Вернуться на главный экран</a>
+                                    
+                                        <br>
+                                        <br>
+                                        <a href="#" class=" auth_forward" data-form="reset_password" data-copy="email">Забыли пароль?</a>
+                                
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                
+                    </form>
+                
+                    <form method="post" class="auth_form" data-form-id="reset_password" id="auth_input_reset_password" style="display: none">
+                        <input type="hidden" name="auth_phone" value="">
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Восстановление пароля
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span>Введите логин или пароля</span>
+                                    </div>
+                                    <div>
+                                        <div class="auth_block_inputs">
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer ">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input type="text" inputmode="email" name="email_reset" value="" autofocus="autofocus" class="auth_input_email auth_input_no_mask">
+                                                            <span class="auth_input_placeholder">Электронная почта</span>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="auth_buttons">
+                                        <button tabindex="0" type="submit" autofocus="" name="auth_action" value="auth/email/password/reset" class="auth_btn btn btn-info btn-block">
+                                            Сбросить пароль
+                                        </button>
+                                    </div>
+                                    <div class="auth_forward_footer">
+                                        <a href="#" class=" auth_forward" data-form="email_login">Вернуться к входу</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                
+                    <form method="post" class="auth_form" data-form-id="change_password" id="auth_input_change_password" style="display: none">
+                        <input type="hidden" name="auth_phone" value="">
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Изменить пароль
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span>Введите пароля и подтвердите его</span>
+                                    </div>
+                                    <div>
+                                        <div class="auth_block_inputs">
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input type="password" name="password" value="" class=" auth_input_no_mask">
+                                                            <span class="auth_input_placeholder">Пароль</span>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input type="password" name="password_confirmation" value="" class=" auth_input_no_mask">
+                                                            <span class="auth_input_placeholder">Подтверждение пароля</span>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="auth_buttons">
+                                        <button tabindex="0" type="submit" autofocus="" name="auth_action" value="auth/settings/password" class="auth_btn btn btn-info btn-block">
+                                            Изменить пароль
+                                        </button>
+                                    </div>
+                                    <div class="auth_forward_footer">
+                                        <a href="#" class="auth_forward" data-form="email_login">Перейти в личный кабинет</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                
+                    <form method="post" class="auth_form" data-form-id="change_password_success" id="auth_input_change_password_success" style="display: none">
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Изменить пароль
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span>Пароль успешно изменен</span>
+                                    </div>
+                                    <div class="auth_forward_footer">
+                                        <a href="http://auth.local/">Перейти в личный кабинет</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                
+                    <form method="post" class="auth_form auth_mask_country" data-form-id="phone_change" id="auth_input_phone_change">
+                        <input type="hidden" name="auth_phone" value="">
+                        <div class="auth">
+                            <div class="auth_block">
+                                <div class="auth_block_first">
+                                    <div class="auth_block_title">
+                                        Введите новый номер телефона
+                                    </div>
+                                    <div class="auth_block_text">
+                                        <span>Мы отправим код или позвоним для подтвеждения нового номера. Отвечать на звонок не нужно.</span>
+                                    </div>
+                                    <div>
+                                        <div class="auth_block_inputs">
+                                            <div class="auth_block_inputs_phone">
+                                                <label>
+                                                    <div class="auth_block_inputs_phone_outer ">
+                                                        <div class="auth_block_inputs_phone_outer_row">
+                                                            <input autocomplete="on" type="tel" inputmode="numeric" name="phone" maxlength="" value="" autofocus="" class="auth_input auth_mask_init">
+                                                            <span class="auth_input_placeholder auth_input_placeholder_toggle">999 999 99 99</span>
+                                                        </div>
+                                                    </div>
+                                                </label>
+                                            </div>
+                                            <div class="auth_country">
+                                                <div class="auth_country_block">
+                                                    <div class="auth_country_blocks">
+                                                        <div class="auth_country_block_1" role="listbox">
+                                                            <div class="auth_country_block_1_number">
+                                                                <div class="auth_country_block_1_number_1">
+                                                                    <span>+7</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="auth_country_block_2"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="auth_buttons">
+                                        <button tabindex="0" type="submit" name="auth_action" value="auth/settings/phone/change" class="auth_btn btn btn-info btn-block">
+                                            Получить код
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+<script>
+    // Переменную authModalConfig переносить не нужно!
+    // Необходима для работы скрптов аутентификации в верстке
+    var authModalConfig = {
+        "close_all_message": "auth_message_close_all",
+        "cssUrl": "\/assets\/components\/auth\/css\/web\/",
+        "jsUrl": "\/assets\/components\/auth\/js\/web\/",
+        "ctx": "web",
+        "country_table_enable": "",
+        "country": "\u0420\u043e\u0441\u0441\u0438\u044f",
+        "country_code": "7",
+        "siteName": "MODX Revolution"
+    }
+    
+    $('#auth_modal').click(function(e) {
+        if (this.id === 'auth_modal') {
+           e.preventDefault();
+           e.stopPropagation();
+        }
+    });
+    
+</script>
+<script src="js/auth.js"></script>

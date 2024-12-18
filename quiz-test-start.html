@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ru" class="mode--dev js rgba boxshadow csstransitions js rgba boxshadow csstransitions">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест аудитории Fandeco.ru</title>
+    <meta name="figma" content="@@figma">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700&display=swap" rel="stylesheet" />
+    <link rel="shortcut icon" href="https://aws.massive.ru/fandeco.ru/redesign/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/main.min.css">
+    
+        
+            <link rel="stylesheet" href="css/page/quiz-test.min.css">
+        
+    
+</head>
+
+<body class="page">
+
+<!-- Блоки с инлайновыми стилями переносить не надо, они добавлены для сервиса сравнения -->
+<div style="display: flex; justify-content: center;">
+    <div style="width: 100%; max-width: 1440px; padding: 0 20px;">
+        
+        <!-- На страницу забирать только .quiz-test__wrapper -->
+        <div class="quiz-test__wrapper">
+            <h1 class="quiz-test__title">Tест <span id="quizTestStep"></span></h1>
+            <div class="quiz-test__question visible"
+     data-quiz-test-step="0">
+    <h2 class="quiz-test__caption quiz-test__caption_start">Помогите нам стать лучше! Пройдите короткий тест. Нам очень важно именно ВАШЕ мнение!</h2>
+    <form action="" class="quiz-test__form">
+        <h3 class="quiz-test__form-title">Представьтесь пожалуйста</h3>
+        
+        <!-- Полю с ошибкой добавлять класс .has-error -->
+        <label>
+            <span class="quiz-test__form-label">ФИО</span>
+            <input type="text" name="name" placeholder="Ваше имя"/>
+            <span class="quiz-test__form-error">Текст ошибки</span>
+        </label>
+        <label>
+            <span class="quiz-test__form-label">Дата рождения</span>
+            <input type="tel" name="birthday" placeholder="01.01.1990"/>
+            <span class="quiz-test__form-error">Текст ошибки</span>
+        </label>
+        <label>
+            <span class="quiz-test__form-label">Сфера деятельности</span>
+            <input type="text" name="job" placeholder="Инженер"/>
+            <span class="quiz-test__form-error">Текст ошибки</span>
+        </label>
+        
+        <p class="quiz-test__form-privacy">Мы не передаем информацию третьим лицам</p>
+    </form>
+    <button class="btn btn-primary quiz-test__button">Пройти тест</button>
+</div>
+        </div>
+        
+    </div>
+</div>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fancy scrollbar</title>
+    <link rel="shortcut icon" href="https://584c5dbd-593d-44f7-8470-c89579a522b3.selcdn.net/favicon.ico" type="image/x-icon">
+    
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    
+    <!-- Perfect scrollbar -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.7/js/min/perfect-scrollbar.jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.7/css/perfect-scrollbar.min.css" />
+    
+    <!-- Fancybox -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    
+    <script type="text/javascript">
+    
+    // Исправленный скрипт drag.js --- START
+    $(document).on('ready', function() {
+        var slider = document.querySelector('#gallery_wrap_scroll');
+        
+        if (slider) {
+            $('#gallery_wrap_scroll').perfectScrollbar();
+    
+            var isDown = false;
+            var isSliderLocked = false;
+            var startX;
+            var scrollLeft;
+    
+            var fancyLinks = Array.from(slider
+                .querySelectorAll('.gallery_item_image'));
+            
+            function unlockFancySlider () {
+                isDown = false;
+                slider.classList.remove('active');
+                setTimeout(function () {
+                    isSliderLocked = false;
+                }, 100);
+            }
+            
+            slider.addEventListener('mouseleave', unlockFancySlider);
+            slider.addEventListener('mouseup', unlockFancySlider);
+            
+            slider.addEventListener('mousedown', function(event) {
+                isDown = true;
+                slider.classList.add('active');
+                startX = event.pageX - slider.offsetLeft;
+                scrollLeft = slider.scrollLeft;
+            });
+            
+            slider.addEventListener('mousemove', function(event) {
+                if (!isDown) return;
+    
+                event.preventDefault();
+    
+                var x = event.pageX - slider.offsetLeft;
+                var walk = (x - startX) * 3 // scroll speed
+                slider.scrollLeft = scrollLeft - walk;
+                isSliderLocked = true;
+            });
+            
+            fancyLinks.forEach(function (link) {
+                link.addEventListener('click', function(event) {
+                    if (isSliderLocked) event.preventDefault();
+                });
+            });
+        }
+    });
+// Исправленный скрипт drag.js --- FINISH
+</script>
+
+    
+    <style>
+        html, body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .row {
+            margin: 0 20px;
+        }
+
+        #gallery_wrap_scroll {
+            margin: 50px 0;
+            position: relative;
+        }
+
+        div#gallery_wrap.gallery_wrap {
+            width: 100%;
+            display: grid;
+            gap: 20px;
+            align-items: start;
+            justify-content: start;
+            align-content: center;
+            justify-items: start;
+            max-width: 100%;
+        }
+
+        div#gallery_wrap.gallery_wrap .gallery_row {
+            width: 100%;
+            display: flex;
+            gap: 20px;
+            justify-content: flex-start;
+            align-content: flex-start;
+            flex-wrap: nowrap;
+            flex-direction: row;
+            align-items: flex-start;
+        }
+
+        div#gallery_wrap.gallery_wrap .gallery_row a {
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div id="gallery_wrap_scroll">
+                <div id="gallery_wrap" class="gallery_wrap">
+                    <div class="gallery_row">
+                        <a href="https://fandeco.ru/assets/images/gallery/73/croped-2000/crop/fb17acf8c5f6c7486bdf98ceb0ac3f04b5491d76.jpg"
+                           data-fancybox="gallery" class="gallery_item_image">
+                            <img class="gallery_item lazyload_img "
+                                 src="https://fandeco.ru/assets/images/gallery/73/croped-2000/crop/fb17acf8c5f6c7486bdf98ceb0ac3f04b5491d76.jpg"
+                                 alt="" width="610" height="292">
+                        </a>
+                        <a href="https://fandeco.ru/assets/images/gallery/73/croped-2000/crop/8852bcb35d49dabeff2bad7285d66484796f125a.jpg"
+                           data-fancybox="gallery" class="gallery_item_image">
+                            <img class="gallery_item lazyload_img "
+                                 src="https://fandeco.ru/assets/images/gallery/73/croped-2000/crop/8852bcb35d49dabeff2bad7285d66484796f125a.jpg"
+                                 alt="" width="393" height="292">
+                        </a>
+                        <a href="https://fandeco.ru/assets/images/gallery/73/croped-2000/crop/612ed8712d4c09e6ad8dfddcec962f9193bfa8f6.jpg"
+                           data-fancybox="gallery" class="gallery_item_image">
+                            <img class="gallery_item lazyload_img "
+                                 src="https://fandeco.ru/assets/images/gallery/73/croped-2000/crop/612ed8712d4c09e6ad8dfddcec962f9193bfa8f6.jpg"
+                                 alt="" width="194" height="292">
+                        </a>
+                        <a href="https://fandeco.ru/assets/images/gallery/73/croped-2000/crop/4fa6732de38ae665edec90c1574b5c13ebc9a492.jpg"
+                           data-fancybox="gallery" class="gallery_item_image">
+                            <img class="gallery_item lazyload_img "
+                                 src="https://fandeco.ru/assets/images/gallery/73/croped-2000/crop/4fa6732de38ae665edec90c1574b5c13ebc9a492.jpg"
+                                 alt="" width="164" height="292">
+                        </a>
+                        <a href="https://fandeco.ru/assets/images/gallery/73/croped-2000/crop/a8e1d9a39c8ecb3667125c389c78cf36e858df80.jpg"
+                           data-fancybox="gallery" class="gallery_item_image">
+                            <img class="gallery_item lazyload_img "
+                                 src="https://fandeco.ru/assets/images/gallery/73/croped-2000/crop/a8e1d9a39c8ecb3667125c389c78cf36e858df80.jpg"
+                                 alt="" width="438" height="292">
+                        </a>
+                        <a href="https://fandeco.ru/assets/images/gallery/73/croped-2000/crop/977b2f706a31ac30a4f216788c1511aaabb157e4.jpg"
+                           data-fancybox="gallery" class="gallery_item_image">
+                            <img class="gallery_item lazyload_img "
+                                 src="https://fandeco.ru/assets/images/gallery/73/croped-2000/crop/977b2f706a31ac30a4f216788c1511aaabb157e4.jpg"
+                                 alt="" width="194" height="292">
+                        </a>
+                    </div>
+                    <div class="gallery_row">
+                        <a href="https://fandeco.ru/assets/images/gallery/73/croped-2000/crop/39ba81289acbedc3a08cbeb2031149aee4503fda.jpg"
+                           data-fancybox="gallery" class="gallery_item_image">
+                            <img class="gallery_item lazyload_img "
+                                 src="https://fandeco.ru/assets/images/gallery/73/croped-2000/crop/39ba81289acbedc3a08cbeb2031149aee4503fda.jpg"
+                                 alt="" width="547" height="406">
+                        </a>
+                        <a href="https://fandeco.ru/assets/images/gallery/73/croped-2000/crop/1fcb80e13a235429952eb9e719e447bd81ed1013.jpg"
+                           data-fancybox="gallery" class="gallery_item_image">
+                            <img class="gallery_item lazyload_img "
+                                 src="https://fandeco.ru/assets/images/gallery/73/croped-2000/crop/1fcb80e13a235429952eb9e719e447bd81ed1013.jpg"
+                                 alt="" width="609" height="406">
+                        </a>
+                        <a href="https://fandeco.ru/assets/images/gallery/73/croped-2000/crop/95c22313dff50b83c2755e23989e6ab6bcdd556a.jpg"
+                           data-fancybox="gallery" class="gallery_item_image">
+                            <img class="gallery_item lazyload_img "
+                                 src="https://fandeco.ru/assets/images/gallery/73/croped-2000/crop/95c22313dff50b83c2755e23989e6ab6bcdd556a.jpg"
+                                 alt="" width="270" height="406">
+                        </a>
+                        <a href="https://fandeco.ru/assets/images/gallery/73/croped-2000/crop/3dda29f3e03cd4d59a40a953222f2183b0ca9180.jpg"
+                           data-fancybox="gallery" class="gallery_item_image">
+                            <img class="gallery_item lazyload_img "
+                                 src="https://fandeco.ru/assets/images/gallery/73/croped-2000/crop/3dda29f3e03cd4d59a40a953222f2183b0ca9180.jpg"
+                                 alt="" width="302" height="406">
+                        </a>
+                        <a href="https://fandeco.ru/assets/images/gallery/73/croped-2000/crop/0141f7451c45b9b8eee9b0f7ad9091e46124f094.jpg"
+                           data-fancybox="gallery" class="gallery_item_image">
+                            <img class="gallery_item lazyload_img "
+                                 src="https://fandeco.ru/assets/images/gallery/73/croped-2000/crop/0141f7451c45b9b8eee9b0f7ad9091e46124f094.jpg"
+                                 alt="" width="270" height="406">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

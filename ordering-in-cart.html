@@ -1,0 +1,1950 @@
+<!doctype html>
+<html lang="ru" class="mode--dev js rgba boxshadow csstransitions js rgba boxshadow csstransitions">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оформление товара под заказ в корзине</title>
+    <meta name="figma" content="@@figma">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700&display=swap" rel="stylesheet" />
+    <link rel="shortcut icon" href="https://aws.massive.ru/fandeco.ru/redesign/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/main.min.css">
+    
+        
+            <link rel="stylesheet" href="css/page/basket.min.css">
+        
+    
+</head>
+
+<body class="page">
+
+<div class="widget_wrap">
+    <ul class="widget_list">
+        <li class="widget_item">
+    <a class="widget_link" href="home.html">Главная страница</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="about-product.html">О товаре</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="about.html">О нас</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="banner.html">Баннер/Слайдер</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="brands.html">Бренды</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="catalogs.html">Каталоги</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="comparison.html">Сравнение</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="cooperation.html">Cотрудничество</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="delivery.html">О товаре</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="matching.html">Сравнение</a>
+</li>
+
+        <li class="widget_label">Динамика</li>
+        <li class="widget_item">
+            <a class="widget_link widget_link_dynamic" data-num="dyn_1" href="#">Первый вариант</a>
+        </li>
+        <li class="widget_item">
+            <a class="widget_link widget_link_dynamic" data-num="dyn_2" href="#">Второй вариант</a>
+        </li>
+        <li class="widget_item">
+            <a class="widget_link widget_link_dynamic" data-num="dyn_3" href="#">Третий вариант</a>
+        </li>
+        <li class="widget_item">
+            <a class="widget_link widget_link_dynamic" data-num="dyn_4" href="#">Четвертый вариант</a>
+        </li>
+    </ul>
+</div>
+<!-- Стили для спойлера Долями не переносить. Скопировал их из виджета для демонстрации верстки --- START -->
+<style type="text/css">
+    .digi-dolyame-logo-advanced {
+        top: -5px
+    }
+
+    .digi-dolyame-scheme {
+        max-width: 451px;
+        margin: 0 20px 0 auto;
+        padding: 0 15px;
+    }
+
+    @media screen and (max-width: 991px) {
+        .digi-dolyame-scheme--mobile {
+            max-width: 330px
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        .digi-dolyame-scheme--mobile {
+            max-width: 100%;
+            margin-right: 0
+        }
+    }
+
+    .digi-dolyame-scheme--desktop .digi-dolyame-scheme__details-of-payment {
+        padding: 16px 4px !important
+    }
+
+    .digi-dolyame-button .digi-dolyame-button__text {
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 24px;
+        color: #000;
+    }
+
+    .digi-dolyame-banner {
+        width: 100%;
+        margin-bottom: 0
+    }
+
+    .digi-dolyame-button {
+        width: 100%;
+        margin: 11px 0 0;
+        height: 44px;
+        border-radius: 0.3rem;
+    }
+
+    .digi-dolyame-banner {
+        width: 100%;
+        margin-bottom: 20px;
+        border-radius: 4px !important
+    }
+</style>
+<style type="text/css">
+    .digi-dolyame-scheme {
+        width: 100%;
+        font-weight: 400;
+        text-transform: none;
+        font-family: var(--inheritFontFamilyValue)
+    }
+
+    .digi-dolyame-scheme__content {
+        min-height: 100%;
+        font-weight: 400
+    }
+
+    .digi-dolyame-scheme ul {
+        list-style: none
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__payment-list {
+        display: -webkit-flex !important;
+        display: flex !important;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+        margin-bottom: 15px
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__payment-item {
+        min-width: -webkit-max-content;
+        min-width: -moz-max-content;
+        min-width: max-content
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__payment-item--price {
+        display: -webkit-flex !important;
+        display: flex !important;
+        -webkit-align-items: center;
+        align-items: center;
+        position: relative;
+        font-size: 13px;
+        line-height: 16px;
+        font-weight: 700;
+        margin-bottom: 2px
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__payment-item--price svg {
+        margin-left: 3px
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__payment-item--date {
+        font-size: 11px;
+        line-height: 16px;
+        font-weight: 400;
+        opacity: .6;
+        margin-bottom: 8px
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__payment-item--img {
+        position: relative;
+        display: -webkit-flex !important;
+        display: flex !important;
+        -webkit-align-items: center;
+        align-items: center;
+        height: 18px
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__payment-item--img:not(:last-child) {
+        margin-right: 8px
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__payment-item:first-child .digi-dolyame-scheme__payment-item--img:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 15px;
+        height: 14px;
+        display: block !important;
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='15' height='14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.318 1a9 9 0 00-9 9' stroke='%236FADAA' stroke-width='1.5'/%3E%3Ccircle cx='10.318' cy='10' r='4' transform='rotate(-90 10.318 10)' fill='%23242424'/%3E%3C/svg%3E");
+        background-position: 50%;
+        background-repeat: no-repeat
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__payment-item:nth-child(3) .digi-dolyame-scheme__payment-item--img:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 21px;
+        height: 14px;
+        display: block !important;
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='21' height='14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19.354 10a9 9 0 10-18 0' stroke='%236FADAA' stroke-width='1.5'/%3E%3Ccircle cx='10.354' cy='10' r='4' transform='rotate(-90 10.354 10)' fill='%23242424'/%3E%3C/svg%3E");
+        background-position: 50%;
+        background-repeat: no-repeat
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__payment-item:nth-child(5) .digi-dolyame-scheme__payment-item--img:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 21px;
+        height: 20px;
+        display: block !important;
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='21' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.386 19a9 9 0 10-9-9' stroke='%236FADAA' stroke-width='1.5'/%3E%3Ccircle cx='10.386' cy='10' r='4' transform='rotate(-90 10.386 10)' fill='%23242424'/%3E%3C/svg%3E");
+        background-position: 50%;
+        background-repeat: no-repeat
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__payment-item:nth-child(7) .digi-dolyame-scheme__payment-item--img:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 19px;
+        height: 19px;
+        display: block !important;
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='19' height='19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='9.422' cy='9.069' r='8.25' stroke='%236FADAA' stroke-width='1.5'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8.536 10.472l-1.782-1.52a.824.824 0 00-1.13.064.745.745 0 00.067 1.083l2.4 2.045a.824.824 0 001.146-.082l4-4.602a.745.745 0 00-.103-1.08.824.824 0 00-1.127.099l-3.47 3.993z' fill='%236FADAA'/%3E%3C/svg%3E");
+        background-position: 50%;
+        background-repeat: no-repeat
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__payment-item--border {
+        width: 17%;
+        border-bottom: 1px solid #c7c9cc;
+        margin-bottom: 7px;
+        margin-left: -20px;
+        margin-right: 8px
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__features-list {
+        display: -webkit-flex !important;
+        display: flex !important;
+        -webkit-flex-direction: column;
+        flex-direction: column
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__details-of-payment_item,
+    .digi-dolyame-scheme .digi-dolyame-scheme__item-features {
+        color: #000 !important
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__features-item {
+        position: relative;
+        padding-left: 22px;
+        font-size: 13px;
+        line-height: 20px;
+        font-weight: 400
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__features-item:before {
+        content: "";
+        position: absolute;
+        top: calc(50% - 4px);
+        left: 0;
+        width: 10px;
+        height: 8px;
+        display: block !important;
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='10' height='8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M3.893 5.567L1.664 3.586A1 1 0 10.336 5.08l3 2.666a1 1 0 001.432-.107l5-6A1 1 0 108.232.36l-4.34 5.207z' fill='%236FADAA'/%3E%3C/svg%3E");
+        background-position: 50%;
+        background-repeat: no-repeat
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__features-item:not(:last-child) {
+        margin-bottom: 8px
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__description-details {
+        color: rgba(0, 0, 0, .6);
+        font-size: 15px;
+        line-height: 24px
+    }
+
+    .digi-dolyame-scheme li:before {
+        content: unset !important
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__details-of-payment_item {
+        width: 25%;
+        line-height: 1.35 !important;
+        font-size: 14px !important
+    }
+
+    .digi-dolyame-scheme.digi-dolyame-scheme--mobile .digi-dolyame-scheme__features-list {
+        margin-top: 24px;
+        padding-left: 0 !important;
+        margin-left: 0 !important
+    }
+
+    .digi-dolyame-scheme.digi-dolyame-scheme--mobile .digi-dolyame-scheme__item-features:not(:nth-child(2)) {
+        margin-bottom: 16px !important
+    }
+
+    .digi-dolyame-scheme.digi-dolyame-scheme--mobile .digi-dolyame-scheme__item-features {
+        display: -webkit-flex !important;
+        display: flex !important;
+        -webkit-align-items: center;
+        align-items: center;
+        padding-left: 0 !important
+    }
+
+    .digi-dolyame-scheme.digi-dolyame-scheme--mobile .digi-dolyame-scheme__item-features svg {
+        margin-right: 12px
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__details {
+        font-size: 13px;
+        text-align: center;
+        color: rgba(0, 0, 0, .4)
+    }
+
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__details-of-payment_date {
+        font-size: .865em
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__details-of-payment_price {
+        font-size: 1em;
+        font-weight: 700;
+        margin-bottom: 12px
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__details-of-payment_item~.digi-dolyame-scheme__details-of-payment_item {
+        color: rgba(0, 0, 0, .4) !important
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__details-of-payment {
+        display: -webkit-flex !important;
+        display: flex !important;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+        margin: 16px 0;
+        padding: 16px !important;
+        background-color: #f6f7f8;
+        border-radius: 8px
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__details-of-payment_item:after {
+        content: "";
+        background-color: var(--redesign-main-color);
+        border-radius: 6px;
+        height: 5px;
+        width: 95%;
+        display: block !important
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__details-of-payment_item~.digi-dolyame-scheme__details-of-payment_item:after {
+        background-color: rgba(0, 0, 0, .06) !important
+    }
+</style>
+<style type="text/css">
+    .digi-dolyame-scheme {
+        width: 100%;
+        font-weight: 400;
+        text-transform: none;
+        font-family: var(--inheritFontFamilyValue)
+    }
+
+    .digi-dolyame-scheme__content {
+        min-height: 100%;
+        font-weight: 400
+    }
+
+    .digi-dolyame-scheme ul {
+        list-style: none
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__payment-list {
+        display: -webkit-flex !important;
+        display: flex !important;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+        margin-bottom: 15px
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__payment-item {
+        min-width: -webkit-max-content;
+        min-width: -moz-max-content;
+        min-width: max-content
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__payment-item--price {
+        display: -webkit-flex !important;
+        display: flex !important;
+        -webkit-align-items: center;
+        align-items: center;
+        position: relative;
+        font-size: 13px;
+        line-height: 16px;
+        font-weight: 700;
+        margin-bottom: 2px
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__payment-item--price svg {
+        margin-left: 3px
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__payment-item--date {
+        font-size: 11px;
+        line-height: 16px;
+        font-weight: 400;
+        opacity: .6;
+        margin-bottom: 8px
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__payment-item--img {
+        position: relative;
+        display: -webkit-flex !important;
+        display: flex !important;
+        -webkit-align-items: center;
+        align-items: center;
+        height: 18px
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__payment-item--img:not(:last-child) {
+        margin-right: 8px
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__payment-item:first-child .digi-dolyame-scheme__payment-item--img:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 15px;
+        height: 14px;
+        display: block !important;
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='15' height='14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.318 1a9 9 0 00-9 9' stroke='%236FADAA' stroke-width='1.5'/%3E%3Ccircle cx='10.318' cy='10' r='4' transform='rotate(-90 10.318 10)' fill='%23242424'/%3E%3C/svg%3E");
+        background-position: 50%;
+        background-repeat: no-repeat
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__payment-item:nth-child(3) .digi-dolyame-scheme__payment-item--img:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 21px;
+        height: 14px;
+        display: block !important;
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='21' height='14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19.354 10a9 9 0 10-18 0' stroke='%236FADAA' stroke-width='1.5'/%3E%3Ccircle cx='10.354' cy='10' r='4' transform='rotate(-90 10.354 10)' fill='%23242424'/%3E%3C/svg%3E");
+        background-position: 50%;
+        background-repeat: no-repeat
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__payment-item:nth-child(5) .digi-dolyame-scheme__payment-item--img:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 21px;
+        height: 20px;
+        display: block !important;
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='21' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.386 19a9 9 0 10-9-9' stroke='%236FADAA' stroke-width='1.5'/%3E%3Ccircle cx='10.386' cy='10' r='4' transform='rotate(-90 10.386 10)' fill='%23242424'/%3E%3C/svg%3E");
+        background-position: 50%;
+        background-repeat: no-repeat
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__payment-item:nth-child(7) .digi-dolyame-scheme__payment-item--img:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 19px;
+        height: 19px;
+        display: block !important;
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='19' height='19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='9.422' cy='9.069' r='8.25' stroke='%236FADAA' stroke-width='1.5'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8.536 10.472l-1.782-1.52a.824.824 0 00-1.13.064.745.745 0 00.067 1.083l2.4 2.045a.824.824 0 001.146-.082l4-4.602a.745.745 0 00-.103-1.08.824.824 0 00-1.127.099l-3.47 3.993z' fill='%236FADAA'/%3E%3C/svg%3E");
+        background-position: 50%;
+        background-repeat: no-repeat
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__payment-item--border {
+        width: 17%;
+        border-bottom: 1px solid #c7c9cc;
+        margin-bottom: 7px;
+        margin-left: -20px;
+        margin-right: 8px
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__features-list {
+        display: -webkit-flex !important;
+        display: flex !important;
+        -webkit-flex-direction: column;
+        flex-direction: column
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__details-of-payment_item,
+    .digi-dolyame-scheme .digi-dolyame-scheme__item-features {
+        color: #000 !important
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__features-item {
+        position: relative;
+        padding-left: 22px;
+        font-size: 13px;
+        line-height: 20px;
+        font-weight: 400
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__features-item:before {
+        content: "";
+        position: absolute;
+        top: calc(50% - 4px);
+        left: 0;
+        width: 10px;
+        height: 8px;
+        display: block !important;
+        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='10' height='8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M3.893 5.567L1.664 3.586A1 1 0 10.336 5.08l3 2.666a1 1 0 001.432-.107l5-6A1 1 0 108.232.36l-4.34 5.207z' fill='%236FADAA'/%3E%3C/svg%3E");
+        background-position: 50%;
+        background-repeat: no-repeat
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__features-item:not(:last-child) {
+        margin-bottom: 8px
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__description-details {
+        color: rgba(0, 0, 0, .6);
+        font-size: 15px;
+        line-height: 24px
+    }
+
+    .digi-dolyame-scheme li:before {
+        content: unset !important
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__details-of-payment_item {
+        width: 25%;
+        line-height: 1.35 !important;
+        font-size: 14px !important
+    }
+
+    .digi-dolyame-scheme.digi-dolyame-scheme--mobile .digi-dolyame-scheme__features-list {
+        margin-top: 24px;
+        padding-left: 0 !important;
+        margin-left: 0 !important
+    }
+
+    .digi-dolyame-scheme.digi-dolyame-scheme--mobile .digi-dolyame-scheme__item-features:not(:nth-child(2)) {
+        margin-bottom: 16px !important
+    }
+
+    .digi-dolyame-scheme.digi-dolyame-scheme--mobile .digi-dolyame-scheme__item-features {
+        display: -webkit-flex !important;
+        display: flex !important;
+        -webkit-align-items: center;
+        align-items: center;
+        padding-left: 0 !important
+    }
+
+    .digi-dolyame-scheme.digi-dolyame-scheme--mobile .digi-dolyame-scheme__item-features svg {
+        margin-right: 12px
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__details {
+        font-size: 13px;
+        text-align: center;
+        color: rgba(0, 0, 0, .4)
+    }
+
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__details-of-payment_date {
+        font-size: .865em
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__details-of-payment_price {
+        font-size: 1em;
+        font-weight: 700;
+        margin-bottom: 12px
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__details-of-payment_item~.digi-dolyame-scheme__details-of-payment_item {
+        color: rgba(0, 0, 0, .4) !important
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__details-of-payment {
+        display: -webkit-flex !important;
+        display: flex !important;
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+        margin: 16px 0;
+        padding: 16px !important;
+        background-color: #f6f7f8;
+        border-radius: 8px
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__details-of-payment_item:after {
+        content: "";
+        background-color: var(--redesign-main-color);
+        border-radius: 6px;
+        height: 5px;
+        width: 95%;
+        display: block !important
+    }
+
+    .digi-dolyame-scheme .digi-dolyame-scheme__details-of-payment_item~.digi-dolyame-scheme__details-of-payment_item:after {
+        background-color: rgba(0, 0, 0, .06) !important
+    }
+</style>
+<style type="text/css">
+    .new_cart_order .digi-dolyame-scheme {
+        display: none;
+    }
+    .input-parent:has([name="payment"]:checked) + .digi-dolyame-scheme {
+        display: block;
+    }
+</style>
+<!-- Стили для спойлера Долями не переносить. Скопировал их из виджета для демонстрации верстки --- FINISH -->
+<section class="new_cart">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <form class="ms2_form" id="msOrder" method="post" novalidate="">
+                    <div class="new_cart_order" style="padding-bottom: 0">
+                        <div class="new_cart_order_content">
+                            <div class="new_cart_order_content_unit">
+                                <p class="tit">1. Как вы хотите получить заказ?</p>
+                                <div class="check_units check_units_delivery" id="deliveries">
+                                    <div class="check_unit delivery_express_moskov">
+                                        <input type="radio" class="radio" name="delivery" value="1" data-delivery-day="0" data-delivery-date="30 июня" id="delivery_1" data-payments="[1,2,3,10]" checked="">
+                                        <label class="check_unit_wrap" for="delivery_1">
+                              <span class="lab_check">
+                              Курьером (По Москве)
+                              </span>
+                                            <span class="text_list">
+                              <i>Стоимость доставки</i>
+                              <b class="ms3_approximatecost_cost">Бесплатно</b>
+                              </span>
+                                            <span class="text_list">
+                              <i>Ближайшая доставка</i>
+                              <b class="the_date ms3_approximatecost_day ">
+                              30 июня                </b>
+                              </span>
+                                        </label>
+                                    </div>
+                                    <div class="check_unit delivery_pickup_shop">
+                                        <input type="radio" class="radio" name="delivery" value="2" data-delivery-day="0" data-delivery-date="8 июля" id="delivery_2" data-payments="[1,2,3,10]">
+                                        <label class="check_unit_wrap" for="delivery_2">
+                              <span class="lab_check">
+                              Самовывоз из магазинов
+                              </span>
+                                            <span class="text_list">
+                              <i>Стоимость доставки</i>
+                              <b class="ms3_approximatecost_cost">Бесплатно</b>
+                              </span>
+                                            <span class="text_list">
+                              <i>Ближайшая доставка</i>
+                              <b class="the_date ms3_approximatecost_day ">
+                              8 июля                </b>
+                              </span>
+                                        </label>
+                                    </div>
+                                    <div class="check_unit delivery_express_transport">
+                                        <input type="radio" class="radio" name="delivery" value="5" data-delivery-day="0" data-delivery-date="2 июля" id="delivery_5" data-payments="[2,3,10]">
+                                        <label class="check_unit_wrap" for="delivery_5">
+                              <span class="lab_check">
+                              Самовывоз из <strong class="ms3_approximatecost_points">1891</strong> <span class="ms3_approximatecost_points_dec">пункт</span> ТК
+                              </span>
+                                            <span class="text_list">
+                              <i>Стоимость доставки</i>
+                              <b class="ms3_approximatecost_cost">от <i>671</i> <i class="ic">₽</i></b>
+                              </span>
+                                            <span class="text_list">
+                              <i>Ближайшая доставка</i>
+                              <b class="the_date ms3_approximatecost_day ">через 9 дней</b>
+                              </span>
+                                        </label>
+                                    </div>
+                                    <div class="info_nopay ms3_delivery_free" style="display: none">
+                                        <p class="tit_nopay"> Бесплатная доставка</p>
+                                        <div class="df">
+                                            <p class="text">
+                                                Чтобы получить бесплатную доставку добавьте в корзину товары на сумму
+                                            </p>
+                                            <b>
+                                                <span class="ms3_delivery_free_price">0</span>
+                                                <i class="ic">₽</i>
+                                            </b>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ordering-card-badge ordering-card-badge_for-order">
+                                    В корзине есть товары "Под заказ", срок доставки этих товаров уточнит менеджер по телефону после оформления заказа
+                                </div>
+                                <div id="ms3_delivery_elements">
+                                    <div class="controll_wrap input-parent required" style="visibility: hidden; max-height: 0; overflow: hidden">
+                                        <label for="terminal_id">терминал<span class="required-star">*</span></label>
+                                        <input type="text" id="terminal_id" name="terminal_id" value="26317" class="required">
+                                    </div>
+                                    <div class="check_unit_tab check_unit_tab2 ms3_delivery_elements ms3_delivery_element" data-delivery="express_moskov" style="display: none">
+                                        <p class="tit">2. Укажите адрес доставки</p>
+                                        <div class="ms3_delivery_address"></div>
+                                    </div>
+                                    <div class="check_unit_tab check_unit_tab2 ms3_delivery_elements ms3_delivery_element" data-delivery="express_shop" style="display: none;">
+                                        <p class="tit">2. Укажите адрес доставки</p>
+                                        <div class="ms3_delivery_address"></div>
+                                    </div>
+                                    <div class="check_unit_tab check_unit_tab2 ms3_delivery_elements ms3_delivery_element" data-delivery="manager_change_transport" style="display: none">
+                                        <p class="tit">2. Укажите адрес доставки</p>
+                                        <div class="ms3_delivery_address"></div>
+                                    </div>
+                                    <div class="check_unit_tab check_unit_tab2 ms3_delivery_elements ms3_delivery_element " data-delivery="pickup_shop" style="display: block;">
+                                        <p class="tit">2. Самовывоз из магазинов сети Fandeco</p>
+                                        <div class="map_unit ms3_delivery_pickup_not_change" style="display: none;">
+                                            <p class="map_title map_title_shops">
+                                                <span class="w100_mob">
+                                                    <span class="ic"><img src="https://cdn.fandeco.ru/assets/tpl/page/basket/images/new_cart/map_icon.svg" alt=""></span>
+                                                    Доступно <i class="ms3_total_terminals">124</i> <span class="ms3_total_terminals_transfer">пункта</span>
+                                                </span>
+                                                <a href="/shop/cart/checkout/change_pickup/" class="btn_run_modal_terminal">Выберите пункт самовывоза</a>
+                                            </p>
+                                            <div class="map_wrap mob_block">
+                                                <div class="iframe_wrap">
+                                                    <img src="https://cdn.fandeco.ru/assets/dist_new/images/page/basket/cart_maps.jpg" alt="">
+                                                </div>
+                                                <div class="input_search_wrap">
+                                                    <div class="d-grid mt-2">
+                                                        <button type="button" class="btn btn-outline-success btn-lg input_search_btn btn_run_modal_terminal" data-type-terminal="shop">
+                                                            Укажите магазин для самовывоза
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Выбор магазина для самовывоза --- START -->
+                                        <div class="shop-list check_unit_shop map_unit ms3_delivery_pickup_change" style="display: flex;">
+
+                                            <div class="value">
+                                                <p class="map_title">Выберите удобный для вас адрес:</p>
+
+                                                <label class="shop-list__card">
+                                                    <input type="radio" name="delivery-shop">
+                                                    <p class="addr ms3_point_name_full">Нижний Новгород, Fandeco (ул. Алексеевская)</p>
+                                                    <p class="addr ms3_point_address">г. Нижний Новгород, ул. Алексеевская, д. 8/15</p>
+                                                    <p class="plans_work ms3_point_phone">8 (831) 274-66-70, 8 (906) 765-17-42</p>
+                                                    <p class="plans_work ms3_point_work_schedule">Ежедневно c 10:00 до 20:00</p>
+                                                    <button type="button" class="shop-list__card_map-link">Посмотреть на карте</button>
+                                                </label>
+
+                                                <label class="shop-list__card">
+                                                    <input type="radio" name="delivery-shop">
+                                                    <p class="addr ms3_point_name_full">Нижний Новгород, Fandeco (ул. Алексеевская)</p>
+                                                    <p class="addr ms3_point_address">г. Нижний Новгород, ул. Алексеевская, д. 8/15</p>
+                                                    <p class="plans_work ms3_point_phone">8 (831) 274-66-70, 8 (906) 765-17-42</p>
+                                                    <p class="plans_work ms3_point_work_schedule">Ежедневно c 10:00 до 20:00</p>
+                                                    <button type="button" class="shop-list__card_map-link">Посмотреть на карте</button>
+                                                </label>
+
+                                                <label class="shop-list__card">
+                                                    <input type="radio" name="delivery-shop">
+                                                    <p class="addr ms3_point_name_full">Нижний Новгород, Fandeco (ул. Алексеевская)</p>
+                                                    <p class="addr ms3_point_address">г. Нижний Новгород, ул. Алексеевская, д. 8/15</p>
+                                                    <p class="plans_work ms3_point_phone">8 (831) 274-66-70, 8 (906) 765-17-42</p>
+                                                    <p class="plans_work ms3_point_work_schedule">Ежедневно c 10:00 до 20:00</p>
+                                                    <button type="button" class="shop-list__card_map-link">Посмотреть на карте</button>
+                                                </label>
+                                            </div>
+
+                                            <!-- Модалка для Карты магазина на мобильных --- START -->
+                                            <div class="map_wrap">
+                                                <div class="iframe_wrap" data-pickup-map>
+                                                    <iframe
+                                                        src="https://yandex.ru/map-widget/v1/?ll=44.026471%2C56.331396&mode=search&scroll=false&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1MzEwNTA3OBIr0KDQvtGB0YHQuNGPLCDQndC40LbQvdC40Lkg0J3QvtCy0LPQvtGA0L7QtCIKDa0GMEIVpE5hQg%2C%2C&z=13.88"
+                                                        frameborder="0" allowfullscreen="true"></iframe>
+                                                    <!-- <img class="btn_run_modal_terminal" data-type-terminal="shop"
+                                                        src="https://aws.massive.ru/fandeco.ru/layout/nnmap.jpg" alt="">
+                                                        -->
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <!-- Выбор магазина для самовывоза --- FINISH -->
+                                    </div>
+                                    <div class="check_unit_tab check_unit_tab2 ms3_delivery_elements ms3_delivery_element" data-delivery="express_transport" style="display: none;">
+                                        <p class="tit">2. Выберите пункт самовывоза</p>
+                                        <div class="map_unit ms3_delivery_pickup_not_change" style="display: none;">
+                                            <p class="map_title map_title_shops">
+                                                <span class="w100_mob">
+                                                    <span class="ic"><img src="https://cdn.fandeco.ru/assets/tpl/page/basket/images/new_cart/map_icon.svg" alt=""></span>
+                                                    Доступно <i class="ms3_total_terminals">124</i> <span class="ms3_total_terminals_transfer">пункта</span>
+                                                </span>
+                                                <a href="/shop/cart/checkout/change_pickup/" class="btn_run_modal_terminal">Выберите пункт самовывоза</a>
+                                            </p>
+                                            <div class="map_wrap mob_block">
+                                                <div class="iframe_wrap">
+                                                    <img src="https://cdn.fandeco.ru/assets/dist_new/images/page/basket/cart_maps.jpg" alt="">
+                                                </div>
+                                                <div class="input_search_wrap">
+                                                    <button type="button" class="input_search_btn btn_run_modal_terminal" data-type-terminal="point">Укажите пункт доставки</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="check_unit_shop map_unit ms3_delivery_pickup_change" style="display: flex;">
+                                            <div class="value">
+                                                <p class="map_title">
+                                                    Пункт самовывоза:
+                                                </p>
+                                                <p class="addr ms3_point_name_full">Нижний Новгород, Fandeco (ул. Алексеевская)</p>
+                                                <p class="addr ms3_point_address">г. Нижний Новгород, ул. Алексеевская, д. 8/15</p>
+                                                <p class="plans_work ms3_point_phone">8 (831) 274-66-70, 8 (906) 765-17-42</p>
+                                                <p class="plans_work ms3_point_work_schedule">Ежедневно c 10:00 до 20:00
+                                                </p>
+                                                <div class="check_unit_shop_date">
+                                                    <p>Дата ближайшей доставки</p>
+                                                    <p class="color-green ms3_delivery_date">24 марта</p>
+                                                </div>
+                                                <div class="check_unit_shop_date">
+                                                    <p>Стоимость доставки</p>
+                                                    <p class="color-green"><span class="ms3_total_delivery_cost">0</span> <i class="ic">₽</i></p>
+                                                </div>
+                                                <button type="button" class=" mt-2 btn btn-outline-success btn_other_shop btn_run_modal_terminal"
+                                                    data-type-terminal="point">
+                                                    Выбрать другой пункт самовывоза (<i class="ms3_total_terminals">124</i>)
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="ms3_delivery_address" style="display: none;">
+                                        <div class="curier_delivery">
+                                            <div class="order_form_unit">
+                                                <div class="controll_wrap input-parent">
+                                                    <label for="street">Адрес доставки<span class="required-star">*</span></label>
+                                                    <input type="text" id="street" placeholder="пр. Ленина" name="street" value="" class="suggestions-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+                                                </div>
+                                                <div class="controll_wrap_df input-parent">
+                                                    <div class="controll_wrap">
+                                                        <label for="building">Дом/корпус<span class="required-star">*</span></label>
+                                                        <input placeholder="4/2" type="text" id="building" name="building" value="" class="suggestions-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+                                                    </div>
+                                                    <div class="controll_wrap input-parent">
+                                                        <label for="room">Квартира/Офис<span class="required-star">*</span></label>
+                                                        <input placeholder="3 четвертый этаж" type="text" id="room" name="room" value="">
+                                                    </div>
+                                                </div>
+                                                <div class="controll_wrap input-parent ms3_real_desired_delivery_date_blk">
+                                                    <input type="hidden" class="ms3_real_desired_delivery_date" id="real_desired_delivery_date"
+                                                        name="real_desired_delivery_date" value="24.03.2024">
+                                                    <label for="desired_delivery_date">Желаемая дата доставки<span
+                                                            class="required-star">*</span></label>
+                                                    <input type="text" data-start="25.03.2024" id="desired_delivery_date" name="desired_delivery_date"
+                                                        placeholder="Выберите дату" autocomplete="off" class="date_control" value="">
+                                                    <div class="choice_date" id="ms3_choice_date">
+                                                        <span data-date="25.03.2024" class="el_date">25.03.2024</span>
+                                                        <span data-date="26.03.2024" class="el_date">26.03.2024</span>
+                                                        <span data-date="27.03.2024" class="el_date">27.03.2024</span>
+                                                        <span data-date="28.03.2024" class="el_date">28.03.2024</span>
+                                                        <span data-date="29.03.2024" class="el_date">29.03.2024</span>
+                                                        <span data-date="30.03.2024" class="el_date">30.03.2024</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="check_unit_agree">
+                                            <input type="checkbox" name="remember_address" class="checkbox" id="remember_address">
+                                            <label for="remember_address">
+                                                Запомнить адрес для последующих заказов
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="tit">3. Как вам будет удобнее оплатить заказ?</p>
+                                <div class="check_units check_units_banks check_units_payment" id="payments">
+                                    <div class="check_unit input-parent">
+                                        <input type="radio" class="radio" id="payment_1" name="payment" value="1">
+                                        <label for="payment_1" class="check_unit_wrap">
+                                            <span class="lab_check">Наличные или по карте</span>
+                                            <span class="text_list"><i>Оплата при получении товара наличными или через терминал</i></span>
+                                        </label>
+                                    </div>
+                                    <div class="check_unit input-parent">
+                                        <input type="radio" class="radio" id="payment_2" name="payment" value="2">
+                                        <label for="payment_2" class="check_unit_wrap">
+                                            <span class="lab_check">Онлайн платеж по карте, СБП</span>
+                                            <span class="bank_list bank_list__cards">
+                                                <i class="icon_bank">
+                                                    <img src="https://cdn.fandeco.ru/assets/tpl/page/basket/images/new_cart/visa.svg" alt="">
+                                                </i>
+                                                <i class="icon_bank">
+                                                    <img src="https://cdn.fandeco.ru/assets/tpl/page/basket/images/new_cart/master.svg" alt="">
+                                                </i>
+                                                <i class="icon_bank">
+                                                    <img src="https://cdn.fandeco.ru/assets/tpl/page/basket/images/new_cart/mir.svg" alt="">
+                                                </i>
+                                                <i class="icon_bank">
+                                                    <img src="https://aws.massive.ru/fandeco.ru/assert/images/sbp.png" alt="">
+                                                </i>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <div class="check_unit input-parent">
+                                        <input type="radio" class="radio" id="payment_3" name="payment" value="3">
+                                        <label for="payment_3" class="check_unit_wrap">
+                                            <span class="lab_check">Выставить счет</span>
+                                            <span class="text_list"><i>Менеджер компании выставит счет</i></span>
+                                        </label>
+                                    </div>
+                                    <div class="check_unit input-parent">
+                                        <input type="radio" class="radio" id="payment_10" name="payment" value="10">
+                                        <label for="payment_10" class="check_unit_wrap">
+                                            <span class="lab_check">Онлайн платеж</span>
+                                            <span class="bank_list">
+												<i class="icon_bank">
+													<img src="https://cdn.fandeco.ru/assets/tpl/page/basket/images/new_cart/hal.svg"alt="">
+												</i>
+											</span>
+                                        </label>
+                                    </div>
+
+                                    <!-- Кнопка Яндекс сплит --- START -->
+                                    <div class="check_unit input-parent">
+                                        <input type="radio" class="radio" id="payment-split" name="payment" value="" checked>
+                                        <label for="payment-split"
+                                            class="check_unit_wrap">
+                                            <span class="lab_check">Оплата частями в Сплит</span>
+                                            <span class="bank_list">
+                                                <i class="icon_bank">
+                                                    <img src="https://aws.massive.ru/fandeco.ru/assert/images/ya-split.svg" alt="">
+                                                </i>
+                                            </span>
+                                        </label>
+                                    </div>
+                                    <!-- Кнопка Яндекс сплит --- FINISH -->
+
+                                    <!-- Кнопка долями со спойлером --- START -->
+                                    <div class="check_unit input-parent">
+                                        <input type="radio" class="radio" id="payment_***" name="payment" value="***">
+                                        <label for="payment_***" class="check_unit_wrap">
+                                            <span class="lab_check lab_check_dolyami">Долями — 4 платежа по 2040 р.</span>
+                                            <span class="bank_list">
+												<i class="icon_bank">
+													<img src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/648/49f25b3c7d.svg" alt="">
+												</i>
+											</span>
+                                        </label>
+                                    </div>
+                                    <div class="digi-dolyame-scheme digi-dolyame-scheme--desktop">
+                                        <div class="digi-dolyame-scheme__content" style="">
+                                            <div class="digi-dolyame-scheme__description-details">
+                                                Оплатите 25% от стоимости покупки, а оставшиеся 3 части спишутся
+                                                автоматически с шагом в две недели. <br> Без процентов и комиссий, как
+                                                обычная оплата картой.
+                                            </div>
+                                            <ul class="digi-dolyame-scheme__details-of-payment">
+                                                <li class="digi-dolyame-scheme__details-of-payment_item">
+                                                    <div class="digi-dolyame-scheme__details-of-payment_date">
+                                                        Сегодня
+                                                    </div>
+                                                    <div class="digi-dolyame-scheme__details-of-payment_price">
+                                                        4447 <span>₽</span></div>
+                                                </li>
+                                                <li class="digi-dolyame-scheme__details-of-payment_item">
+                                                    <div class="digi-dolyame-scheme__details-of-payment_date">
+                                                        28 сен
+                                                    </div>
+                                                    <div class="digi-dolyame-scheme__details-of-payment_price">
+                                                        4447 <span>₽</span></div>
+                                                </li>
+                                                <li class="digi-dolyame-scheme__details-of-payment_item">
+                                                    <div class="digi-dolyame-scheme__details-of-payment_date">
+                                                        12 окт
+                                                    </div>
+                                                    <div class="digi-dolyame-scheme__details-of-payment_price">
+                                                        4447 <span>₽</span></div>
+                                                </li>
+                                                <li class="digi-dolyame-scheme__details-of-payment_item">
+                                                    <div class="digi-dolyame-scheme__details-of-payment_date">
+                                                        26 окт
+                                                    </div>
+                                                    <div class="digi-dolyame-scheme__details-of-payment_price">
+                                                        4449 <span>₽</span></div>
+                                                </li>
+                                            </ul>
+                                            <p class="digi-dolyame-scheme__details">
+                                                Подробности на <noindex><a href="https://dolyame.ru" target="_blank"
+                                                        rel="nofollow">dolyame.ru</a></noindex>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <!-- Кнопка долями со спойлером --- FINISH -->
+
+
+                                    <div class="check_unit_agree ms3_payment_manual_halva input-parent" style="display: none">
+                                        После оформления заказа необходимо выбрать оплатить по картке VISA, MASTER CARD и МИР
+                                    </div>
+                                </div>
+                                <p class="tit">4. Укажите данные получателя заказа</p>
+                                <div class="order_form_unit">
+                                    <div class="controll_wrap input-parent required">
+                                        <label for="receiver">ФИО<span class="required-star">*</span></label>
+                                        <input type="text" id="receiver" placeholder="Ваше ФИО" name="receiver" value="" class="suggestions-input required" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" style="box-sizing: border-box;">
+                                    </div>
+                                    <div class="controll_wrap input-parent">
+                                        <label for="email">E-mail<span class="required-star">*</span></label>
+                                        <input type="text" id="email" placeholder="info@mail.ru" name="email" value="">
+                                    </div>
+                                    <div class="controll_wrap input-parent required">
+                                        <label for="phone">Телефон<span class="required-star">*</span></label>
+                                        <div class="controll_wrap_phone">
+                                            <i class="numb_rus">+7</i><input type="text" id="phone" placeholder="( ___ ) ___-__-__" name="phone" value="" class="mask_controll required" inputmode="text">
+                                        </div>
+                                    </div>
+                                    <div class="controll_wrap input-parent">
+                                        <div class="controll_wrap">
+                                            <label for="comment">Комментарии к заказу</label>
+                                            <textarea name="comment" id="comment" placeholder="Прошу перезвонить для уточнения параметров заказа"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="new_cart_sidebar" style="height: 469px;">
+                            <div class="new_cart_sidebar_fix_wrap">
+                                <div class="new_cart_sidebar_wrap">
+                                    <div class="new_cart_sidebar_value new_cart_sidebar_value_dolyami">
+                                        <div class="df df_cart">
+                                            <div class="df_cart_show"></div>
+                                            <p class="tit ms3_cart_title" title="Вес корзины: 14.505 кг, Объем корзины 0.184 м2 ">Ваша корзина</p>
+                                            <p class="cont">
+                                                <a href="/shop/cart/">Вернуться в корзину</a>
+                                            </p>
+                                        </div>
+                                        <div class="new_cart_sidebar_value_mob_opener" style="display: block">
+                                            <div class="new_cart_order_list_goods height180 ps ps--active-y">
+                                                <div class="unit" id="product_chek_32246117daf206a0ffb8922a04b92b6a" title="">
+                                                    <div class="tit">
+                                                        Люстра Arte Lamp SIGNORA A7898SP-2CC
+                                                    </div>
+                                                    <div class="res_col">
+                                                        <i>1</i> шт. х <i>7 860</i>
+                                                        <i class="ic">₽ </i>
+                                                    </div>
+                                                </div>
+
+                                                <!-- К блоку с классом .unit у товара под заказ добавлять класс .unit_for-order -->
+                                                <div class="unit unit_for-order" id="product_chek_6690d3698f7bb3fae06b8c00a6b74f0f" title="">
+                                                    <div class="tit">
+                                                        Люстра Divinare ALBERO 1680/02 LM-12
+                                                    </div>
+                                                    <div class="res_col">
+                                                        <i>1</i> шт. х <i>15 980</i>
+                                                        <i class="ic">₽ </i>
+                                                    </div>
+
+                                                    <!-- Это новый блок, который нужно добавлять для Товаров под заказ -->
+                                                    <div class="item-ordering-card-badge">
+                                                        Товар под заказ. Сроки поставок уточнит менеджер после оформления заказа
+                                                    </div>
+                                                </div>
+
+                                                <div class="ps__rail-x" style="left: 0px; bottom: 0px;">
+                                                    <div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+                                                </div>
+                                                <div class="ps__rail-y" style="top: 0px; height: 180px; right: 0px;">
+                                                    <div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 150px;"></div>
+                                                </div>
+                                            </div>
+                                            <style>
+                                                .new_cart_order_list_goods {
+                                                    position: relative;
+                                                }
+                                            </style>
+                                            <div class="df df_summa">
+                                                <p class="tit">Сумма</p>
+                                                <p class="cont">
+                                                    <span class="ms3_total_original_cost">55 220</span>
+                                                    <i class="ic">₽</i>
+                                                </p>
+                                            </div>
+                                            <div class="df df_discount">
+                                                <p class="tit">Скидка</p>
+                                                <p class="cont">
+                                                    - <span class="ms3_total_discount">16 908</span>
+                                                    <i class="ic">
+                                                        <i class="ic">₽</i>
+                                                    </i>
+                                                </p>
+                                            </div>
+                                            <div class="df df_summa">
+                                                <p class="tit">Общая стоимость</p>
+                                                <p class="cont">
+                                                    <span class="ms3_total_cost">38 312</span>
+                                                    <i class="ic">₽</i>
+                                                </p>
+                                            </div>
+                                            <div class="df df_summa">
+                                                <p class="tit">Стоимость доставки</p>
+                                                <p class="cont ms3_total_delivery_cost_not_free" style="display: none">
+                                                    <span class="ms3_total_delivery_cost">0</span>
+                                                    <i class="ic">₽</i>
+                                                </p>
+                                                <p class="cont ms3_total_delivery_cost_free">
+                                                    <span class="ms3_total_delivery_text_free">бесплатно</span>
+                                                </p>
+                                            </div>
+                                            <div class="df df_dolyami" type="button" data-toggle="modal" data-target="#modalDolyami">
+                                                <p class="tit">
+                                                    <img src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/650/ba4f12fd31.svg" alt="">
+                                                    Первый платеж:
+                                                </p>
+                                                <p class="cont">
+                                                    <span class="ms3_total_order_cost">30 000</span>
+                                                    <i class="ic">₽</i>
+                                                </p>
+                                            </div>
+                                            <div class="df df_result">
+                                                <p class="tit">Итого</p>
+                                                <p class="cont">
+                                                    <span class="ms3_total_order_cost">38 312</span>
+                                                    <i class="ic">₽</i>
+                                                </p>
+                                            </div>
+                                            <div class="link_to_cart_wrap">
+                                                <a href="#" class="link_to_cart oneClick" data-run-modal="true" data-modal-options-city="1" data-tpl-form="chunks/modal/session_cart/link_to_cart.tpl">Получить ссылку на корзину</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="new_cart_order">
+                        <div class="new_cart_order_content">
+                            <div class="new_cart_order_content_unit">
+                                <div class="order_form_results_desk">
+                                    <div class="order_form_results">
+                                        <div class="element">
+                                            <b>Количество товаров</b>
+                                            <span><span class="ms3_total_count">2</span> <i class="ic">шт</i></span>
+                                        </div>
+                                        <div class="element">
+                                            <b>Стоимость доставки</b>
+                                            <span class="ms3_total_delivery_cost_not_free" style="">
+                                                <span class="ms3_total_delivery_cost">279</span> <i class="ic">₽</i></span>
+                                                <span class="ms3_total_delivery_cost_free" style="display: none;"><span>бесплатно</span>
+                                            </span>
+                                        </div>
+                                        <div class="element element_all">
+                                            <span>
+                                                <img src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/649/4a14decbf8.svg" alt="">
+                                            </span>
+                                            <span><span class="ms3_total_order_cost">100  000 000</span> <i class="ic">₽</i></span>
+                                        </div>
+                                        <div class="element element_all">
+                                            <b>Итого</b>
+                                            <span><span class="ms3_total_order_cost">100  000 000</span> <i class="ic">₽</i></span>
+                                        </div>
+                                        <div class="element element_date ms3_delivery_info_day" style="display: flex;">
+                                            <b class="ms3_delivery_title">Дата доставки</b>
+                                            <span class="ms3_delivery_date">2 января</span>
+                                        </div>
+                                    </div>
+                                    <div class="order_form_send d-grid">
+                                        <button type="submit" name="ms2_action" value="order/submit"
+                                                class="btn btn-primary btn-lg btn_send fast_order_btn_submit" style="">
+                                            Оформить заказ
+                                        </button>
+                                        <button type="button"
+                                                class="btn btn-primary btn-lg  fast_order_btn_message btn_send"
+                                                style="display: none;" data-original-title="" title="">
+                                            Оформить заказ
+                                        </button>
+                                        <div class="order_form_send_info">
+                                            Нажимая на кнопку «Оформить заказ», вы принимаете условия
+                                            <a target="_blank" href="/dogovor-oferta/">Публичной оферты</a> и
+                                            <a target="_blank" href="/dogovor-oferta/">Пользовательского соглашения</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Никакую разметку и инлойновые стили для виджета Mindbox переносить не нужно. Меренджер самостоятельно вставляет ее при настройке слайдера -->
+                                <div style="margin: 50px 0;">
+                                    <div class="popmechanic-js-container popmechanic-desktop" id="popmechanic-container-60883">
+    <style id="popmechanic-css-60883"></style>
+    <div class="popmechanic-reset popmechanic-widget-reco popmechanic-js-form popmechanic-desktop popmechanic-loaded maindbox-slider-3col" id="popmechanic-form-60883" data-popmechanic-area="Barnaul">
+        <div class="popmechanic-main">
+            <div class="popmechanic-header">
+                Популярные товары
+                <span class="recommendation-mark">Используем рекомендательные технологии</span>
+            </div>
+            <div class="popmechanic-items-wrapper">
+                <div class="popmechanic-items">
+                    <div class="mb__card" data-click-track="0">
+                        <div class="mb__card-wrap">
+                            <ul class="mb__card-labels">
+                                <li class="mb__card-label mb__card-label_lite" title="В Барнауле">В Барнауле шт.</li>
+                            </ul>
+                            <div class="mb__card-img">
+                                <a href="https://fandeco.ru/catalog/vstraivaemye-svetilniki/A2168PL-2WH/">
+                                    <img src="https://fandeco.ru/assets/images/products/250010/a2168pl-2wh.jpg" alt="" />
+                                </a>
+                            </div>
+                            <div class="mb__card-body">
+                                <div class="mb__card-prices"><span class="mb__card-price">990 р.</span></div>
+                                <div class="mb__card-name">
+                                    <a href="https://fandeco.ru/catalog/vstraivaemye-svetilniki/A2168PL-2WH/" title="Точечный встраиваемый светильник Arte Lamp TARF A2168PL-2WH">
+                                        Точечный встраиваемый светильник Arte Lamp TARF A2168PL-2WH
+                                    </a>
+                                </div>
+                                <mark class="mb__card-code"> <span title="A2168PL-2WH">A2168PL-2WH</span> </mark>
+                                <ul class="mb__card-info">
+                                    <li>Arte Lamp</li>
+                                    <li>Италия</li>
+                                </ul>
+                            </div>
+                            <div class="mb__card-btn"><a class="btn btn-success" href="https://fandeco.ru/catalog/vstraivaemye-svetilniki/A2168PL-2WH/" title="Подробнее">Подробнее</a></div>
+                        </div>
+                    </div>
+                    <div class="mb__card" data-click-track="1">
+                        <div class="mb__card-wrap">
+                            <ul class="mb__card-labels">
+                                <li class="mb__card-label mb__card-label_lite" title="В Барнауле">В Барнауле шт.</li>
+                            </ul>
+                            <div class="mb__card-img">
+                                <a href="https://fandeco.ru/catalog/ljustry/A7790SP-10BK/"> <img src="https://fandeco.ru/assets/images/products/222275/a7790sp-10bk.jpg" alt="" /> </a>
+                            </div>
+                            <div class="mb__card-body">
+                                <div class="mb__card-prices"><span class="mb__card-price">24&nbsp;990 р.</span></div>
+                                <div class="mb__card-name">
+									<a href="https://fandeco.ru/catalog/ljustry/A7790SP-10BK/" title="Подвесная люстра Arte Lamp VINCENT A7790SP-10BK">Подвесная люстра Arte Lamp VINCENT A7790SP-10BK</a>
+								</div>
+                                <mark class="mb__card-code"> <span title="A7790SP-10BK">A7790SP-10BK</span> </mark>
+                                <ul class="mb__card-info">
+                                    <li>Arte Lamp</li>
+                                    <li>Италия</li>
+                                </ul>
+                            </div>
+                            <div class="mb__card-btn"><a class="btn btn-success" href="https://fandeco.ru/catalog/ljustry/A7790SP-10BK/" title="Подробнее">Подробнее</a></div>
+                        </div>
+                    </div>
+                    <div class="mb__card" data-click-track="2">
+                        <div class="mb__card-wrap">
+                            <ul class="mb__card-labels">
+                                <li class="mb__card-label mb__card-label_lite" title="В Барнауле">В Барнауле шт.</li>
+                            </ul>
+                            <div class="mb__card-img">
+                                <a href="https://fandeco.ru/catalog/podvesnyie-svetilniki/118806-lm-42/"> <img src="https://fandeco.ru/assets/images/products/270890/118806-lm-42.jpg" alt="" /> </a>
+                            </div>
+                            <div class="mb__card-body">
+                                <div class="mb__card-prices"><span class="mb__card-price">30&nbsp;990 р.</span></div>
+                                <div class="mb__card-name">
+                                    <a href="https://fandeco.ru/catalog/podvesnyie-svetilniki/118806-lm-42/" title="Подвесной светильник Divinare SUMMER 1188/06 LM-42">Подвесной светильник Divinare SUMMER 1188/06 LM-42</a>
+                                </div>
+                                <mark class="mb__card-code"> <span title="1188/06 LM-42">1188/06 LM-42</span> </mark>
+                                <ul class="mb__card-info">
+                                    <li>Divinare</li>
+                                    <li>Италия</li>
+                                </ul>
+                            </div>
+                            <div class="mb__card-btn"><a class="btn btn-success" href="https://fandeco.ru/catalog/podvesnyie-svetilniki/118806-lm-42/" title="Подробнее">Подробнее</a></div>
+                        </div>
+                    </div>
+                    <div class="mb__card" data-click-track="3">
+                        <div class="mb__card-wrap">
+                            <ul class="mb__card-labels">
+                                <li class="mb__card-label mb__card-label_lite" title="В Барнауле">В Барнауле шт.</li>
+                            </ul>
+                            <div class="mb__card-img">
+                                <a href="https://fandeco.ru/catalog/ljustry/A2850LM-75PB/"> <img src="https://fandeco.ru/assets/images/products/229633/a2850lm-75pb.jpg" alt="" /> </a>
+                            </div>
+                            <div class="mb__card-body">
+                                <div class="mb__card-prices"><span class="mb__card-price">22&nbsp;990 р.</span></div>
+                                <div class="mb__card-name">
+									<a href="https://fandeco.ru/catalog/ljustry/A2850LM-75PB/" title="Подвесная люстра Arte Lamp KLIMT A2850LM-75PB">Подвесная люстра Arte Lamp KLIMT A2850LM-75PB</a>
+								</div>
+                                <mark class="mb__card-code"> <span title="A2850LM-75PB">A2850LM-75PB</span> </mark>
+                                <ul class="mb__card-info">
+                                    <li>Arte Lamp</li>
+                                    <li>Италия</li>
+                                </ul>
+                            </div>
+                            <div class="mb__card-btn"><a class="btn btn-success" href="https://fandeco.ru/catalog/ljustry/A2850LM-75PB/" title="Подробнее">Подробнее</a></div>
+                        </div>
+                    </div>
+                    <div class="mb__card" data-click-track="4">
+                        <div class="mb__card-wrap">
+                            <ul class="mb__card-labels">
+                                <li class="mb__card-label mb__card-label_lite" title="В Барнауле">В Барнауле шт.</li>
+                            </ul>
+                            <div class="mb__card-img">
+                                <a href="https://fandeco.ru/catalog/spoty/A1518PL-1BK/"> <img src="https://fandeco.ru/assets/images/products/166156/a1518pl-1bk.jpg" alt="" /> </a>
+                            </div>
+                            <div class="mb__card-body">
+                                <div class="mb__card-prices"><span class="mb__card-price">850 р.</span></div>
+                                <div class="mb__card-name">
+									<a href="https://fandeco.ru/catalog/spoty/A1518PL-1BK/" title="Трековый светильник Arte Lamp RIDGE A1518PL-1BK">Трековый светильник Arte Lamp RIDGE A1518PL-1BK</a>
+								</div>
+                                <mark class="mb__card-code"> <span title="A1518PL-1BK">A1518PL-1BK</span> </mark>
+                                <ul class="mb__card-info">
+                                    <li>Arte Lamp</li>
+                                    <li>Италия</li>
+                                </ul>
+                            </div>
+                            <div class="mb__card-btn"><a class="btn btn-success" href="https://fandeco.ru/catalog/spoty/A1518PL-1BK/" title="Подробнее">Подробнее</a></div>
+                        </div>
+                    </div>
+                    <div class="mb__card" data-click-track="5">
+                        <div class="mb__card-wrap">
+                            <ul class="mb__card-labels">
+                                <li class="mb__card-label mb__card-label_lite" title="В Барнауле">В Барнауле шт.</li>
+                            </ul>
+                            <div class="mb__card-img">
+                                <a href="https://fandeco.ru/catalog/vstraivaemye-svetilniki/A2167PL-1WH/"> <img src="https://fandeco.ru/assets/images/products/222306/a2167pl-1wh.jpg" alt="" /> </a>
+                            </div>
+                            <div class="mb__card-body">
+                                <div class="mb__card-prices"><span class="mb__card-price">490 р.</span></div>
+                                <div class="mb__card-name">
+                                    <a href="https://fandeco.ru/catalog/vstraivaemye-svetilniki/A2167PL-1WH/" title="Точечный встраиваемый светильник Arte Lamp TARF A2167PL-1WH">
+                                        Точечный встраиваемый светильник Arte Lamp TARF A2167PL-1WH
+                                    </a>
+                                </div>
+                                <mark class="mb__card-code"> <span title="A2167PL-1WH">A2167PL-1WH</span> </mark>
+                                <ul class="mb__card-info">
+                                    <li>Arte Lamp</li>
+                                    <li>Италия</li>
+                                </ul>
+                            </div>
+                            <div class="mb__card-btn"><a class="btn btn-success" href="https://fandeco.ru/catalog/vstraivaemye-svetilniki/A2167PL-1WH/" title="Подробнее">Подробнее</a></div>
+                        </div>
+                    </div>
+                    <div class="mb__card" data-click-track="6">
+                        <div class="mb__card-wrap">
+                            <ul class="mb__card-labels">
+                                <li class="mb__card-label mb__card-label_lite" title="В Барнауле">В Барнауле шт.</li>
+                            </ul>
+                            <div class="mb__card-img">
+                                <a href="https://fandeco.ru/catalog/ljustry/A7274PL-27GO/"> <img src="https://fandeco.ru/assets/images/products/228159/a7274pl-27go.jpg" alt="" /> </a>
+                            </div>
+                            <div class="mb__card-body">
+                                <div class="mb__card-prices"><span class="mb__card-price">13&nbsp;250 р.</span></div>
+                                <div class="mb__card-name">
+									<a href="https://fandeco.ru/catalog/ljustry/A7274PL-27GO/" title="Потолочная люстра Arte Lamp CANDY A7274PL-27GO">Потолочная люстра Arte Lamp CANDY A7274PL-27GO</a></div>
+                                <mark class="mb__card-code"> <span title="A7274PL-27GO">A7274PL-27GO</span> </mark>
+                                <ul class="mb__card-info">
+                                    <li>Arte Lamp</li>
+                                    <li>Италия</li>
+                                </ul>
+                            </div>
+                            <div class="mb__card-btn"><a class="btn btn-success" href="https://fandeco.ru/catalog/ljustry/A7274PL-27GO/" title="Подробнее">Подробнее</a></div>
+                        </div>
+                    </div>
+                    <div class="mb__card" data-click-track="7">
+                        <div class="mb__card-wrap">
+                            <ul class="mb__card-labels">
+                                <li class="mb__card-label mb__card-label_lite" title="В Барнауле">В Барнауле шт.</li>
+                                <li class="mb__card-label mb__card-label_bright" title="Скидка 51%">Скидка 51%</li>
+                            </ul>
+                            <div class="mb__card-img">
+                                <a href="https://fandeco.ru/catalog/svetilniki/A7790SP-75BK/"> <img src="https://fandeco.ru/assets/images/products/222304/a7790sp-75bk.jpg" alt="" /> </a>
+                            </div>
+                            <div class="mb__card-body">
+                                <div class="mb__card-prices">
+                                    <div class="mb__card-sale"><span class="mb__card-old-price" title="Старая цена 56&nbsp;990 р.">56&nbsp;990 р.</span> <span class="mb__card-sale-value" title="Ваша скидка составит 51%">-51%</span></div>
+                                    <span class="mb__card-price">27&nbsp;980 р.</span>
+                                </div>
+                                <div class="mb__card-name">
+									<a href="https://fandeco.ru/catalog/svetilniki/A7790SP-75BK/" title="Люстра на штанге Arte Lamp SATURN A7790SP-75BK">Люстра на штанге Arte Lamp SATURN A7790SP-75BK</a></div>
+                                <mark class="mb__card-code"> <span title="A7790SP-75BK">A7790SP-75BK</span> </mark>
+                                <ul class="mb__card-info">
+                                    <li>Arte Lamp</li>
+                                    <li>Италия</li>
+                                </ul>
+                            </div>
+                            <div class="mb__card-btn"><a class="btn btn-success" href="https://fandeco.ru/catalog/svetilniki/A7790SP-75BK/" title="Подробнее">Подробнее</a></div>
+                        </div>
+                    </div>
+                    <div class="mb__card" data-click-track="8">
+                        <div class="mb__card-wrap">
+                            <ul class="mb__card-labels">
+                                <li class="mb__card-label mb__card-label_lite" title="В Барнауле">В Барнауле шт.</li>
+                                <li class="mb__card-label mb__card-label_bright" title="Скидка 61%">Скидка 61%</li>
+                            </ul>
+                            <div class="mb__card-img">
+                                <a href="https://fandeco.ru/catalog/ljustry/ljustra-podvesnaja/1223-02-sp-5/"> <img src="https://fandeco.ru/assets/images/products/264154/122302-sp-5.jpg" alt="" /> </a>
+                            </div>
+                            <div class="mb__card-body">
+                                <div class="mb__card-prices">
+                                    <div class="mb__card-sale"><span class="mb__card-old-price" title="Старая цена 43&nbsp;700 р.">43&nbsp;700 р.</span> <span class="mb__card-sale-value" title="Ваша скидка составит 61%">-61%</span></div>
+                                    <span class="mb__card-price">17&nbsp;010 р.</span>
+                                </div>
+                                <div class="mb__card-name">
+									<a href="https://fandeco.ru/catalog/ljustry/ljustra-podvesnaja/1223-02-sp-5/" title="Подвесная люстра Divinare NOVA 1223/02 SP-5">Подвесная люстра Divinare NOVA 1223/02 SP-5</a></div>
+                                <mark class="mb__card-code"> <span title="1223/02 SP-5">1223/02 SP-5</span> </mark>
+                                <ul class="mb__card-info">
+                                    <li>Divinare</li>
+                                    <li>Италия</li>
+                                </ul>
+                            </div>
+                            <div class="mb__card-btn"><a class="btn btn-success" href="https://fandeco.ru/catalog/ljustry/ljustra-podvesnaja/1223-02-sp-5/" title="Подробнее">Подробнее</a></div>
+                        </div>
+                    </div>
+                    <div class="mb__card" data-click-track="9">
+                        <div class="mb__card-wrap">
+                            <ul class="mb__card-labels">
+                                <li class="mb__card-label mb__card-label_lite" title="В Барнауле">В Барнауле шт.</li>
+                            </ul>
+                            <div class="mb__card-img">
+                                <a href="https://fandeco.ru/catalog/svetilniki/A7274PL-27WH/"> <img src="https://fandeco.ru/assets/images/products/201725/a7274pl-27wh.jpg" alt="" /> </a>
+                            </div>
+                            <div class="mb__card-body">
+                                <div class="mb__card-prices"><span class="mb__card-price">19&nbsp;990 р.</span></div>
+                                <div class="mb__card-name">
+									<a href="https://fandeco.ru/catalog/svetilniki/A7274PL-27WH/" title="Потолочная люстра Arte Lamp CANDY A7274PL-27WH">Потолочная люстра Arte Lamp CANDY A7274PL-27WH</a></div>
+                                <mark class="mb__card-code"> <span title="A7274PL-27WH">A7274PL-27WH</span> </mark>
+                                <ul class="mb__card-info">
+                                    <li>Arte Lamp</li>
+                                    <li>Италия</li>
+                                </ul>
+                            </div>
+                            <div class="mb__card-btn"><a class="btn btn-success" href="https://fandeco.ru/catalog/svetilniki/A7274PL-27WH/" title="Подробнее">Подробнее</a></div>
+                        </div>
+                    </div>
+                    <div class="mb__card" data-click-track="10">
+                        <div class="mb__card-wrap">
+                            <ul class="mb__card-labels">
+                                <li class="mb__card-label mb__card-label_lite" title="В Барнауле">В Барнауле шт.</li>
+                            </ul>
+                            <div class="mb__card-img">
+                                <a href="https://fandeco.ru/catalog/ljustry/A4052LM-6SG/"> <img src="https://fandeco.ru/assets/images/products/237177/a4052lm-6sg.jpg" alt="" /> </a>
+                            </div>
+                            <div class="mb__card-body">
+                                <div class="mb__card-prices"><span class="mb__card-price">26&nbsp;990 р.</span></div>
+                                <div class="mb__card-name">
+									<a href="https://fandeco.ru/catalog/ljustry/A4052LM-6SG/" title="Подвесная люстра Arte Lamp EVIE A4052LM-6SG">Подвесная люстра Arte Lamp EVIE A4052LM-6SG</a></div>
+                                <mark class="mb__card-code"> <span title="A4052LM-6SG">A4052LM-6SG</span> </mark>
+                                <ul class="mb__card-info">
+                                    <li>Arte Lamp</li>
+                                    <li>Италия</li>
+                                </ul>
+                            </div>
+                            <div class="mb__card-btn"><a class="btn btn-success" href="https://fandeco.ru/catalog/ljustry/A4052LM-6SG/" title="Подробнее">Подробнее</a></div>
+                        </div>
+                    </div>
+                    <div class="mb__card" data-click-track="11">
+                        <div class="mb__card-wrap">
+                            <ul class="mb__card-labels">
+                                <li class="mb__card-label mb__card-label_lite" title="В Барнауле">В Барнауле шт.</li>
+                            </ul>
+                            <div class="mb__card-img">
+                                <a href="https://fandeco.ru/catalog/podvesnyie-svetilniki/a2850sp-80bk/"> <img src="https://fandeco.ru/assets/images/products/273460/a2850sp-80bk.jpg" alt="" /> </a>
+                            </div>
+                            <div class="mb__card-body">
+                                <div class="mb__card-prices"><span class="mb__card-price">19&nbsp;490 р.</span></div>
+                                <div class="mb__card-name">
+                                    <a href="https://fandeco.ru/catalog/podvesnyie-svetilniki/a2850sp-80bk/" title="Подвесной светильник Arte Lamp KLIMT A2850SP-80BK">Подвесной светильник Arte Lamp KLIMT A2850SP-80BK</a>
+                                </div>
+                                <mark class="mb__card-code"> <span title="A2850SP-80BK">A2850SP-80BK</span> </mark>
+                                <ul class="mb__card-info">
+                                    <li>Arte Lamp</li>
+                                    <li>Италия</li>
+                                </ul>
+                            </div>
+                            <div class="mb__card-btn"><a class="btn btn-success" href="https://fandeco.ru/catalog/podvesnyie-svetilniki/a2850sp-80bk/" title="Подробнее">Подробнее</a></div>
+                        </div>
+                    </div>
+                    <div class="mb__card" data-click-track="12">
+                        <div class="mb__card-wrap">
+                            <ul class="mb__card-labels">
+                                <li class="mb__card-label mb__card-label_lite" title="В Барнауле">В Барнауле шт.</li>
+                            </ul>
+                            <div class="mb__card-img">
+                                <a href="https://fandeco.ru/catalog/vstraivaemye-svetilniki/A2168PL-1WH/"> <img src="https://fandeco.ru/assets/images/products/222330/a2168pl-1wh.jpg" alt="" /> </a>
+                            </div>
+                            <div class="mb__card-body">
+                                <div class="mb__card-prices"><span class="mb__card-price">490 р.</span></div>
+                                <div class="mb__card-name">
+                                    <a href="https://fandeco.ru/catalog/vstraivaemye-svetilniki/A2168PL-1WH/" title="Точечный встраиваемый светильник Arte Lamp TARF A2168PL-1WH">
+                                        Точечный встраиваемый светильник Arte Lamp TARF A2168PL-1WH
+                                    </a>
+                                </div>
+                                <mark class="mb__card-code"> <span title="A2168PL-1WH">A2168PL-1WH</span> </mark>
+                                <ul class="mb__card-info">
+                                    <li>Arte Lamp</li>
+                                    <li>Италия</li>
+                                </ul>
+                            </div>
+                            <div class="mb__card-btn"><a class="btn btn-success" href="https://fandeco.ru/catalog/vstraivaemye-svetilniki/A2168PL-1WH/" title="Подробнее">Подробнее</a></div>
+                        </div>
+                    </div>
+                    <div class="mb__card" data-click-track="13">
+                        <div class="mb__card-wrap">
+                            <ul class="mb__card-labels">
+                                <li class="mb__card-label mb__card-label_lite" title="В Барнауле">В Барнауле шт.</li>
+                            </ul>
+                            <div class="mb__card-img">
+                                <a href="https://fandeco.ru/catalog/trekovye/A540206/"> <img src="https://fandeco.ru/assets/images/products/208412/a540206.jpg" alt="" /> </a>
+                            </div>
+                            <div class="mb__card-body">
+                                <div class="mb__card-prices"><span class="mb__card-price">1&nbsp;750 р.</span></div>
+                                <div class="mb__card-name">
+									<a href="https://fandeco.ru/catalog/trekovye/A540206/" title="Шинопровод Arte Lamp TRACK ACCESSORIES A540206">Шинопровод Arte Lamp TRACK ACCESSORIES A540206</a></div>
+                                <mark class="mb__card-code"> <span title="A540206">A540206</span> </mark>
+                                <ul class="mb__card-info">
+                                    <li>Arte Lamp</li>
+                                    <li>Италия</li>
+                                </ul>
+                            </div>
+                            <div class="mb__card-btn"><a class="btn btn-success" href="https://fandeco.ru/catalog/trekovye/A540206/" title="Подробнее">Подробнее</a></div>
+                        </div>
+                    </div>
+                    <div class="mb__card" data-click-track="14">
+                        <div class="mb__card-wrap">
+                            <ul class="mb__card-labels">
+                                <li class="mb__card-label mb__card-label_lite" title="В Барнауле">В Барнауле шт.</li>
+                            </ul>
+                            <div class="mb__card-img">
+                                <a href="https://fandeco.ru/catalog/svetilniki/A2505SP-2BK/"> <img src="https://fandeco.ru/assets/images/products/108888/a2505sp-2bk.jpg" alt="" /> </a>
+                            </div>
+                            <div class="mb__card-body">
+                                <div class="mb__card-prices"><span class="mb__card-price">13&nbsp;990 р.</span></div>
+                                <div class="mb__card-name">
+									<a href="https://fandeco.ru/catalog/svetilniki/A2505SP-2BK/" title="Линейный светильник Arte Lamp LARGO A2505SP-2BK">Линейный светильник Arte Lamp LARGO A2505SP-2BK</a></div>
+                                <mark class="mb__card-code"> <span title="A2505SP-2BK">A2505SP-2BK</span> </mark>
+                                <ul class="mb__card-info">
+                                    <li>Arte Lamp</li>
+                                    <li>Италия</li>
+                                </ul>
+                            </div>
+                            <div class="mb__card-btn"><a class="btn btn-success" href="https://fandeco.ru/catalog/svetilniki/A2505SP-2BK/" title="Подробнее">Подробнее</a></div>
+                        </div>
+                    </div>
+                    <div class="mb__card" data-click-track="15">
+                        <div class="mb__card-wrap">
+                            <ul class="mb__card-labels">
+                                <li class="mb__card-label mb__card-label_lite" title="В Барнауле">В Барнауле шт.</li>
+                            </ul>
+                            <div class="mb__card-img">
+                                <a href="https://fandeco.ru/catalog/ljustry/A1364PL-6PB/"> <img src="https://fandeco.ru/assets/images/products/242253/a1364pl-6pb.jpg" alt="" /> </a>
+                            </div>
+                            <div class="mb__card-body">
+                                <div class="mb__card-prices"><span class="mb__card-price">15&nbsp;790 р.</span></div>
+                                <div class="mb__card-name">
+									<a href="https://fandeco.ru/catalog/ljustry/A1364PL-6PB/" title="Потолочная люстра Arte Lamp HOLLY A1364PL-6PB">Потолочная люстра Arte Lamp HOLLY A1364PL-6PB</a></div>
+                                <mark class="mb__card-code"> <span title="A1364PL-6PB">A1364PL-6PB</span> </mark>
+                                <ul class="mb__card-info">
+                                    <li>Arte Lamp</li>
+                                    <li>Италия</li>
+                                </ul>
+                            </div>
+                            <div class="mb__card-btn"><a class="btn btn-success" href="https://fandeco.ru/catalog/ljustry/A1364PL-6PB/" title="Подробнее">Подробнее</a></div>
+                        </div>
+                    </div>
+                    <div class="mb__card" data-click-track="16">
+                        <div class="mb__card-wrap">
+                            <ul class="mb__card-labels">
+                                <li class="mb__card-label mb__card-label_lite" title="В Барнауле">В Барнауле шт.</li>
+                            </ul>
+                            <div class="mb__card-img">
+                                <a href="https://fandeco.ru/catalog/ljustry/A9052PL-4CC/"> <img src="https://fandeco.ru/assets/images/products/170169/a9052pl-4cc.jpg" alt="" /> </a>
+                            </div>
+                            <div class="mb__card-body">
+                                <div class="mb__card-prices"><span class="mb__card-price">17&nbsp;490 р.</span></div>
+                                <div class="mb__card-name">
+									<a href="https://fandeco.ru/catalog/ljustry/A9052PL-4CC/" title="Потолочная люстра Arte Lamp ORBIT A9052PL-4CC">Потолочная люстра Arte Lamp ORBIT A9052PL-4CC</a></div>
+                                <mark class="mb__card-code"> <span title="A9052PL-4CC">A9052PL-4CC</span> </mark>
+                                <ul class="mb__card-info">
+                                    <li>Arte Lamp</li>
+                                    <li>Италия</li>
+                                </ul>
+                            </div>
+                            <div class="mb__card-btn"><a class="btn btn-success" href="https://fandeco.ru/catalog/ljustry/A9052PL-4CC/" title="Подробнее">Подробнее</a></div>
+                        </div>
+                    </div>
+                    <div class="mb__card" data-click-track="17">
+                        <div class="mb__card-wrap">
+                            <ul class="mb__card-labels">
+                                <li class="mb__card-label mb__card-label_lite" title="В Барнауле">В Барнауле шт.</li>
+                            </ul>
+                            <div class="mb__card-img">
+                                <a href="https://fandeco.ru/catalog/svetilniki/A5552PL-1WH/"> <img src="https://fandeco.ru/assets/images/products/256083/a5552pl-1wh.jpg" alt="" /> </a>
+                            </div>
+                            <div class="mb__card-body">
+                                <div class="mb__card-prices"><span class="mb__card-price">890 р.</span></div>
+                                <div class="mb__card-name">
+                                    <a href="https://fandeco.ru/catalog/svetilniki/A5552PL-1WH/" title="Точечный накладной светильник Arte Lamp FANG A5552PL-1WH">Точечный накладной светильник Arte Lamp FANG A5552PL-1WH</a>
+                                </div>
+                                <mark class="mb__card-code"> <span title="A5552PL-1WH">A5552PL-1WH</span> </mark>
+                                <ul class="mb__card-info">
+                                    <li>Arte Lamp</li>
+                                    <li>Италия</li>
+                                </ul>
+                            </div>
+                            <div class="mb__card-btn"><a class="btn btn-success" href="https://fandeco.ru/catalog/svetilniki/A5552PL-1WH/" title="Подробнее">Подробнее</a></div>
+                        </div>
+                    </div>
+                    <div class="mb__card" data-click-track="18">
+                        <div class="mb__card-wrap">
+                            <ul class="mb__card-labels">
+                                <li class="mb__card-label mb__card-label_lite" title="В Барнауле">В Барнауле шт.</li>
+                                <li class="mb__card-label mb__card-label_bright" title="Скидка 45%">Скидка 45%</li>
+                            </ul>
+                            <div class="mb__card-img">
+                                <a href="https://fandeco.ru/catalog/svetilniki/1126_04_PL-9/"> <img src="https://fandeco.ru/assets/images/products/208408/112604-pl-9.jpg" alt="" /> </a>
+                            </div>
+                            <div class="mb__card-body">
+                                <div class="mb__card-prices">
+                                    <div class="mb__card-sale"><span class="mb__card-old-price" title="Старая цена 26&nbsp;990 р.">26&nbsp;990 р.</span> <span class="mb__card-sale-value" title="Ваша скидка составит 45%">-45%</span></div>
+                                    <span class="mb__card-price">14&nbsp;780 р.</span>
+                                </div>
+                                <div class="mb__card-name">
+									<a href="https://fandeco.ru/catalog/svetilniki/1126_04_PL-9/" title="Люстра на штанге Divinare TILDA 1126/04 PL-9">Люстра на штанге Divinare TILDA 1126/04 PL-9</a></div>
+                                <mark class="mb__card-code"> <span title="1126/04 PL-9">1126/04 PL-9</span> </mark>
+                                <ul class="mb__card-info">
+                                    <li>Divinare</li>
+                                    <li>Италия</li>
+                                </ul>
+                            </div>
+                            <div class="mb__card-btn"><a class="btn btn-success" href="https://fandeco.ru/catalog/svetilniki/1126_04_PL-9/" title="Подробнее">Подробнее</a></div>
+                        </div>
+                    </div>
+                    <div class="mb__card" data-click-track="19">
+                        <div class="mb__card-wrap">
+                            <ul class="mb__card-labels">
+                                <li class="mb__card-label mb__card-label_lite" title="В Барнауле">В Барнауле шт.</li>
+                            </ul>
+                            <div class="mb__card-img">
+                                <a href="https://fandeco.ru/catalog/nastolnye-lampy/A4429LT-1BA/"> <img src="https://fandeco.ru/assets/images/products/201555/a4429lt-1ba.jpg" alt="" /> </a>
+                            </div>
+                            <div class="mb__card-body">
+                                <div class="mb__card-prices"><span class="mb__card-price">1&nbsp;990 р.</span></div>
+                                <div class="mb__card-name">
+                                    <a href="https://fandeco.ru/catalog/nastolnye-lampy/A4429LT-1BA/" title="Декоративная настольная лампа Arte Lamp FIORI A4429LT-1BA">Декоративная настольная лампа Arte Lamp FIORI A4429LT-1BA</a>
+                                </div>
+                                <mark class="mb__card-code"> <span title="A4429LT-1BA">A4429LT-1BA</span> </mark>
+                                <ul class="mb__card-info">
+                                    <li>Arte Lamp</li>
+                                    <li>Италия</li>
+                                </ul>
+                            </div>
+                            <div class="mb__card-btn"><a class="btn btn-success" href="https://fandeco.ru/catalog/nastolnye-lampy/A4429LT-1BA/" title="Подробнее">Подробнее</a></div>
+                        </div>
+                    </div>
+                    <div class="mb__card" data-click-track="20">
+                        <div class="mb__card-wrap">
+                            <ul class="mb__card-labels">
+                                <li class="mb__card-label mb__card-label_lite" title="В Барнауле">В Барнауле шт.</li>
+                            </ul>
+                            <div class="mb__card-img">
+                                <a href="https://fandeco.ru/catalog/ljustry/A7274SP-36GO/"> <img src="https://fandeco.ru/assets/images/products/228160/a7274sp-36go.jpg" alt="" /> </a>
+                            </div>
+                            <div class="mb__card-body">
+                                <div class="mb__card-prices"><span class="mb__card-price">16&nbsp;630 р.</span></div>
+                                <div class="mb__card-name">
+									<a href="https://fandeco.ru/catalog/ljustry/A7274SP-36GO/" title="Подвесная люстра Arte Lamp CANDY A7274SP-36GO">Подвесная люстра Arte Lamp CANDY A7274SP-36GO</a></div>
+                                <mark class="mb__card-code"> <span title="A7274SP-36GO">A7274SP-36GO</span> </mark>
+                                <ul class="mb__card-info">
+                                    <li>Arte Lamp</li>
+                                    <li>Италия</li>
+                                </ul>
+                            </div>
+                            <div class="mb__card-btn"><a class="btn btn-success" href="https://fandeco.ru/catalog/ljustry/A7274SP-36GO/" title="Подробнее">Подробнее</a></div>
+                        </div>
+                    </div>
+                    <div class="mb__card" data-click-track="21">
+                        <div class="mb__card-wrap">
+                            <ul class="mb__card-labels">
+                                <li class="mb__card-label mb__card-label_lite" title="В Барнауле">В Барнауле шт.</li>
+                            </ul>
+                            <div class="mb__card-img">
+                                <a href="https://fandeco.ru/catalog/ljustry/3132/01-SP-10/"> <img src="https://fandeco.ru/assets/images/products/228126/313201-sp-10.jpg" alt="" /> </a>
+                            </div>
+                            <div class="mb__card-body">
+                                <div class="mb__card-prices"><span class="mb__card-price">80&nbsp;990 р.</span></div>
+                                <div class="mb__card-name">
+									<a href="https://fandeco.ru/catalog/ljustry/3132/01-SP-10/" title="Подвесная люстра Divinare SALICE 3132/01 SP-10">Подвесная люстра Divinare SALICE 3132/01 SP-10</a></div>
+                                <mark class="mb__card-code"> <span title="3132/01 SP-10">3132/01 SP-10</span> </mark>
+                                <ul class="mb__card-info">
+                                    <li>Divinare</li>
+                                    <li>Италия</li>
+                                </ul>
+                            </div>
+                            <div class="mb__card-btn"><a class="btn btn-success" href="https://fandeco.ru/catalog/ljustry/3132/01-SP-10/" title="Подробнее">Подробнее</a></div>
+                        </div>
+                    </div>
+                    <div class="mb__card" data-click-track="22">
+                        <div class="mb__card-wrap">
+                            <ul class="mb__card-labels">
+                                <li class="mb__card-label mb__card-label_lite" title="В Барнауле">В Барнауле шт.</li>
+                                <li class="mb__card-label mb__card-label_bright" title="Скидка 44%">Скидка 44%</li>
+                            </ul>
+                            <div class="mb__card-img">
+                                <a href="https://fandeco.ru/catalog/ljustry/A1276PL-24GO/"> <img src="https://fandeco.ru/assets/images/products/228157/a1276pl-24go.jpg" alt="" /> </a>
+                            </div>
+                            <div class="mb__card-body">
+                                <div class="mb__card-prices">
+                                    <div class="mb__card-sale"><span class="mb__card-old-price" title="Старая цена 12&nbsp;990 р.">12&nbsp;990 р.</span> <span class="mb__card-sale-value" title="Ваша скидка составит 44%">-44%</span></div>
+                                    <span class="mb__card-price">7&nbsp;210 р.</span>
+                                </div>
+                                <div class="mb__card-name">
+									<a href="https://fandeco.ru/catalog/ljustry/A1276PL-24GO/" title="Потолочная люстра Arte Lamp MAPLE A1276PL-24GO">Потолочная люстра Arte Lamp MAPLE A1276PL-24GO</a></div>
+                                <mark class="mb__card-code"> <span title="A1276PL-24GO">A1276PL-24GO</span> </mark>
+                                <ul class="mb__card-info">
+                                    <li>Arte Lamp</li>
+                                    <li>Италия</li>
+                                </ul>
+                            </div>
+                            <div class="mb__card-btn"><a class="btn btn-success" href="https://fandeco.ru/catalog/ljustry/A1276PL-24GO/" title="Подробнее">Подробнее</a></div>
+                        </div>
+                    </div>
+                    <div class="mb__card" data-click-track="23">
+                        <div class="mb__card-wrap">
+                            <ul class="mb__card-labels">
+                                <li class="mb__card-label mb__card-label_lite" title="В Барнауле">В Барнауле шт.</li>
+                            </ul>
+                            <div class="mb__card-img">
+                                <a href="https://fandeco.ru/catalog/ljustry/A1049SP-12GO/"> <img src="https://fandeco.ru/assets/images/products/250009/a1049sp-12go.jpg" alt="" /> </a>
+                            </div>
+                            <div class="mb__card-body">
+                                <div class="mb__card-prices"><span class="mb__card-price">19&nbsp;990 р.</span></div>
+                                <div class="mb__card-name">
+									<a href="https://fandeco.ru/catalog/ljustry/A1049SP-12GO/" title="Подвесная люстра Arte Lamp SANTORINI A1049SP-12GO">Подвесная люстра Arte Lamp SANTORINI A1049SP-12GO</a></div>
+                                <mark class="mb__card-code"> <span title="A1049SP-12GO">A1049SP-12GO</span> </mark>
+                                <ul class="mb__card-info">
+                                    <li>Arte Lamp</li>
+                                    <li>Италия</li>
+                                </ul>
+                            </div>
+                            <div class="mb__card-btn"><a class="btn btn-success" href="https://fandeco.ru/catalog/ljustry/A1049SP-12GO/" title="Подробнее">Подробнее</a></div>
+                        </div>
+                    </div>
+                    <div class="mb__card" data-click-track="24">
+                        <div class="mb__card-wrap">
+                            <ul class="mb__card-labels">
+                                <li class="mb__card-label mb__card-label_lite" title="В Барнауле">В Барнауле шт.</li>
+                            </ul>
+                            <div class="mb__card-img">
+                                <a href="https://fandeco.ru/catalog/podvesnyie-svetilniki/a2610sp-85bk/"> <img src="https://fandeco.ru/assets/images/products/270933/a2610sp-85bk.jpg" alt="" /> </a>
+                            </div>
+                            <div class="mb__card-body">
+                                <div class="mb__card-prices"><span class="mb__card-price">15&nbsp;690 р.</span></div>
+                                <div class="mb__card-name">
+                                    <a href="https://fandeco.ru/catalog/podvesnyie-svetilniki/a2610sp-85bk/" title="Подвесной светильник Arte Lamp POLARIS A2610SP-85BK">Подвесной светильник Arte Lamp POLARIS A2610SP-85BK</a>
+                                </div>
+                                <mark class="mb__card-code"> <span title="A2610SP-85BK">A2610SP-85BK</span> </mark>
+                                <ul class="mb__card-info">
+                                    <li>Arte Lamp</li>
+                                    <li>Италия</li>
+                                </ul>
+                            </div>
+                            <div class="mb__card-btn"><a class="btn btn-success" href="https://fandeco.ru/catalog/podvesnyie-svetilniki/a2610sp-85bk/" title="Подробнее">Подробнее</a></div>
+                        </div>
+                    </div>
+                    <div class="mb__card" data-click-track="25">
+                        <div class="mb__card-wrap">
+                            <ul class="mb__card-labels">
+                                <li class="mb__card-label mb__card-label_lite" title="В Барнауле">В Барнауле шт.</li>
+                            </ul>
+                            <div class="mb__card-img">
+                                <a href="https://fandeco.ru/catalog/ljustry/A1033LM-6GO/"> <img src="https://fandeco.ru/assets/images/products/222317/a1033lm-6go.jpg" alt="" /> </a>
+                            </div>
+                            <div class="mb__card-body">
+                                <div class="mb__card-prices"><span class="mb__card-price">9&nbsp;990 р.</span></div>
+                                <div class="mb__card-name">
+									<a href="https://fandeco.ru/catalog/ljustry/A1033LM-6GO/" title="Подвесная люстра Arte Lamp POLLUX A1033LM-6GO">Подвесная люстра Arte Lamp POLLUX A1033LM-6GO</a></div>
+                                <mark class="mb__card-code"> <span title="A1033LM-6GO">A1033LM-6GO</span> </mark>
+                                <ul class="mb__card-info">
+                                    <li>Arte Lamp</li>
+                                    <li>Италия</li>
+                                </ul>
+                            </div>
+                            <div class="mb__card-btn"><a class="btn btn-success" href="https://fandeco.ru/catalog/ljustry/A1033LM-6GO/" title="Подробнее">Подробнее</a></div>
+                        </div>
+                    </div>
+                    <div class="mb__card" data-click-track="26">
+                        <div class="mb__card-wrap">
+                            <ul class="mb__card-labels">
+                                <li class="mb__card-label mb__card-label_lite" title="В Барнауле">В Барнауле шт.</li>
+                            </ul>
+                            <div class="mb__card-img">
+                                <a href="https://fandeco.ru/catalog/nastennyie-svetilniki-i-bra/118806-ap-6/"> <img src="https://fandeco.ru/assets/images/products/270889/118806-ap-6.jpg" alt="" /> </a>
+                            </div>
+                            <div class="mb__card-body">
+                                <div class="mb__card-prices"><span class="mb__card-price">6&nbsp;990 р.</span></div>
+                                <div class="mb__card-name">
+									<a href="https://fandeco.ru/catalog/nastennyie-svetilniki-i-bra/118806-ap-6/" title="Бра Divinare SUMMER 1188/06 AP-6">Бра Divinare SUMMER 1188/06 AP-6</a></div>
+                                <mark class="mb__card-code"> <span title="1188/06 AP-6">1188/06 AP-6</span> </mark>
+                                <ul class="mb__card-info">
+                                    <li>Divinare</li>
+                                    <li>Италия</li>
+                                </ul>
+                            </div>
+                            <div class="mb__card-btn"><a class="btn btn-success" href="https://fandeco.ru/catalog/nastennyie-svetilniki-i-bra/118806-ap-6/" title="Подробнее">Подробнее</a></div>
+                        </div>
+                    </div>
+                    <div class="mb__card" data-click-track="27">
+                        <div class="mb__card-wrap">
+                            <ul class="mb__card-labels">
+                                <li class="mb__card-label mb__card-label_lite" title="В Барнауле">В Барнауле шт.</li>
+                            </ul>
+                            <div class="mb__card-img">
+                                <a href="https://fandeco.ru/catalog/ljustry/A7790SP-15BK/"> <img src="https://fandeco.ru/assets/images/products/203037/a7790sp-15bk.jpg" alt="" /> </a>
+                            </div>
+                            <div class="mb__card-body">
+                                <div class="mb__card-prices"><span class="mb__card-price">32&nbsp;800 р.</span></div>
+                                <div class="mb__card-name">
+									<a href="https://fandeco.ru/catalog/ljustry/A7790SP-15BK/" title="Подвесная люстра Arte Lamp VINCENT A7790SP-15BK">Подвесная люстра Arte Lamp VINCENT A7790SP-15BK</a></div>
+                                <mark class="mb__card-code"> <span title="A7790SP-15BK">A7790SP-15BK</span> </mark>
+                                <ul class="mb__card-info">
+                                    <li>Arte Lamp</li>
+                                    <li>Италия</li>
+                                </ul>
+                            </div>
+                            <div class="mb__card-btn"><a class="btn btn-success" href="https://fandeco.ru/catalog/ljustry/A7790SP-15BK/" title="Подробнее">Подробнее</a></div>
+                        </div>
+                    </div>
+                    <div class="mb__card" data-click-track="28">
+                        <div class="mb__card-wrap">
+                            <ul class="mb__card-labels">
+                                <li class="mb__card-label mb__card-label_lite" title="В Барнауле">В Барнауле шт.</li>
+                            </ul>
+                            <div class="mb__card-img">
+                                <a href="https://fandeco.ru/catalog/ljustry/A1007SP-10GO/"> <img src="https://fandeco.ru/assets/images/products/228148/a1007sp-10go.jpg" alt="" /> </a>
+                            </div>
+                            <div class="mb__card-body">
+                                <div class="mb__card-prices"><span class="mb__card-price">26&nbsp;990 р.</span></div>
+                                <div class="mb__card-name">
+									<a href="https://fandeco.ru/catalog/ljustry/A1007SP-10GO/" title="Подвесная люстра Arte Lamp ACAPULCO A1007SP-10GO">Подвесная люстра Arte Lamp ACAPULCO A1007SP-10GO</a></div>
+                                <mark class="mb__card-code"> <span title="A1007SP-10GO">A1007SP-10GO</span> </mark>
+                                <ul class="mb__card-info">
+                                    <li>Arte Lamp</li>
+                                    <li>Италия</li>
+                                </ul>
+                            </div>
+                            <div class="mb__card-btn"><a class="btn btn-success" href="https://fandeco.ru/catalog/ljustry/A1007SP-10GO/" title="Подробнее">Подробнее</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="popmechanic-scrollbar"></div>
+        </div>
+        <script type="text/x-template">
+            <div class="mb__card">
+				<div class="mb__card-wrap">
+					<ul class="mb__card-labels">
+						<li class="mb__card-label mb__card-label_lite" title="В Барнауле">В Барнауле
+							{{ product.customFields.FeedCreationDate }} шт.</li>
+						{% if(product.discount) { %}<li class="mb__card-label mb__card-label_bright"
+							title="Скидка {{ product.discount }}">Скидка {{ product.discount }}</li>{% } %}
+					</ul>
+					<div class="mb__card-img">
+						<a href="{{ product.url }}">
+							<img src="{{ product.pictureUrl }}" alt="">
+						</a>
+					</div>
+					<div class="mb__card-body">
+						<div class="mb__card-prices">
+							{% if(product.discount) { %}<div class="mb__card-sale">
+								<span class="mb__card-old-price"
+									title="Старая цена {{ product.formattedOldPrice }} р.">{{ product.formattedOldPrice }} р.</span>
+								<span class="mb__card-sale-value"
+									title="Ваша скидка составит {{ product.discount }}">-{{ product.discount }}</span>
+							</div>{% } %}
+							<span class="mb__card-price">{{ product.formattedPrice }} р.</span>
+						</div>
+						<div class="mb__card-name">
+							<a href="{{ product.url }}" title="{{ product.displayName }}">{{ product.displayName }}</a>
+						</div>
+						<mark class="mb__card-code">
+							<span title="{{ product.vendorCode }}">{{ product.vendorCode }}</span>
+						</mark>
+						<ul class="mb__card-info">
+							{% if(product.manufacturer.name) { %}<li>{{ product.manufacturer.name }}</li>{% } %}
+							{% if(product.customFields.countryOfOriginOfTheBrand) { %}<li>{{ product.customFields.countryOfOriginOfTheBrand }}</li>{% } %}
+						</ul>
+					</div>
+					<div class="mb__card-btn">
+						<a class="btn btn-success" href="{{ product.url }}" title="Подробнее">Подробнее</a>
+					</div>
+				</div>
+            </div>
+        </script>
+    </div>
+</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Модалка для Карты магазина на мобильных --- START -->
+<div class="shop-map-modal">
+    <span class="shop-map-modal__back"></span>
+    <button type="button" class="shop-map-modal__close"></button>
+    <div class="shop-map-modal__body">
+        <iframe
+            src="https://yandex.ru/map-widget/v1/?ll=44.026471%2C56.331396&mode=search&scroll=false&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1MzEwNTA3OBIr0KDQvtGB0YHQuNGPLCDQndC40LbQvdC40Lkg0J3QvtCy0LPQvtGA0L7QtCIKDa0GMEIVpE5hQg%2C%2C&z=13.88"
+            frameborder="0" allowfullscreen="true"></iframe>
+        <!-- <img class="btn_run_modal_terminal" data-type-terminal="shop"
+            src="https://aws.massive.ru/fandeco.ru/layout/nnmap.jpg" alt=""> -->
+    </div>
+</div>
+<!-- Модалка для Карты магазина на мобильных --- FINISH -->
+
+<script src="js/main.js"></script>
+
+<!-- Модалка для долями -->
+<div id="modalDolyami" class="modalDolyami modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/643/7dc16c0be1.svg" alt="">
+                <button type="button" class="closen" data-dismiss="modal" aria-hidden="true"></button>
+            </div>
+            <div class="modal-body">
+                <h3>Оплатите 25% от стоимости покупки</h3>
+                <p>Оставшиеся 3 части спишутся автоматически с шагом в две недели</p>
+                <ul>
+                    <li>
+                        <img src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/644/b6e514840b.svg" alt="">
+                        <span>Без процентов и комиссий</span>
+                    </li>
+                    <li>
+                        <img src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/645/304b5f427a.svg" alt="">
+                        <span>Как обычная оплата картой</span>
+                    </li>
+                </ul>
+                <ol>
+                    <li>
+                        <span>Сегодня</span>
+                        <span>2 040 ₽</span>
+                    </li>
+                    <li>
+                        <span>24 дек</span>
+                        <span>2 040 ₽</span>
+                    </li>
+                    <li>
+                        <span>7 янв</span>
+                        <span>2 040 ₽</span>
+                    </li>
+                    <li>
+                        <span>21 янв</span>
+                        <span>2 040 ₽</span>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>

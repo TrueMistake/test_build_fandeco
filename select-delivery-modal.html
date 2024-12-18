@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ru" class="mode--dev js rgba boxshadow csstransitions js rgba boxshadow csstransitions">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Модальное окно выбора пункт выдачи</title>
+    <meta name="figma" content="@@figma">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700&display=swap" rel="stylesheet" />
+    <link rel="shortcut icon" href="https://aws.massive.ru/fandeco.ru/redesign/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/main.min.css">
+    
+        
+            <link rel="stylesheet" href="css/page/basket.min.css">
+        
+    
+</head>
+
+<body class="page">
+
+<div class="new_cart_order_popup new_cart_order_popup_boxberry">
+    <div class="unit new_cart_order_popup_success">
+        <button class="close_popup"></button>
+        <p class="headline ms3_popover_transport_name">Название магазина Фандеко</p>
+        <p class="lab ">Адрес:</p>
+        <div class="value">
+            <p class="ms3_popover_address">Нахимовский проспект, д.24, павильон №1, этаж 2 - й , стенд 97, 98 (м. Профсоюзная, м.Нахимовский пр-т - до остановки Ткацкая фабрика)</p>
+        </div>
+        <p class="df the_date">
+            <span class="the_title "><span class="ms3_popover_date_text">Дата доставки</span>: </span>
+            <span class="val ms3_popover_date">30 сентября</span>
+        </p>
+        <p class="df the_cost">
+            <span class="the_title"><span class="ms3_popover_cost_text">Стоимость</span>: </span>
+            <span class="val "><span class="ms3_popover_cost ms3_format_price">300 ₽</span></span>
+        </p>
+        <button class="btn_the_here ms3_popover_terminal_id change_terminal">Забрать здесь</button>
+    </div>
+    <div class="unit new_cart_order_popup_error" style="display: none;">
+        <button class="close_popup"></button>
+        <p class="headline">Произошла ошибка</p>
+        <p class=" ">Выберите другой пункт самовывоза<br><br></p>
+        <button class="btn_the_here close_popup_button_error">Закрыть</button>
+    </div>
+</div>
+<script src="js/main.js"></script>

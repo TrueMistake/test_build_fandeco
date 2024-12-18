@@ -1,0 +1,646 @@
+<!doctype html>
+<html lang="ru" class="mode--dev js rgba boxshadow csstransitions js rgba boxshadow csstransitions">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Баннер/Слайдер</title>
+    <meta name="figma" content="@@figma">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700&display=swap" rel="stylesheet" />
+    <link rel="shortcut icon" href="https://aws.massive.ru/fandeco.ru/redesign/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/main.min.css">
+    
+</head>
+
+<body class="page">
+
+<div class="widget_wrap">
+    <ul class="widget_list">
+        <li class="widget_item">
+    <a class="widget_link" href="home.html">Главная страница</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="about-product.html">О товаре</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="about.html">О нас</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="banner.html">Баннер/Слайдер</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="brands.html">Бренды</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="catalogs.html">Каталоги</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="comparison.html">Сравнение</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="cooperation.html">Cотрудничество</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="delivery.html">О товаре</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="matching.html">Сравнение</a>
+</li>
+
+        <li class="widget_label">Динамика</li>
+        <li class="widget_item">
+            <a class="widget_link widget_link_dynamic" data-num="dyn_1" href="#">Первый вариант</a>
+        </li>
+        <li class="widget_item">
+            <a class="widget_link widget_link_dynamic" data-num="dyn_2" href="#">Второй вариант</a>
+        </li>
+        <li class="widget_item">
+            <a class="widget_link widget_link_dynamic" data-num="dyn_3" href="#">Третий вариант</a>
+        </li>
+        <li class="widget_item">
+            <a class="widget_link widget_link_dynamic" data-num="dyn_4" href="#">Четвертый вариант</a>
+        </li>
+    </ul>
+</div>
+
+<section class="billboard">
+    <div class="container">
+        <!-- Цвет для баннера вставляется как инлайновый стиль (style="background-color: #750923;")
+        Логика взята с боевого сайта -->
+        <div class="billboard__wrap" style="background-color: #750923;">
+            <!-- Маркер для рекламного баннера с тултипом --- START -->
+            <!-- Для того чтобы установить кастомную позицию маркера на баннере, нужно добавить инлайновые стили top и right -->
+<!-- В заначение data атрибута link (data-link) нужно записать ссыку, котороая будет скопирована в буфер, если data-link нет, то бедет взято значение href из ближайшей сслыки родителе -->
+<div class="add-mark" data-link="https://fandeco.ru/qerty">
+    <i class="add-mark__icon"></i>
+    <span class="add-mark__title">Реклама</span>
+    <div class="add-mark__tooltip">
+        <div class="add-mark__content">
+            <span class="add-mark__company">Реклaмодатель ООО "Фандеко</span>
+            <span class="add-mark__copy">
+                <i></i>
+                <span>Скопировать ссылку</span>
+            </span>
+        </div>
+        <span class="add-mark__close"></span>
+    </div>
+</div>
+            <!-- Маркер для рекламного баннера с тултипом --- FINISH -->
+            <div class="billboard__picture-wrap">
+                <div class="billboard__picture">
+                    <img src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/343/5b7f1c3676.jpg" alt>
+                </div>
+            </div>
+            <div class="billboard__content">
+                <h2 class="billboard__caption">
+                    Уцененные товары
+                    <span class="billboard__text">Попробовать прямо сейчас!</span>
+                </h2>
+                <button class="billboard__button">Посмотреть</button>
+            </div>
+        </div>
+    </div>
+</section>
+<br><br><br>
+
+<section class="billboard">
+    <div class="container">
+
+        <!-- Для слайдера добавляем стандартную разметку swiper.js -->
+        <div class="swiper swiper_billboard">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <div class="billboard__wrap" style="background-color: #061434;">
+                        <div class="billboard__picture-wrap">
+                            <a href="#"
+                                class="billboard__picture">
+                                <div class="add-mark" data-link="#">
+                                    <i class="add-mark__icon"></i>
+                                    <span class="add-mark__title">Реклама</span>
+                                    <div class="add-mark__tooltip">
+                                        <div class="add-mark__content">
+                                            <span class="add-mark__company">Реклaмодатель ООО "Фандеко"</span>
+                                            <span class="add-mark__copy">
+                                                <i></i>
+                                                <span>Скопировать ссылку</span>
+                                            </span>
+                                        </div>
+                                        <span class="add-mark__close"></span>
+                                    </div>
+                                </div>
+                                <img alt="Совершенство света"
+                                    src="https://cdn.fandeco.ru/assets/cache_image/assets/manager/slider_index/960x300/24-04_Дримлайт (Fandeco)_Лампы_Баннер_960х300_960x300_d9e.webp"
+                                    class="swiper-lazy swiper-lazy-loaded"
+                                    srcset="https://cdn.fandeco.ru/assets/cache_image/assets/manager/slider_index/960x300/24-04_Дримлайт (Fandeco)_Лампы_Баннер_960х300_960x300_d9e.webp">
+                            </a>
+                        </div>
+                        <div class="billboard__content">
+                            <h2 class="billboard__caption">
+                                Совершенство света </h2>
+                            <a href="#"
+                                class="billboard__button">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Внутрь каждого слайда (.swiper-slide) нужно положить стандартный единичный баннер -->
+                <div class="swiper-slide">
+
+                    <!-- Цвет для баннера вставляется как инлайновый стиль -&#45;&#45; Логика взята с боевого сайта -->
+                    <div class="billboard__wrap" style="background-color: #750923;">
+                        <div class="billboard__picture-wrap">
+                            <div class="billboard__picture">
+                                <!--
+                                    1. К картинке надо добавить класс swiper-lazy
+                                    2. Путь для картинки добавляем в data-src
+                                    3. В сам src надо добавить любое однопиксельное изображение чтобы не было ошибок в инспекторе.
+                                        Я поставил с нашего cdn, можно не менять.
+                                -->
+                                <a href="#">
+                                    <!-- Для того чтобы установить кастомную позицию маркера на баннере, нужно добавить инлайновые стили top и right -->
+<!-- В заначение data атрибута link (data-link) нужно записать ссыку, котороая будет скопирована в буфер, если data-link нет, то бедет взято значение href из ближайшей сслыки родителе -->
+<div class="add-mark hidden" data-link="https://fandeco.ru/qerty">
+    <i class="add-mark__icon"></i>
+    <span class="add-mark__title">Реклама</span>
+    <div class="add-mark__tooltip">
+        <div class="add-mark__content">
+            <span class="add-mark__company">Реклaмодатель ООО "Фандеко</span>
+            <span class="add-mark__copy">
+                <i></i>
+                <span>Скопировать ссылку</span>
+            </span>
+        </div>
+        <span class="add-mark__close"></span>
+    </div>
+</div>
+                                    <img class="swiper-lazy"
+                                        data-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/343/5b7f1c3676.jpg"
+                                        src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/366/f6062aa61e.png"
+                                        alt>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="billboard__content">
+                            <h2 class="billboard__caption">
+                                Уцененные товары
+                                <span class="billboard__text">Попробовать прямо сейчас!</span>
+                            </h2>
+                            <a href="#" class="billboard__button">Посмотреть</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="billboard__wrap" style="background-color: #ae5a2b;">
+                        <div class="billboard__picture-wrap">
+                            <div class="billboard__picture">
+                                <a href="#">
+                                    <!-- Для того чтобы установить кастомную позицию маркера на баннере, нужно добавить инлайновые стили top и right -->
+<!-- В заначение data атрибута link (data-link) нужно записать ссыку, котороая будет скопирована в буфер, если data-link нет, то бедет взято значение href из ближайшей сслыки родителе -->
+<div class="add-mark hidden" data-link="https://fandeco.ru/qerty">
+    <i class="add-mark__icon"></i>
+    <span class="add-mark__title">Реклама</span>
+    <div class="add-mark__tooltip">
+        <div class="add-mark__content">
+            <span class="add-mark__company">Реклaмодатель ООО "Фандеко</span>
+            <span class="add-mark__copy">
+                <i></i>
+                <span>Скопировать ссылку</span>
+            </span>
+        </div>
+        <span class="add-mark__close"></span>
+    </div>
+</div>
+                                    <img class="swiper-lazy"
+                                        data-src="https://aws.massive.ru/fandeco.ru/layout/billboard-slide_960x300.png"
+                                        src="https://aws.massive.ru/fandeco.ru/layout/billboard-slide_960x300.png" alt>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="billboard__content">
+                            <h2 class="billboard__caption">
+                                Обучающий семинар
+                                <span class="billboard__text">Свет и декор</span>
+                            </h2>
+                            <a href="#" class="billboard__button">Посмотреть</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="billboard__wrap" style="background-color: #380b46;">
+                        <div class="billboard__picture-wrap">
+                            <div class="billboard__picture">
+                                <a href="#">
+                                    <!-- Для того чтобы установить кастомную позицию маркера на баннере, нужно добавить инлайновые стили top и right -->
+<!-- В заначение data атрибута link (data-link) нужно записать ссыку, котороая будет скопирована в буфер, если data-link нет, то бедет взято значение href из ближайшей сслыки родителе -->
+<div class="add-mark hidden" data-link="https://fandeco.ru/qerty">
+    <i class="add-mark__icon"></i>
+    <span class="add-mark__title">Реклама</span>
+    <div class="add-mark__tooltip">
+        <div class="add-mark__content">
+            <span class="add-mark__company">Реклaмодатель ООО "Фандеко</span>
+            <span class="add-mark__copy">
+                <i></i>
+                <span>Скопировать ссылку</span>
+            </span>
+        </div>
+        <span class="add-mark__close"></span>
+    </div>
+</div>
+                                    <img class="swiper-lazy"
+                                        data-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/347/61f5eb4dba.jpg"
+                                        src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/366/f6062aa61e.png"
+                                        alt>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="billboard__content">
+                            <h2 class="billboard__caption">
+                                Электроустановка
+                                <span class="billboard__text">Розетки и диммеры здесь</span>
+                            </h2>
+                            <a href="#" class="billboard__button">Посмотреть</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="billboard__wrap" style="background-color: #224a36;">
+                        <div class="billboard__picture-wrap">
+                            <div class="billboard__picture">
+                                <a href="#">
+                                    <!-- Для того чтобы установить кастомную позицию маркера на баннере, нужно добавить инлайновые стили top и right -->
+<!-- В заначение data атрибута link (data-link) нужно записать ссыку, котороая будет скопирована в буфер, если data-link нет, то бедет взято значение href из ближайшей сслыки родителе -->
+<div class="add-mark hidden" data-link="https://fandeco.ru/qerty">
+    <i class="add-mark__icon"></i>
+    <span class="add-mark__title">Реклама</span>
+    <div class="add-mark__tooltip">
+        <div class="add-mark__content">
+            <span class="add-mark__company">Реклaмодатель ООО "Фандеко</span>
+            <span class="add-mark__copy">
+                <i></i>
+                <span>Скопировать ссылку</span>
+            </span>
+        </div>
+        <span class="add-mark__close"></span>
+    </div>
+</div>
+                                    <img class="swiper-lazy"
+                                        data-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/358/1c96fab7fb.jpg"
+                                        src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/366/f6062aa61e.png"
+                                        alt>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="billboard__content">
+                            <h2 class="billboard__caption">
+                                Создайте уют на участке
+                                <span class="billboard__text">Уличные светильники по лучшим ценам</span>
+                            </h2>
+                            <a href="#" class="billboard__button">Посмотреть</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="billboard__wrap" style="background-color: #a3280e;">
+                        <div class="billboard__picture-wrap">
+                            <div class="billboard__picture">
+                                <a href="#">
+                                    <!-- Для того чтобы установить кастомную позицию маркера на баннере, нужно добавить инлайновые стили top и right -->
+<!-- В заначение data атрибута link (data-link) нужно записать ссыку, котороая будет скопирована в буфер, если data-link нет, то бедет взято значение href из ближайшей сслыки родителе -->
+<div class="add-mark hidden" data-link="https://fandeco.ru/qerty">
+    <i class="add-mark__icon"></i>
+    <span class="add-mark__title">Реклама</span>
+    <div class="add-mark__tooltip">
+        <div class="add-mark__content">
+            <span class="add-mark__company">Реклaмодатель ООО "Фандеко</span>
+            <span class="add-mark__copy">
+                <i></i>
+                <span>Скопировать ссылку</span>
+            </span>
+        </div>
+        <span class="add-mark__close"></span>
+    </div>
+</div>
+                                    <img class="swiper-lazy"
+                                        data-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/359/37a1422983.jpg"
+                                        src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/366/f6062aa61e.png"
+                                        alt>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="billboard__content">
+                            <h2 class="billboard__caption">
+                                Современный декор
+                                <span class="billboard__text">от <a href="#">Fandecoa</a></span>
+                            </h2>
+                            <a href="#" class="billboard__button">Посмотреть</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="billboard__wrap" style="background-color: #a47d85;">
+                        <div class="billboard__picture-wrap">
+                            <div class="billboard__picture">
+                                <a href="#">
+                                    <!-- Для того чтобы установить кастомную позицию маркера на баннере, нужно добавить инлайновые стили top и right -->
+<!-- В заначение data атрибута link (data-link) нужно записать ссыку, котороая будет скопирована в буфер, если data-link нет, то бедет взято значение href из ближайшей сслыки родителе -->
+<div class="add-mark hidden" data-link="https://fandeco.ru/qerty">
+    <i class="add-mark__icon"></i>
+    <span class="add-mark__title">Реклама</span>
+    <div class="add-mark__tooltip">
+        <div class="add-mark__content">
+            <span class="add-mark__company">Реклaмодатель ООО "Фандеко</span>
+            <span class="add-mark__copy">
+                <i></i>
+                <span>Скопировать ссылку</span>
+            </span>
+        </div>
+        <span class="add-mark__close"></span>
+    </div>
+</div>
+                                    <img class="swiper-lazy"
+                                        data-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/360/3ccfb5af77.jpg"
+                                        src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/366/f6062aa61e.png"
+                                        alt>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="billboard__content">
+                            <h2 class="billboard__caption">
+                                Летнее снижение цен на ArteLamp и Divinare
+                                <span class="billboard__text">Лето вместе с Fandeco!</span>
+                            </h2>
+                            <a href="#" class="billboard__button">Посмотреть</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="billboard__wrap" style="background-color: #EB6408;">
+                        <div class="billboard__picture-wrap">
+                            <div class="billboard__picture">
+                                <a href="#">
+                                    <!-- Для того чтобы установить кастомную позицию маркера на баннере, нужно добавить инлайновые стили top и right -->
+<!-- В заначение data атрибута link (data-link) нужно записать ссыку, котороая будет скопирована в буфер, если data-link нет, то бедет взято значение href из ближайшей сслыки родителе -->
+<div class="add-mark hidden" data-link="https://fandeco.ru/qerty">
+    <i class="add-mark__icon"></i>
+    <span class="add-mark__title">Реклама</span>
+    <div class="add-mark__tooltip">
+        <div class="add-mark__content">
+            <span class="add-mark__company">Реклaмодатель ООО "Фандеко</span>
+            <span class="add-mark__copy">
+                <i></i>
+                <span>Скопировать ссылку</span>
+            </span>
+        </div>
+        <span class="add-mark__close"></span>
+    </div>
+</div>
+                                    <img class="swiper-lazy"
+                                        data-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/361/72827fb280.jpg"
+                                        src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/366/f6062aa61e.png"
+                                        alt>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="billboard__content">
+                            <h2 class="billboard__caption">
+                                Магазин в г. Волгоград в ТЦ Стройград
+                            </h2>
+                            <a href="#" class="billboard__button">Посмотреть</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="billboard__wrap" style="background-color: #0f1d49;">
+                        <div class="billboard__picture-wrap">
+                            <div class="billboard__picture">
+                                <a href="#">
+                                    <!-- Для того чтобы установить кастомную позицию маркера на баннере, нужно добавить инлайновые стили top и right -->
+<!-- В заначение data атрибута link (data-link) нужно записать ссыку, котороая будет скопирована в буфер, если data-link нет, то бедет взято значение href из ближайшей сслыки родителе -->
+<div class="add-mark hidden" data-link="https://fandeco.ru/qerty">
+    <i class="add-mark__icon"></i>
+    <span class="add-mark__title">Реклама</span>
+    <div class="add-mark__tooltip">
+        <div class="add-mark__content">
+            <span class="add-mark__company">Реклaмодатель ООО "Фандеко</span>
+            <span class="add-mark__copy">
+                <i></i>
+                <span>Скопировать ссылку</span>
+            </span>
+        </div>
+        <span class="add-mark__close"></span>
+    </div>
+</div>
+                                    <img class="swiper-lazy"
+                                        data-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/362/4142e5f704.jpg"
+                                        src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/366/f6062aa61e.png"
+                                        alt>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="billboard__content">
+                            <h2 class="billboard__caption">
+                                Сезон уличного освещения<br>«Весна - Лето 2022»
+                            </h2>
+                            <a href="#" class="billboard__button">Посмотреть</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="billboard__wrap" style="background-color: #1d1d1d;">
+                        <div class="billboard__picture-wrap">
+                            <div class="billboard__picture">
+                                <a href="#">
+                                    <!-- Для того чтобы установить кастомную позицию маркера на баннере, нужно добавить инлайновые стили top и right -->
+<!-- В заначение data атрибута link (data-link) нужно записать ссыку, котороая будет скопирована в буфер, если data-link нет, то бедет взято значение href из ближайшей сслыки родителе -->
+<div class="add-mark hidden" data-link="https://fandeco.ru/qerty">
+    <i class="add-mark__icon"></i>
+    <span class="add-mark__title">Реклама</span>
+    <div class="add-mark__tooltip">
+        <div class="add-mark__content">
+            <span class="add-mark__company">Реклaмодатель ООО "Фандеко</span>
+            <span class="add-mark__copy">
+                <i></i>
+                <span>Скопировать ссылку</span>
+            </span>
+        </div>
+        <span class="add-mark__close"></span>
+    </div>
+</div>
+                                    <img class="swiper-lazy"
+                                        data-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/363/8782af935f.jpg"
+                                        src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/366/f6062aa61e.png"
+                                        alt>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="billboard__content">
+                            <h2 class="billboard__caption">
+                                ДИЗАЙНЕРСКОЕ ОСВЕЩЕНИЕ
+                                <span class="billboard__text">Философия света в вашем помещении</span>
+                            </h2>
+                            <a href="#" class="billboard__button">Посмотреть</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="billboard__wrap" style="background-color: #522c24;">
+                        <div class="billboard__picture-wrap">
+                            <div class="billboard__picture">
+                                <a href="#">
+                                    <!-- Для того чтобы установить кастомную позицию маркера на баннере, нужно добавить инлайновые стили top и right -->
+<!-- В заначение data атрибута link (data-link) нужно записать ссыку, котороая будет скопирована в буфер, если data-link нет, то бедет взято значение href из ближайшей сслыки родителе -->
+<div class="add-mark hidden" data-link="https://fandeco.ru/qerty">
+    <i class="add-mark__icon"></i>
+    <span class="add-mark__title">Реклама</span>
+    <div class="add-mark__tooltip">
+        <div class="add-mark__content">
+            <span class="add-mark__company">Реклaмодатель ООО "Фандеко</span>
+            <span class="add-mark__copy">
+                <i></i>
+                <span>Скопировать ссылку</span>
+            </span>
+        </div>
+        <span class="add-mark__close"></span>
+    </div>
+</div>
+                                    <img class="swiper-lazy"
+                                        data-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/364/9c077b794f.jpg"
+                                        src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/366/f6062aa61e.png"
+                                        alt>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="billboard__content">
+                            <h2 class="billboard__caption">
+                                Зеркала ювелирной работы
+                                <span class="billboard__text">Новинки декора</span>
+                            </h2>
+                            <a href="#" class="billboard__button">Посмотреть</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="billboard__wrap" style="background-color: #00372a;">
+                        <div class="billboard__picture-wrap">
+                            <div class="billboard__picture">
+                                <a href="#">
+                                    <!-- Для того чтобы установить кастомную позицию маркера на баннере, нужно добавить инлайновые стили top и right -->
+<!-- В заначение data атрибута link (data-link) нужно записать ссыку, котороая будет скопирована в буфер, если data-link нет, то бедет взято значение href из ближайшей сслыки родителе -->
+<div class="add-mark hidden" data-link="https://fandeco.ru/qerty">
+    <i class="add-mark__icon"></i>
+    <span class="add-mark__title">Реклама</span>
+    <div class="add-mark__tooltip">
+        <div class="add-mark__content">
+            <span class="add-mark__company">Реклaмодатель ООО "Фандеко</span>
+            <span class="add-mark__copy">
+                <i></i>
+                <span>Скопировать ссылку</span>
+            </span>
+        </div>
+        <span class="add-mark__close"></span>
+    </div>
+</div>
+                                    <img class="swiper-lazy"
+                                        data-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/344/8384abd53d.jpg"
+                                        src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/366/f6062aa61e.png"
+                                        alt>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="billboard__content">
+                            <h2 class="billboard__caption">
+                                Дизайнер? или системный интегратор
+                                <span class="billboard__text">Зарабатывай с Fandeco</span>
+                            </h2>
+                            <a href="#" class="billboard__button">Посмотреть</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="billboard__wrap" style="background-color: #df2537;">
+                        <div class="billboard__picture-wrap">
+                            <div class="billboard__picture">
+                                <a href="#">
+                                    <!-- Для того чтобы установить кастомную позицию маркера на баннере, нужно добавить инлайновые стили top и right -->
+<!-- В заначение data атрибута link (data-link) нужно записать ссыку, котороая будет скопирована в буфер, если data-link нет, то бедет взято значение href из ближайшей сслыки родителе -->
+<div class="add-mark hidden" data-link="https://fandeco.ru/qerty">
+    <i class="add-mark__icon"></i>
+    <span class="add-mark__title">Реклама</span>
+    <div class="add-mark__tooltip">
+        <div class="add-mark__content">
+            <span class="add-mark__company">Реклaмодатель ООО "Фандеко</span>
+            <span class="add-mark__copy">
+                <i></i>
+                <span>Скопировать ссылку</span>
+            </span>
+        </div>
+        <span class="add-mark__close"></span>
+    </div>
+</div>
+                                    <img class="swiper-lazy"
+                                        data-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/346/c5b872c117.jpg"
+                                        src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/366/f6062aa61e.png"
+                                        alt>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="billboard__content">
+                            <h2 class="billboard__caption">
+                                Розничные магазины
+                                <span class="billboard__text">Зарабатывай с Fandeco</span>
+                            </h2>
+                            <a href="#" class="billboard__button">Посмотреть</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="billboard__wrap" style="background-color: #3b312c;">
+                        <div class="billboard__picture-wrap">
+                            <div class="billboard__picture">
+                                <a href="#">
+                                    <!-- Для того чтобы установить кастомную позицию маркера на баннере, нужно добавить инлайновые стили top и right -->
+<!-- В заначение data атрибута link (data-link) нужно записать ссыку, котороая будет скопирована в буфер, если data-link нет, то бедет взято значение href из ближайшей сслыки родителе -->
+<div class="add-mark hidden" data-link="https://fandeco.ru/qerty">
+    <i class="add-mark__icon"></i>
+    <span class="add-mark__title">Реклама</span>
+    <div class="add-mark__tooltip">
+        <div class="add-mark__content">
+            <span class="add-mark__company">Реклaмодатель ООО "Фандеко</span>
+            <span class="add-mark__copy">
+                <i></i>
+                <span>Скопировать ссылку</span>
+            </span>
+        </div>
+        <span class="add-mark__close"></span>
+    </div>
+</div>
+                                    <img class="swiper-lazy"
+                                        data-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/345/370852127a.jpg"
+                                        src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/366/f6062aa61e.png"
+                                        alt>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="billboard__content">
+                            <h2 class="billboard__caption">
+                                Интернет магазины
+                                <span class="billboard__text">Зарабатывай с Fandeco</span>
+                            </h2>
+                            <a href="#" class="billboard__button">На страницу с магазинами</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Контроллеры для слайдера -->
+            <div class="billboard__pagination"></div>
+        </div>
+    </div>
+</section>
+
+<script src="js/main.js"></script>

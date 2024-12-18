@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ru" class="mode--dev js rgba boxshadow csstransitions js rgba boxshadow csstransitions">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Омникальный промокод - Покупатель</title>
+    <meta name="figma" content="@@figma">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700&display=swap" rel="stylesheet" />
+    <link rel="shortcut icon" href="https://aws.massive.ru/fandeco.ru/redesign/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/main.min.css">
+    
+        
+            <link rel="stylesheet" href="css/page/omnicode.min.css">
+        
+    
+</head>
+
+<body class="page page--omnicode">
+
+
+    <div class="omnicode omnicode__phone-mask">
+        <form action="" class="omnicode__form auth_mask_country visible " id="omniFormData" autocomplete="off">
+            <span class="omnicode__logo"></span>
+            <h3 class="omnicode__title">Регистрация в программе лояльности сети Fandeco</h3>
+
+            <p class="omnicode__auth-error"></p>
+
+            <div class="omnicode__formdata">
+                <label class="omnicode__controller-text">
+                    <div class="controller">
+                        <input type="text" name="name">
+                        <mark>Ваше имя</mark>
+                    </div>
+                    <i>Необходимо указать Ваше имя</i>
+                </label>
+
+                <label class="omnicode__controller-text">
+                    <div class="controller">
+                        <input type="text" name="email">
+                        <mark>Электронная почта</mark>
+                    </div>
+                    <i>Некорректный адрес электронной почты</i>
+                </label>
+
+                <label class="omnicode__controller-text">
+                    <div class="controller">
+                        <div class="auth_country">
+                            <div class="auth_country_block">
+                                <div class="auth_country_blocks">
+                                    <div class="auth_country_block_1" role="listbox">
+                                        <div class="auth_country_block_1_number">
+                                            <div class="auth_country_block_1_number_1">
+                                                <span>+7</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="auth_country_block_2"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <input autocomplete="on"
+                            type="tel" inputmode="numeric"
+                            name="phone" maxlength="" value=""
+                            class="auth_input">
+                        <mark>Ваш телефон</mark>
+                    </div>
+                    <i>Некорректный номер телефона</i>
+                </label>
+            </div>
+
+            <label class="omnicode__controller-check">
+                <input type="checkbox" name="subscribe">
+                <i></i>
+                <span>Согласен на получение информационных рассылок</span>
+            </label>
+            <label class="omnicode__controller-check">
+                <input type="checkbox" name="consent">
+                <i></i>
+                <span>Даю согласие на обработку моих персональных данных</span>
+            </label>
+
+            <button type="submit" class="omnicode__submit">Получить код</button>
+
+            <p class="omnicode__attention">
+                Нажимая на кнопку "Получить код" вы принимаете условие
+                <a href="#" target="_blank">Публичной оферты</a>
+            </p>
+        </form>
+
+        <form action="" class="omnicode__form" id="omniFormCode" autocomplete="off">
+            <span class="omnicode__logo"></span>
+            <h3 class="omnicode__title">Введите код</h3>
+            <h4 class="omnicode__subtitle">
+                На Ваш телефон <strong></strong><br>
+                поступит смс, введите 4 цифры из сообщения.
+                <button type="button">Изменить номер телефона.</button>
+            </h4>
+            <label class="omnicode__controller-text omnicode__controller-text_code">
+                <div class="controller">
+                    <input type="tel" name="code" id="omniCode" autofocus="">
+                </div>
+                <i></i>
+            </label>
+            <p class="omnicode__attention">
+                Получить новый код можно <br> через
+                <em class="omnicode__timer">00:55</em>
+            </p>
+            <button type="button" class="omnicode__reset">
+                Получить новый код
+            </button>
+        </form>
+
+        <form action="" class="omnicode__form" id="omniFormNumbers" autocomplete="off">
+            <span class="omnicode__logo"></span>
+            <h3 class="omnicode__title">Продиктуйте код менеджеру</h3>
+            <div class="omnicode__numbers"></div>
+        </form>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Переменную authModalConfig переносить не нужно!
+        // Необходима для работы скриптов аутентификации в верстке
+        var authModalConfig = {
+            "close_all_message": "auth_message_close_all",
+            "cssUrl": "\/assets\/components\/auth\/css\/web\/",
+            "jsUrl": "\/assets\/components\/auth\/js\/web\/",
+            "ctx": "web",
+            "country_table_enable": "",
+            "country": "\u0420\u043e\u0441\u0441\u0438\u044f",
+            "country_code": "7",
+            "siteName": "MODX Revolution"
+        };
+    </script>
+    <script src="js/auth.js"></script>
+</body>

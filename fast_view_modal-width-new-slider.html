@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="ru" class="mode--dev js rgba boxshadow csstransitions js rgba boxshadow csstransitions">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Быстрый просмотр товара в модальном окне</title>
+    <meta name="figma" content="@@figma">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700&display=swap" rel="stylesheet" />
+    <link rel="shortcut icon" href="https://aws.massive.ru/fandeco.ru/redesign/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/main.min.css">
+    
+        
+            <link rel="stylesheet" href="css/page/basket.min.css">
+        
+            <link rel="stylesheet" href="css/module/modals.min.css">
+        
+    
+</head>
+
+<body class="page">
+
+<div class="widget_wrap">
+    <ul class="widget_list">
+        <li class="widget_item">
+    <a class="widget_link" href="home.html">Главная страница</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="about-product.html">О товаре</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="about.html">О нас</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="banner.html">Баннер/Слайдер</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="brands.html">Бренды</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="catalogs.html">Каталоги</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="comparison.html">Сравнение</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="cooperation.html">Cотрудничество</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="delivery.html">О товаре</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="matching.html">Сравнение</a>
+</li>
+
+        <li class="widget_label">Динамика</li>
+        <li class="widget_item">
+            <a class="widget_link widget_link_dynamic" data-num="dyn_1" href="#">Первый вариант</a>
+        </li>
+        <li class="widget_item">
+            <a class="widget_link widget_link_dynamic" data-num="dyn_2" href="#">Второй вариант</a>
+        </li>
+        <li class="widget_item">
+            <a class="widget_link widget_link_dynamic" data-num="dyn_3" href="#">Третий вариант</a>
+        </li>
+        <li class="widget_item">
+            <a class="widget_link widget_link_dynamic" data-num="dyn_4" href="#">Четвертый вариант</a>
+        </li>
+    </ul>
+</div>
+
+<div class="modal fade in fast-view" style="display: block;"
+        id="modalFastView"
+        tabindex="-1"
+        role="dialog"
+        aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+                <h4 class="modal-title">Люстра Divinare SIMONA</h4>
+            </div>
+            <div class="modal-body">
+                <div class="new_card_stickers">
+                    <div class="new_card_stickers_info">
+						<span class="new_card_stickers_article">
+							A8564PL-5RB
+						</span>
+                        <div class="new_card_stickers_brand">
+                            <span>
+                                <img src="https://static.basedcdn.com/early-black-bison/src/assets/arti-lampadari.png" alt="">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="new_card_main">
+                    <div class="presentation">
+    <div class="presentation__previews">
+        <div class="presentation__video">
+            <!-- Для карточек с видео, добавлять псевдо-класс .presentation__item_video -->
+            <div class="presentation__item presentation__item_video">
+                <a href="https://rutube.ru/play/embed/9e39db958fba5d5f130a9a8c322bf2a0" data-fancybox="rt-gallery" data-type="iframe">
+                    <!-- Картинка от первого слайда илю другая в качестве превью постера -->
+                    <img src="https://cdn.fandeco.ru/assets/images/products/160180/small/a1150sp-5cc.jpg" alt="" loading="lazy">
+                </a>
+            </div>
+        </div>
+
+        <div class="presentation__previews-slider">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <!-- При первом рендеринге первому слайду, ЕСЛИ ОН НЕ ЕДИНСТВЕННЫЙ, добавляем класс .active -->
+                    <div class="swiper-slide active">
+                        <div class="presentation__item">
+                            <!-- В data-source записываем урл адрес (картинка или видео) который будет отображаться в развернутом виде -->
+                            <img src="https://cdn.fandeco.ru/assets/images/products/160180/small/a1150sp-5cc.jpg"
+                                data-source="https://cdn.fandeco.ru/assets/images/products/160180/bigg/a1150sp-5cc.jpg"
+                                alt="" loading="lazy">
+                        </div>
+                        <div class="swiper-lazy-preloader"></div>
+                        <a href="https://cdn.fandeco.ru/assets/images/products/160180/a1150sp-5cc.jpg" data-fancybox="gallery"></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="presentation__item">
+                            <img src="https://cdn.fandeco.ru/assets/images/products/160180/small/a1150sp-5cc-1.jpg"
+                                data-source="https://cdn.fandeco.ru/assets/images/products/160180/bigg/a1150sp-5cc-1.jpg"
+                                alt="" loading="lazy">
+                        </div>
+                        <div class="swiper-lazy-preloader"></div>
+                        <a href="https://cdn.fandeco.ru/assets/images/products/160180/a1150sp-5cc-1.jpg" data-fancybox="gallery"></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="presentation__item">
+                            <img src="https://cdn.fandeco.ru/assets/images/products/160180/small/a1150sp-5cc-2.jpg"
+                                data-source="https://cdn.fandeco.ru/assets/images/products/160180/bigg/a1150sp-5cc-2.jpg"
+                                alt="" loading="lazy">
+                        </div>
+                        <div class="swiper-lazy-preloader"></div>
+                        <a href="https://cdn.fandeco.ru/assets/images/products/160180/a1150sp-5cc-2.jpg" data-fancybox="gallery"></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="presentation__item">
+                            <img src="https://cdn.fandeco.ru/assets/images/products/160180/small/a1150sp-5cc-3.jpg"
+                                data-source="https://cdn.fandeco.ru/assets/images/products/160180/bigg/a1150sp-5cc-3.jpg"
+                                alt="" loading="lazy">
+                        </div>
+                        <div class="swiper-lazy-preloader"></div>
+                        <a href="https://cdn.fandeco.ru/assets/images/products/160180/a1150sp-5cc-3.jpg" data-fancybox="gallery"></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="presentation__item">
+                            <img src="https://cdn.fandeco.ru/assets/images/products/160180/small/a1150sp-5cc-drawing.jpg"
+                                data-source="https://cdn.fandeco.ru/assets/images/products/160180/bigg/a1150sp-5cc-drawing.jpg"
+                                alt="" loading="lazy">
+                        </div>
+                        <div class="swiper-lazy-preloader"></div>
+                        <a href="https://cdn.fandeco.ru/assets/images/products/160180/a1150sp-5cc-drawing.jpg" data-fancybox="gallery"></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="presentation__item">
+                            <!-- В data-source записываем урл адрес (картинка или видео) который будет отображаться в развернутом виде -->
+                            <img src="https://cdn.fandeco.ru/assets/images/products/160180/small/a1150sp-5cc.jpg"
+                                data-source="https://cdn.fandeco.ru/assets/images/products/160180/bigg/a1150sp-5cc.jpg"
+                                alt="" loading="lazy">
+                        </div>
+                        <div class="swiper-lazy-preloader"></div>
+                        <a href="https://cdn.fandeco.ru/assets/images/products/160180/a1150sp-5cc.jpg" data-fancybox="gallery"></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="presentation__item">
+                            <img src="https://cdn.fandeco.ru/assets/images/products/160180/small/a1150sp-5cc-1.jpg"
+                                data-source="https://cdn.fandeco.ru/assets/images/products/160180/bigg/a1150sp-5cc-1.jpg"
+                                alt="" loading="lazy">
+                        </div>
+                        <div class="swiper-lazy-preloader"></div>
+                        <a href="https://cdn.fandeco.ru/assets/images/products/160180/a1150sp-5cc-1.jpg" data-fancybox="gallery"></a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <!-- Для карточек с видео, добавлять дата-аттрибут data-source c ссылкой на видео с youtube или rutube -->
+                        <!-- Для карточек с видео, добавлять дата-аттрибут data-poster с картинкой-постером для видео -->
+                        <!-- Для карточек с видео с RuTube нужно добавлять класс .presentation__item_video -->
+                        <div class="presentation__item">
+                            <img src="https://aws.massive.ru/fandeco.ru/logo/rt-sm.svg"
+                                data-source="https://rutube.ru/play/embed/9e39db958fba5d5f130a9a8c322bf2a0"
+                                data-poster="https://cdn.fandeco.ru/assets/images/products/160180/bigg/a1150sp-5cc.jpg"
+                                alt="" loading="lazy">
+                        </div>
+                        <div class="swiper-lazy-preloader"></div>
+                        <a href="https://aws.massive.ru/fandeco.ru/logo/rt-sm.svg" data-fancybox="rt-slide-gallery" data-type="iframe"></a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <!-- Для карточек с видео, добавлять дата-аттрибут data-source c ссылкой на видео с youtube или rutube -->
+                        <!-- Для карточек с видео, добавлять дата-аттрибут data-poster с картинкой-постером для видео -->
+                        <div class="presentation__item">
+                            <img src="https://aws.massive.ru/fandeco.ru/logo/yt-sm.svg"
+                                data-source="https://youtube.com/embed/gwjb-RoVYN8"
+                                data-poster="https://cdn.fandeco.ru/assets/images/products/160180/bigg/a1150sp-5cc.jpg"
+                                alt="" loading="lazy">
+                        </div>
+                        <div class="swiper-lazy-preloader"></div>
+                        <a href="https://youtube.com/embed/gwjb-RoVYN8" data-fancybox="yt-gallery"></a>
+                    </div>
+                </div>
+
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+
+            5.
+        </div>
+    </div>
+    <div class="presentation__display">
+        <div class="swiper-lazy-preloader"></div>
+
+        <div class="presentation__display-content">
+            <div>
+                <!-- При первом рендеринге ставим картинку из первого слайда, из data-source в src .presentation__display-view -->
+                <img class="presentation__display-view" src="https://cdn.fandeco.ru/assets/images/products/160180/bigg/a1150sp-5cc.jpg" alt="" loading="lazy">
+            </div>
+        </div>
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <a href="#!" class="btn-similar-products">
+            <i></i><span>Похожие</span>
+        </a>
+    </div>
+</div>
+                    <div class="new_card_buy new_card_main_dolyami">
+                        <div class="flex_bl @@class">
+                            <div class="new_card_buyCost">
+                                <div class="new_card_buy_sale">
+                                    <del class="new_card_buy_old">1 000 000 р.</del>
+                                    <div class="new_card_buy_new">-1 000 000 р.</div>
+                                </div>
+                                <div class="new_card_buy_cost">1 145 120 ₽</div>
+                                <div class="new_card_dolyami">
+                                    <button type="button" class="oneClick" data-form-code="dolyami" data-product="92900" data-toggle="modal" data-target="#modalDolyami">
+                                        <img src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/639/22d2e2e9ee.svg" alt="">
+                                        <span>4 платежа по 5 383 ₽</span>
+                                        <img src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/640/65e1485449.svg" alt="">
+                                    </button>
+                                </div>
+                            </div>
+                            <form class="ms2_form" method="post">
+                                <input type="hidden" name="id" value="82366">
+                                <input type="hidden" name="count" value="1">
+                                <div class="d-grid">
+                                    <button class="btn btn-success btn-lg btn_addcart js_btn_calc sncartgr calculate_add_js" value="cart/add" name="ms2_action" type="submit">
+                                        Добавить в корзину
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="new_card_buy_another">
+                            <div class="new_card_buy_existence">
+                                <div class="new_card_buy_existence_all">
+                                    Наличие: 625 шт
+                                </div>
+                                <span class="new_card_buy_existence_city">
+									624 в Москве
+								</span>
+                                <span class="new_card_buy_existence_city">
+									1 в Новокузнецке
+								</span>
+                            </div>
+                            <div class="new_card_buy_anotherLine new_card_buy_anotherLine_short">
+                                <div class="new_card_buy_anotherProducer_link">
+                                    Производитель <a href="">Divinare</a>
+                                </div>
+                            </div>
+                            <div class="new_card_buy_anotherLine new_card_buy_anotherLine_wrap">
+                                <div class="new_card_buy_anotherLine_like ">
+                                    <span>
+                                        <a rel="nofollow" href="javascript:" class="btn_like_jsOne" data-id="82366">
+                                            <span class="btn_like btn_like--new_product"></span>
+                                            <span class="btn_like_js__text">В избранное</span>
+                                        </a>
+                                    </span>
+                                </div>
+                                <div class="new_card_buy_anotherLine_ves">
+                                    <span>
+                                        <span class="comparison sncardlike comparison-default can_compare" data-id="82366">
+                                            <a rel="nofollow" href="#" class="sncardlike sncardlike-vesi comparison-add comparison-link" data-text="Обновляю список...">В сравнение</a>
+                                            <a rel="nofollow" href="#" class="sncardlike sncardlike-vesi comparison-remove comparison-link" data-text="Обновляю список...">Убрать из сравнения</a>
+                                        </span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="new_card_info_charactersLink">
+                                <i class="ic">
+                                    <svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect width="25" height="25" transform="translate(0 0.5)" fill="white"></rect>
+                                        <path d="M9.14081 18.8306L9.13991 18.8293C6.51683 15.0737 5.3 12.0897 5.3 9.91904C5.3 8.01545 6.05774 6.2288 7.44327 4.8892C8.83138 3.54711 10.6873 2.8 12.6778 2.8C14.6768 2.8 16.5325 3.54739 17.9204 4.8892C19.306 6.22888 20.0628 8.01462 20.0556 9.916V9.91904C20.0556 12.0897 18.8387 15.0737 16.2157 18.8293L16.2152 18.8299C15.2446 20.2222 14.2764 21.4339 13.5481 22.301C13.1888 22.7288 12.8887 23.0718 12.6765 23.3103C12.0309 22.5868 10.59 20.9141 9.14081 18.8306Z"
+                                              stroke="#5DAC0D" stroke-width="1.6"></path>
+                                        <path d="M12.6776 6.604C10.9114 6.604 9.48389 8.02927 9.48389 9.77482C9.48389 11.5204 10.9194 12.9456 12.6776 12.9456C14.4357 12.9456 15.8713 11.5204 15.8713 9.77482C15.8713 8.02927 14.4438 6.604 12.6776 6.604Z"
+                                              fill="white" stroke="#5DAC0D" stroke-width="1.5"></path>
+                                    </svg>
+                                </i>
+                                <a rel="nofollow" href="store/" target="_blank" class="new_card_info_charactersText">
+                                    Найти ближайший магазин
+                                </a>
+                            </div>
+                        </div>
+                        <div class="d-grid">
+                            <button class="btn btn-outline-success btn-lg fast_view_go_to_page oneClick" data-form-id="4" data-product="82366">
+                                Перейти на страницу товара
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+
+<!-- Модалка для долями -->
+<div id="modalDolyami" class="modalDolyami modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/643/7dc16c0be1.svg" alt="">
+                <button type="button" class="closen" data-dismiss="modal" aria-hidden="true"></button>
+            </div>
+            <div class="modal-body">
+                <h3>Оплатите 25% от стоимости покупки</h3>
+                <p>Оставшиеся 3 части спишутся автоматически с шагом в две недели</p>
+                <ul>
+                    <li>
+                        <img src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/644/b6e514840b.svg" alt="">
+                        <span>Без процентов и комиссий</span>
+                    </li>
+                    <li>
+                        <img src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/645/304b5f427a.svg" alt="">
+                        <span>Как обычная оплата картой</span>
+                    </li>
+                </ul>
+                <ol>
+                    <li>
+                        <span>Сегодня</span>
+                        <span>2 040 ₽</span>
+                    </li>
+                    <li>
+                        <span>24 дек</span>
+                        <span>2 040 ₽</span>
+                    </li>
+                    <li>
+                        <span>7 янв</span>
+                        <span>2 040 ₽</span>
+                    </li>
+                    <li>
+                        <span>21 янв</span>
+                        <span>2 040 ₽</span>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>

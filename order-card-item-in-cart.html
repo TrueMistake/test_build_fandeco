@@ -1,0 +1,913 @@
+<!doctype html>
+<html lang="ru" class="mode--dev js rgba boxshadow csstransitions js rgba boxshadow csstransitions">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карточка Только под заказ на странице Корзины</title>
+    <meta name="figma" content="@@figma">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700&display=swap" rel="stylesheet" />
+    <link rel="shortcut icon" href="https://aws.massive.ru/fandeco.ru/redesign/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/main.min.css">
+    
+        
+            <link rel="stylesheet" href="css/page/basket.min.css">
+        
+            <link rel="stylesheet" href="css/page/omnicode.min.css">
+        
+    
+</head>
+
+<body class="page">
+
+<div class="widget_wrap">
+    <ul class="widget_list">
+        <li class="widget_item">
+    <a class="widget_link" href="home.html">Главная страница</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="about-product.html">О товаре</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="about.html">О нас</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="banner.html">Баннер/Слайдер</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="brands.html">Бренды</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="catalogs.html">Каталоги</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="comparison.html">Сравнение</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="cooperation.html">Cотрудничество</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="delivery.html">О товаре</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="matching.html">Сравнение</a>
+</li>
+
+        <li class="widget_label">Динамика</li>
+        <li class="widget_item">
+            <a class="widget_link widget_link_dynamic" data-num="dyn_1" href="#">Первый вариант</a>
+        </li>
+        <li class="widget_item">
+            <a class="widget_link widget_link_dynamic" data-num="dyn_2" href="#">Второй вариант</a>
+        </li>
+        <li class="widget_item">
+            <a class="widget_link widget_link_dynamic" data-num="dyn_3" href="#">Третий вариант</a>
+        </li>
+        <li class="widget_item">
+            <a class="widget_link widget_link_dynamic" data-num="dyn_4" href="#">Четвертый вариант</a>
+        </li>
+    </ul>
+</div>
+<section class="new_cart" style="padding-top: 0;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="new_cart_wrapper">
+                    <div class="new_cart_content">
+                        <div class="cart-item__wrapper">
+                            <!-- Различные блоки внутри карточки переключаются с помощью классов-модификаторов -->
+<div class="cart-item">
+    <div class="cart-item__caption">
+        <h2 class="cart-item__title">
+            <!-- В карточку брать только один блок с текстом.
+            Второй добавлен для сервиса теста верстки
+            Классы бутстрапа брать не нужно,
+            они также нужны для сервиса сравнения -->
+            <a href="#">
+                <span class="d-none d-md-block">Люстра Аrte Lamp RosariaЛюстра Аrte Lamp Rosaria ЛюстраЛюстра Аrte Lamp&nbsp;&nbsp;Lamp Rosaria Люстра</span>
+                <span class="d-md-none">Подсветка для картин Maytoni LAO одсветка для картин Maytoni LAO...</span>
+            </a>
+        </h2>
+        <div class="cart-item__links">
+            <a href="">Удалить</a>
+            <a href="">В избранное</a>
+        </div>
+    </div>
+    
+    <div class="cart-item__picture">
+        <a href="#">
+            <!-- В карточку брать только одну картинку,
+            вторая добавлена для сервиса теста верстки
+            Классы бутстрапа брать не нужно,
+            они также нужны для сервиса сравнения -->
+            <img class="d-none d-md-block" src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/367/a4b1dfc0ce.jpg" alt="">
+            <img class="d-md-none" src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/368/1aceec3837.jpg" alt="">
+        </a>
+    </div>
+    
+    <div class="cart-item__content">
+        <span class="cart-item__code">A8564PL-5RB</span>
+        
+        <ul class="cart-item__data">
+            <!-- Отображение того или иного элемента списка регулировать, через классы бутстрапа -->
+            <li class="d-none d-md-block">Наличие: 625 шт.</li>
+            <li>624 в Москве</li>
+            <li>1 в Новокузнецке</li>
+        </ul>
+        
+        <div class="cart-item__sale">
+            <div class="cart-item__old-price">1 000 000 р.</div>
+            <div class="cart-item__new-price">-1 000 000 р. </div>
+        </div>
+        
+        <div class="cart-item__actions">
+            <div class="cart-item__price">100&nbsp;&nbsp;000 000 ₽</div>
+            
+            <div class="cart-item__controllers">
+                <button class="cart-item__btn cart-item__btn_inc"></button>
+                <input class="cart-item__count" type="text" value="1000">
+                <button class="cart-item__btn cart-item__btn_dec"></button>
+            </div>
+            
+            <div class="cart-item__cost">100&nbsp;&nbsp;000 000 ₽</div>
+        </div>
+    </div>
+</div>
+                            <!-- Для карточки Товара в избранное,
+ нужно добавлять кастомный класс .cart-item_favorites -->
+<div class="cart-item cart-item_favorites">
+    <div class="cart-item__caption">
+        <h2 class="cart-item__title">
+            <!-- В карточку брать только один блок с текстом.
+            Второй добавлен для сервиса теста верстки
+            Классы бутстрапа брать не нужно,
+            они также нужны для сервиса сравнения -->
+            <a href="#">
+                <span class="d-none d-md-block">Люстра Аrte Lamp RosariaЛюстра Аrte Lamp Rosaria ЛюстраЛюстра Аrte Lamp&nbsp;&nbsp;Lamp Rosaria Люстра</span>
+                <span class="d-md-none">Подсветка для картин Maytoni LAO одсветка для картин Maytoni LAO...</span>
+            </a>
+        </h2>
+        <div class="cart-item__links">
+            <a href="">Удалить</a>
+            <!-- Для соответствующих карточек к ссылке В избранное добавлять калсс .cart-item__favorites-link-->
+            <a href="" class="cart-item__favorites-link">В избранное</a>
+        </div>
+    </div>
+    
+    <div class="cart-item__picture">
+        <a href="#">
+            <!-- В карточку брать только одну картинку,
+            вторая добавлена для сервиса теста верстки
+            Классы бутстрапа брать не нужно,
+            они также нужны для сервиса сравнения -->
+            <img class="d-none d-md-block" src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/367/a4b1dfc0ce.jpg" alt="">
+            <img class="d-md-none" src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/368/1aceec3837.jpg" alt="">
+        </a>
+    </div>
+    
+    <div class="cart-item__content">
+        <span class="cart-item__code">A8564PL-5RB</span>
+        
+        <ul class="cart-item__data">
+            <!-- Отображение того или иного элемента списка регулировать, через классы бутстрапа -->
+            <li class="d-none d-md-block">Наличие: 625 шт.</li>
+            <li>624 в Москве</li>
+            <li>1 в Новокузнецке</li>
+        </ul>
+        
+        <div class="cart-item__sale">
+            <div class="cart-item__old-price">1 000 000 р.</div>
+            <div class="cart-item__new-price">-1 000 000 р. </div>
+        </div>
+        
+        <div class="cart-item__actions">
+            <div class="cart-item__price">100&nbsp;&nbsp;000 000 ₽</div>
+            
+            <div class="cart-item__controllers">
+                <button class="cart-item__btn cart-item__btn_inc"></button>
+                <input class="cart-item__count" type="text" value="1000">
+                <button class="cart-item__btn cart-item__btn_dec"></button>
+            </div>
+            
+            <div class="cart-item__cost">100&nbsp;&nbsp;000 000 ₽</div>
+        </div>
+    </div>
+</div>
+                            <!-- Для карточки Цена товара изменилась,
+ нужно добавлять кастомный класс .cart-item_price-change -->
+<div class="cart-item cart-item_price-change">
+    <div class="cart-item__caption">
+        <h2 class="cart-item__title">
+            <!-- В карточку брать только один блок с текстом.
+            Второй добавлен для сервиса теста верстки
+            Классы бутстрапа брать не нужно,
+            они также нужны для сервиса сравнения -->
+            <a href="#">
+                <span class="d-none d-md-block">Люстра Аrte Lamp RosariaЛюстра Аrte Lamp Rosaria ЛюстраЛюстра Аrte Lamp&nbsp;&nbsp;Lamp Rosaria Люстра</span>
+                <span class="d-md-none">Подсветка для картин Maytoni LAO одсветка для картин Maytoni LAO...</span>
+            </a>
+        </h2>
+        <div class="cart-item__links">
+            <a href="">Удалить</a>
+            <a href="">В избранное</a>
+        </div>
+    </div>
+    
+    <div class="cart-item__picture">
+        <a href="#">
+            <!-- В карточку брать только одну картинку,
+            вторая добавлена для сервиса теста верстки
+            Классы бутстрапа брать не нужно,
+            они также нужны для сервиса сравнения -->
+            <img class="d-none d-md-block" src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/367/a4b1dfc0ce.jpg" alt="">
+            <img class="d-md-none" src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/368/1aceec3837.jpg" alt="">
+        </a>
+    </div>
+    
+    <div class="cart-item__content">
+        <span class="cart-item__code">A8564PL-5RB</span>
+        
+        <ul class="cart-item__data">
+            <!-- Отображение того или иного элемента списка регулировать, через классы бутстрапа -->
+            <li class="d-none d-md-block">Наличие: 625 шт.</li>
+            <li>624 в Москве</li>
+            <li>1 в Новокузнецке</li>
+        </ul>
+        
+        <div class="cart-item__sale">
+            <div class="cart-item__old-price">1 000 000 р.</div>
+            <div class="cart-item__new-price">-1 000 000 р. </div>
+        </div>
+        
+        <div class="cart-item__actions">
+            <div class="cart-item__price">100&nbsp;&nbsp;000 000 ₽</div>
+            
+            <div class="cart-item__controllers">
+                <button class="cart-item__btn cart-item__btn_inc"></button>
+                <input class="cart-item__count" type="text" value="1000">
+                <button class="cart-item__btn cart-item__btn_dec"></button>
+            </div>
+            
+            <div class="cart-item__cost">100&nbsp;&nbsp;000 000 ₽</div>
+        </div>
+    </div>
+    
+    <!-- Данный блок можно добавлять в карточку постоянно.
+    Он включается/отключается кастомным классом .cart-item_price-change
+    на самой карточке товара.
+    Если блок будет добавляться только в карточку Цена товара изменилась,
+    в этом случае в .cart-item нужно добавить класс .cart-item_price-change-->
+    <div class="cart-item__price-change">
+        <h2>Цена товара изменилась</h2>
+    
+        <div class="cart-item__btn-wrap">
+            <button class="btn btn-outline-primary">Понятно</button>
+            <a href="" class="btn btn-info">Аналоги</a>
+        </div>
+    </div>
+</div>
+                            <!-- Для карточки Товара нет в наличии,
+ нужно добавлять кастомный класс .cart-item_not-available -->
+<div class="cart-item cart-item_not-available">
+    <div class="cart-item__caption">
+        <h2 class="cart-item__title">
+            <!-- В карточку брать только один блок с текстом.
+            Второй добавлен для сервиса теста верстки
+            Классы бутстрапа брать не нужно,
+            они также нужны для сервиса сравнения -->
+            <a href="#">
+                <span class="d-none d-md-block">Люстра Аrte Lamp RosariaЛюстра Аrte Lamp Rosaria ЛюстраЛюстра Аrte Lamp&nbsp;&nbsp;Lamp Rosaria Люстра</span>
+                <span class="d-md-none">Подсветка для картин Maytoni LAO одсветка для картин Maytoni LAO...</span>
+            </a>
+        </h2>
+        <div class="cart-item__links">
+            <a href="">Удалить</a>
+            <a href="">В избранное</a>
+        </div>
+    </div>
+    
+    <div class="cart-item__picture">
+        <a href="#">
+            <!-- В карточку брать только одну картинку,
+            вторая добавлена для сервиса теста верстки
+            Классы бутстрапа брать не нужно,
+            они также нужны для сервиса сравнения -->
+            <img class="d-none d-md-block" src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/367/a4b1dfc0ce.jpg" alt="">
+            <img class="d-md-none" src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/368/1aceec3837.jpg" alt="">
+        </a>
+    </div>
+    
+    <div class="cart-item__content">
+        <span class="cart-item__code">A8564PL-5RB</span>
+        
+        <ul class="cart-item__data">
+            <!-- Отображение того или иного элемента списка регулировать, через классы бутстрапа -->
+            <li class="d-none d-md-block">Наличие: 625 шт.</li>
+            <li>624 в Москве</li>
+            <li>1 в Новокузнецке</li>
+        </ul>
+        
+        <div class="cart-item__sale">
+            <div class="cart-item__old-price">1 000 000 р.</div>
+            <div class="cart-item__new-price">-1 000 000 р. </div>
+        </div>
+        
+        <div class="cart-item__actions">
+            <div class="cart-item__price">100&nbsp;&nbsp;000 000 ₽</div>
+            
+            <div class="cart-item__controllers">
+                <button class="cart-item__btn cart-item__btn_inc"></button>
+                <input class="cart-item__count" type="text" value="1000">
+                <button class="cart-item__btn cart-item__btn_dec"></button>
+            </div>
+            
+            <div class="cart-item__cost">100&nbsp;&nbsp;000 000 ₽</div>
+        </div>
+    </div>
+    
+    <!-- Данный блок можно добавлять в карточку постоянно.
+    Он включается/отключается кастомным классом .cart-item_not-available
+    на самой карточке товара.
+    Если блок будет добавляться только в карточку Товара нет в наличии,
+    в этом случае в .cart-item нужно добавить класс .cart-item_not-available-->
+    <div class="cart-item__not-available">
+        <h2>Товара нет в наличии</h2>
+    
+        <div class="cart-item__btn-wrap">
+            <button class="btn btn-outline-primary">Понятно</button>
+            <a href="" class="btn btn-info">Аналоги</a>
+        </div>
+    </div>
+</div>
+                            <!-- Для того чтобы показать/скрыть блок с кнопкой
+Сообщить о поступлении, нужно тоглить класс .cart-item_report-admission
+на карточке товара -->
+<div class="cart-item cart-item_report-admission">
+    <div class="cart-item__caption">
+        <h2 class="cart-item__title">
+            <!-- В карточку брать только один блок с текстом.
+            Второй добавлен для сервиса теста верстки
+            Классы бутстрапа брать не нужно,
+            они также нужны для сервиса сравнения -->
+            <a href="#">
+                <span class="d-none d-md-block">Люстра Аrte Lamp RosariaЛюстра Аrte Lamp Rosaria ЛюстраЛюстра Аrte Lamp&nbsp;&nbsp;Lamp Rosaria Люстра</span>
+                <span class="d-md-none">Подсветка для картин Maytoni LAO одсветка для картин Maytoni LAO...</span>
+            </a>
+        </h2>
+        <div class="cart-item__links">
+            <a href="">Удалить</a>
+            <a href="">В избранное</a>
+        </div>
+    </div>
+    
+    <div class="cart-item__picture">
+        <a href="#">
+            <!-- В карточку брать только одну картинку,
+            вторая добавлена для сервиса теста верстки
+            Классы бутстрапа брать не нужно,
+            они также нужны для сервиса сравнения -->
+            <img class="d-none d-md-block" src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/367/a4b1dfc0ce.jpg" alt="">
+            <img class="d-md-none" src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/368/1aceec3837.jpg" alt="">
+        </a>
+    </div>
+    
+    <div class="cart-item__content">
+        <span class="cart-item__code">A8564PL-5RB</span>
+        
+        <ul class="cart-item__data">
+            <!-- Отображение того или иного элемента списка регулировать, через классы бутстрапа -->
+            <li class="d-none d-md-block">Наличие: 625 шт.</li>
+            <li>624 в Москве</li>
+            <li>1 в Новокузнецке</li>
+        </ul>
+        
+        <div class="cart-item__sale">
+            <div class="cart-item__old-price">1 000 000 р.</div>
+            <div class="cart-item__new-price">-1 000 000 р. </div>
+        </div>
+        
+        <div class="cart-item__actions">
+            <div class="cart-item__price">100&nbsp;&nbsp;000 000 ₽</div>
+            
+            <div class="cart-item__controllers">
+                <button class="cart-item__btn cart-item__btn_inc"></button>
+                <input class="cart-item__count" type="text" value="1000">
+                <button class="cart-item__btn cart-item__btn_dec"></button>
+            </div>
+            
+            <div class="cart-item__cost">100&nbsp;&nbsp;000 000 ₽</div>
+        </div>
+    </div>
+    
+    <!-- Данный блок можно добавлять в карточку постоянно.
+    Он включается/отключается кастомным классом .cart-item_report-admission
+    на самой карточке товара.
+    Если блок будет добавляться только в карточку Товара нет в наличии,
+    в этом случае в .cart-item нужно добавить класс .cart-item_report-admission -->
+    <div class="cart-item__report-admission">
+        <h2>Товара нет в наличии</h2>
+        
+        <div class="cart-item__btn-wrap">
+            <button class="btn btn-outline-primary">Сообщить о поступлении</button>
+            <a href="" class="btn btn-info">Аналоги</a>
+        </div>
+    </div>
+</div>
+                            <!-- Для карточки в состоянии загрузки,
+ нужно добавлять кастомный класс .cart-item_loading -->
+<div class="cart-item cart-item_loading">
+    <div class="cart-item__caption">
+        <h2 class="cart-item__title">
+            <!-- В карточку брать только один блок с текстом.
+            Второй добавлен для сервиса теста верстки
+            Классы бутстрапа брать не нужно,
+            они также нужны для сервиса сравнения -->
+            <a href="#">
+                <span class="d-none d-md-block">Люстра Аrte Lamp RosariaЛюстра Аrte Lamp Rosaria ЛюстраЛюстра Аrte Lamp&nbsp;&nbsp;Lamp Rosaria Люстра</span>
+                <span class="d-md-none">Подсветка для картин Maytoni LAO одсветка для картин Maytoni LAO...</span>
+            </a>
+        </h2>
+        <div class="cart-item__links">
+            <a href="">Удалить</a>
+            <a href="">В избранное</a>
+        </div>
+    </div>
+    
+    <div class="cart-item__picture">
+        <a href="#">
+            <!-- В карточку брать только одну картинку,
+            вторая добавлена для сервиса теста верстки
+            Классы бутстрапа брать не нужно,
+            они также нужны для сервиса сравнения -->
+            <img class="d-none d-md-block" src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/367/a4b1dfc0ce.jpg" alt="">
+            <img class="d-md-none" src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/368/1aceec3837.jpg" alt="">
+        </a>
+    </div>
+    
+    <div class="cart-item__content">
+        <span class="cart-item__code">A8564PL-5RB</span>
+        
+        <ul class="cart-item__data">
+            <!-- Отображение того или иного элемента списка регулировать, через классы бутстрапа -->
+            <li class="d-none d-md-block">Наличие: 625 шт.</li>
+            <li>624 в Москве</li>
+            <li>1 в Новокузнецке</li>
+        </ul>
+        
+        <div class="cart-item__sale">
+            <div class="cart-item__old-price">1 000 000 р.</div>
+            <div class="cart-item__new-price">-1 000 000 р. </div>
+        </div>
+        
+        <div class="cart-item__actions">
+            <div class="cart-item__price">100&nbsp;&nbsp;000 000 ₽</div>
+            
+            <div class="cart-item__controllers">
+                <button class="cart-item__btn cart-item__btn_inc"></button>
+                <input class="cart-item__count" type="text" value="1000">
+                <button class="cart-item__btn cart-item__btn_dec"></button>
+            </div>
+            
+            <div class="cart-item__cost">100&nbsp;&nbsp;000 000 ₽</div>
+        </div>
+    </div>
+    
+    <!-- Данный блок можно добавлять в карточку постоянно.
+    Он включается/отключается кастомным классом .cart-item_loading
+    на самой карточке товара.
+    Если блок будет добавляться в карточку товара динамически, также
+    в этом случае в .cart-item нужно добавить класс .cart-item_loading-->
+    <div class="cart-item__loading"></div>
+</div>
+                            <!-- Для того чтобы показать/скрыть блок с сообщением
+о Максимальном количестве товара, нужно тоглить класс .cart-item_count-limit
+на карточке товара -->
+<div class="cart-item cart-item_count-limit">
+    <div class="cart-item__caption">
+        <h2 class="cart-item__title">
+            <!-- В карточку брать только один блок с текстом.
+            Второй добавлен для сервиса теста верстки
+            Классы бутстрапа брать не нужно,
+            они также нужны для сервиса сравнения -->
+            <a href="#">
+                <span class="d-none d-md-block">Люстра Аrte Lamp RosariaЛюстра Аrte Lamp Rosaria ЛюстраЛюстра Аrte Lamp&nbsp;&nbsp;Lamp Rosaria Люстра</span>
+                <span class="d-md-none">Подсветка для картин Maytoni LAO одсветка для картин Maytoni LAO...</span>
+            </a>
+        </h2>
+        <div class="cart-item__links">
+            <a href="">Удалить</a>
+            <a href="">В избранное</a>
+        </div>
+    </div>
+    
+    <div class="cart-item__picture">
+        <a href="#">
+            <!-- В карточку брать только одну картинку,
+            вторая добавлена для сервиса теста верстки
+            Классы бутстрапа брать не нужно,
+            они также нужны для сервиса сравнения -->
+            <img class="d-none d-md-block" src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/367/a4b1dfc0ce.jpg" alt="">
+            <img class="d-md-none" src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/368/1aceec3837.jpg" alt="">
+        </a>
+    </div>
+    
+    <div class="cart-item__content">
+        <span class="cart-item__code">A8564PL-5RB</span>
+        
+        <ul class="cart-item__data">
+            <!-- Отображение того или иного элемента списка регулировать, через классы бутстрапа -->
+            <li class="d-none d-md-block">Наличие: 625 шт.</li>
+            <li>624 в Москве</li>
+            <li>1 в Новокузнецке</li>
+        </ul>
+        
+        <div class="cart-item__sale">
+            <div class="cart-item__old-price">1 000 000 р.</div>
+            <div class="cart-item__new-price">-1 000 000 р. </div>
+        </div>
+        
+        <div class="cart-item__actions">
+            <div class="cart-item__price">100&nbsp;&nbsp;000 000 ₽</div>
+            
+            <div class="cart-item__controllers">
+                <button class="cart-item__btn cart-item__btn_inc"></button>
+                <input class="cart-item__count" type="text" value="73">
+                <button class="cart-item__btn cart-item__btn_dec"></button>
+                
+                <!-- Для того чтобы показать/скрыть сообщение Максимальное кол-во товара,
+                нужно туглить класс .cart-item_count-limit на карточке товара -->
+                <div class="cart-item__count-limit">
+                    Вы уже указали максимальное количество по наличию на складе
+                </div>
+            </div>
+    
+            <div class="cart-item__cost">100&nbsp;&nbsp;000 000 ₽</div>
+            
+        </div>
+    </div>
+</div>
+                            <!-- Для того чтобы показать/скрыть блок с сообщением
+Товар под заказ, нужно тогглить класс .cart-item_order-product
+на карточке товара -->
+<div class="cart-item cart-item_order-product">
+    <div class="cart-item__caption">
+        <h2 class="cart-item__title">
+            <!-- В карточку брать только один блок с текстом.
+            Второй добавлен для сервиса теста верстки
+            Классы бутстрапа брать не нужно,
+            они также нужны для сервиса сравнения -->
+            <a href="#">
+                <span class="d-none d-md-block">Люстра Аrte Lamp RosariaЛюстра Аrte Lamp Rosaria ЛюстраЛюстра Аrte Lamp&nbsp;&nbsp;Lamp Rosaria Люстра</span>
+                <span class="d-md-none">Подсветка для картин Maytoni LAO одсветка для картин Maytoni LAO...</span>
+            </a>
+        </h2>
+        <div class="cart-item__links">
+            <a href="">Удалить</a>
+            <a href="">В избранное</a>
+        </div>
+    </div>
+
+    <div class="cart-item__picture">
+        <a href="#">
+            <!-- В карточку брать только одну картинку,
+            вторая добавлена для сервиса теста верстки
+            Классы бутстрапа брать не нужно,
+            они также нужны для сервиса сравнения -->
+            <img class="d-none d-md-block" src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/367/a4b1dfc0ce.jpg" alt="">
+            <img class="d-md-none" src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/368/1aceec3837.jpg" alt="">
+        </a>
+    </div>
+
+    <div class="cart-item__content">
+        <span class="cart-item__code">A8564PL-5RB</span>
+
+        <!-- Для того чтобы показать/скрыть сообщение Товар под заказ,
+            нужно тогглить класс .cart-item_order-product на карточке товара
+            Этот же класс скроет блок .cart-item__data -->
+        <ul class="cart-item__data">
+            <!-- Отображение того или иного элемента списка регулировать, через классы бутстрапа -->
+            <li class="d-none d-md-block">Наличие: 625 шт.</li>
+            <li>624 в Москве</li>
+            <li>1 в Новокузнецке</li>
+        </ul>
+
+        <div class="card-order-badge card-order-badge_for-order">
+            Товар под заказ. Срок доставки этого товара уточняйте у менеджера
+        </div>
+
+        <div class="cart-item__sale">
+            <div class="cart-item__old-price">1 000 000 р.</div>
+            <div class="cart-item__new-price">-1 000 000 р. </div>
+        </div>
+
+        <div class="cart-item__actions">
+            <div class="cart-item__price">100&nbsp;&nbsp;000 000 ₽</div>
+
+            <div class="cart-item__controllers">
+                <button class="cart-item__btn cart-item__btn_inc"></button>
+                <input class="cart-item__count" type="text" value="1000">
+                <button class="cart-item__btn cart-item__btn_dec"></button>
+            </div>
+
+            <div class="cart-item__cost">100&nbsp;&nbsp;000 000 ₽</div>
+        </div>
+    </div>
+</div>
+                            <!-- Для того чтобы показать/скрыть бейдж Уцененный товар,
+нужно тоглить класс .cart-item_item-discounted на карточке товара -->
+<div class="cart-item cart-item_item-discounted">
+    <div class="cart-item__caption">
+        <h2 class="cart-item__title">
+            <!-- В карточку брать только один блок с текстом.
+            Второй добавлен для сервиса теста верстки
+            Классы бутстрапа брать не нужно,
+            они также нужны для сервиса сравнения -->
+            <a href="#">
+                <span class="d-none d-md-block">Люстра Аrte Lamp RosariaЛюстра Аrte Lamp Rosaria ЛюстраЛюстра Аrte Lamp&nbsp;&nbsp;Lamp Rosaria Люстра</span>
+                <span class="d-md-none">Подсветка для картин Maytoni LAO одсветка для картин Maytoni LAO...</span>
+            </a>
+        </h2>
+        <div class="cart-item__links">
+            <a href="">Удалить</a>
+            <a href="" class="cart-item__favorites-link">В избранное</a>
+        </div>
+    </div>
+    
+    <div class="cart-item__picture">
+        <a href="#">
+            <!-- В карточку брать только одну картинку,
+            вторая добавлена для сервиса теста верстки
+            Классы бутстрапа брать не нужно,
+            они также нужны для сервиса сравнения -->
+            <img class="d-none d-md-block" src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/367/a4b1dfc0ce.jpg" alt="">
+            <img class="d-md-none" src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/368/1aceec3837.jpg" alt="">
+        </a>
+    </div>
+    
+    <div class="cart-item__content">
+        <span class="cart-item__code">A8564PL-5RB</span>
+    
+        <!-- Для того чтобы показать/скрыть бэйдж Уцененный товар,
+             нужно туглить класс .cart-item_item-discounted на карточке товара
+             Этот же класс скроет блок .cart-item__data -->
+        <ul class="cart-item__data">
+            <!-- Отображение того или иного элемента списка регулировать, через классы бутстрапа -->
+            <li class="d-none d-md-block">Наличие: 625 шт.</li>
+            <li>624 в Москве</li>
+            <li>1 в Новокузнецке</li>
+        </ul>
+    
+        <span class="cart-item__item-discounted">Уцененный товар</span>
+        
+        <div class="cart-item__sale">
+            <div class="cart-item__old-price">1 000 000 р.</div>
+            <div class="cart-item__new-price">-1 000 000 р. </div>
+        </div>
+        
+        <div class="cart-item__actions">
+            <div class="cart-item__price">100&nbsp;&nbsp;000 000 ₽</div>
+            
+            <div class="cart-item__controllers">
+                <button class="cart-item__btn cart-item__btn_inc"></button>
+                <input class="cart-item__count" type="text" value="1000">
+                <button class="cart-item__btn cart-item__btn_dec"></button>
+            </div>
+            
+            <div class="cart-item__cost">100&nbsp;&nbsp;000 000 ₽</div>
+        </div>
+    </div>
+</div>
+                        </div>
+                        <div class="new_cart__cart-sharing">
+                            <a hre="#">Получить ссылку на корзину</a>
+                        </div>
+                    </div>
+                    <div class="new_cart_sidebar" style="padding-top: 0;">
+                        <div class="new_cart_sidebar_fix_wrap">
+                            <div class="new_cart_sidebar_wrap">
+                                <div class="new_cart_sidebar_value new_cart_sidebar_value_cart-dolyami">
+                                    <div class="df df_cart">
+                                        <p class="tit">
+                                            Ваша корзина
+                                        </p>
+                                        <p class="cont">
+                                            <a href="/catalog/">Вернуться к покупкам</a>
+                                        </p>
+                                    </div>
+                                    <div class="df df_promocode">
+                                        <p class="tit">
+                                            <a href="#" class="oneClick " data-run-modal="true" data-form-code="cart_promocode">Промокод </a>
+                                        </p>
+                                        <p class="cont" style="display: none"></p>
+                                    </div>
+                                    <div class="df df_goods">
+                                        <p class="tit">
+                                            Количество товаров
+                                        </p>
+                                        <p class="cont">
+                                            <span class="ms3_total_count">5</span> шт.
+                                        </p>
+                                    </div>
+                                    <div class="df df_summa">
+                                        <p class="tit">
+                                            Сумма
+                                        </p>
+                                        <p class="cont">
+                                            <span class="ms3_total_original_cost">55 220</span> ₽
+                                        </p>
+                                    </div>
+                                    <div class="df df_discount">
+                                        <p class="tit">
+                                            Скидка
+                                        </p>
+                                        <p class="cont">
+                                            -<span class="ms3_total_discount">16 908</span>
+                                            <i class="ic">₽</i>
+                                        </p>
+                                    </div>
+                                    <div class="df df_dolyami" type="button" data-toggle="modal" data-target="#modalDolyami">
+                                        <p class="tit">
+                                            <img src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/650/ba4f12fd31.svg" alt="">
+                                            Первый платеж:
+                                        </p>
+                                        <p class="cont">
+                                            <span class="ms3_total_order_cost">30 000</span>
+                                            <i class="ic">₽</i>
+                                        </p>
+                                    </div>
+                                    <div class="df df_result">
+                                        <p class="tit">
+                                            Общая стоимость
+                                        </p>
+                                        <p class="cont">
+                                            <span class="ms3_total_cost">38 312</span> ₽
+                                        </p>
+                                    </div>
+                                    <a href="#" class="link_to_cart oneClick" data-run-modal="true" data-modal-options-city="1" data-tpl-form="chunks/modal/session_cart/link_to_cart.tpl">Получить ссылку на корзину</a>
+                                </div>
+                            </div>
+
+                            <div class="new_cart_sidebar_wrap">
+                                <div class="d-grid gap-2 w-100">
+                                    <a href="/shop/cart/checkout/" class="btn_to_order btn btn-success">
+                                        <span>Перейти к оформлению</span>
+                                    </a>
+                                    <button class="btn btn-outline-success fast_order_btn oneClick  fast_order_btn_submit" style="" data-form-code="cart_fast_order">
+                                        Быстрый заказ
+                                    </button>
+                                    <button type="button" class="btn btn-outline-success fast_order_btn fast_order_btn_message" data-placement="left" data-html="true" style="display: none;" data-original-title="" title="">
+                                        Быстрый заказ
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="new_cart_sidebar_wrap">
+                                <div class="omnicode__manager omnicode__phone-mask">
+                                    <div class="omnicode__manager-section">
+
+                                        <h3 class="omnicode__manager-title">
+                                            Форма заявки 1С менеджером
+                                        </h3>
+
+                                        <form action="" class="omnicode__customer" id="omniManagerForm" autocomplete="off">
+
+                                            <div class="omnicode__select">
+                                                <div class="omnicode__select-value">
+                                                    <span>Клиент не зарегистрирован</span>
+                                                </div>
+                                                <div class="omnicode__select-drop">
+                                                    <div class="omnicode__select-options">
+                                                        <label>
+                                                            <input checked type="radio" name="select_order"
+                                                                value="1"
+                                                                data-status="not-registered">
+                                                                <span class="value">Клиент не зарегистрирован</span>
+                                                        </label>
+                                                        <label>
+                                                            <input type="radio" name="select_order"
+                                                                value="2"
+                                                                data-status="registered">
+                                                                <span class="value">Клиент уже зарегистрирован</span>
+                                                        </label>
+                                                        <label>
+                                                            <input type="radio" name="select_order"
+                                                                value="3"
+                                                                data-status="qrcode">
+                                                                <span class="value">Клиент регистрируется по QR коду при мне</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <p class="omnicode__shop-error has-error">Сообщение об ошибке</p>
+
+                                            <label class="omnicode__customer-phone omnicode__controller-text">
+                                                <div class="controller">
+                                                    <div class="auth_country">
+                                                        <div class="auth_country_block">
+                                                            <div class="auth_country_blocks">
+                                                                <div class="auth_country_block_1" role="listbox">
+                                                                    <div class="auth_country_block_1_number">
+                                                                        <div class="auth_country_block_1_number_1">
+                                                                            <span>+7</span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="auth_country_block_2"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <input autocomplete="on" type="tel" inputmode="numeric" name="phone"
+                                                        maxlength="" value="" class="auth_input"
+                                                        data-shop-phone="+7-000-000-00-00">
+                                                    <mark>Телефон покупателя</mark>
+                                                </div>
+                                                <i>Некорректный номер телефона</i>
+                                            </label>
+
+                                            <label class="omnicode__customer-code omnicode__controller-text">
+                                                <div class="controller">
+                                                    <input type="tel" name="code" id="omniCode">
+                                                    <mark>Введите код, полученный клиентом</mark>
+                                                </div>
+                                                <i></i>
+                                            </label>
+
+                                            <a href="#" class="omnicode__customer-qr-link" target="_blank">
+                                                Показать QR код или ссылку клиенту
+                                            </a>
+
+                                            <button type="submit" class="omnicode__manager-submit btn btn-success">
+                                                Отправить заказ
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Модалка для долями -->
+<div id="modalDolyami" class="modalDolyami modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/643/7dc16c0be1.svg" alt="">
+                <button type="button" class="closen" data-dismiss="modal" aria-hidden="true"></button>
+            </div>
+            <div class="modal-body">
+                <h3>Оплатите 25% от стоимости покупки</h3>
+                <p>Оставшиеся 3 части спишутся автоматически с шагом в две недели</p>
+                <ul>
+                    <li>
+                        <img src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/644/b6e514840b.svg" alt="">
+                        <span>Без процентов и комиссий</span>
+                    </li>
+                    <li>
+                        <img src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/645/304b5f427a.svg" alt="">
+                        <span>Как обычная оплата картой</span>
+                    </li>
+                </ul>
+                <ol>
+                    <li>
+                        <span>Сегодня</span>
+                        <span>2 040 ₽</span>
+                    </li>
+                    <li>
+                        <span>24 дек</span>
+                        <span>2 040 ₽</span>
+                    </li>
+                    <li>
+                        <span>7 янв</span>
+                        <span>2 040 ₽</span>
+                    </li>
+                    <li>
+                        <span>21 янв</span>
+                        <span>2 040 ₽</span>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/main.js"></script>
+<script>
+    // Переменную authModalConfig переносить не нужно!
+    // Необходима для работы скриптов аутентификации в верстке
+    var authModalConfig = {
+        "close_all_message": "auth_message_close_all",
+        "cssUrl": "\/assets\/components\/auth\/css\/web\/",
+        "jsUrl": "\/assets\/components\/auth\/js\/web\/",
+        "ctx": "web",
+        "country_table_enable": "",
+        "country": "\u0420\u043e\u0441\u0441\u0438\u044f",
+        "country_code": "7",
+        "siteName": "MODX Revolution"
+    }
+
+    $('#auth_modal').click(function (e) {
+        if (this.id === 'auth_modal') {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+    });
+</script>
+<script src="js/auth.js"></script>

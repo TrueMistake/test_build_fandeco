@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="ru" class="mode--dev js rgba boxshadow csstransitions js rgba boxshadow csstransitions">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Текстовый блок внизу главной страницы</title>
+    <meta name="figma" content="@@figma">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700&display=swap" rel="stylesheet" />
+    <link rel="shortcut icon" href="https://aws.massive.ru/fandeco.ru/redesign/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/main.min.css">
+    
+</head>
+
+<body class="page">
+
+<div class="widget_wrap">
+    <ul class="widget_list">
+        <li class="widget_item">
+    <a class="widget_link" href="home.html">Главная страница</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="about-product.html">О товаре</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="about.html">О нас</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="banner.html">Баннер/Слайдер</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="brands.html">Бренды</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="catalogs.html">Каталоги</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="comparison.html">Сравнение</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="cooperation.html">Cотрудничество</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="delivery.html">О товаре</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="matching.html">Сравнение</a>
+</li>
+
+        <li class="widget_label">Динамика</li>
+        <li class="widget_item">
+            <a class="widget_link widget_link_dynamic" data-num="dyn_1" href="#">Первый вариант</a>
+        </li>
+        <li class="widget_item">
+            <a class="widget_link widget_link_dynamic" data-num="dyn_2" href="#">Второй вариант</a>
+        </li>
+        <li class="widget_item">
+            <a class="widget_link widget_link_dynamic" data-num="dyn_3" href="#">Третий вариант</a>
+        </li>
+        <li class="widget_item">
+            <a class="widget_link widget_link_dynamic" data-num="dyn_4" href="#">Четвертый вариант</a>
+        </li>
+    </ul>
+</div>
+<!--
+    Только для главной страницы, добавлять класс .afterword именно в section
+    Специфика главной страницы. На ней данный текстовый блок имеет нестандартную ширину.
+    
+    Для всех остальных случаев нужно все содержание обернуть в div с классом .afterword,
+    который будет занимать всю ширину родительского блока-контейнера.
+-->
+<section class="afterword">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                
+                <!--
+                    Для использование данного текстового блока в любом месте сайта,
+                    нужно оборачивать его в div с калссом .afterword
+                    Для элемнтов внутри, используем стандарные теги html,
+                    без каких-либо классов.
+                -->
+                <div class="afterword">
+                    
+                    <!-- Для заголовков, используем теги h2,
+                    елси нжуно больше разновидностей заголовков,
+                    нужно поставить отдельную задачу -->
+                    <h2>Интернет-магазин светильников и люстр</h2>
+    
+                    <!-- Все текстовые блоки, нужно оборачивать в
+                        тег P - стандартный html тег для параграфов -->
+                    <p>
+                        Освещение создает комфортную обстановку в помещении и отвечает за визуальное восприятие интерьера.
+                        Компания «Фандеко» предлагает осветительные приборы разного вида. Мы один из крупнейших
+                        интернет-магазинов светильников и люстр в России. Купить товары у нас можно онлайн, а также в
+                        магазинах розничной сети.
+                    </p>
+                    
+                    <h2>Ассортимент</h2>
+                     
+                     <p>
+                         У нас вы найдете большой выбор люстр, бра спотов, трековых и встраиваемых светильников, торшеров. В
+                         каталоге также представлены подсветки для картин и зеркал, светодиодные ленты, лампочки и
+                         комплектующие.
+                         В продаже есть приборы освещения для дома, торговых помещений и офисов. Спальня с самым скромным
+                         интерьером станет по-домашнему теплой, если добавить в нее бра. Точечные светильники выделят
+                         достоинства интерьера и замаскируют его недостатки. Хрустальная люстра не только осветит весь зал,
+                         но и создаст торжественную атмосферу.
+                         У нас большой выбор товаров разного дизайна. Модели с текстильным абажуром добавят уюта комнате в
+                         стиле прованс. Изделия строгой формы из металла подойдут для помещений в стиле хай-тек. Люстры из
+                         дерева и хрусталя подчеркнут изысканность классического интерьера.
+                         Для удобства покупателей все товары в каталоге поделены на категории. Есть фильтры, позволяющие
+                         выбрать товар по бренду, стилю, материалу, типу крепежа, месту установки и другим параметрам.
+                     </p>
+                     
+                    <h2>Почему выбирают нас</h2>
+    
+                    <!-- Для ссылок, использовать стандартный тег a -->
+                    <p>Мы предлагаем <a href="">огромный выбор приборов освещения</a>. Наши клиенты получают ряд преимуществ:</p>
+    
+                    <!-- Для маркированых списков нужно использовать тег UL
+                     Для нумерованных тег OL, соответственно -->
+                    <ul>
+                        <li>Расширенную гарантию на товар.</li>
+                        <li>Помощь свето-дизайнера в выборе.</li>
+                        <li>Помощь в комплектации объекта.</li>
+                        <li>Примерку светильника по фотографии.</li>
+                        <li>Инструмент по подбору похожих моделей.</li>
+                    </ul>
+                    
+                    <p>
+                        Доставка выполняется по всей России. В магазины розничной сети товары доставляются бесплатно.
+                        Посетите наш магазин света в Москве, чтобы лучше изучить ассортимент.
+                        Мы реагируем на пожелания клиентов и дорожим репутацией. В нашем каталоге есть осветительные
+                        приборы, которые понравятся даже взыскательным покупателям!
+                    </p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>

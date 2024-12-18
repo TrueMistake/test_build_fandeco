@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="ru" class="mode--dev js rgba boxshadow csstransitions js rgba boxshadow csstransitions">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Модальное окно добавить окно в карзину</title>
+    <meta name="figma" content="@@figma">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700&display=swap" rel="stylesheet" />
+    <link rel="shortcut icon" href="https://aws.massive.ru/fandeco.ru/redesign/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/main.min.css">
+    
+        
+            <link rel="stylesheet" href="css/module/modals.min.css">
+        
+    
+</head>
+
+<body class="page">
+
+<div class="widget_wrap">
+    <ul class="widget_list">
+        <li class="widget_item">
+    <a class="widget_link" href="home.html">Главная страница</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="about-product.html">О товаре</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="about.html">О нас</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="banner.html">Баннер/Слайдер</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="brands.html">Бренды</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="catalogs.html">Каталоги</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="comparison.html">Сравнение</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="cooperation.html">Cотрудничество</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="delivery.html">О товаре</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="matching.html">Сравнение</a>
+</li>
+
+        <li class="widget_label">Динамика</li>
+        <li class="widget_item">
+            <a class="widget_link widget_link_dynamic" data-num="dyn_1" href="#">Первый вариант</a>
+        </li>
+        <li class="widget_item">
+            <a class="widget_link widget_link_dynamic" data-num="dyn_2" href="#">Второй вариант</a>
+        </li>
+        <li class="widget_item">
+            <a class="widget_link widget_link_dynamic" data-num="dyn_3" href="#">Третий вариант</a>
+        </li>
+        <li class="widget_item">
+            <a class="widget_link widget_link_dynamic" data-num="dyn_4" href="#">Четвертый вариант</a>
+        </li>
+    </ul>
+</div>
+<div id="add_to_cart" class="modal fade oneClick_modal oneClickmod2 in" role="dialog" style="display: block; padding-right: 0px;">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="closen" data-dismiss="modal" aria-hidden="true"></button>
+                <div id="nmodorder_nodelivery" class="nmodorder">
+                    <div class="titwr">
+                        <p class="tit fz21">Товар добавлен в корзину!</p>
+                        <p class="tit">
+                            <strong class="add_to_cart__product_title" title="Заголовок товара длинной в одну или две строки">Заголовок товара длинной в одну или две строки Заголовок товара длинной в одну или две строки</strong>
+                            <span class="article add_to_cart__product_article">A1509PN-1PB</span>
+                        </p>
+                    </div>
+                    <div class="df1">
+                        <div class="el el1">
+                            <div class="imgwr add_to_cart__product_image">
+                                <img src="https://584c5dbd-593d-44f7-8470-c89579a522b3.selcdn.net/assets/images/products/160487/big/a1509pn-1pb.jpg">
+                            </div>
+                        </div>
+                        <div class="el el2">
+                            
+                            
+                            <!-- К блоку с классом .val нужно добавить кастомный класс .val_with-counter-->
+                            <div class="val val_with-counter">
+                                <div class="elem2">
+                                    <p id="cart_discount" class="t1">
+                                        <span class="diff">- <i id="cart_discount_cost">1 000 000</i></span>
+                                        <del><i id="cart_old_total_cost">1 000 000</i> ₽ </del>
+                                    </p>
+                                    <p class="t2"><i id="cart_total_cost">18990</i> ₽</p>
+                                </div>
+    
+    
+                                <!-- Блок с кнопками полностью скопирован с боевого -->
+                                <div class="cartcalc">
+                                    <form class="ms2_form " method="post">
+                                        <input type="hidden" name="key" value="d82e15181691216b3acb150879aba9b7">
+                                        <input type="hidden" name="id" value="166005">
+                                        <input type="hidden" name="count" value="0">
+                                        <button class="calculate_minus_js" value="cart/remove" name="ms2_action" type="submit">- </button>
+                                    </form>
+                                    <div class="val_input">1</div>
+                                    <form class="ms2_form" method="post">
+                                        <input type="hidden" name="id" value="166005">
+                                        <input type="hidden" name="count" value="1">
+                                        <button class="calculate_plus_js" value="cart/add" name="ms2_action" type="submit">+ </button>
+                                    </form>
+                                </div>
+                                
+                                
+                                
+                            </div>
+                            <div class="val2">
+                                <div class="mform pb55">
+                                    <div class="d-grid gap-2 d-md-block mt-4 mb-4">
+                                        <button class="btn btn-success" type="button" onclick="window.location = '/shop/cart/'">В корзину</button>
+                                        <button class="btn btn-outline-success" id="hide-add-to-cart" data-hover="" data-dismiss="modal" aria-hidden="true">Продолжить покупки</button>
+                                    </div>
+                                </div>
+                                <div class="custdelive add_to_cart__delivery" style="display: block;">
+                                    <div class="truck"></div>
+                                    <p class="info">
+                                        <b>Сумма в корзине позволяет получить в г.Москва бесплатную доставку</b>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nmodorderbottom add_to_cart__products">
+                    <p class="tit"> С этим товаром покупают: </p>
+                    <div class="units">
+                        <div class="el">
+                            <form method="post" class="ms2_form">
+                                <input type="hidden" name="id" value="190575">
+                                <input type="hidden" name="count" value="1">
+                                <input type="hidden" name="price_complect" value="719">
+                                <input type="hidden" name="options" value="[]">
+                                <div class="unit">
+                                    <div class="imgwr">
+                                        <img src="https://584c5dbd-593d-44f7-8470-c89579a522b3.selcdn.net/assets/images/products/190575/small/e27-8w-g125-ww-fil-gold-lb.jpg" alt="Лампочка L&amp;B E27-8W-G125-WW-fil gold">
+                                    </div>
+                                    <p class="heade">
+                                        <a href="catalog/lampochki/E27-8W-G125-WW-fil-gold/">Лампочка L&amp;B E27-8W-G125-WW-fil gold</a>
+                                    </p>
+                                    <div class="val">
+                                        <div class="elem2">
+                                            <p class="t2">
+                                                <i>719</i> ₽
+                                            </p>
+                                        </div>
+                                        <div class="calc-sopcard">
+                                            <div class="cartcalc" id="cart_change_count_contener">
+                                                <button class="ccalc-minus" type="button" data-mode="-" id="cart_change_count_minus">—</button>
+                                                <input readonly="" name="cart_change_count" data-min="1" data-max="35" type="text" value="1">
+                                                <button class="ccalc-plus" type="button" data-mode="+" id="cart_change_count_plus">+</button>
+                                            </div>
+                                            <div>
+                                                <button class="butwr" type="submit" name="ms2_action" value="cart/add">
+                                                    <span>В корзину</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="total-summ-lcard">
+                                            <p class="tit-total"> Стоимость комплекта </p>
+                                            <p class="result">
+                                                <i id="cart_change_count_price_complect">719</i> ₽
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="el">
+                            <form method="post" class="ms2_form">
+                                <input type="hidden" name="id" value="47622">
+                                <input type="hidden" name="count" value="1">
+                                <input type="hidden" name="price_complect" value="179">
+                                <input type="hidden" name="options" value="[]">
+                                <div class="unit">
+                                    <div class="imgwr">
+                                        <img src="https://584c5dbd-593d-44f7-8470-c89579a522b3.selcdn.net/assets/images/products/47622/small/103102107-gauss.jpg" alt="Лампочка Gauss СВЕЧА 103102107">
+                                    </div>
+                                    <p class="heade">
+                                        <a href="catalog/lampochki/103102107_Gauss/">Лампочка Gauss СВЕЧА 103102107</a>
+                                    </p>
+                                    <div class="val">
+                                        <div class="elem2">
+                                            <p class="t2">
+                                                <i>179</i> ₽
+                                            </p>
+                                        </div>
+                                        <div class="calc-sopcard">
+                                            <div class="cartcalc" id="cart_change_count_contener">
+                                                <button class="ccalc-minus" type="button" data-mode="-" id="cart_change_count_minus">—</button>
+                                                <input readonly="" name="cart_change_count" data-min="1" data-max="10970" type="text" value="1">
+                                                <button class="ccalc-plus" type="button" data-mode="+" id="cart_change_count_plus">+</button>
+                                            </div>
+                                            <div>
+                                                <button class="butwr" type="submit" name="ms2_action" value="cart/add">
+                                                    <span>В корзину</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="total-summ-lcard">
+                                            <p class="tit-total"> Стоимость комплекта </p>
+                                            <p class="result">
+                                                <i id="cart_change_count_price_complect">179</i> ₽
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="el">
+                            <form method="post" class="ms2_form">
+                                <input type="hidden" name="id" value="47632">
+                                <input type="hidden" name="count" value="1">
+                                <input type="hidden" name="price_complect" value="179">
+                                <input type="hidden" name="options" value="[]">
+                                <div class="unit">
+                                    <div class="imgwr">
+                                        <img src="https://584c5dbd-593d-44f7-8470-c89579a522b3.selcdn.net/assets/images/products/47632/small/102502107-gauss.jpg" alt="Лампочка Gauss A60 102502107">
+                                    </div>
+                                    <p class="heade">
+                                        <a href="catalog/lampochki/102502107_Gauss/">Лампочка Gauss A60 102502107</a>
+                                    </p>
+                                    <div class="val">
+                                        <div class="elem2">
+                                            <p class="t2">
+                                                <i>179</i> ₽
+                                            </p>
+                                        </div>
+                                        <div class="calc-sopcard">
+                                            <div class="cartcalc" id="cart_change_count_contener">
+                                                <button class="ccalc-minus" type="button" data-mode="-" id="cart_change_count_minus">—</button>
+                                                <input readonly="" name="cart_change_count" data-min="1" data-max="6361" type="text" value="1">
+                                                <button class="ccalc-plus" type="button" data-mode="+" id="cart_change_count_plus">+</button>
+                                            </div>
+                                            <div>
+                                                <button class="butwr" type="submit" name="ms2_action" value="cart/add">
+                                                    <span>В корзину</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="total-summ-lcard">
+                                            <p class="tit-total"> Стоимость комплекта </p>
+                                            <p class="result">
+                                                <i id="cart_change_count_price_complect">179</i> ₽
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="el">
+                            <form method="post" class="ms2_form">
+                                <input type="hidden" name="id" value="47662">
+                                <input type="hidden" name="count" value="1">
+                                <input type="hidden" name="price_complect" value="179">
+                                <input type="hidden" name="options" value="[]">
+                                <div class="unit">
+                                    <div class="imgwr">
+                                        <img src="https://584c5dbd-593d-44f7-8470-c89579a522b3.selcdn.net/assets/images/products/47662/small/105102107-gauss.jpg" alt="Лампочка Gauss ШАР 105102107">
+                                    </div>
+                                    <p class="heade">
+                                        <a href="catalog/lampochki/105102107_Gauss/">Лампочка Gauss ШАР 105102107</a>
+                                    </p>
+                                    <div class="val">
+                                        <div class="elem2">
+                                            <p class="t2">
+                                                <i>179</i> ₽
+                                            </p>
+                                        </div>
+                                        <div class="calc-sopcard">
+                                            <div class="cartcalc" id="cart_change_count_contener">
+                                                <button class="ccalc-minus" type="button" data-mode="-" id="cart_change_count_minus">—</button>
+                                                <input readonly="" name="cart_change_count" data-min="1" data-max="28064" type="text" value="1">
+                                                <button class="ccalc-plus" type="button" data-mode="+" id="cart_change_count_plus">+</button>
+                                            </div>
+                                            <div>
+                                                <button class="butwr" type="submit" name="ms2_action" value="cart/add">
+                                                    <span>В корзину</span>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="total-summ-lcard">
+                                            <p class="tit-total"> Стоимость комплекта </p>
+                                            <p class="result">
+                                                <i id="cart_change_count_price_complect">179</i> ₽
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <a class="nmodorder__link" href="#">Посмотреть все лампочки</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/main.js"></script>

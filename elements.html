@@ -1,0 +1,1141 @@
+<!doctype html>
+<html lang="ru" class="mode--dev js rgba boxshadow csstransitions js rgba boxshadow csstransitions">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elements</title>
+    <meta name="figma" content="@@figma">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700&display=swap" rel="stylesheet" /> -->
+    <link rel="stylesheet" href="css/main.min.css?v=1">
+</head>
+
+<body>
+
+
+<style class="content">
+    .content {
+        margin-left: 320px;
+        margin-bottom: 250px;
+    }
+
+    .bd-example {
+        margin: 20px 0;
+    }
+
+    .sidebar-content {
+        width: 260px;
+    }
+
+    .sidebar-content .nav-link {
+        font-size: 16px;
+    }
+
+    .elements-block {
+        margin-bottom: 50px;
+        padding-bottom: 50px;
+        border-bottom: 5px solid #eee;
+    }
+
+    .elements-block > h1 {
+        font-size: 40px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+</style>
+
+<script>
+    // const anchors = document.querySelectorAll('a[href*="#"]')
+    //
+    // for (let anchor of anchors) {
+    //     anchor.addEventListener('click', function (e) {
+    //         e.preventDefault()
+    //
+    //         const blockID = anchor.getAttribute('href').substr(1)
+    //
+    //         document.getElementById(blockID).scrollIntoView({
+    //             behavior: 'smooth',
+    //             block: 'start'
+    //         })
+    //     })
+    // }
+</script>
+
+<div class="container-xxl ">
+    <div class="sidebar-fixed">
+        <div class="elements-nav mt-4 mb-4">
+            <a title="Интернет-магазин светильников и люстр Fandeco. Fandeco.ru" href="index.html" class="elem elem_logo">
+                <img src="images/header_new/logo_new_header_mob_bottom.svg" class="mobile" alt="">
+                <span class="m-2">Elements Design</span>
+            </a>
+        </div>
+
+        <div class="sidebar-content">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#button">Button</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="#сlose-button">Close button</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="#product-card">Product Card</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="#card-fast-link">Card - Fast Link</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#headings">Headings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#badge">Badge</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#pagination">Pagination</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+    <div class=" content">
+        <div class="content-wrapper">
+
+            <div class="elements-block" id="button">
+                <h1>Buttons</h1>
+                <h4>default</h4>
+                <div class="row mb-5">
+                    <div class="col-sm-12">
+                        <button type="button" class="btn btn-primary">Primary</button>
+                        <button type="button" class="btn btn-secondary">Secondary</button>
+                        <button type="button" class="btn btn-success">Success</button>
+                        <button type="button" class="btn btn-danger">Danger</button>
+                        <button type="button" class="btn btn-warning">Warning</button>
+                        <button type="button" class="btn btn-info">Info</button>
+                        <button type="button" class="btn btn-light">Light</button>
+                        <button type="button" class="btn btn-dark">Dark</button>
+
+                        <button type="button" class="btn btn-link">Link</button>
+                    </div>
+                </div>
+                <h4>outline</h4>
+                <div class="row mb-5">
+                    <div class="col-sm-12">
+                        <button type="button" class="btn btn-outline-primary">Primary</button>
+                        <button type="button" class="btn btn-outline-secondary">Secondary</button>
+                        <button type="button" class="btn btn-outline-success">Success</button>
+                        <button type="button" class="btn btn-outline-danger">Danger</button>
+                        <button type="button" class="btn btn-outline-warning">Warning</button>
+                        <button type="button" class="btn btn-outline-info">Info</button>
+                        <button type="button" class="btn btn-outline-light">Light</button>
+                        <button type="button" class="btn btn-outline-dark">Dark</button>
+                    </div>
+                </div>
+                <h4>outline hover</h4>
+                <div class="row mb-5">
+                    <div class="col-sm-12">
+                        <button type="button" class="btn btn-primary btn-outline hover">Primary</button>
+                        <button type="button" class="btn btn-secondary btn-outline hover">Secondary</button>
+                        <button type="button" class="btn btn-success btn-outline hover">Success</button>
+                        <button type="button" class="btn btn-danger btn-outline hover">Danger</button>
+                        <button type="button" class="btn btn-warning btn-outline hover">Warning</button>
+                        <button type="button" class="btn btn-info btn-outline hover">Info</button>
+                        <button type="button" class="btn btn-light btn-outline hover">Light</button>
+                        <button type="button" class="btn btn-dark btn-outline hover">Dark</button>
+                    </div>
+                </div>
+
+                <h4>Block buttons</h4>
+                <div class="row mb-5">
+                    <div class="col-sm-12">
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-primary" type="button">Button</button>
+                            <button class="btn btn-primary" type="button">Button</button>
+                        </div>
+                    </div>
+                </div>
+
+                <h4>Sizes</h4>
+                <p>Fancy larger or smaller buttons? Add .btn-lg or .btn-sm for additional sizes.</p>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                        <button type="button" class="btn btn-secondary btn-lg">Large button</button>
+                    </div>
+                </div>
+                <div class="row mt-4 ">
+                    <div class="col-sm-12">
+                        <button type="button" class="btn btn-primary ">Middle default button</button>
+                        <button type="button" class="btn btn-secondary ">Middle default button</button>
+                    </div>
+                </div>
+                <div class="row mt-4 mb-5">
+                    <div class="col-sm-12">
+                        <button type="button" class="btn btn-primary btn-sm">Small button</button>
+                        <button type="button" class="btn btn-secondary btn-sm">Small button</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="elements-block" id="сlose-button">
+                <h1>Close button</h1>
+
+                <div class="bd-content ">
+                    <h2>Default state</h2>
+                    <div class="bd-example">
+                        <button type="button" class="btn-close" aria-label="Close"></button>
+                    </div>
+                    <h2>Disabled state</h2>
+                    <div class="bd-example">
+                        <button type="button" class="btn-close" disabled="" aria-label="Close"></button>
+                    </div>
+
+                    <h2>White variant</h2>
+                    <div class="bd-example bg-dark">
+                        <button type="button" class="btn-close btn-close-white" aria-label="Close"></button>
+                        <button type="button" class="btn-close btn-close-white" disabled="" aria-label="Close"></button>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="elements-block" id="product-card">
+                <h1>Product Card</h1>
+
+                <p>Карточки для списков товаров</p>
+
+                <h5>Допустимые размеры изображений</h5>
+                <ul>
+                    <li><b>mobile</b> - 140x140</li>
+                    <li><b>small</b> - 224x224</li>
+                    <li><b>middle</b> - 280x280</li>
+                    <li><b>big</b> - 430x430</li>
+                </ul>
+
+
+                <h2 class="mt-5 mb-3">Grid View</h2>
+                <p>карточка плиткой</p>
+                <div class="ecommerce-application">
+                    <div class="grid-view wishlist-slide">
+                        <div class="card ecommerce-card e_dots in_stock item__label__active item-prices__hide_sale card-slider-init swiper-slide">
+    <div class=" d-flex justify-content-center">
+        <div class="ecommerce-card__body ">
+
+            <!-- images -->
+            <div class="item-img">
+                <a href="#">
+                    <div class="item-img__list">
+                        <div class="eslider">
+                            <div class="eslider-list swiper-container">
+                                <div class="eslider-track swiper-wrapper">
+                                    
+                                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/317/d88b8075ea.png"
+                                         class="swiper-slide eslide eslide_0 item-img__thumb swiper-lazy"
+                                          data-index="0">
+                                    
+                                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/320/4ca3ca6e3c.png"
+                                         class="swiper-slide eslide eslide_1 item-img__thumb swiper-lazy"
+                                          data-index="1">
+                                    
+                                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/317/d88b8075ea.png"
+                                         class="swiper-slide eslide eslide_2 item-img__thumb swiper-lazy"
+                                          data-index="2">
+                                    
+                                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/320/7fb099cf5b.png"
+                                         class="swiper-slide eslide eslide_3 item-img__thumb swiper-lazy"
+                                          data-index="3">
+                                    
+                                    <div class="swiper-lazy-preloader"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item-dots ">
+                        <div class="item-images">
+                            
+                            <div class="item-images__zone" data-dot-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/317/d88b8075ea.png" data-index="0"></div>
+                            
+                            <div class="item-images__zone" data-dot-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/320/4ca3ca6e3c.png" data-index="1"></div>
+                            
+                            <div class="item-images__zone" data-dot-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/317/d88b8075ea.png" data-index="2"></div>
+                            
+                            <div class="item-images__zone" data-dot-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/320/7fb099cf5b.png" data-index="3"></div>
+                            
+                        </div>
+
+                    </div>
+
+                    <div class="item-slider">
+                        
+                        <div class="item-slider__dot" data-dot-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/317/d88b8075ea.png" data-index="0"></div>
+                        
+                        <div class="item-slider__dot" data-dot-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/320/4ca3ca6e3c.png" data-index="1"></div>
+                        
+                        <div class="item-slider__dot" data-dot-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/317/d88b8075ea.png" data-index="2"></div>
+                        
+                        <div class="item-slider__dot" data-dot-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/320/7fb099cf5b.png" data-index="3"></div>
+                        
+                    </div>
+                </a>
+                <!-- Верстка блока для карточеки с капелькой и/или tv иконкой
+                    Тултипы добавлять, через стандартные компоненты bootstrap
+                    (инициализируются в src/js/components/card/product/ecommerce.js) -->
+                <div class="item-badges">
+                    <span class="item-badges__el item-badges__el_water-drop"></span>
+                    <span class="item-badges__el item-badges__el_tv"></span>
+                </div>
+            </div>
+            <!-- THE END  -->
+
+            <div class="card-body">
+
+                <!-- labels -->
+                <div class="item-label">
+                    <div class="item-label__badges item-label__line">
+                        
+                        <span class="item-label__badge item-label__badge_fast-view">
+                            <a href="#" class="btn_oneClick oneClick" data-form-id="" data-product=""></a>
+                        </span>
+                        
+                        
+                        <span class="item-label__badge item-label__badge__color" data-label="Новинка" title="Новинка"><div title="Новинка">Новинка</div></span>
+                        
+                        <span class="item-label__badge item-label__badge__color" data-label="Уцененный" title="Уцененный"><div title="Уцененный">Уцененный</div></span>
+                        
+                        <span class="item-label__badge item-label__badge__color" data-label="Скидка" title="Скидка"><div title="Скидка">Скидка</div></span>
+                        
+                        <span class="item-label__badge item-label__badge__color" data-label="Черная пятница!" title="Черная пятница!"><div title="Черная пятница!">Черная пятница!</div></span>
+                        
+                        <span class="item-label__caret"></span>
+                    </div>
+                </div>
+
+                <!-- name -->
+                <h6 class="item-name">
+                    <a href="#" title="Светильник Arte Lamp PROPUS A4344SP-1CC или очень длинный заголовок" target="_self">Светильник Arte Lamp PROPUS A4344SP-1CC или очень длинный заголовок</a>
+                </h6>
+
+                <!--article  -->
+                <div class="item-article">
+                    <div class="item-article__3dmodel"></div>
+                    <div class="item-article__yottube"></div>
+                    <div class="item-article__text" title="A8564PL-5RB">A8564PL-5RB</div>
+                </div>
+
+
+                <!-- storages -->
+                <div class="item-storage">
+                    
+                    <div class="item-storage__name">в Москве 624 шт.</div>
+                    
+                    <div class="item-storage__name">в Комсомольск-на-Амуре 364 шт.</div>
+                    
+                </div>
+
+                <!-- prices -->
+                <div class="item-prices">
+                    <div class="item-prices__mod">
+                        <div class="item-prices__mod__old_price" title="Старая цена">1 000 000 р.</div>
+                        <div class="item-prices__mod__sale_price" title="Ваша скидка составила 1 000 000 р.">
+                            <span>-1 000 000 р.</span>
+                        </div>
+                    </div>
+                    <div class="item-prices__price">1 454 120 р.</div>
+                </div>
+            </div>
+
+            <!-- buttons -->
+            <div class="item-buttons ">
+
+                <div class="item-info">
+                    <div class="item-info__sep"></div>
+                    <a href="#" target="_blank">об оплате</a>
+                    <a href="#" target="_blank">о доставке</a>
+                </div>
+
+                <!-- prices -->
+                <div class="item-prices mt-auto">
+                    <div class="item-prices__mod">
+                        <div class="item-prices__mod__old_price" title="Старая цена">1 000 000 р.</div>
+                        <div class="item-prices__mod__sale_price" title="Ваша скидка составила 1 000 000 р.">
+                            <span>-1 000 000 р.</span>
+                        </div>
+                    </div>
+                    <div class="item-prices__price">1 454 120 р.</div>
+                </div>
+
+
+                <!-- buttons -->
+                <div class="item-buttons__btn">
+                    <button type="button" class="btn btn-cart btn-success btn-xl" title="Добавить в корзину">
+                        В корзину
+                    </button>
+                    <div class="item-list">
+                        <a href="#" class="item-list__item btn-favorite" title="Добавить в избранное"></a>
+                        <a href="#" class="item-list__item btn-compare" title="Добавить в сравнение"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card ecommerce-card e_dots item__label__hide no_stock item__label__active card-slider-init swiper-slide">
+    <div class=" d-flex justify-content-center">
+        <div class="ecommerce-card__body ">
+
+            <!-- images -->
+            <div class="item-img">
+                <a href="#">
+                    <div class="item-img__list">
+                        <div class="eslider">
+                            <div class="eslider-list swiper-container">
+                                <div class="eslider-track swiper-wrapper">
+                                    
+                                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/320/4ca3ca6e3c.png"
+                                         class="swiper-slide eslide eslide_0 item-img__thumb swiper-lazy"
+                                          data-index="0">
+                                    
+                                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/320/7fb099cf5b.png"
+                                         class="swiper-slide eslide eslide_1 item-img__thumb swiper-lazy"
+                                          data-index="1">
+                                    
+                                    <div class="swiper-lazy-preloader"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item-dots ">
+                        <div class="item-images">
+                            
+                            <div class="item-images__zone" data-dot-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/320/4ca3ca6e3c.png" data-index="0"></div>
+                            
+                            <div class="item-images__zone" data-dot-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/320/7fb099cf5b.png" data-index="1"></div>
+                            
+                        </div>
+
+                    </div>
+
+                    <div class="item-slider">
+                        
+                        <div class="item-slider__dot" data-dot-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/320/4ca3ca6e3c.png" data-index="0"></div>
+                        
+                        <div class="item-slider__dot" data-dot-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/320/7fb099cf5b.png" data-index="1"></div>
+                        
+                    </div>
+                </a>
+                <!-- Верстка блока для карточеки с капелькой и/или tv иконкой
+                    Тултипы добавлять, через стандартные компоненты bootstrap
+                    (инициализируются в src/js/components/card/product/ecommerce.js) -->
+                <div class="item-badges">
+                    <span class="item-badges__el item-badges__el_water-drop"></span>
+                    <span class="item-badges__el item-badges__el_tv"></span>
+                </div>
+            </div>
+            <!-- THE END  -->
+
+            <div class="card-body">
+
+                <!-- labels -->
+                <div class="item-label">
+                    <div class="item-label__badges item-label__line">
+                        
+                        <span class="item-label__badge item-label__badge_fast-view">
+                            <a href="#" class="btn_oneClick oneClick" data-form-id="" data-product=""></a>
+                        </span>
+                        
+                        
+                        <span class="item-label__badge item-label__badge__color" data-label="Новинка" title="Новинка"><div title="Новинка">Новинка</div></span>
+                        
+                        <span class="item-label__badge item-label__badge__color" data-label="Скидка" title="Скидка"><div title="Скидка">Скидка</div></span>
+                        
+                        <span class="item-label__badge item-label__badge__color" data-label="Черная пятница!" title="Черная пятница!"><div title="Черная пятница!">Черная пятница!</div></span>
+                        
+                        <span class="item-label__caret"></span>
+                    </div>
+                </div>
+
+                <!-- name -->
+                <h6 class="item-name">
+                    <a href="#" title="Люстра Аrte Lamp" target="_self">Люстра Аrte Lamp</a>
+                </h6>
+
+                <!--article  -->
+                <div class="item-article">
+                    <div class="item-article__3dmodel"></div>
+                    <div class="item-article__yottube"></div>
+                    <div class="item-article__text" title="A8564PL-5RB">A8564PL-5RB</div>
+                </div>
+
+
+                <!-- storages -->
+                <div class="item-storage">
+                    
+                    <div class="item-storage__name">Нет в наличии 0 шт.</div>
+                    
+                </div>
+
+                <!-- prices -->
+                <div class="item-prices">
+                    <div class="item-prices__mod">
+                        <div class="item-prices__mod__old_price" title="Старая цена">1 000 000 р.</div>
+                        <div class="item-prices__mod__sale_price" title="Ваша скидка составила 1 000 000 р.">
+                            <span>-1 000 000 р.</span>
+                        </div>
+                    </div>
+                    <div class="item-prices__price">1 454 120 р.</div>
+                </div>
+            </div>
+
+            <!-- buttons -->
+            <div class="item-buttons ">
+
+                <div class="item-info">
+                    <div class="item-info__sep"></div>
+                    <a href="#" target="_blank">об оплате</a>
+                    <a href="#" target="_blank">о доставке</a>
+                </div>
+
+                <!-- prices -->
+                <div class="item-prices mt-auto">
+                    <div class="item-prices__mod">
+                        <div class="item-prices__mod__old_price" title="Старая цена">1 000 000 р.</div>
+                        <div class="item-prices__mod__sale_price" title="Ваша скидка составила 1 000 000 р.">
+                            <span>-1 000 000 р.</span>
+                        </div>
+                    </div>
+                    <div class="item-prices__price">1 454 120 р.</div>
+                </div>
+
+
+                <!-- buttons -->
+                <div class="item-buttons__btn">
+                    <button type="button" class="btn btn-cart btn-info btn-xl" title="Добавить в корзину">
+                        Аналоги
+                    </button>
+                    <div class="item-list">
+                        <a href="#" class="item-list__item btn-favorite" title="Добавить в избранное"></a>
+                        <a href="#" class="item-list__item btn-compare" title="Добавить в сравнение"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                    </div>
+                </div>
+
+                <h2 class="mt-5 mb-3">List View</h2>
+                <p>карточка списком</p>
+                <div class="ecommerce-application">
+                    <div class="list-view wishlist-slide">
+                        <div class="card ecommerce-card e_dots in_stock item__label__active item-prices__hide_sale card-slider-init swiper-slide">
+    <div class=" d-flex justify-content-center">
+        <div class="ecommerce-card__body ">
+
+            <!-- images -->
+            <div class="item-img">
+                <a href="#">
+                    <div class="item-img__list">
+                        <div class="eslider">
+                            <div class="eslider-list swiper-container">
+                                <div class="eslider-track swiper-wrapper">
+                                    
+                                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/317/d88b8075ea.png"
+                                         class="swiper-slide eslide eslide_0 item-img__thumb swiper-lazy"
+                                          data-index="0">
+                                    
+                                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/320/4ca3ca6e3c.png"
+                                         class="swiper-slide eslide eslide_1 item-img__thumb swiper-lazy"
+                                          data-index="1">
+                                    
+                                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/317/d88b8075ea.png"
+                                         class="swiper-slide eslide eslide_2 item-img__thumb swiper-lazy"
+                                          data-index="2">
+                                    
+                                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/320/7fb099cf5b.png"
+                                         class="swiper-slide eslide eslide_3 item-img__thumb swiper-lazy"
+                                          data-index="3">
+                                    
+                                    <div class="swiper-lazy-preloader"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item-dots ">
+                        <div class="item-images">
+                            
+                            <div class="item-images__zone" data-dot-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/317/d88b8075ea.png" data-index="0"></div>
+                            
+                            <div class="item-images__zone" data-dot-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/320/4ca3ca6e3c.png" data-index="1"></div>
+                            
+                            <div class="item-images__zone" data-dot-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/317/d88b8075ea.png" data-index="2"></div>
+                            
+                            <div class="item-images__zone" data-dot-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/320/7fb099cf5b.png" data-index="3"></div>
+                            
+                        </div>
+
+                    </div>
+
+                    <div class="item-slider">
+                        
+                        <div class="item-slider__dot" data-dot-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/317/d88b8075ea.png" data-index="0"></div>
+                        
+                        <div class="item-slider__dot" data-dot-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/320/4ca3ca6e3c.png" data-index="1"></div>
+                        
+                        <div class="item-slider__dot" data-dot-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/317/d88b8075ea.png" data-index="2"></div>
+                        
+                        <div class="item-slider__dot" data-dot-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/320/7fb099cf5b.png" data-index="3"></div>
+                        
+                    </div>
+                </a>
+                <!-- Верстка блока для карточеки с капелькой и/или tv иконкой
+                    Тултипы добавлять, через стандартные компоненты bootstrap
+                    (инициализируются в src/js/components/card/product/ecommerce.js) -->
+                <div class="item-badges">
+                    <span class="item-badges__el item-badges__el_water-drop"></span>
+                    <span class="item-badges__el item-badges__el_tv"></span>
+                </div>
+            </div>
+            <!-- THE END  -->
+
+            <div class="card-body">
+
+                <!-- labels -->
+                <div class="item-label">
+                    <div class="item-label__badges item-label__line">
+                        
+                        <span class="item-label__badge item-label__badge_fast-view">
+                            <a href="#" class="btn_oneClick oneClick" data-form-id="" data-product=""></a>
+                        </span>
+                        
+                        
+                        <span class="item-label__badge item-label__badge__color" data-label="Новинка" title="Новинка"><div title="Новинка">Новинка</div></span>
+                        
+                        <span class="item-label__badge item-label__badge__color" data-label="Уцененный" title="Уцененный"><div title="Уцененный">Уцененный</div></span>
+                        
+                        <span class="item-label__badge item-label__badge__color" data-label="Скидка" title="Скидка"><div title="Скидка">Скидка</div></span>
+                        
+                        <span class="item-label__badge item-label__badge__color" data-label="Черная пятница!" title="Черная пятница!"><div title="Черная пятница!">Черная пятница!</div></span>
+                        
+                        <span class="item-label__caret"></span>
+                    </div>
+                </div>
+
+                <!-- name -->
+                <h6 class="item-name">
+                    <a href="#" title="Светильник Arte Lamp PROPUS A4344SP-1CC или очень длинный заголовок" target="_self">Светильник Arte Lamp PROPUS A4344SP-1CC или очень длинный заголовок</a>
+                </h6>
+
+                <!--article  -->
+                <div class="item-article">
+                    <div class="item-article__3dmodel"></div>
+                    <div class="item-article__yottube"></div>
+                    <div class="item-article__text" title="A8564PL-5RB">A8564PL-5RB</div>
+                </div>
+
+
+                <!-- storages -->
+                <div class="item-storage">
+                    
+                    <div class="item-storage__name">в Москве 624 шт.</div>
+                    
+                    <div class="item-storage__name">в Комсомольск-на-Амуре 364 шт.</div>
+                    
+                </div>
+
+                <!-- prices -->
+                <div class="item-prices">
+                    <div class="item-prices__mod">
+                        <div class="item-prices__mod__old_price" title="Старая цена">1 000 000 р.</div>
+                        <div class="item-prices__mod__sale_price" title="Ваша скидка составила 1 000 000 р.">
+                            <span>-1 000 000 р.</span>
+                        </div>
+                    </div>
+                    <div class="item-prices__price">1 454 120 р.</div>
+                </div>
+            </div>
+
+            <!-- buttons -->
+            <div class="item-buttons ">
+
+                <div class="item-info">
+                    <div class="item-info__sep"></div>
+                    <a href="#" target="_blank">об оплате</a>
+                    <a href="#" target="_blank">о доставке</a>
+                </div>
+
+                <!-- prices -->
+                <div class="item-prices mt-auto">
+                    <div class="item-prices__mod">
+                        <div class="item-prices__mod__old_price" title="Старая цена">1 000 000 р.</div>
+                        <div class="item-prices__mod__sale_price" title="Ваша скидка составила 1 000 000 р.">
+                            <span>-1 000 000 р.</span>
+                        </div>
+                    </div>
+                    <div class="item-prices__price">1 454 120 р.</div>
+                </div>
+
+
+                <!-- buttons -->
+                <div class="item-buttons__btn">
+                    <button type="button" class="btn btn-cart btn-success btn-xl" title="Добавить в корзину">
+                        В корзину
+                    </button>
+                    <div class="item-list">
+                        <a href="#" class="item-list__item btn-favorite" title="Добавить в избранное"></a>
+                        <a href="#" class="item-list__item btn-compare" title="Добавить в сравнение"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card ecommerce-card e_dots item__label__hide no_stock item__label__active card-slider-init swiper-slide">
+    <div class=" d-flex justify-content-center">
+        <div class="ecommerce-card__body ">
+
+            <!-- images -->
+            <div class="item-img">
+                <a href="#">
+                    <div class="item-img__list">
+                        <div class="eslider">
+                            <div class="eslider-list swiper-container">
+                                <div class="eslider-track swiper-wrapper">
+                                    
+                                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/320/4ca3ca6e3c.png"
+                                         class="swiper-slide eslide eslide_0 item-img__thumb swiper-lazy"
+                                          data-index="0">
+                                    
+                                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/320/7fb099cf5b.png"
+                                         class="swiper-slide eslide eslide_1 item-img__thumb swiper-lazy"
+                                          data-index="1">
+                                    
+                                    <div class="swiper-lazy-preloader"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="item-dots ">
+                        <div class="item-images">
+                            
+                            <div class="item-images__zone" data-dot-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/320/4ca3ca6e3c.png" data-index="0"></div>
+                            
+                            <div class="item-images__zone" data-dot-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/320/7fb099cf5b.png" data-index="1"></div>
+                            
+                        </div>
+
+                    </div>
+
+                    <div class="item-slider">
+                        
+                        <div class="item-slider__dot" data-dot-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/320/4ca3ca6e3c.png" data-index="0"></div>
+                        
+                        <div class="item-slider__dot" data-dot-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/320/7fb099cf5b.png" data-index="1"></div>
+                        
+                    </div>
+                </a>
+                <!-- Верстка блока для карточеки с капелькой и/или tv иконкой
+                    Тултипы добавлять, через стандартные компоненты bootstrap
+                    (инициализируются в src/js/components/card/product/ecommerce.js) -->
+                <div class="item-badges">
+                    <span class="item-badges__el item-badges__el_water-drop"></span>
+                    <span class="item-badges__el item-badges__el_tv"></span>
+                </div>
+            </div>
+            <!-- THE END  -->
+
+            <div class="card-body">
+
+                <!-- labels -->
+                <div class="item-label">
+                    <div class="item-label__badges item-label__line">
+                        
+                        <span class="item-label__badge item-label__badge_fast-view">
+                            <a href="#" class="btn_oneClick oneClick" data-form-id="" data-product=""></a>
+                        </span>
+                        
+                        
+                        <span class="item-label__badge item-label__badge__color" data-label="Новинка" title="Новинка"><div title="Новинка">Новинка</div></span>
+                        
+                        <span class="item-label__badge item-label__badge__color" data-label="Скидка" title="Скидка"><div title="Скидка">Скидка</div></span>
+                        
+                        <span class="item-label__badge item-label__badge__color" data-label="Черная пятница!" title="Черная пятница!"><div title="Черная пятница!">Черная пятница!</div></span>
+                        
+                        <span class="item-label__caret"></span>
+                    </div>
+                </div>
+
+                <!-- name -->
+                <h6 class="item-name">
+                    <a href="#" title="Люстра Аrte Lamp" target="_self">Люстра Аrte Lamp</a>
+                </h6>
+
+                <!--article  -->
+                <div class="item-article">
+                    <div class="item-article__3dmodel"></div>
+                    <div class="item-article__yottube"></div>
+                    <div class="item-article__text" title="A8564PL-5RB">A8564PL-5RB</div>
+                </div>
+
+
+                <!-- storages -->
+                <div class="item-storage">
+                    
+                    <div class="item-storage__name">Нет в наличии 0 шт.</div>
+                    
+                </div>
+
+                <!-- prices -->
+                <div class="item-prices">
+                    <div class="item-prices__mod">
+                        <div class="item-prices__mod__old_price" title="Старая цена">1 000 000 р.</div>
+                        <div class="item-prices__mod__sale_price" title="Ваша скидка составила 1 000 000 р.">
+                            <span>-1 000 000 р.</span>
+                        </div>
+                    </div>
+                    <div class="item-prices__price">1 454 120 р.</div>
+                </div>
+            </div>
+
+            <!-- buttons -->
+            <div class="item-buttons ">
+
+                <div class="item-info">
+                    <div class="item-info__sep"></div>
+                    <a href="#" target="_blank">об оплате</a>
+                    <a href="#" target="_blank">о доставке</a>
+                </div>
+
+                <!-- prices -->
+                <div class="item-prices mt-auto">
+                    <div class="item-prices__mod">
+                        <div class="item-prices__mod__old_price" title="Старая цена">1 000 000 р.</div>
+                        <div class="item-prices__mod__sale_price" title="Ваша скидка составила 1 000 000 р.">
+                            <span>-1 000 000 р.</span>
+                        </div>
+                    </div>
+                    <div class="item-prices__price">1 454 120 р.</div>
+                </div>
+
+
+                <!-- buttons -->
+                <div class="item-buttons__btn">
+                    <button type="button" class="btn btn-cart btn-info btn-xl" title="Добавить в корзину">
+                        Аналоги
+                    </button>
+                    <div class="item-list">
+                        <a href="#" class="item-list__item btn-favorite" title="Добавить в избранное"></a>
+                        <a href="#" class="item-list__item btn-compare" title="Добавить в сравнение"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="elements-block" id="card-fast-link">
+                <h1>Card - Fast Link</h1>
+                <h2 class="mt-5 mb-3">Быстрые ссылки</h2>
+
+                <div style="position: relative">
+                    <div class="e_fast_link swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide e_fast_link_card">
+    <a href="///" >
+        <div class="e_fast_link_pic">
+            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/322/5daef91e7c.png" class="lazyload_img" alt="">
+        </div>
+        <div class="e_fast_link_body">
+            <div class="e_fast_link_title ">Светодиодные люстры</div>
+        </div>
+    </a>
+</div>
+<div class="swiper-slide e_fast_link_card">
+    <a href="///" >
+        <div class="e_fast_link_pic">
+            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/323/33124adc5c.png" class="lazyload_img" alt="">
+        </div>
+        <div class="e_fast_link_body">
+            <div class="e_fast_link_title active">Светодиодные светильники</div>
+        </div>
+    </a>
+</div>
+<div class="swiper-slide e_fast_link_card">
+    <a href="///" >
+        <div class="e_fast_link_pic">
+            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/324/f04dbc345e.png" class="lazyload_img" alt="">
+        </div>
+        <div class="e_fast_link_body">
+            <div class="e_fast_link_title ">Люстры с пультом</div>
+        </div>
+    </a>
+</div>
+<div class="swiper-slide e_fast_link_card">
+    <a href="///" >
+        <div class="e_fast_link_pic">
+            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/325/3a55b54d0d.png" class="lazyload_img" alt="">
+        </div>
+        <div class="e_fast_link_body">
+            <div class="e_fast_link_title ">Светильники белые</div>
+        </div>
+    </a>
+</div>
+<div class="swiper-slide e_fast_link_card">
+    <a href="///" >
+        <div class="e_fast_link_pic">
+            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/326/74d0d55864.png" class="lazyload_img" alt="">
+        </div>
+        <div class="e_fast_link_body">
+            <div class="e_fast_link_title ">Светильники для кухни</div>
+        </div>
+    </a>
+</div>
+<div class="swiper-slide e_fast_link_card">
+    <a href="///" >
+        <div class="e_fast_link_pic">
+            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/327/27d0b3ee5e.png" class="lazyload_img" alt="">
+        </div>
+        <div class="e_fast_link_body">
+            <div class="e_fast_link_title ">Светильники для ванной</div>
+        </div>
+    </a>
+</div>
+<div class="swiper-slide e_fast_link_card">
+    <a href="///" >
+        <div class="e_fast_link_pic">
+            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/329/da2675f3b6.png" class="lazyload_img" alt="">
+        </div>
+        <div class="e_fast_link_body">
+            <div class="e_fast_link_title ">Большие люстры</div>
+        </div>
+    </a>
+</div>
+<div class="swiper-slide e_fast_link_card">
+    <a href="///" >
+        <div class="e_fast_link_pic">
+            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/330/daaa91bd95.png" class="lazyload_img" alt="">
+        </div>
+        <div class="e_fast_link_body">
+            <div class="e_fast_link_title ">Люстры на кухню</div>
+        </div>
+    </a>
+</div>
+<div class="swiper-slide e_fast_link_card">
+    <a href="///" >
+        <div class="e_fast_link_pic">
+            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/322/5daef91e7c.png" class="lazyload_img" alt="">
+        </div>
+        <div class="e_fast_link_body">
+            <div class="e_fast_link_title ">Светодиодные люстры</div>
+        </div>
+    </a>
+</div>
+<div class="swiper-slide e_fast_link_card">
+    <a href="///" >
+        <div class="e_fast_link_pic">
+            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/323/33124adc5c.png" class="lazyload_img" alt="">
+        </div>
+        <div class="e_fast_link_body">
+            <div class="e_fast_link_title ">Светодиодные светильники</div>
+        </div>
+    </a>
+</div>
+<div class="swiper-slide e_fast_link_card">
+    <a href="///" >
+        <div class="e_fast_link_pic">
+            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="https://9d2c73b6-1b6d-45e9-9faa-7fb794647734.selcdn.net/i/324/f04dbc345e.png" class="lazyload_img" alt="">
+        </div>
+        <div class="e_fast_link_body">
+            <div class="e_fast_link_title ">Люстры с пультом</div>
+        </div>
+    </a>
+</div>
+
+                        </div>
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="elements-block" id="headings">
+                <h1>Headings</h1>
+
+                <h3 class="mt-5 mb-3">H - header</h3>
+
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>Heading</th>
+                        <th>Example</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <code>&lt;h1&gt;&lt;/h1&gt;</code>
+                        </td>
+                        <td><span class="h1">h1. Bootstrap heading</span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <code>&lt;h2&gt;&lt;/h2&gt;</code>
+                        </td>
+                        <td><span class="h2">h2. Bootstrap heading</span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <code>&lt;h3&gt;&lt;/h3&gt;</code>
+                        </td>
+                        <td><span class="h3">h3. Bootstrap heading</span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <code>&lt;h4&gt;&lt;/h4&gt;</code>
+                        </td>
+                        <td><span class="h4">h4. Bootstrap heading</span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <code>&lt;h5&gt;&lt;/h5&gt;</code>
+                        </td>
+                        <td><span class="h5">h5. Bootstrap heading</span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <code>&lt;h6&gt;&lt;/h6&gt;</code>
+                        </td>
+                        <td><span class="h6">h6. Bootstrap heading</span></td>
+                    </tr>
+                    </tbody>
+                </table>
+
+
+                <h3 class="mt-5 mb-3">Display</h3>
+                <hr>
+                <div class="bd-example">
+                    <div class="display-1 pb-3 mb-3 border-bottom">Display 1</div>
+                    <div class="display-2 pb-3 mb-3 border-bottom">Display 2</div>
+                    <div class="display-3 pb-3 mb-3 border-bottom">Display 3</div>
+                    <div class="display-4 pb-3 mb-3 border-bottom">Display 4</div>
+                    <div class="display-5 pb-3 mb-3 border-bottom">Display 5</div>
+                    <div class="display-6">Display 6</div>
+                </div>
+
+
+                <h3 class="mt-5 mb-3">Text-decorated</h3>
+                <div class="bd-example">
+                    <p>You can use the mark tag to
+                        <mark>highlight</mark>
+                        text.
+                    </p>
+                    <p>
+                        <del>This line of text is meant to be treated as deleted text.</del>
+                    </p>
+                    <p><s>This line of text is meant to be treated as no longer accurate.</s></p>
+                    <p>
+                        <ins>This line of text is meant to be treated as an addition to the document.</ins>
+                    </p>
+                    <p><u>This line of text will render as underlined.</u></p>
+                    <p><small>This line of text is meant to be treated as fine print.</small></p>
+                    <p><strong>This line rendered as bold text.</strong></p>
+                    <p><em>This line rendered as italicized text.</em></p>
+                </div>
+            </div>
+            <div class="elements-block" id="badge">
+                <h1>Badges</h1>
+
+                <div class="bd-example">
+                    <h1>Example heading <span class="badge bg-secondary">New</span></h1>
+                    <h2>Example heading <span class="badge bg-secondary">New</span></h2>
+                    <h3>Example heading <span class="badge bg-secondary">New</span></h3>
+                    <h4>Example heading <span class="badge bg-secondary">New</span></h4>
+                    <h5>Example heading <span class="badge bg-secondary">New</span></h5>
+                    <h6>Example heading <span class="badge bg-secondary">New</span></h6>
+                </div>
+                <div class="bd-example">
+                    <button type="button" class="btn btn-primary">
+                        Notifications <span class="badge bg-secondary">4</span>
+                    </button>
+                </div>
+                <div class="bd-example">
+                    <button type="button" class="btn btn-primary position-relative">
+                        Inbox
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+    99+
+    <span class="visually-hidden">unread messages</span>
+  </span>
+                    </button>
+                </div>
+
+                <div class="bd-example">
+                    <button type="button" class="btn btn-primary position-relative">
+                        Profile
+                        <span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
+    <span class="visually-hidden">New alerts</span>
+  </span>
+                    </button>
+                </div>
+
+                <div class="bd-example">
+
+                    <span class="badge bg-primary">Primary</span>
+                    <span class="badge bg-secondary">Secondary</span>
+                    <span class="badge bg-success">Success</span>
+                    <span class="badge bg-danger">Danger</span>
+                    <span class="badge bg-warning text-dark">Warning</span>
+                    <span class="badge bg-info text-dark">Info</span>
+                    <span class="badge bg-light text-dark">Light</span>
+                    <span class="badge bg-dark">Dark</span>
+                </div>
+            </div>
+
+
+            <div class="elements-block" id="pagination">
+                <h1>Pagination</h1>
+
+
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination pagination-lg">
+                        <li class="page-item">
+                            <a class="page-link page-link-caret" href="#" aria-label="Previous">
+                                <span aria-hidden="true">&lsaquo;</span>
+                            </a>
+                        </li>
+
+                        <li class="page-item disabled">
+                            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                        <li class="page-item">
+                            <a class="page-link page-link-caret" href="#" aria-label="Previous">
+                                <span aria-hidden="true">	&rsaquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<script src="js/main.js"></script>
