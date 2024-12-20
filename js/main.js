@@ -11918,6 +11918,15 @@ function cardToolTip () {
         trigger: 'hover',
         delay: { "show": 300, "hide": 0 }
     })
+    $('.item-article__ies').tooltip({
+        title: 'Есть IES файл',
+        fallbackPlacements: ['right'],
+        placement: 'right',
+        //delay: 300,
+        padding: 0,
+        trigger: 'hover',
+        delay: { "show": 300, "hide": 0 }
+    })
     $('.item-article__yottube, .reviews__youtube').tooltip({
         title: 'Смотреть видео',
         fallbackPlacements: ['right'],
@@ -13655,9 +13664,9 @@ function getAnchorFromUrl() {
 function smoothScrollToAnchor() {
     const links = document.querySelectorAll('a');
 
-    links.forEach(link => {
+    links.forEach(function (link) {
         if (link.hash && link.hash.length > 1) {
-            link.addEventListener("click", function (event) {
+            link.addEventListener('click', function (event) {
                 event.preventDefault();
 
                 const targetId = link.hash.slice(1);
@@ -13669,11 +13678,11 @@ function smoothScrollToAnchor() {
                         behavior: 'smooth'
                     });
                 } else {
-                    const anchorBtn = document.querySelector(`button[data-anchor="${targetId}"]`);
+                    const anchorBtn = document.querySelector('button[data-anchor="' + targetId + '"]');
                     if (anchorBtn) {
                         anchorBtn.click();
 
-                        const targetAnchorElement = document.querySelector(`[data-anchor="${targetId}"]`);
+                        const targetAnchorElement = document.querySelector('[data-anchor="' + targetId + '"]');
                         if (targetAnchorElement) {
                             window.scrollTo({
                                 top: targetAnchorElement.offsetTop - 200,
@@ -13688,8 +13697,6 @@ function smoothScrollToAnchor() {
 }
 
 function checkScrollPosition() {
-    if (window.innerWidth < 992) return;
-
     const fixedProduct = document.querySelector('.fixed_product');
 
     if (fixedProduct && window.scrollY >= 700) {

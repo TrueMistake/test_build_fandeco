@@ -8,6 +8,10 @@
     <meta name="figma" content="@@figma">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700&display=swap" rel="stylesheet" />
     <link rel="shortcut icon" href="https://aws.massive.ru/fandeco.ru/redesign/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.4.0/nouislider.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/perfect-scrollbar/1.5.2/css/perfect-scrollbar.min.css">
     <link rel="stylesheet" href="css/main.min.css">
     
         
@@ -23,6 +27,8 @@
         
             <link rel="stylesheet" href="css/page/store/list.min.css">
         
+            <link rel="stylesheet" href="css/styles/default.min.css">
+        
     
 </head>
 
@@ -33,7 +39,7 @@
     .auth_modal {
         overflow: auto;
     }
-    
+
     .auth_modal-content {
         margin-bottom: 50px;
     }
@@ -96,7 +102,7 @@
                                     <div class="auth_or">
                                         или
                                     </div>
-                                    
+
                                     <div class="auth_forward_footer">
                                         <div class="auth_forward_links">
                                             <a class="auth_forward_link" href="#">
@@ -114,7 +120,7 @@
                             </div>
                         </div>
                     </form>
-                    
+
                     <form method="post" class="auth_form" data-form-id="phone_confirmation" id="auth_input_code" style="display: none">
                         <input type="hidden" name="auth_phone" value="">
                         <button tabindex="0" type="submit" name="auth_action" value="auth/phone/confirmation" style="display: none"></button>
@@ -127,11 +133,11 @@
                                     <div class="auth_block_text">
                                         <span><span id="auth_phone_code_text">Мы отправили код подтверждения на номер</span> <span id="auth_phone">+7 (000) 000-00-00</span> <a href="#" class="auth_phone_change auth_forward" data-form="phone_code">Изменить</a></span>
                                     </div>
-                                    
+
                                     <div class="auth_flash_call">
                                         <span></span>
                                     </div>
-                                    
+
                                     <div>
                                         <div class="auth_block_inputs">
                                             <div class="auth_block_inputs_phone">
@@ -144,11 +150,11 @@
                                                     </div>
                                                 </label>
                                             </div>
-                                        
+
                                         </div>
                                     </div>
-                                    
-                                    
+
+
                                     <div class="auth_timer_container">
                                         <div class="auth_timer_text">
                                             <span>Получить новый код можно<br> через <span class="auth_timer">00:59</span></span>
@@ -167,13 +173,13 @@
                                             <a href="#" class="auth_forward" data-form="email_login">Войти по почте</a>
                                         </div>
                                     </div>
-                                
-                                
+
+
                                 </div>
                             </div>
                         </div>
                     </form>
-                    
+
                     <form method="post" class="auth_form" data-form-id="in_login" id="auth_input_in_login" style="display: none">
                         <div class="auth">
                             <div class="auth_block">
@@ -190,7 +196,7 @@
                             </div>
                         </div>
                     </form>
-                    
+
                     <form method="post" class="auth_form" data-form-id="email_login" id="auth_input_email" style="display: none">
                         <input type="hidden" name="auth_phone" value="">
                         <button tabindex="0" type="submit" name="auth_action" value="auth/email/login" style="display: none"></button>
@@ -215,7 +221,7 @@
                                                     </div>
                                                 </label>
                                             </div>
-                                            
+
                                             <div class="auth_block_inputs_phone">
                                                 <label>
                                                     <div class="auth_block_inputs_phone_outer">
@@ -235,18 +241,18 @@
                                     </div>
                                     <div class="auth_forward_footer">
                                         <a href="#" class=" auth_forward" data-form="phone_code">Вернуться на главный экран</a>
-                                        
+
                                         <br>
                                         <br>
                                         <a href="#" class=" auth_forward" data-form="reset_password" data-copy="email">Забыли пароль?</a>
-                                    
+
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    
+
                     </form>
-                    
+
                     <form method="post" class="auth_form" data-form-id="reset_password" id="auth_input_reset_password" style="display: none">
                         <input type="hidden" name="auth_phone" value="">
                         <div class="auth">
@@ -284,7 +290,7 @@
                             </div>
                         </div>
                     </form>
-                    
+
                     <form method="post" class="auth_form" data-form-id="change_password" id="auth_input_change_password" style="display: none">
                         <input type="hidden" name="auth_phone" value="">
                         <div class="auth">
@@ -308,7 +314,7 @@
                                                     </div>
                                                 </label>
                                             </div>
-                                            
+
                                             <div class="auth_block_inputs_phone">
                                                 <label>
                                                     <div class="auth_block_inputs_phone_outer">
@@ -333,7 +339,7 @@
                             </div>
                         </div>
                     </form>
-                    
+
                     <form method="post" class="auth_form" data-form-id="change_password_success" id="auth_input_change_password_success" style="display: none">
                         <div class="auth">
                             <div class="auth_block">
@@ -351,7 +357,7 @@
                             </div>
                         </div>
                     </form>
-                    
+
                     <form method="post" class="auth_form auth_mask_country" data-form-id="phone_change" id="auth_input_phone_change" style="display: none">
                         <input type="hidden" name="auth_phone" value="">
                         <div class="auth">
@@ -403,7 +409,7 @@
                 </div>
             </div>
         </div>
-    
+
         <div class="auth_modal-content">
             <div class="auth_modal-header">
                 <button type="button" class=" auth_modal-closed auth_modal-close" data-dismiss="modal" aria-label="Close">
@@ -459,7 +465,7 @@
                                     <div class="auth_or">
                                         или
                                     </div>
-                                
+
                                     <div class="auth_forward_footer">
                                         <a href="#" class=" auth_forward" data-form="email_login">Войти по почте</a>
                                     </div>
@@ -467,25 +473,25 @@
                             </div>
                         </div>
                     </form>
-                
+
                     <form method="post" class="auth_form" data-form-id="phone_confirmation" id="auth_input_code">
                         <input type="hidden" name="auth_phone" value="">
                         <button tabindex="0" type="submit" name="auth_action" value="auth/phone/confirmation" style="display: none"></button>
                         <div class="auth">
                             <div class="auth_block">
                                 <div class="auth_block_first">
-                                    <div class="auth_block_title">  
+                                    <div class="auth_block_title">
                                         Введите код
                                     </div>
                                     <div class="auth_block_text">
                                         <span><span id="auth_phone_code_text">Мы отправили код подтверждения на номер</span> <span id="auth_phone">+7 (000) 000-00-00</span> <a href="#" class="auth_phone_change auth_forward" data-form="phone_code">Изменить</a></span>
                                     </div>
-                                
-                                <!--
-                                    <div class="auth_flash_call">
-                                        <span></span>
-                                    </div>
-                                --> 
+
+                                    <!--
+                                        <div class="auth_flash_call">
+                                            <span></span>
+                                        </div>
+                                    -->
                                     <div>
                                         <div class="auth_block_inputs">
                                             <div class="auth_block_inputs_phone">
@@ -498,11 +504,11 @@
                                                     </div>
                                                 </label>
                                             </div>
-                                    
+
                                         </div>
                                     </div>
-                                
-                                
+
+
                                     <div class="auth_timer_container">
                                         <div class="auth_timer_text">
                                             <span>Получить новый код можно<br> через <span class="auth_timer">00:59</span></span>
@@ -521,13 +527,13 @@
                                             <a href="#" class="auth_forward" data-form="email_login">Войти по почте</a>
                                         </div>
                                     </div>
-                            
-                            
+
+
                                 </div>
                             </div>
                         </div>
                     </form>
-                
+
                     <form method="post" class="auth_form" data-form-id="in_login" id="auth_input_in_login" style="display: none">
                         <div class="auth">
                             <div class="auth_block">
@@ -544,7 +550,7 @@
                             </div>
                         </div>
                     </form>
-                
+
                     <form method="post" class="auth_form" data-form-id="email_login" id="auth_input_email" style="display: none">
                         <input type="hidden" name="auth_phone" value="">
                         <button tabindex="0" type="submit" name="auth_action" value="auth/email/login" style="display: none"></button>
@@ -569,7 +575,7 @@
                                                     </div>
                                                 </label>
                                             </div>
-                                        
+
                                             <div class="auth_block_inputs_phone">
                                                 <label>
                                                     <div class="auth_block_inputs_phone_outer">
@@ -589,18 +595,18 @@
                                     </div>
                                     <div class="auth_forward_footer">
                                         <a href="#" class=" auth_forward" data-form="phone_code">Вернуться на главный экран</a>
-                                    
+
                                         <br>
                                         <br>
                                         <a href="#" class=" auth_forward" data-form="reset_password" data-copy="email">Забыли пароль?</a>
-                                
+
                                     </div>
                                 </div>
                             </div>
                         </div>
-                
+
                     </form>
-                
+
                     <form method="post" class="auth_form" data-form-id="reset_password" id="auth_input_reset_password" style="display: none">
                         <input type="hidden" name="auth_phone" value="">
                         <div class="auth">
@@ -638,7 +644,7 @@
                             </div>
                         </div>
                     </form>
-                
+
                     <form method="post" class="auth_form" data-form-id="change_password" id="auth_input_change_password" style="display: none">
                         <input type="hidden" name="auth_phone" value="">
                         <div class="auth">
@@ -662,7 +668,7 @@
                                                     </div>
                                                 </label>
                                             </div>
-                                        
+
                                             <div class="auth_block_inputs_phone">
                                                 <label>
                                                     <div class="auth_block_inputs_phone_outer">
@@ -687,7 +693,7 @@
                             </div>
                         </div>
                     </form>
-                
+
                     <form method="post" class="auth_form" data-form-id="change_password_success" id="auth_input_change_password_success" style="display: none">
                         <div class="auth">
                             <div class="auth_block">
@@ -705,7 +711,7 @@
                             </div>
                         </div>
                     </form>
-                
+
                     <form method="post" class="auth_form auth_mask_country" data-form-id="phone_change" id="auth_input_phone_change" style="display: none">
                         <input type="hidden" name="auth_phone" value="">
                         <div class="auth">
@@ -757,7 +763,7 @@
                 </div>
             </div>
         </div>
-    
+
         <div class="auth_modal-content">
             <div class="auth_modal-header">
                 <button type="button" class=" auth_modal-closed auth_modal-close" data-dismiss="modal" aria-label="Close">
@@ -813,7 +819,7 @@
                                     <div class="auth_or">
                                         или
                                     </div>
-                                
+
                                     <div class="auth_forward_footer">
                                         <a href="#" class=" auth_forward" data-form="email_login">Войти по почте</a>
                                     </div>
@@ -821,7 +827,7 @@
                             </div>
                         </div>
                     </form>
-                
+
                     <form method="post" class="auth_form" data-form-id="phone_confirmation" id="auth_input_code" style="display: none">
                         <input type="hidden" name="auth_phone" value="">
                         <button tabindex="0" type="submit" name="auth_action" value="auth/phone/confirmation" style="display: none"></button>
@@ -834,11 +840,11 @@
                                     <div class="auth_block_text">
                                         <span><span id="auth_phone_code_text">Мы отправили код подтверждения на номер</span> <span id="auth_phone">+7 (000) 000-00-00</span> <a href="#" class="auth_phone_change auth_forward" data-form="phone_code">Изменить</a></span>
                                     </div>
-                                
+
                                     <div class="auth_flash_call">
                                         <span></span>
                                     </div>
-                                
+
                                     <div>
                                         <div class="auth_block_inputs">
                                             <div class="auth_block_inputs_phone">
@@ -851,11 +857,11 @@
                                                     </div>
                                                 </label>
                                             </div>
-                                    
+
                                         </div>
                                     </div>
-                                
-                                
+
+
                                     <div class="auth_timer_container">
                                         <div class="auth_timer_text">
                                             <span>Получить новый код можно<br> через <span class="auth_timer">00:59</span></span>
@@ -874,13 +880,13 @@
                                             <a href="#" class="auth_forward" data-form="email_login">Войти по почте</a>
                                         </div>
                                     </div>
-                            
-                            
+
+
                                 </div>
                             </div>
                         </div>
                     </form>
-                
+
                     <form method="post" class="auth_form" data-form-id="in_login" id="auth_input_in_login">
                         <div class="auth">
                             <div class="auth_block">
@@ -898,7 +904,7 @@
                             </div>
                         </div>
                     </form>
-                
+
                     <form method="post" class="auth_form" data-form-id="email_login" id="auth_input_email" style="display: none">
                         <input type="hidden" name="auth_phone" value="">
                         <button tabindex="0" type="submit" name="auth_action" value="auth/email/login" style="display: none"></button>
@@ -923,7 +929,7 @@
                                                     </div>
                                                 </label>
                                             </div>
-                                        
+
                                             <div class="auth_block_inputs_phone">
                                                 <label>
                                                     <div class="auth_block_inputs_phone_outer">
@@ -943,18 +949,18 @@
                                     </div>
                                     <div class="auth_forward_footer">
                                         <a href="#" class=" auth_forward" data-form="phone_code">Вернуться на главный экран</a>
-                                    
+
                                         <br>
                                         <br>
                                         <a href="#" class=" auth_forward" data-form="reset_password" data-copy="email">Забыли пароль?</a>
-                                
+
                                     </div>
                                 </div>
                             </div>
                         </div>
-                
+
                     </form>
-                
+
                     <form method="post" class="auth_form" data-form-id="reset_password" id="auth_input_reset_password" style="display: none">
                         <input type="hidden" name="auth_phone" value="">
                         <div class="auth">
@@ -992,7 +998,7 @@
                             </div>
                         </div>
                     </form>
-                
+
                     <form method="post" class="auth_form" data-form-id="change_password" id="auth_input_change_password" style="display: none">
                         <input type="hidden" name="auth_phone" value="">
                         <div class="auth">
@@ -1016,7 +1022,7 @@
                                                     </div>
                                                 </label>
                                             </div>
-                                        
+
                                             <div class="auth_block_inputs_phone">
                                                 <label>
                                                     <div class="auth_block_inputs_phone_outer">
@@ -1041,7 +1047,7 @@
                             </div>
                         </div>
                     </form>
-                
+
                     <form method="post" class="auth_form" data-form-id="change_password_success" id="auth_input_change_password_success" style="display: none">
                         <div class="auth">
                             <div class="auth_block">
@@ -1059,7 +1065,7 @@
                             </div>
                         </div>
                     </form>
-                
+
                     <form method="post" class="auth_form auth_mask_country" data-form-id="phone_change" id="auth_input_phone_change" style="display: none">
                         <input type="hidden" name="auth_phone" value="">
                         <div class="auth">
@@ -1111,7 +1117,7 @@
                 </div>
             </div>
         </div>
-    
+
         <div class="auth_modal-content">
             <div class="auth_modal-header">
                 <button type="button" class=" auth_modal-closed auth_modal-close" data-dismiss="modal" aria-label="Close">
@@ -1167,7 +1173,7 @@
                                     <div class="auth_or">
                                         или
                                     </div>
-                                
+
                                     <div class="auth_forward_footer">
                                         <a href="#" class=" auth_forward" data-form="email_login">Войти по почте</a>
                                     </div>
@@ -1175,7 +1181,7 @@
                             </div>
                         </div>
                     </form>
-                
+
                     <form method="post" class="auth_form" data-form-id="phone_confirmation" id="auth_input_code" style="display: none">
                         <input type="hidden" name="auth_phone" value="">
                         <button tabindex="0" type="submit" name="auth_action" value="auth/phone/confirmation" style="display: none"></button>
@@ -1188,11 +1194,11 @@
                                     <div class="auth_block_text">
                                         <span><span id="auth_phone_code_text">Мы отправили код подтверждения на номер</span> <span id="auth_phone">+7 (000) 000-00-00</span> <a href="#" class="auth_phone_change auth_forward" data-form="phone_code">Изменить</a></span>
                                     </div>
-                                
+
                                     <div class="auth_flash_call">
                                         <span></span>
                                     </div>
-                                
+
                                     <div>
                                         <div class="auth_block_inputs">
                                             <div class="auth_block_inputs_phone">
@@ -1205,11 +1211,11 @@
                                                     </div>
                                                 </label>
                                             </div>
-                                    
+
                                         </div>
                                     </div>
-                                
-                                
+
+
                                     <div class="auth_timer_container">
                                         <div class="auth_timer_text">
                                             <span>Получить новый код можно<br> через <span class="auth_timer">00:59</span></span>
@@ -1228,13 +1234,13 @@
                                             <a href="#" class="auth_forward" data-form="email_login">Войти по почте</a>
                                         </div>
                                     </div>
-                            
-                            
+
+
                                 </div>
                             </div>
                         </div>
                     </form>
-                
+
                     <form method="post" class="auth_form" data-form-id="in_login" id="auth_input_in_login" style="display: none">
                         <div class="auth">
                             <div class="auth_block">
@@ -1251,7 +1257,7 @@
                             </div>
                         </div>
                     </form>
-                
+
                     <form method="post" class="auth_form" data-form-id="email_login" id="auth_input_email">
                         <input type="hidden" name="auth_phone" value="">
                         <button tabindex="0" type="submit" name="auth_action" value="auth/email/login" style="display: none"></button>
@@ -1276,7 +1282,7 @@
                                                     </div>
                                                 </label>
                                             </div>
-                                        
+
                                             <div class="auth_block_inputs_phone">
                                                 <label>
                                                     <div class="auth_block_inputs_phone_outer">
@@ -1296,17 +1302,17 @@
                                     </div>
                                     <div class="auth_forward_footer">
                                         <a href="#" class=" auth_forward" data-form="phone_code">Вернуться на главный экран</a>
-                                    
+
                                         <br>
                                         <br>
                                         <a href="#" class=" auth_forward" data-form="reset_password" data-copy="email">Забыли пароль?</a>
-                                
+
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </form>
-                
+
                     <form method="post" class="auth_form" data-form-id="reset_password" id="auth_input_reset_password" style="display: none">
                         <input type="hidden" name="auth_phone" value="">
                         <div class="auth">
@@ -1344,7 +1350,7 @@
                             </div>
                         </div>
                     </form>
-                
+
                     <form method="post" class="auth_form" data-form-id="change_password" id="auth_input_change_password" style="display: none">
                         <input type="hidden" name="auth_phone" value="">
                         <div class="auth">
@@ -1368,7 +1374,7 @@
                                                     </div>
                                                 </label>
                                             </div>
-                                        
+
                                             <div class="auth_block_inputs_phone">
                                                 <label>
                                                     <div class="auth_block_inputs_phone_outer">
@@ -1393,7 +1399,7 @@
                             </div>
                         </div>
                     </form>
-                
+
                     <form method="post" class="auth_form" data-form-id="change_password_success" id="auth_input_change_password_success" style="display: none">
                         <div class="auth">
                             <div class="auth_block">
@@ -1411,7 +1417,7 @@
                             </div>
                         </div>
                     </form>
-                
+
                     <form method="post" class="auth_form auth_mask_country" data-form-id="phone_change" id="auth_input_phone_change" style="display: none">
                         <input type="hidden" name="auth_phone" value="">
                         <div class="auth">
@@ -1463,7 +1469,7 @@
                 </div>
             </div>
         </div>
-    
+
         <div class="auth_modal-content">
             <div class="auth_modal-header">
                 <button type="button" class=" auth_modal-closed auth_modal-close" data-dismiss="modal" aria-label="Close">
@@ -1519,7 +1525,7 @@
                                     <div class="auth_or">
                                         или
                                     </div>
-                                
+
                                     <div class="auth_forward_footer">
                                         <a href="#" class=" auth_forward" data-form="email_login">Войти по почте</a>
                                     </div>
@@ -1527,7 +1533,7 @@
                             </div>
                         </div>
                     </form>
-                
+
                     <form method="post" class="auth_form" data-form-id="phone_confirmation" id="auth_input_code" style="display: none">
                         <input type="hidden" name="auth_phone" value="">
                         <button tabindex="0" type="submit" name="auth_action" value="auth/phone/confirmation" style="display: none"></button>
@@ -1540,11 +1546,11 @@
                                     <div class="auth_block_text">
                                         <span><span id="auth_phone_code_text">Мы отправили код подтверждения на номер</span> <span id="auth_phone">+7 (000) 000-00-00</span> <a href="#" class="auth_phone_change auth_forward" data-form="phone_code">Изменить</a></span>
                                     </div>
-                                
+
                                     <div class="auth_flash_call">
                                         <span></span>
                                     </div>
-                                
+
                                     <div>
                                         <div class="auth_block_inputs">
                                             <div class="auth_block_inputs_phone">
@@ -1557,11 +1563,11 @@
                                                     </div>
                                                 </label>
                                             </div>
-                                    
+
                                         </div>
                                     </div>
-                                
-                                
+
+
                                     <div class="auth_timer_container">
                                         <div class="auth_timer_text">
                                             <span>Получить новый код можно<br> через <span class="auth_timer">00:59</span></span>
@@ -1580,13 +1586,13 @@
                                             <a href="#" class="auth_forward" data-form="email_login">Войти по почте</a>
                                         </div>
                                     </div>
-                            
-                            
+
+
                                 </div>
                             </div>
                         </div>
                     </form>
-                
+
                     <form method="post" class="auth_form" data-form-id="in_login" id="auth_input_in_login" style="display: none">
                         <div class="auth">
                             <div class="auth_block">
@@ -1603,7 +1609,7 @@
                             </div>
                         </div>
                     </form>
-                
+
                     <form method="post" class="auth_form" data-form-id="email_login" id="auth_input_email" style="display: none">
                         <input type="hidden" name="auth_phone" value="">
                         <button tabindex="0" type="submit" name="auth_action" value="auth/email/login" style="display: none"></button>
@@ -1628,7 +1634,7 @@
                                                     </div>
                                                 </label>
                                             </div>
-                                        
+
                                             <div class="auth_block_inputs_phone">
                                                 <label>
                                                     <div class="auth_block_inputs_phone_outer">
@@ -1648,18 +1654,18 @@
                                     </div>
                                     <div class="auth_forward_footer">
                                         <a href="#" class=" auth_forward" data-form="phone_code">Вернуться на главный экран</a>
-                                    
+
                                         <br>
                                         <br>
                                         <a href="#" class=" auth_forward" data-form="reset_password" data-copy="email">Забыли пароль?</a>
-                                
+
                                     </div>
                                 </div>
                             </div>
                         </div>
-                
+
                     </form>
-                
+
                     <form method="post" class="auth_form" data-form-id="reset_password" id="auth_input_reset_password">
                         <input type="hidden" name="auth_phone" value="">
                         <div class="auth">
@@ -1697,7 +1703,7 @@
                             </div>
                         </div>
                     </form>
-                
+
                     <form method="post" class="auth_form" data-form-id="change_password" id="auth_input_change_password" style="display: none">
                         <input type="hidden" name="auth_phone" value="">
                         <div class="auth">
@@ -1721,7 +1727,7 @@
                                                     </div>
                                                 </label>
                                             </div>
-                                        
+
                                             <div class="auth_block_inputs_phone">
                                                 <label>
                                                     <div class="auth_block_inputs_phone_outer">
@@ -1746,7 +1752,7 @@
                             </div>
                         </div>
                     </form>
-                
+
                     <form method="post" class="auth_form" data-form-id="change_password_success" id="auth_input_change_password_success" style="display: none">
                         <div class="auth">
                             <div class="auth_block">
@@ -1764,7 +1770,7 @@
                             </div>
                         </div>
                     </form>
-                
+
                     <form method="post" class="auth_form auth_mask_country" data-form-id="phone_change" id="auth_input_phone_change" style="display: none">
                         <input type="hidden" name="auth_phone" value="">
                         <div class="auth">
@@ -1816,7 +1822,7 @@
                 </div>
             </div>
         </div>
-    
+
         <div class="auth_modal-content">
             <div class="auth_modal-header">
                 <button type="button" class=" auth_modal-closed auth_modal-close" data-dismiss="modal" aria-label="Close">
@@ -1872,7 +1878,7 @@
                                     <div class="auth_or">
                                         или
                                     </div>
-                                
+
                                     <div class="auth_forward_footer">
                                         <a href="#" class=" auth_forward" data-form="email_login">Войти по почте</a>
                                     </div>
@@ -1880,7 +1886,7 @@
                             </div>
                         </div>
                     </form>
-                
+
                     <form method="post" class="auth_form" data-form-id="phone_confirmation" id="auth_input_code" style="display: none">
                         <input type="hidden" name="auth_phone" value="">
                         <button tabindex="0" type="submit" name="auth_action" value="auth/phone/confirmation" style="display: none"></button>
@@ -1893,11 +1899,11 @@
                                     <div class="auth_block_text">
                                         <span><span id="auth_phone_code_text">Мы отправили код подтверждения на номер</span> <span id="auth_phone">+7 (000) 000-00-00</span> <a href="#" class="auth_phone_change auth_forward" data-form="phone_code">Изменить</a></span>
                                     </div>
-                                
+
                                     <div class="auth_flash_call">
                                         <span></span>
                                     </div>
-                                
+
                                     <div>
                                         <div class="auth_block_inputs">
                                             <div class="auth_block_inputs_phone">
@@ -1910,11 +1916,11 @@
                                                     </div>
                                                 </label>
                                             </div>
-                                    
+
                                         </div>
                                     </div>
-                                
-                                
+
+
                                     <div class="auth_timer_container">
                                         <div class="auth_timer_text">
                                             <span>Получить новый код можно<br> через <span class="auth_timer">00:59</span></span>
@@ -1933,13 +1939,13 @@
                                             <a href="#" class="auth_forward" data-form="email_login">Войти по почте</a>
                                         </div>
                                     </div>
-                            
-                            
+
+
                                 </div>
                             </div>
                         </div>
                     </form>
-                
+
                     <form method="post" class="auth_form" data-form-id="in_login" id="auth_input_in_login" style="display: none">
                         <div class="auth">
                             <div class="auth_block">
@@ -1956,7 +1962,7 @@
                             </div>
                         </div>
                     </form>
-                
+
                     <form method="post" class="auth_form" data-form-id="email_login" id="auth_input_email" style="display: none">
                         <input type="hidden" name="auth_phone" value="">
                         <button tabindex="0" type="submit" name="auth_action" value="auth/email/login" style="display: none"></button>
@@ -1981,7 +1987,7 @@
                                                     </div>
                                                 </label>
                                             </div>
-                                        
+
                                             <div class="auth_block_inputs_phone">
                                                 <label>
                                                     <div class="auth_block_inputs_phone_outer">
@@ -2001,18 +2007,18 @@
                                     </div>
                                     <div class="auth_forward_footer">
                                         <a href="#" class=" auth_forward" data-form="phone_code">Вернуться на главный экран</a>
-                                    
+
                                         <br>
                                         <br>
                                         <a href="#" class=" auth_forward" data-form="reset_password" data-copy="email">Забыли пароль?</a>
-                                
+
                                     </div>
                                 </div>
                             </div>
                         </div>
-                
+
                     </form>
-                
+
                     <form method="post" class="auth_form" data-form-id="reset_password" id="auth_input_reset_password" style="display: none">
                         <input type="hidden" name="auth_phone" value="">
                         <div class="auth">
@@ -2050,7 +2056,7 @@
                             </div>
                         </div>
                     </form>
-                
+
                     <form method="post" class="auth_form" data-form-id="change_password" id="auth_input_change_password">
                         <input type="hidden" name="auth_phone" value="">
                         <div class="auth">
@@ -2074,7 +2080,7 @@
                                                     </div>
                                                 </label>
                                             </div>
-                                        
+
                                             <div class="auth_block_inputs_phone">
                                                 <label>
                                                     <div class="auth_block_inputs_phone_outer">
@@ -2099,7 +2105,7 @@
                             </div>
                         </div>
                     </form>
-                
+
                     <form method="post" class="auth_form" data-form-id="change_password_success" id="auth_input_change_password_success" style="display: none">
                         <div class="auth">
                             <div class="auth_block">
@@ -2117,7 +2123,7 @@
                             </div>
                         </div>
                     </form>
-                
+
                     <form method="post" class="auth_form auth_mask_country" data-form-id="phone_change" id="auth_input_phone_change" style="display: none">
                         <input type="hidden" name="auth_phone" value="">
                         <div class="auth">
@@ -2169,7 +2175,7 @@
                 </div>
             </div>
         </div>
-    
+
         <div class="auth_modal-content">
             <div class="auth_modal-header">
                 <button type="button" class=" auth_modal-closed auth_modal-close" data-dismiss="modal" aria-label="Close">
@@ -2225,7 +2231,7 @@
                                     <div class="auth_or">
                                         или
                                     </div>
-                                
+
                                     <div class="auth_forward_footer">
                                         <a href="#" class=" auth_forward" data-form="email_login">Войти по почте</a>
                                     </div>
@@ -2233,7 +2239,7 @@
                             </div>
                         </div>
                     </form>
-                
+
                     <form method="post" class="auth_form" data-form-id="phone_confirmation" id="auth_input_code" style="display: none">
                         <input type="hidden" name="auth_phone" value="">
                         <button tabindex="0" type="submit" name="auth_action" value="auth/phone/confirmation" style="display: none"></button>
@@ -2246,11 +2252,11 @@
                                     <div class="auth_block_text">
                                         <span><span id="auth_phone_code_text">Мы отправили код подтверждения на номер</span> <span id="auth_phone">+7 (000) 000-00-00</span> <a href="#" class="auth_phone_change auth_forward" data-form="phone_code">Изменить</a></span>
                                     </div>
-                                
+
                                     <div class="auth_flash_call">
                                         <span></span>
                                     </div>
-                                
+
                                     <div>
                                         <div class="auth_block_inputs">
                                             <div class="auth_block_inputs_phone">
@@ -2263,11 +2269,11 @@
                                                     </div>
                                                 </label>
                                             </div>
-                                    
+
                                         </div>
                                     </div>
-                                
-                                
+
+
                                     <div class="auth_timer_container">
                                         <div class="auth_timer_text">
                                             <span>Получить новый код можно<br> через <span class="auth_timer">00:59</span></span>
@@ -2286,13 +2292,13 @@
                                             <a href="#" class="auth_forward" data-form="email_login">Войти по почте</a>
                                         </div>
                                     </div>
-                            
-                            
+
+
                                 </div>
                             </div>
                         </div>
                     </form>
-                
+
                     <form method="post" class="auth_form" data-form-id="in_login" id="auth_input_in_login" style="display: none">
                         <div class="auth">
                             <div class="auth_block">
@@ -2309,7 +2315,7 @@
                             </div>
                         </div>
                     </form>
-                
+
                     <form method="post" class="auth_form" data-form-id="email_login" id="auth_input_email" style="display: none">
                         <input type="hidden" name="auth_phone" value="">
                         <button tabindex="0" type="submit" name="auth_action" value="auth/email/login" style="display: none"></button>
@@ -2334,7 +2340,7 @@
                                                     </div>
                                                 </label>
                                             </div>
-                                        
+
                                             <div class="auth_block_inputs_phone">
                                                 <label>
                                                     <div class="auth_block_inputs_phone_outer">
@@ -2354,18 +2360,18 @@
                                     </div>
                                     <div class="auth_forward_footer">
                                         <a href="#" class=" auth_forward" data-form="phone_code">Вернуться на главный экран</a>
-                                    
+
                                         <br>
                                         <br>
                                         <a href="#" class=" auth_forward" data-form="reset_password" data-copy="email">Забыли пароль?</a>
-                                
+
                                     </div>
                                 </div>
                             </div>
                         </div>
-                
+
                     </form>
-                
+
                     <form method="post" class="auth_form" data-form-id="reset_password" id="auth_input_reset_password" style="display: none">
                         <input type="hidden" name="auth_phone" value="">
                         <div class="auth">
@@ -2403,7 +2409,7 @@
                             </div>
                         </div>
                     </form>
-                
+
                     <form method="post" class="auth_form" data-form-id="change_password" id="auth_input_change_password" style="display: none">
                         <input type="hidden" name="auth_phone" value="">
                         <div class="auth">
@@ -2427,7 +2433,7 @@
                                                     </div>
                                                 </label>
                                             </div>
-                                        
+
                                             <div class="auth_block_inputs_phone">
                                                 <label>
                                                     <div class="auth_block_inputs_phone_outer">
@@ -2452,7 +2458,7 @@
                             </div>
                         </div>
                     </form>
-                
+
                     <form method="post" class="auth_form" data-form-id="change_password_success" id="auth_input_change_password_success">
                         <div class="auth">
                             <div class="auth_block">
@@ -2470,7 +2476,7 @@
                             </div>
                         </div>
                     </form>
-                
+
                     <form method="post" class="auth_form auth_mask_country" data-form-id="phone_change" id="auth_input_phone_change" style="display: none">
                         <input type="hidden" name="auth_phone" value="">
                         <div class="auth">
@@ -2522,7 +2528,7 @@
                 </div>
             </div>
         </div>
-    
+
         <div class="auth_modal-content">
             <div class="auth_modal-header">
                 <button type="button" class=" auth_modal-closed auth_modal-close" data-dismiss="modal" aria-label="Close">
@@ -2578,7 +2584,7 @@
                                     <div class="auth_or">
                                         или
                                     </div>
-                                
+
                                     <div class="auth_forward_footer">
                                         <a href="#" class=" auth_forward" data-form="email_login">Войти по почте</a>
                                     </div>
@@ -2586,7 +2592,7 @@
                             </div>
                         </div>
                     </form>
-                
+
                     <form method="post" class="auth_form" data-form-id="phone_confirmation" id="auth_input_code" style="display: none">
                         <input type="hidden" name="auth_phone" value="">
                         <button tabindex="0" type="submit" name="auth_action" value="auth/phone/confirmation" style="display: none"></button>
@@ -2599,11 +2605,11 @@
                                     <div class="auth_block_text">
                                         <span><span id="auth_phone_code_text">Мы отправили код подтверждения на номер</span> <span id="auth_phone">+7 (000) 000-00-00</span> <a href="#" class="auth_phone_change auth_forward" data-form="phone_code">Изменить</a></span>
                                     </div>
-                                
+
                                     <div class="auth_flash_call">
                                         <span></span>
                                     </div>
-                                
+
                                     <div>
                                         <div class="auth_block_inputs">
                                             <div class="auth_block_inputs_phone">
@@ -2616,11 +2622,11 @@
                                                     </div>
                                                 </label>
                                             </div>
-                                    
+
                                         </div>
                                     </div>
-                                
-                                
+
+
                                     <div class="auth_timer_container">
                                         <div class="auth_timer_text">
                                             <span>Получить новый код можно<br> через <span class="auth_timer">00:59</span></span>
@@ -2639,13 +2645,13 @@
                                             <a href="#" class="auth_forward" data-form="email_login">Войти по почте</a>
                                         </div>
                                     </div>
-                            
-                            
+
+
                                 </div>
                             </div>
                         </div>
                     </form>
-                
+
                     <form method="post" class="auth_form" data-form-id="in_login" id="auth_input_in_login" style="display: none">
                         <div class="auth">
                             <div class="auth_block">
@@ -2662,7 +2668,7 @@
                             </div>
                         </div>
                     </form>
-                
+
                     <form method="post" class="auth_form" data-form-id="email_login" id="auth_input_email" style="display: none">
                         <input type="hidden" name="auth_phone" value="">
                         <button tabindex="0" type="submit" name="auth_action" value="auth/email/login" style="display: none"></button>
@@ -2687,7 +2693,7 @@
                                                     </div>
                                                 </label>
                                             </div>
-                                        
+
                                             <div class="auth_block_inputs_phone">
                                                 <label>
                                                     <div class="auth_block_inputs_phone_outer">
@@ -2707,18 +2713,18 @@
                                     </div>
                                     <div class="auth_forward_footer">
                                         <a href="#" class=" auth_forward" data-form="phone_code">Вернуться на главный экран</a>
-                                    
+
                                         <br>
                                         <br>
                                         <a href="#" class=" auth_forward" data-form="reset_password" data-copy="email">Забыли пароль?</a>
-                                
+
                                     </div>
                                 </div>
                             </div>
                         </div>
-                
+
                     </form>
-                
+
                     <form method="post" class="auth_form" data-form-id="reset_password" id="auth_input_reset_password" style="display: none">
                         <input type="hidden" name="auth_phone" value="">
                         <div class="auth">
@@ -2756,7 +2762,7 @@
                             </div>
                         </div>
                     </form>
-                
+
                     <form method="post" class="auth_form" data-form-id="change_password" id="auth_input_change_password" style="display: none">
                         <input type="hidden" name="auth_phone" value="">
                         <div class="auth">
@@ -2780,7 +2786,7 @@
                                                     </div>
                                                 </label>
                                             </div>
-                                        
+
                                             <div class="auth_block_inputs_phone">
                                                 <label>
                                                     <div class="auth_block_inputs_phone_outer">
@@ -2805,7 +2811,7 @@
                             </div>
                         </div>
                     </form>
-                
+
                     <form method="post" class="auth_form" data-form-id="change_password_success" id="auth_input_change_password_success" style="display: none">
                         <div class="auth">
                             <div class="auth_block">
@@ -2823,7 +2829,7 @@
                             </div>
                         </div>
                     </form>
-                
+
                     <form method="post" class="auth_form auth_mask_country" data-form-id="phone_change" id="auth_input_phone_change">
                         <input type="hidden" name="auth_phone" value="">
                         <div class="auth">
@@ -2880,25 +2886,25 @@
 
 <script src="js/main.js"></script>
 <script>
-    // Переменную authModalConfig переносить не нужно!
-    // Необходима для работы скрптов аутентификации в верстке
-    var authModalConfig = {
-        "close_all_message": "auth_message_close_all",
-        "cssUrl": "\/assets\/components\/auth\/css\/web\/",
-        "jsUrl": "\/assets\/components\/auth\/js\/web\/",
-        "ctx": "web",
-        "country_table_enable": "",
-        "country": "\u0420\u043e\u0441\u0441\u0438\u044f",
-        "country_code": "7",
-        "siteName": "MODX Revolution"
+  // Переменную authModalConfig переносить не нужно!
+  // Необходима для работы скрптов аутентификации в верстке
+  var authModalConfig = {
+    "close_all_message": "auth_message_close_all",
+    "cssUrl": "\/assets\/components\/auth\/css\/web\/",
+    "jsUrl": "\/assets\/components\/auth\/js\/web\/",
+    "ctx": "web",
+    "country_table_enable": "",
+    "country": "\u0420\u043e\u0441\u0441\u0438\u044f",
+    "country_code": "7",
+    "siteName": "MODX Revolution"
+  }
+
+  $('#auth_modal').click(function(e) {
+    if (this.id === 'auth_modal') {
+      e.preventDefault();
+      e.stopPropagation();
     }
-    
-    $('#auth_modal').click(function(e) {
-        if (this.id === 'auth_modal') {
-           e.preventDefault();
-           e.stopPropagation();
-        }
-    });
-    
+  });
+
 </script>
 <script src="js/auth.js"></script>

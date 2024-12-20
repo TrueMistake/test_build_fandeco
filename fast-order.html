@@ -8,8 +8,16 @@
     <meta name="figma" content="@@figma">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700&display=swap" rel="stylesheet" />
     <link rel="shortcut icon" href="https://aws.massive.ru/fandeco.ru/redesign/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.4.0/nouislider.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/perfect-scrollbar/1.5.2/css/perfect-scrollbar.min.css">
     <link rel="stylesheet" href="css/main.min.css">
     
+        
+            <link rel="stylesheet" href="css/widget.min.css">
+        
+            <link rel="stylesheet" href="css/default/custom-new.min.css">
         
             <link rel="stylesheet" href="css/jivosite.min.css">
         
@@ -56,6 +64,8 @@
     <a class="widget_link" href="catalogs.html">Каталоги</a>
 </li><li class="widget_item">
     <a class="widget_link" href="comparison.html">Сравнение</a>
+</li><li class="widget_item">
+    <a class="widget_link" href="configurators.html">Конфигуратор</a>
 </li><li class="widget_item">
     <a class="widget_link" href="cooperation.html">Cотрудничество</a>
 </li><li class="widget_item">
@@ -184,62 +194,62 @@
     </ul>
 </div>
 
-    <div id="oneClick_modal" class="formalicious_class_19 modal fade   oneClick_modal3  in" tabindex="-1" role="dialog"
-        style="display: block; padding-right: 0px;">
-        <div class="modal-dialog modal-sm" role="document">
-            <div class="modal-content">
-                <form action="https://fandeco.ru/catalog/svetilniki/48328/#formalicious-19" id="formalicious_19"
-                    method="POST" enctype="multipart/form-data" novalidate=""
-                    class="msoc_mobile_version form-horizontal"><input type="hidden" name="yandex_client_id"
-                        value="170711876693441962">
-                    <div class="msoneclick_form">
-                        <button type="button" class="closen" data-dismiss="modal" aria-hidden="true"></button>
-                        <div class="modal-body" id="oneClick_body">
-                            <div class="popwr">
-                                <div id="oneClick_body">
-                                    <p class="title mb6">
-                                        <i class="ic ic-fast_order"></i>Быстрый заказ </p>
-                                    <div class="imgwr imgwrp_fast_order"></div>
-                                    <div class="numborder">
-                                        <div class="msoneclick_form-field porwrap msoneclick_field_name ">
-                                            <input type="text" id="msoc_name" name="name" value="" class=""
-                                                placeholder="Ваше имя">
-                                        </div>
-                                    </div>
-                                    <div class="numborder fieldtype_phone">
-                                        <div class="msoneclick_form-field porwrap msoneclick_field_phone_fast ">
-                                            <i class="numb_rus">+7</i>
-                                            <input type="text" id="msoc_phone_fast" name="phone_fast" value="" class=""
-                                                placeholder="( ___ ) ___-__-__" inputmode="text">
-                                        </div>
-                                    </div>
-                                    <div class="numborder">
-                                        <div class=" thetext thetext-t9 ">
-                                            <input type="checkbox" name="confirm" id="msoc_confirm" class="checkbox "
-                                                value="Да" checked="checked">
-                                            <label for="msoc_confirm" class="thetext-t9">
-                                                Подтверждаю согласие на обработку своих персональных данных в
-                                                соответствии с <a target="_blank" href="dogovor-oferta/">условиями</a>
-                                            </label>
-                                        </div>
-                                    </div>
-                                    <div class="the_buttons">
-                                        <button type="submit" class="btn btn-success" name="form_submit_19"
-                                            value="form_submit_19" title="">
-                                            Оформить заказ </button>
+<div id="oneClick_modal" class="formalicious_class_19 modal fade   oneClick_modal3  in" tabindex="-1" role="dialog"
+     style="display: block; padding-right: 0px;">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <form action="https://fandeco.ru/catalog/svetilniki/48328/#formalicious-19" id="formalicious_19"
+                  method="POST" enctype="multipart/form-data" novalidate=""
+                  class="msoc_mobile_version form-horizontal"><input type="hidden" name="yandex_client_id"
+                                                                     value="170711876693441962">
+                <div class="msoneclick_form">
+                    <button type="button" class="closen" data-dismiss="modal" aria-hidden="true"></button>
+                    <div class="modal-body" id="oneClick_body">
+                        <div class="popwr">
+                            <div id="oneClick_body">
+                                <p class="title mb6">
+                                    <i class="ic ic-fast_order"></i>Быстрый заказ </p>
+                                <div class="imgwr imgwrp_fast_order"></div>
+                                <div class="numborder">
+                                    <div class="msoneclick_form-field porwrap msoneclick_field_name ">
+                                        <input type="text" id="msoc_name" name="name" value="" class=""
+                                               placeholder="Ваше имя">
                                     </div>
                                 </div>
+                                <div class="numborder fieldtype_phone">
+                                    <div class="msoneclick_form-field porwrap msoneclick_field_phone_fast ">
+                                        <i class="numb_rus">+7</i>
+                                        <input type="text" id="msoc_phone_fast" name="phone_fast" value="" class=""
+                                               placeholder="( ___ ) ___-__-__" inputmode="text">
+                                    </div>
+                                </div>
+                                <div class="numborder">
+                                    <div class=" thetext thetext-t9 ">
+                                        <input type="checkbox" name="confirm" id="msoc_confirm" class="checkbox "
+                                               value="Да" checked="checked">
+                                        <label for="msoc_confirm" class="thetext-t9">
+                                            Подтверждаю согласие на обработку своих персональных данных в
+                                            соответствии с <a target="_blank" href="dogovor-oferta/">условиями</a>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="the_buttons">
+                                    <button type="submit" class="btn btn-success" name="form_submit_19"
+                                            value="form_submit_19" title="">
+                                        Оформить заказ </button>
+                                </div>
                             </div>
-                            <script>
-                                $('#oneClick_modal form').prepend('<input type="hidden" name="yandex_client_id">')
-                                $('[name=yandex_client_id]').attr('value', $('body').data('yandex-client-id') || '')
-                            </script>
                         </div>
+                        <script>
+                          $('#oneClick_modal form').prepend('<input type="hidden" name="yandex_client_id">')
+                          $('[name=yandex_client_id]').attr('value', $('body').data('yandex-client-id') || '')
+                        </script>
                     </div>
-                </form>
-            </div>
+                </div>
+            </form>
         </div>
     </div>
+</div>
 
     <script src="js/main.js"></script>
 </body>
